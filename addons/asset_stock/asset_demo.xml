@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        
+        <!-- Resource: asset.asset -->
+        <record id="asset.asset_asset_1" model="asset.asset">
+            <field name="warehouse_state_id" ref="asset.asset_state_use"/>
+        </record>
+
+        <record id="asset.asset_asset_2" model="asset.asset">
+            <field name="warehouse_state_id" ref="asset.asset_state_shipped"/>
+        </record>
+
+        <record id="asset.asset_asset_3" model="asset.asset">
+            <field name="warehouse_state_id" ref="asset.asset_state_stored"/>
+        </record>
+
+    </data>
+</openerp>

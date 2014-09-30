@@ -1,0 +1,83 @@
+@charset "utf-8";
+.codup_status {
+  margin: -3px 2px -5px 2px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  background-position: center center;
+  background-image: radial-gradient(at 35% 35%, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 40%), radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8) 80%);
+  box-shadow: 0 0 3px;
+}
+.codup_status_color_0 {
+  background-color: #ff0000;
+}
+.codup_status_color_1 {
+  background-color: #00ff00;
+}
+.codup_status_color_2 {
+  background-color: #0000ff;
+}
+.codup_status_color_3 {
+  background-color: #ffff00;
+}
+.codup_status_color_4 {
+  background-color: #ff00ff;
+}
+.codup_status_color_5 {
+  background-color: #00ffff;
+}
+.codup_status_color_6 {
+  background-color: #000000;
+}
+.codup_status_color_7 {
+  background-color: #ffffff;
+}
+.codup_status_color_8 {
+  background-color: #ff8000;
+}
+.codup_status_color_9 {
+  background-color: #0080ff;
+}
+.codup_kanban_status {
+  background-color: #E6E6E6 !important;
+  border-color: #C8C8C8 !important;
+}
+.codup_kanban_status:hover {
+  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  border-color: #D8D8D8 #C8C8C8 #C8C8C8 #D8D8D8 !important;
+}
+.codup_kanban_status:hover .codup_status {
+  background-image: radial-gradient(at 33% 34%, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 40%), radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9) 80%);
+}
+.codup_kanban_left {
+  display: inline-block;
+}
+.codup_kanban_left .codup_status {
+  display: block;
+  margin: 7px 22px;
+}
+.codup_kanban_info .oe_kanban_avatar{
+  margin-left: 20px;
+}
+.codup_attention_on, .codup_attention_off {
+  font-family: "entypoRegular";
+  font-size: 24px;
+  color: #cccccc !important;
+  text-shadow: 0 0 2px black;
+  text-decoration: none !important;
+}
+.codup_attention_on:hover, .codup_attention_off:hover {
+  text-decoration: none !important;
+}
+.codup_attention_on {
+  color: gold !important;
+}
+.openerp .oe_kanban_view .codup_kanban_details {
+    display: inline-block;
+    vertical-align: top;
+    width: 140px;
+    font-size: 13px;
+    padding: 0px 5px;
+    color: #4C4C4C;
+}

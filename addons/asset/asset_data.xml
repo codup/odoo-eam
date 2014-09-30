@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- Asset states in Finance -->
+        <record id="asset_state_planned" model="asset.state">
+            <field name="name">Planned</field>
+            <field name="team">0</field>
+            <field name="state_color">7</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="asset_state_rented" model="asset.state">
+            <field name="name">Rented</field>
+            <field name="team">0</field>
+            <field name="state_color">5</field>
+            <field name="sequence">2</field>
+        </record>
+        <record id="asset_state_purchased" model="asset.state">
+            <field name="name">Purchased</field>
+            <field name="team">0</field>
+            <field name="state_color">1</field>
+            <field name="sequence">3</field>
+        </record>
+        <record id="asset_state_leased" model="asset.state">
+            <field name="name">Leased</field>
+            <field name="team">0</field>
+            <field name="state_color">4</field>
+            <field name="sequence">4</field>
+        </record>
+        <record id="asset_state_sold" model="asset.state">
+            <field name="name">Sold</field>
+            <field name="team">0</field>
+            <field name="state_color">0</field>
+            <field name="sequence">5</field>
+        </record>
+        <!-- Asset states in Warehouse -->
+        <record id="asset_state_shipped" model="asset.state">
+            <field name="name">Shipped</field>
+            <field name="team">1</field>
+            <field name="state_color">5</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="asset_state_moves" model="asset.state">
+            <field name="name">Moves</field>
+            <field name="team">1</field>
+            <field name="state_color">9</field>
+            <field name="sequence">2</field>
+        </record>
+        <record id="asset_state_stored" model="asset.state">
+            <field name="name">Stored</field>
+            <field name="team">1</field>
+            <field name="state_color">3</field>
+            <field name="sequence">3</field>
+        </record>
+        <record id="asset_state_installed" model="asset.state">
+            <field name="name">Installed</field>
+            <field name="team">1</field>
+            <field name="state_color">2</field>
+            <field name="sequence">4</field>
+        </record>
+        <record id="asset_state_use" model="asset.state">
+            <field name="name">Use</field>
+            <field name="team">1</field>
+            <field name="state_color">1</field>
+            <field name="sequence">5</field>
+        </record>
+        <record id="asset_state_stolen" model="asset.state">
+            <field name="name">Stolen</field>
+            <field name="team">1</field>
+            <field name="state_color">0</field>
+            <field name="sequence">6</field>
+        </record>
+        <record id="asset_state_retired" model="asset.state">
+            <field name="name">Retired</field>
+            <field name="team">1</field>
+            <field name="state_color">4</field>
+            <field name="sequence">7</field>
+        </record>
+        <!-- Asset states in Manufacture -->
+        <record id="asset_state_shutdown" model="asset.state">
+            <field name="name">Shutdown</field>
+            <field name="team">2</field>
+            <field name="state_color">7</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="asset_state_run" model="asset.state">
+            <field name="name">Run</field>
+            <field name="team">2</field>
+            <field name="state_color">1</field>
+            <field name="sequence">2</field>
+        </record>
+        <record id="asset_state_setup" model="asset.state">
+            <field name="name">Setup</field>
+            <field name="team">2</field>
+            <field name="state_color">2</field>
+            <field name="sequence">3</field>
+        </record>
+        <record id="asset_state_standby" model="asset.state">
+            <field name="name">Standby</field>
+            <field name="team">2</field>
+            <field name="state_color">3</field>
+            <field name="sequence">4</field>
+        </record>
+        <record id="asset_state_down" model="asset.state">
+            <field name="name">Down</field>
+            <field name="team">2</field>
+            <field name="state_color">0</field>
+            <field name="sequence">5</field>
+        </record>
+        <!-- Asset states in Maintenance -->
+        <record id="asset_state_breakdown" model="asset.state">
+            <field name="name">Breakdown</field>
+            <field name="team">3</field>
+            <field name="state_color">0</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="asset_state_repair" model="asset.state">
+            <field name="name">Repair</field>
+            <field name="team">3</field>
+            <field name="state_color">4</field>
+            <field name="sequence">2</field>
+        </record>
+        <record id="asset_state_maintenance" model="asset.state">
+            <field name="name">Maintenance</field>
+            <field name="team">3</field>
+            <field name="state_color">8</field>
+            <field name="sequence">3</field>
+        </record>
+        <record id="asset_state_operable" model="asset.state">
+            <field name="name">Operable</field>
+            <field name="team">3</field>
+            <field name="state_color">1</field>
+            <field name="sequence">4</field>
+        </record>
+        <!-- Asset states in Accounting -->
+        <record id="asset_state_draft" model="asset.state">
+            <field name="name">Draft</field>
+            <field name="team">4</field>
+            <field name="state_color">7</field>
+            <field name="sequence">1</field>
+        </record>
+        <record id="asset_state_depreciation" model="asset.state">
+            <field name="name">Depreciation</field>
+            <field name="team">4</field>
+            <field name="state_color">1</field>
+            <field name="sequence">2</field>
+        </record>
+        <record id="asset_state_close" model="asset.state">
+            <field name="name">Close</field>
+            <field name="team">4</field>
+            <field name="state_color">6</field>
+            <field name="sequence">3</field>
+        </record>
+     </data>
+</openerp>

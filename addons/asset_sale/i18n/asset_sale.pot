@@ -1,0 +1,121 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* asset_sale
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20140125-002455\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-02 08:26+0000\n"
+"PO-Revision-Date: 2014-03-02 08:26+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: asset_sale
+#: selection:asset.asset,finance_state_color:0
+msgid "Blue"
+msgstr ""
+
+#. module: asset_sale
+#: view:asset.asset:0
+msgid "Info"
+msgstr ""
+
+#. module: asset_sale
+#: selection:asset.asset,finance_state_color:0
+msgid "Green"
+msgstr ""
+
+#. module: asset_sale
+#: view:asset.asset:0
+#: model:ir.actions.act_window,name:asset_sale.action_assets_sale
+#: model:ir.ui.menu,name:asset_sale.menu_maintenance_assets
+#: model:ir.ui.menu,name:asset_sale.menu_maintenance_assets_assets
+msgid "Assets"
+msgstr ""
+
+#. module: asset_sale
+#: view:asset.asset:0
+msgid "Model:"
+msgstr ""
+
+#. module: asset_sale
+#: field:asset.asset,finance_state_color:0
+msgid "Color"
+msgstr ""
+
+#. module: asset_sale
+#: model:ir.ui.menu,name:asset_sale.menu_asset_state
+msgid "Asset States"
+msgstr ""
+
+#. module: asset_sale
+#: selection:asset.asset,finance_state_color:0
+msgid "SkyBlue"
+msgstr ""
+
+#. module: asset_sale
+#: view:asset.asset:0
+msgid "Manufacturer:"
+msgstr ""
+
+#. module: asset_sale
+#: selection:asset.asset,finance_state_color:0
+msgid "Orange"
+msgstr ""
+
+#. module: asset_sale
+#: view:asset.asset:0
+msgid "Warranty"
+msgstr ""
+
+#. module: asset_sale
+#: selection:asset.asset,finance_state_color:0
+msgid "Yellow"
+msgstr ""
+
+#. module: asset_sale
+#: selection:asset.asset,finance_state_color:0
+msgid "Black"
+msgstr ""
+
+#. module: asset_sale
+#: model:ir.model,name:asset_sale.model_asset_asset
+msgid "Asset"
+msgstr ""
+
+#. module: asset_sale
+#: model:ir.actions.act_window,name:asset_sale.action_management_assets_sale
+#: model:ir.ui.menu,name:asset_sale.menu_maintenance_assets_management
+msgid "Manage states"
+msgstr ""
+
+#. module: asset_sale
+#: selection:asset.asset,finance_state_color:0
+msgid "Cyan"
+msgstr ""
+
+#. module: asset_sale
+#: selection:asset.asset,finance_state_color:0
+msgid "Magenta"
+msgstr ""
+
+#. module: asset_sale
+#: view:asset.asset:0
+msgid "Serial No:"
+msgstr ""
+
+#. module: asset_sale
+#: selection:asset.asset,finance_state_color:0
+msgid "White"
+msgstr ""
+
+#. module: asset_sale
+#: selection:asset.asset,finance_state_color:0
+msgid "Red"
+msgstr ""
+
