@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <record id="mrp_workcenter_view" model="ir.ui.view">
+            <field name="name">mrp.workcenter.form.inherit</field>
+            <field name="model">mrp.workcenter</field>
+            <field name="inherit_id" ref="mrp.mrp_workcenter_view"/>
+            <field name="arch" type="xml">
+                <page string="General Information" position="after" version="7.0">
+                    <page string="Assets">
+                        <field name="asset_ids">
+                            <tree string="Assets">
+                                <field name="name" string="Asset"/>
+                                <field name="model"/>
+                                <field name="property_stock_asset" string="Location"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+        
+ 	</data>
+</openerp>

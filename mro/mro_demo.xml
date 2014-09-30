@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+
+        <!-- Resource: product.category -->
+
+        <record id="product_category_mro" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">Parts</field>
+        </record>
+
+        <!-- Resource: product.product -->
+
+        <record id="product_product_mro_pump" model="product.product">
+            <field name="name">Pump</field>
+            <field name="default_code">PMP</field>
+            <field name="categ_id" ref="product_category_mro"/>
+            <field name="standard_price">55.0</field>
+            <field name="list_price">70.0</field>
+            <field name="type">consu</field>
+            <field name="uom_id" ref="product.product_uom_unit"/>
+            <field name="uom_po_id" ref="product.product_uom_unit"/>
+        </record>
+
+        <record id="product_product_mro_oil" model="product.product">
+            <field name="name">Oil</field>
+            <field name="default_code">OIL</field>
+            <field name="categ_id" ref="product_category_mro"/>
+            <field name="standard_price">80.0</field>
+            <field name="list_price">90.0</field>
+            <field name="type">consu</field>
+            <field name="uom_id" ref="product.product_uom_unit"/>
+            <field name="uom_po_id" ref="product.product_uom_unit"/>
+        </record>
+        
+        <!-- mro.request -->
+        
+        <record id="mro_request_1" model="mro.request">
+            <field name="asset_id" ref="asset.asset_asset_1"/>
+            <field name="cause">Don't work Pump</field>
+        </record>
+                
+        <record id="mro_request_2" model="mro.request">
+            <field name="asset_id" ref="asset.asset_asset_3"/>
+            <field name="cause">There is no light</field>
+        </record>
+        <workflow action="button_send_request" model="mro.request" ref="mro_request_2"/>
+        <workflow action="button_confirm_request" model="mro.request" ref="mro_request_2"/>
+        
+        <!-- mro.task -->
+        
+        <record id="mro_task_1" model="mro.task">
+            <field name="asset_id" ref="asset.asset_asset_2"/>
+            <field name="name">Wash the truck</field>
+            <field name="maintenance_type">cm</field>
+        </record>
+        
+        <!-- mro.order -->
+        
+        <record id="mro_order_2" model="mro.order">
+            <field name="asset_id" ref="asset.asset_asset_2"/>
+            <field name="maintenance_type">cm</field>
+            <field name="task_id" ref="mro_task_1"/>
+            <field name="description">Wash the truck</field>
+        </record>
+        
+    </data>
+</openerp>

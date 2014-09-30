@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+        <!-- Maintenance request -->
+        
+        <record id="maintenance_request" model="workflow">
+			<field name="name">Maintenance Request Basic Workflow</field>
+			<field name="osv">mro.request</field>
+            <field name="on_create">True</field>
+		</record>
+        
+        <record id="act_draft_request" model="workflow.activity">
+            <field name="wkf_id" ref="maintenance_request"/>
+            <field name="flow_start">True</field>
+			<field name="name">draft</field>
+		</record>
+		<record id="act_claim_request" model="workflow.activity">
+            <field name="wkf_id" ref="maintenance_request"/>
+			<field name="name">claim</field>
+            <field name="kind">function</field>
+            <field name="action">action_send()</field>
+		</record>
+		<record id="act_run_request" model="workflow.activity">
+            <field name="wkf_id" ref="maintenance_request"/>
+            <field name="name">execution</field>
+			<field name="kind">subflow</field>
+			<field name="subflow_id" search="[('osv','=','mro.order')]"/>
+			<field name="action">action_confirm()</field>
+		</record>
+		<record id="act_reject_request" model="workflow.activity">
+            <field name="wkf_id" ref="maintenance_request"/>
+            <field name="flow_stop">True</field>
+            <field name="name">reject</field>
+            <field name="kind">function</field>
+            <field name="action">action_reject()</field>
+		</record>
+        <record id="act_done_request" model="workflow.activity">
+            <field name="wkf_id" ref="maintenance_request"/>
+            <field name="flow_stop">True</field>
+			<field name="name">done</field>
+            <field name="kind">function</field>
+            <field name="action">action_done()</field>            
+		</record>
+		<record id="act_cancel_request" model="workflow.activity">
+            <field name="wkf_id" ref="maintenance_request"/>
+            <field name="flow_stop">True</field>
+            <field name="name">cancel</field>
+            <field name="kind">function</field>
+            <field name="action">action_cancel()</field>
+		</record>
+
+		<record id="trans_draft_claim_request" model="workflow.transition">
+            <field name="act_from" ref="act_draft_request"/>
+            <field name="act_to" ref="act_claim_request"/>
+			<field name="signal">button_send_request</field>
+		</record>
+        <record id="trans_claim_reject_request" model="workflow.transition">
+            <field name="act_from" ref="act_claim_request"/>
+            <field name="act_to" ref="act_reject_request"/>
+            <field name="signal">button_reject</field>
+        </record> 
+        <record id="trans_claim_run_request" model="workflow.transition">
+            <field name="act_from" ref="act_claim_request"/>
+            <field name="act_to" ref="act_run_request"/>
+			<field name="signal">button_confirm_request</field>
+		</record>
+        <record id="trans_run_done_request" model="workflow.transition">
+            <field name="act_from" ref="act_run_request"/>
+            <field name="act_to" ref="act_done_request"/>
+            <field name="signal">subflow.done</field>
+		</record>
+ 		<record id="trans_run_cancel_request" model="workflow.transition">
+            <field name="act_from" ref="act_run_request"/>
+            <field name="act_to" ref="act_cancel_request"/>
+			<field name="signal">subflow.cancel</field>
+		</record>
+        <record id="trans_claim_cancel_request" model="workflow.transition">
+            <field name="act_from" ref="act_claim_request"/>
+            <field name="act_to" ref="act_cancel_request"/>
+            <field name="signal">button_cancel</field>
+        </record>
+        <record id="trans_draft_cancel_request" model="workflow.transition">
+            <field name="act_from" ref="act_draft_request"/>
+            <field name="act_to" ref="act_cancel_request"/>
+            <field name="signal">button_cancel</field>
+        </record>
+ 	</data>
+</openerp>
