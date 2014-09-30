@@ -1,4 +1,4 @@
-eam
+EAM
 ===
 
 Enterprise Asset Management
