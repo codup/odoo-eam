@@ -134,11 +134,9 @@ class asset_asset(osv.osv):
         'maintenance_state_color': fields.related('maintenance_state_id', 'state_color', type="selection", selection=STATE_COLOR_SELECTION, string="Color", readonly=True),
         'criticality': fields.selection(CRITICALITY_SELECTION, 'Criticality'),
         'property_stock_asset': fields.property(
-          'stock.location',
           type='many2one',
           relation='stock.location',
           string="Asset Location",
-          view_load=True,
           store=True,
           help="This location will be used as the destination location for installed parts during asset life."),
         'user_id': fields.many2one('res.users', 'Assigned to', track_visibility='onchange'),
