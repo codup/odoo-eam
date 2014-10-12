@@ -47,8 +47,8 @@ Support following feature:
         'asset_view.xml',
         'asset_data.xml',
         'stock_data.xml',
+        'views/asset.xml',
     ],
-    'css': ['static/src/css/asset.css'],
     'installable': True,
     'application': True,
 }
