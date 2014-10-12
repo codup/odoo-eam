@@ -24,7 +24,7 @@
     'version': '1.5',
     'summary': 'Asset Management',
     'description': """
-Managing Assets in OpenERP.
+Managing Assets in Odoo.
 ===========================
 Support following feature:
     * Location for Asset
