@@ -21,7 +21,7 @@
 
 {
     'name': 'Assets & Sale',
-    'version': '1.0',
+    'version': '1.1',
     'summary': 'Integrate Asset and Sale',
     'description': """
 Integrate Maintenance and Sale.
