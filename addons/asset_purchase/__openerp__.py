@@ -36,7 +36,10 @@ Keep one entity in one place for escape mistakes!
     'sequence': 0,
     'depends': ['purchase','asset'],
     'demo': ['asset_demo.xml'],
-    'data': ['purchase_view.xml'],
+    'data': [
+        'security/ir.model.access.csv',
+        'purchase_view.xml'
+    ],
     'installable': True,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
