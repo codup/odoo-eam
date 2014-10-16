@@ -9,9 +9,12 @@
             <field name="arch" type="xml">
                 <data>
                     <field name="category_id" position="before" version="7.0">
-                        <field name="asset_id"/>
+                        <field name="asset_id" attrs="{'readonly':[('state','!=','draft')]}" on_change="onchange_asset(asset_id)"/>
                     </field>
                     <label for="name" position="replace"/>
+                    <field name="name" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                    </field>
                 </data>
             </field>
         </record>

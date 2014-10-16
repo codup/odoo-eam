@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2013 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2014 CodUP (<http://codup.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -28,11 +28,6 @@ Integrate financial and maintenance asset management.
 ===========================
 
 This module allows use the same Assets for maintenance and accounting purposes.
-Integration take in account assumption that maintenable asset is physical asset
-and must have depreciation. Also vice versa, if asset have depreciation then
-it must be maintenable. So, when you create asset for accounting, it automaticaly
-available for maintenance. And when you create asset for maintenance, it automaticaly
-available for finance.
 Keep one entity in one place for escape mistakes!
     """,
     'author': 'CodUP',

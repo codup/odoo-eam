@@ -23,16 +23,13 @@ from openerp.osv import fields, osv
 
 class account_asset(osv.osv):
     _inherit = 'account.asset.asset'
-    
-    def _get_name(self, cr, uid, ids, name, arg, context=None):
-        res = {}
-        for asset in self.browse(cr, uid, ids, context=context):
-            res[asset.id] = asset.asset_id.name
-        return res	
 
     _columns = {
-        'name': fields.function(_get_name, method=True, type='char', string='Asset'),
-        'asset_id': fields.many2one('asset.asset', 'Asset', required=True, readonly=True, states={'draft':[('readonly',False)]}),
+        'asset_id': fields.many2one('asset.asset', 'Asset', required=True),
     }
+
+    def onchange_asset(self, cr, uid, ids, asset, context=None):
+        asset = self.pool.get('asset.asset').browse(cr, uid, asset, context=context)
+        return {'value': {'name': asset.name}}
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
