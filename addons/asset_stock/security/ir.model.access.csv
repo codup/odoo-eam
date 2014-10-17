@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_asset_asset_stock_manager,asset.asset stock_manager,asset.model_asset_asset,stock.group_stock_manager,1,1,1,1
+access_asset_state_stock_manager,asset.state stock_manager,asset.model_asset_state,stock.group_stock_manager,1,1,1,1
+access_asset_asset_stock_user,asset.asset stock_user,asset.model_asset_asset,stock.group_stock_user,1,1,0,0
+access_asset_state_stock_user,asset.state stock_user,asset.model_asset_state,stock.group_stock_user,1,0,0,0
