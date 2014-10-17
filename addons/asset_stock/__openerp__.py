@@ -21,7 +21,7 @@
 
 {
     'name': 'Assets & Warehouse',
-    'version': '1.0',
+    'version': '1.1',
     'summary': 'Integrate Asset and Warehouse',
     'description': """
 Integrate Maintenance and Warehouse.
