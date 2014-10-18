@@ -27,7 +27,7 @@
             <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
             <field name="arch" type="xml">
                 <page string="Components" position="after">
-                    <page string="Assets">
+                    <page string="Assets" groups="mrp.group_mrp_routings">
                         <field name="asset_ids">
                             <tree string="Assets">
                                 <field name="name" string="Asset"/>
