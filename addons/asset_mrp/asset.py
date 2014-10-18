@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2013-2014 CodUP (<http://codup.com>).
+#    Copyright (C) 2014 CodUP (<http://codup.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,29 +19,14 @@
 #
 ##############################################################################
 
-{
-    'name': 'Assets & Manufacturing',
-    'version': '1.0',
-    'summary': 'Integrate Asset and Manufacturing',
-    'description': """
-Integrate manufacturing and maintenance asset management.
-===========================
+from openerp.osv import fields, osv
+from openerp.addons.asset.asset import STATE_COLOR_SELECTION
 
-This module allows use the same Assets for manufacturing and maintenance purposes.
-Integration take in account following assumption. In manufacturing,
-Work Center can be simple logical entity, but also can reference
-to equipment that is physical asset. Each physical asset must be maintenable, but
-not each can be manufacturing equipment. So, when you create Work Center, you can
-reference it to asset.
-Keep one entity in one place for escape mistakes!
-    """,
-    'author': 'CodUP',
-    'website': 'http://codup.com',
-    'category': 'Enterprise Asset Management',
-    'sequence': 0,
-    'depends': ['asset','mrp'],
-    'demo': ['asset_demo.xml'],
-    'data': ['mrp_view.xml'],
-    'installable': True,
-}
+class asset_asset(osv.osv):
+    _inherit = 'asset.asset'
+
+    _columns = {
+        'manufacture_state_color': fields.related('manufacture_state_id', 'state_color', type="selection", selection=STATE_COLOR_SELECTION, string="Color", readonly=True),
+    }
+
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
