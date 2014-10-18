@@ -374,6 +374,7 @@ msgstr "Производство"
 
 #. module: asset
 #: selection:asset.state,team:0
+#: model:ir.module.category,name:asset.module_category_maintenance
 msgid "Maintenance"
 msgstr "Обслуживание"
 
@@ -473,3 +474,18 @@ msgstr "Состояния активов"
 #: model:ir.ui.menu,name:asset.menu_maintenance_assets_management
 msgid "Manage states"
 msgstr "Управление состояниями"
+
+#. module: asset
+#: model:res.groups,name:asset.group_mro_customer
+msgid "Customer"
+msgstr "Заказчик"
+
+#. module: asset
+#: model:res.groups,name:asset.group_mro_user
+msgid "User"
+msgstr "Пользователь"
+
+#. module: asset
+#: model:res.groups,name:asset.group_mro_manager
+msgid "Manager"
+msgstr "Менеджер"
