@@ -2,12 +2,12 @@
 <openerp>
 	<data>
 
-        <record id="mrp_workcenter_view" model="ir.ui.view">
-            <field name="name">mrp.workcenter.form.inherit</field>
+        <record id="asset_mrp_workcenter_view" model="ir.ui.view">
+            <field name="name">asset.mrp.workcenter.form</field>
             <field name="model">mrp.workcenter</field>
             <field name="inherit_id" ref="mrp.mrp_workcenter_view"/>
             <field name="arch" type="xml">
-                <page string="General Information" position="after" version="7.0">
+                <page string="General Information" position="after">
                     <page string="Assets">
                         <field name="asset_ids">
                             <tree string="Assets">
@@ -20,6 +20,25 @@
                 </page>
             </field>
         </record>
-        
+
+        <record id="asset_mrp_bom_view" model="ir.ui.view">
+            <field name="name">asset.mrp.bom.form</field>
+            <field name="model">mrp.bom</field>
+            <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
+            <field name="arch" type="xml">
+                <page string="Components" position="after">
+                    <page string="Assets">
+                        <field name="asset_ids">
+                            <tree string="Assets">
+                                <field name="name" string="Asset"/>
+                                <field name="model"/>
+                                <field name="property_stock_asset" string="Location"/>
+                            </tree>
+                        </field>
+                    </page>
+                </page>
+            </field>
+        </record>
+
  	</data>
 </openerp>
