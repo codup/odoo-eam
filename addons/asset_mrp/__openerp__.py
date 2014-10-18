@@ -21,7 +21,7 @@
 
 {
     'name': 'Assets & Manufacturing',
-    'version': '1.0',
+    'version': '1.1',
     'summary': 'Integrate Asset and Manufacturing',
     'description': """
 Integrate manufacturing and maintenance asset management.
