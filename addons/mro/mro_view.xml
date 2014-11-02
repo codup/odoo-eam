@@ -164,7 +164,6 @@
                                 <field name="origin"/>
                             </group>
                             <group groups="stock.group_locations">
-                                <field name="parts_location_id" domain="[('usage','=','internal')]"/>
                             </group>
                             <group>
                                 <field name="company_id" groups="base.group_multi_company" widget="selection"/>
