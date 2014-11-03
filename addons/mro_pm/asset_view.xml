@@ -8,7 +8,7 @@
             <field name="inherit_id" ref="asset.assets_form_view"/>
             <field name="arch" type="xml">
                 <page string="Info" position="after" version="7.0">
-                    <page string="Meters" groups="mro.group_mro_user">
+                    <page string="Meters" groups="asset.group_mro_user">
                         <field name="meter_ids">
                             <tree string="Meters">
                                 <field name="name"/>
@@ -25,6 +25,6 @@
                 </page>
             </field>
         </record>
-        
+
  	</data>
 </openerp>
