@@ -5,7 +5,7 @@
         <!-- Top menu item -->
         <menuitem name="Maintenance"
             id="base.menu_mro_root"
-            groups="group_mro_customer"
+            groups="asset.group_mro_customer"
             sequence="80"/>
 
         <!-- Maintenance menu -->
@@ -37,8 +37,8 @@
                 <form string="Maintenance Request" version="7.0">
                     <header>
                         <button name="button_send_request" states="draft" string="Send Request" class="oe_highlight"/>
-                        <button name="button_confirm_request" states="claim" string="Confirm Request" class="oe_highlight" groups="mro.group_mro_user"/>
-                        <button name="%(action_request_reject)d" states="claim" string="Reject Request" type="action" groups="mro.group_mro_user"/>
+                        <button name="button_confirm_request" states="claim" string="Confirm Request" class="oe_highlight" groups="asset.group_mro_user"/>
+                        <button name="%(action_request_reject)d" states="claim" string="Reject Request" type="action" groups="asset.group_mro_user"/>
                         <button name="button_cancel" states="draft" string="Cancel"/>
                         <field name="state" widget="statusbar" statusbar_visible="draft,claim,run,done"/>
                     </header>
@@ -270,7 +270,7 @@
         <menuitem name="Parts"
             id="menu_maintenance_parts"
             parent="base.menu_mro_root"
-            groups="mro.group_mro_user"
+            groups="asset.group_mro_user"
             sequence="9"/>
             
         <menuitem name="Parts"
