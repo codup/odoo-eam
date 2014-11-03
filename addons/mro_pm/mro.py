@@ -58,7 +58,7 @@ class mro_order(osv.osv):
         meter_obj = self.pool.get('mro.pm.meter')
         ids = rule_obj.search(cr, uid, [])
         for rule in rule_obj.browse(cr,uid,ids,context=context):
-            tasks = rule.pm_rules_line_ids
+            tasks = [x for x in rule.pm_rules_line_ids]
             if rule.meter_id.state != 'reading' or not len(tasks):
                 continue
             tasks.sort(lambda y,x: cmp(x.meter_interval_id.interval_max, y.meter_interval_id.interval_max))

@@ -3,7 +3,6 @@
 	<data>
 
         <!-- Update Meters menu -->
-
         <record id="mro_pm_meter_tree_view" model="ir.ui.view">
             <field name="name">mro.pm.meter.tree</field>
             <field name="model">mro.pm.meter</field>
@@ -35,12 +34,10 @@
             action="action_update_meters"
             id="menu_update_meters"
             parent="mro.menu_mro_maintenance"
-            groups="mro.group_mro_user"
+            groups="asset.group_mro_user"
             sequence="20"/>
-
             
         <!-- Meters Logs menu -->
-        
         <record model="ir.actions.act_window" id="open_reading_log">
             <field name="context">{'search_default_meter_id': active_id}</field>
             <field name="name">Reading History</field>
@@ -79,10 +76,9 @@
             action="action_meters_logs"
             id="menu_meters_logs"
             parent="asset.menu_maintenance_assets"
-            groups="mro.group_mro_user"
+            groups="asset.group_mro_user"
             sequence="100"/>
-            
-            
+
         <record id="mro_pm_meter_form_view" model="ir.ui.view">
             <field name="name">mro.pm.meter.form</field>
             <field name="model">mro.pm.meter</field>
@@ -132,9 +128,7 @@
                 </form>
             </field>
         </record>
-        
 
-        
         <record id="mro_pm_meter_line_tree_view" model="ir.ui.view">
             <field name="name">mro.pm.meter.line.tree</field>
             <field name="model">mro.pm.meter.line</field>
@@ -146,7 +140,7 @@
                 </tree>
             </field>
         </record>
-        
+
         <record model="ir.ui.view" id="meter_history_search">
             <field name="name">mro.pm.meter.line.search</field>
             <field name="model">mro.pm.meter.line</field>
@@ -156,9 +150,8 @@
                 </search>
             </field>
         </record>
-        
-        <!-- Meters Ratio menu -->
 
+        <!-- Meters Ratio menu -->
         <record id="mro_pm_meter_ratio_tree_view" model="ir.ui.view">
             <field name="name">mro.pm.meter.ratio.tree</field>
             <field name="model">mro.pm.meter.ratio</field>
@@ -170,7 +163,7 @@
                 </tree>
             </field>
         </record>
-        
+
         <record id="mro_pm_meter_ratio_form_view" model="ir.ui.view">
             <field name="name">mro.pm.meter.ratio.form</field>
             <field name="model">mro.pm.meter.ratio</field>
@@ -207,7 +200,7 @@
         <menuitem name="Configuration"
             id="asset.menu_maintenance_config"
             parent="base.menu_mro_root"
-            groups="mro.group_mro_manager"
+            groups="asset.group_mro_manager"
             sequence="200"/>
 
         <menuitem name="Meter Ratio"
@@ -215,9 +208,8 @@
             id="menu_meter_ratio"
             parent="asset.menu_maintenance_config"
             sequence="1"/>
-        
-        <!-- Meters Interval menu -->
 
+        <!-- Meters Interval menu -->
         <record id="mro_pm_meter_interval_tree_view" model="ir.ui.view">
             <field name="name">mro.pm.meter.interval.tree</field>
             <field name="model">mro.pm.meter.interval</field>
@@ -227,7 +219,7 @@
                 </tree>
             </field>
         </record>
-        
+
         <record id="mro_pm_meter_interval_form_view" model="ir.ui.view">
             <field name="name">mro.pm.meter.interval.form</field>
             <field name="model">mro.pm.meter.interval</field>
@@ -260,11 +252,8 @@
             id="menu_meter_interval"
             parent="asset.menu_maintenance_config"
             sequence="1"/>
-            
-            
-            
-        <!-- PM Rules menu -->
 
+        <!-- PM Rules menu -->
         <record id="mro_pm_rule_tree_view" model="ir.ui.view">
             <field name="name">mro.pm.rule.tree</field>
             <field name="model">mro.pm.rule</field>
@@ -275,7 +264,7 @@
                 </tree>
             </field>
         </record>
-        
+
         <record id="mro_pm_rule_form_view" model="ir.ui.view">
             <field name="name">mro.pm.rule.form</field>
             <field name="model">mro.pm.rule</field>
@@ -320,16 +309,14 @@
             id="menu_pm_rules"
             parent="asset.menu_maintenance_config"
             sequence="1"/>
-            
-            
+
         <!-- Replan PM menu -->
         <menuitem name="Replan PM"
             action="action_replan_pm"
             id="menu_replan_pm"
             parent="mro.menu_mro_maintenance"
-            groups="mro.group_mro_user"
+            groups="asset.group_mro_user"
             sequence="30"/>
 
-    
  	</data>
 </openerp>
