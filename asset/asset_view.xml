@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <!-- Top menu item -->
+        <menuitem name="Maintenance"
+            id="base.menu_mro_root"
+            sequence="80"/>
+
+        <!-- Asset menu -->
+        <menuitem name="Assets"
+            id="menu_maintenance_assets"
+            parent="base.menu_mro_root"
+            groups="asset.group_mro_customer"
+            sequence="9"/>
+
+        <!-- Asset Tree View  -->
+        <record id="assets_tree_view" model="ir.ui.view">
+            <field name="name">asset.asset.tree</field>
+            <field name="model">asset.asset</field>
+            <field name="arch" type="xml">
+                <tree string="Assets">
+                    <field name="name"/>
+                    <field name="property_stock_asset"/>
+                    <field name="criticality"/>
+                    <field name="user_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Asset Form View  -->
+        <record id="assets_form_view" model="ir.ui.view">
+            <field name="name">asset.asset.form</field>
+            <field name="model">asset.asset</field>
+            <field name="arch" type="xml">
+                <form string="Assets" version="7.0">
+                    <header>
+                        <field name="maintenance_state_id" widget="statusbar" clickable="True" groups="asset.group_mro_user"/>
+                    </header>
+                    <sheet>
+                        <field name="image_medium" widget="image" class="oe_avatar oe_left"/>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="property_stock_asset" domain="[('usage','=','asset')]"/>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="criticality"/>
+                                <field name="user_id"/>
+                            </group>
+                            <group>
+                                <field name="active"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Info">
+                                <group>
+                                    <group>
+                                        <field name="asset_number"/>
+                                        <field name="model"/>
+                                        <field name="serial"/>
+                                    </group>
+                                    <group>
+                                    </group>
+                                </group>
+                                <group string="Warranty">
+                                    <group>
+                                    <field name="manufacturer_id"/>
+                                    <field name="start_date"/>
+                                    <field name="warranty_start_date"/>
+                                    </group>
+                                    <group>
+                                    <field name="vendor_id"/>
+                                    <field name="purchase_date"/>
+                                    <field name="warranty_end_date"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                     </sheet>
+                     <div class="oe_chatter">
+                            <field name="message_follower_ids" widget="mail_followers"/>
+                            <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <!-- Asset Kanban View  -->
+        <record model="ir.ui.view" id="assets_kanban_view">
+            <field name="name">Asset Kanban</field>
+            <field name="model">asset.asset</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="maintenance_state_id"/>
+                    <field name="maintenance_state_color"/>
+                    <field name="user_id"/>
+                    <field name="criticality"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_vignette">
+                                <div class="codup_kanban_left">
+                                    <a type="open"><img t-att-src="kanban_image('asset.asset', 'image_small', record.id.value)" class="oe_kanban_image"/></a>
+                                    <div t-attf-title="#{record.maintenance_state_id.value}" t-attf-class="codup_status_color_#{record.maintenance_state_color.raw_value} codup_status"></div>
+                                </div>
+                                <div class="oe_kanban_details">
+                                    <h4>
+                                        <a type="open"><field name="name"/></a>
+                                    </h4>
+                                    <ul>
+                                        <li>Model: <field name="model"></field></li>
+                                        <li>Manufacturer: <field name="manufacturer_id"></field></li>
+                                        <li>Serial No: <field name="serial"></field></li>
+                                        <li class="codup_kanban_info">
+                                        <a t-if="record.criticality.raw_value == 0" t-attf-title="#{record.criticality.value}" class="codup_attention_off">c</a>
+                                        <a t-if="record.criticality.raw_value gt 0" t-attf-title="#{record.criticality.value}" class="codup_attention_on">c</a>
+                                        <a t-if="record.criticality.raw_value lte 1" t-attf-title="#{record.criticality.value}" class="codup_attention_off">c</a>
+                                        <a t-if="record.criticality.raw_value gt 1" t-attf-title="#{record.criticality.value}" class="codup_attention_on">c</a>
+                                        <a t-if="record.criticality.raw_value lte 2" t-attf-title="#{record.criticality.value}" class="codup_attention_off">c</a>
+                                        <a t-if="record.criticality.raw_value gt 2" t-attf-title="#{record.criticality.value}" class="codup_attention_on">c</a>
+                                        <img t-att-src="kanban_image('res.users', 'image_small', record.user_id.raw_value)" t-att-title="record.user_id.value" width="24" height="24" class="oe_kanban_avatar"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        
+        <!-- Asset Search  -->
+        <record model="ir.ui.view" id="assets_search">
+            <field name="name">Asset Search</field>
+            <field name="model">asset.asset</field>
+            <field name="arch" type="xml">
+                <search string="Asset Search">
+                    <field name="name"/>
+                    <field name="property_stock_asset"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_assets" model="ir.actions.act_window">
+            <field name="name">Assets</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">asset.asset</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+            <field name="view_id" eval="False"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_assets_kanban_view">
+            <field name="sequence" eval="0"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="assets_kanban_view"/>
+            <field name="act_window_id" ref="action_assets"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_assets_tree_view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="assets_tree_view"/>
+            <field name="act_window_id" ref="action_assets"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_assets_form_view">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="assets_form_view"/>
+            <field name="act_window_id" ref="action_assets"/>
+        </record>
+
+        <!-- Asset item -->
+        <menuitem name="Assets"
+            action="action_assets"
+            id="menu_maintenance_assets_assets"
+            parent="menu_maintenance_assets"
+            groups="asset.group_mro_customer"
+            sequence="100"/>
+
+        <!-- Management Asset Kanban View  -->
+        <record model="ir.ui.view" id="management_assets_kanban_view">
+            <field name="name">Manage states Asset Kanban</field>
+            <field name="model">asset.asset</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="maintenance_state_id" create="false" delete="false">
+                    <field name="maintenance_state_id"/>
+                    <field name="maintenance_state_color"/>
+                    <field name="user_id"/>
+                    <field name="criticality"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_card codup_kanban_status oe_kanban_global_click">
+                                <div class="codup_kanban_left">
+                                    <a type="open"><img t-att-src="kanban_image('asset.asset', 'image_small', record.id.value)" class="oe_kanban_image"/></a>
+                                    <div t-attf-title="#{record.maintenance_state_id.value}" t-attf-class="codup_status_color_#{record.maintenance_state_color.raw_value} codup_status"></div>
+                                </div>
+                                <div class="codup_kanban_details">
+                                    <h4>
+                                        <a type="open"><field name="name"/></a>
+                                    </h4>
+                                    <ul>
+                                        <li title="Model"><field name="model"></field></li>
+                                        <li title="Manufacturer"><field name="manufacturer_id"></field></li>
+                                        <li class="codup_kanban_info">
+                                        <a t-if="record.criticality.raw_value == 0" t-attf-title="#{record.criticality.value}" class="codup_attention_off">c</a>
+                                        <a t-if="record.criticality.raw_value gt 0" t-attf-title="#{record.criticality.value}" class="codup_attention_on">c</a>
+                                        <a t-if="record.criticality.raw_value lte 1" t-attf-title="#{record.criticality.value}" class="codup_attention_off">c</a>
+                                        <a t-if="record.criticality.raw_value gt 1" t-attf-title="#{record.criticality.value}" class="codup_attention_on">c</a>
+                                        <a t-if="record.criticality.raw_value lte 2" t-attf-title="#{record.criticality.value}" class="codup_attention_off">c</a>
+                                        <a t-if="record.criticality.raw_value gt 2" t-attf-title="#{record.criticality.value}" class="codup_attention_on">c</a>
+                                        <img t-att-src="kanban_image('res.users', 'image_small', record.user_id.raw_value)" t-att-title="record.user_id.value" width="24" height="24" class="oe_kanban_avatar"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="action_management_assets" model="ir.actions.act_window">
+            <field name="name">Manage states</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">asset.asset</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" eval="False"/>
+        </record>
+
+        <record model="ir.actions.act_window.view" id="action_management_assets_kanban_view">
+            <field name="sequence" eval="0"/>
+            <field name="view_mode">kanban</field>
+            <field name="view_id" ref="management_assets_kanban_view"/>
+            <field name="act_window_id" ref="action_management_assets"/>
+        </record>
+
+        <!-- Management Asset item -->
+        <menuitem name="Manage states"
+            action="action_management_assets"
+            id="menu_maintenance_assets_management"
+            parent="menu_maintenance_assets"
+            groups="asset.group_mro_user"
+            sequence="100"/>    
+
+        <!-- Configuration menu -->
+        <menuitem name="Configuration"
+            id="menu_maintenance_config"
+            parent="base.menu_mro_root"
+            groups="asset.group_mro_manager"
+            sequence="200"/>
+            
+        <!-- Asset State Form View  -->        
+        <record id="asset_state_form_view" model="ir.ui.view">
+            <field name="name">asset.state.form</field>
+            <field name="model">asset.state</field>
+            <field name="arch" type="xml">
+                <form string="State" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name" class="oe_inline"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="state_color"/>
+                                <field name="team"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <!-- Asset State Kanban View  -->
+        <record model="ir.ui.view" id="asset_state_kanban_view">
+            <field name="name">Asset State Kanban</field>
+            <field name="model">asset.state</field>
+            <field name="arch" type="xml">
+                <kanban default_group_by="team">
+                    <field name="name"/>
+                    <field name="team"/>
+                    <field name="state_color"/>
+                    <field name="sequence" widget="handle"/>
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div t-attf-class="oe_kanban_card codup_kanban_status oe_kanban_global_click">
+                                <h4>
+                                <a name="change_color" string="Change color" type="object"><span t-attf-class="codup_status_color_#{record.state_color.raw_value} codup_status"></span></a>
+                                <field name="name"/>
+                                </h4>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+
+        <record id="action_asset_state" model="ir.actions.act_window">
+            <field name="name">Asset States</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">asset.state</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,form</field>
+        </record>
+
+        <!-- Asset state item -->
+        <menuitem name="Asset States"
+            action="action_asset_state"
+            id="menu_asset_state"
+            parent="menu_maintenance_config"
+            groups="asset.group_mro_manager"
+            sequence="100"/>
+    
+ 	</data>
+</openerp>

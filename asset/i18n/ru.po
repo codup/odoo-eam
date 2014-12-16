@@ -1,0 +1,491 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* asset
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20130204-000102\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-29 04:56+0000\n"
+"PO-Revision-Date: 2013-03-29 04:56+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_asset
+msgid "Assets"
+msgstr "Активы"
+
+#. module: base
+#: model:ir.module.module,summary:base.module_asset
+msgid "Asset Management"
+msgstr "Управление Активами"
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Info"
+msgstr "Информация"
+
+#. module: asset
+#: field:asset.asset,manufacturer_id:0
+msgid "Manufacturer"
+msgstr "Производитель"
+
+#. module: asset
+#: field:asset.asset,property_stock_asset:0
+msgid "Asset Location"
+msgstr "Расположение актива"
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Serial No:"
+msgstr "Серийный №:"
+
+#. module: asset
+#: view:asset.asset:0
+#: model:ir.actions.act_window,name:asset.action_assets
+#: model:ir.ui.menu,name:asset.menu_maintenance_assets
+#: model:ir.ui.menu,name:asset.menu_maintenance_assets_assets
+#: model:stock.location,name:asset.stock_location_assets
+msgid "Assets"
+msgstr "Активы"
+
+#. module: asset
+#: model:ir.ui.menu,name:base.menu_mro_root
+msgid "Maintenance"
+msgstr "Обслуживание"
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Model:"
+msgstr "Модель:"
+
+#. module: asset
+#: help:asset.asset,image_small:0
+msgid "Small-sized image of the asset. It is automatically resized as a 64x64px image, with aspect ratio preserved. Use this field anywhere a small image is required."
+msgstr "Маленькое изображение актива. Автоматически приводится к размеру 64х64 пиксела, с сохранением пропорции."
+
+#. module: asset
+#: field:asset.asset,image:0
+msgid "Image"
+msgstr "Изображение"
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Manufacturer:"
+msgstr "Производитель:"
+
+#. module: asset
+#: model:stock.location,name:asset.stock_location_locations_asset
+msgid "Asset Locations"
+msgstr "Расположения активов"
+
+#. module: asset
+#: field:asset.asset,serial:0
+msgid "Serial no."
+msgstr "Серийный №"
+
+#. module: asset
+#: field:asset.asset,image_medium:0
+msgid "Medium-sized image"
+msgstr "Среднее изображение"
+
+#. module: asset
+#: help:asset.asset,image_medium:0
+msgid "Medium-sized image of the asset. It is automatically resized as a 128x128px image, with aspect ratio preserved, only when the image exceeds one of those sizes. Use this field in form views or some kanban views."
+msgstr "Среднее изображение актива. Автоматически приводится к размеру 128х128 пикселов, с сохранением пропорции."
+
+#. module: asset
+#: model:ir.model,name:asset.model_asset_asset
+msgid "Asset"
+msgstr "Актив"
+
+#. module: asset
+#: field:asset.asset,active:0
+msgid "Active"
+msgstr "Активно"
+
+#. module: asset
+#: field:asset.asset,image_small:0
+msgid "Small-sized image"
+msgstr "Маленькое изображение актива"
+
+#. module: asset
+#: field:asset.asset,model:0
+msgid "Model"
+msgstr "Модель"
+
+#. module: asset
+#: view:asset.asset:0
+#: field:asset.asset,name:0
+msgid "Asset Name"
+msgstr "Наименование актива"
+
+#. module: asset
+#: help:asset.asset,property_stock_asset:0
+msgid "This location will be used as the destination location for installed parts during asset life."
+msgstr "Это расположение будет использоваться как конечное для установленных запчастей в течении жизни актива."
+
+#. module: asset
+#: help:asset.asset,image:0
+msgid "This field holds the image used as image for the asset, limited to 1024x1024px."
+msgstr "Это поле содержит изображение актива, ограниченное 1024х1024 пикселами."
+
+#. module: asset
+#: model:ir.model,name:asset.model_stock_location
+msgid "Location"
+msgstr "Расположение"
+
+#. module: asset
+#: field:asset.asset,user_id:0
+msgid "Assigned to"
+msgstr "Ответственный"
+
+#. module: asset
+#: model:asset.asset,name:asset.asset_asset_1
+msgid "Moulding machine 25"
+msgstr "ТПА 25"
+
+#. module: asset
+#: model:asset.asset,name:asset.asset_asset_2
+msgid "Truck"
+msgstr "Грузовик"
+
+#. module: asset
+#: model:asset.asset,name:asset.asset_asset_3
+msgid "Building"
+msgstr "Строение"
+
+#. module: asset
+#: field:asset.asset,asset_number:0
+msgid "Asset Number"
+msgstr "Инвентарный номер"
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Warranty"
+msgstr "Гарантия"
+
+#. module: asset
+#: field:asset.asset,warranty_start_date:0
+msgid "Warranty Start"
+msgstr "Начало гарантии"
+
+#. module: asset
+#: field:asset.asset,warranty_end_date:0
+msgid "Warranty End"
+msgstr "Конец гарантии"
+
+#. module: asset
+#: field:asset.asset,vendor_id:0
+msgid "Vendor"
+msgstr "Продавец"
+
+#. module: asset
+#: field:asset.asset,start_date:0
+msgid "Start Date"
+msgstr "Дата запуска"
+
+#. module: asset
+#: field:asset.asset,purchase_date:0
+msgid "Purchase Date"
+msgstr "Дата покупки"
+
+#. module: asset
+#: field:asset.asset,criticality:0
+msgid "Criticality"
+msgstr "Критичность"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "General"
+msgstr "Обычный"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "Important"
+msgstr "Важный"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "Very important"
+msgstr "Очень важный"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "Critical"
+msgstr "Критичный"
+
+#. module: asset
+#: field:asset.asset,maintenance_state_id:0
+#: view:asset.state:0
+#: field:asset.state,name:0
+msgid "State"
+msgstr "Состояние"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_planned
+msgid "Planned"
+msgstr "Планируется"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_rented
+msgid "Rented"
+msgstr "Взят в аренду"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_purchased
+msgid "Purchased"
+msgstr "Куплен"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_leased
+msgid "Leased"
+msgstr "Сдан в аренду"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_sold
+msgid "Sold"
+msgstr "Продан"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_shipped
+msgid "Shipped"
+msgstr "Доставляется"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_moves
+msgid "Moves"
+msgstr "Перемещается"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_stored
+msgid "Stored"
+msgstr "Хранится"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_installed
+msgid "Installed"
+msgstr "Устанавливается"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_use
+msgid "Use"
+msgstr "Используется"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_stolen
+msgid "Stolen"
+msgstr "Украден"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_retired
+msgid "Retired"
+msgstr "Устарел"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_shutdown
+msgid "Shutdown"
+msgstr "Отключен"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_run
+msgid "Run"
+msgstr "Работает"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_setup
+msgid "Setup"
+msgstr "Настраивается"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_standby
+msgid "Standby"
+msgstr "Ожидает"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_down
+msgid "Down"
+msgstr "Не работает"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_breakdown
+msgid "Breakdown"
+msgstr "Авария"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_repair
+msgid "Repair"
+msgstr "Ремонт"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_maintenance
+msgid "Maintenance"
+msgstr "Обслуживание"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_operable
+msgid "Operable"
+msgstr "Рабочий"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_draft
+msgid "Draft"
+msgstr "Планируется"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_depreciation
+msgid "Depreciation"
+msgstr "Амортизируется"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_close
+msgid "Close"
+msgstr "Закрыт"
+
+#. module: asset
+#: field:asset.state,sequence:0
+msgid "Sequence"
+msgstr "Последовательность"
+
+#. module: asset
+#: field:asset.state,team:0
+msgid "Scope Team"
+msgstr "Подразделение"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Finance"
+msgstr "Финансы"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Warehouse"
+msgstr "Склад"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Manufacture"
+msgstr "Производство"
+
+#. module: asset
+#: selection:asset.state,team:0
+#: model:ir.module.category,name:asset.module_category_maintenance
+msgid "Maintenance"
+msgstr "Обслуживание"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Accounting"
+msgstr "Бухгалтерия"
+
+#. module: asset
+#: field:asset.asset,maintenance_state_color:0
+msgid "Color"
+msgstr "Цвет"
+
+#. module: asset
+#: field:asset.state,state_color:0
+msgid "State Color"
+msgstr "Цвет индикатора"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Red"
+msgstr "Красный"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Green"
+msgstr "Зеленый"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Blue"
+msgstr "Синий"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Yellow"
+msgstr "Желтый"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Magenta"
+msgstr "Малиновый"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Cyan"
+msgstr "Бирюзовый"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Black"
+msgstr "Черный"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "White"
+msgstr "Белый"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Orange"
+msgstr "Оранжевый"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "SkyBlue"
+msgstr "Голубой"
+
+#. module: asset
+#: view:asset.state:0
+msgid "Change color"
+msgstr "Поменять цвет"
+
+#. module: asset
+#: model:ir.ui.menu,name:asset.menu_maintenance_config
+msgid "Configuration"
+msgstr "Настройки"
+
+#. module: asset
+#: model:ir.actions.act_window,name:asset.action_asset_state
+#: model:ir.ui.menu,name:asset.menu_asset_state
+msgid "Asset States"
+msgstr "Состояния активов"
+
+#. module: asset
+#: model:ir.actions.act_window,name:asset.action_management_assets
+#: model:ir.ui.menu,name:asset.menu_maintenance_assets_management
+msgid "Manage states"
+msgstr "Управление состояниями"
+
+#. module: asset
+#: model:res.groups,name:asset.group_mro_customer
+msgid "Customer"
+msgstr "Заказчик"
+
+#. module: asset
+#: model:res.groups,name:asset.group_mro_user
+msgid "User"
+msgstr "Пользователь"
+
+#. module: asset
+#: model:res.groups,name:asset.group_mro_manager
+msgid "Manager"
+msgstr "Менеджер"

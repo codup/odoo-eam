@@ -1,0 +1,463 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* mro_pm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20130204-000102\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-29 09:45+0000\n"
+"PO-Revision-Date: 2013-03-29 09:45+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_mro_pm
+msgid "MRO_PM"
+msgstr "ТОиР ППР"
+
+#. module: base
+#: model:ir.module.module,summary:base.module_mro_pm
+msgid "Asset Proactive Maintenance"
+msgstr "Планово предупредительное обслуживание"
+
+#. module: mro
+#: selection:mro.order,maintenance_type:0
+#: selection:mro.task,maintenance_type:0
+msgid "Preventive"
+msgstr "Предупредительное"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_replan_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_replan
+#: model:ir.ui.menu,name:mro_pm.menu_replan_pm
+#: view:mro.pm.replan:0
+msgid "Replan PM"
+msgstr "Перепланировать ППР"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,ratio:0
+msgid "Ratio"
+msgstr "Коэффициент"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_pm_rules
+#: view:mro.pm.rule:0
+#: field:mro.pm.rule.line,pm_rule_id:0
+msgid "PM Rule"
+msgstr "Правило ППР"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,rounding_type:0
+msgid "Floor"
+msgstr "Округление вниз"
+
+#. module: mro_pm
+#: field:mro.pm.meter,new_value:0
+msgid "New value"
+msgstr "Новое показание"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_meter_ratio
+#: model:ir.ui.menu,name:mro_pm.menu_meter_ratio
+#: view:mro.pm.meter.ratio:0
+msgid "Meter Ratio"
+msgstr "Коэффициент счетчика"
+
+#. module: mro_pm
+#: field:mro.pm.meter,reading_type:0
+msgid "Reading Type"
+msgstr "Тип считывания"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,reading_type:0
+msgid "Increase"
+msgstr "Увеличение"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Attach"
+msgstr "Присоединить"
+
+#. module: mro_pm
+#: field:mro.pm.rule.line,task_id:0
+msgid "Task"
+msgstr "Задача"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_task
+msgid "Maintenance Task"
+msgstr "Задача по Обслуживанию"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_asset_asset
+#: field:mro.pm.meter,asset_id:0
+#: field:mro.pm.rule,asset_id:0
+msgid "Asset"
+msgstr "Актив"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,precision:0
+msgid "Rounding Precision"
+msgstr "Точность округления"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,state:0
+msgid "Reading"
+msgstr "Считывание"
+
+#. module: mro_pm
+#: field:mro.pm.meter,meter_uom:0
+#: field:mro.pm.rule,meter_uom:0
+msgid "Unit of Measure"
+msgstr "ЕИ"
+
+#. module: mro_pm
+#: field:mro.pm.meter,state:0
+msgid "Status"
+msgstr "Состояние"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "New Reading"
+msgstr "Новое показание"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,rounding_type:0
+msgid "Ceiling"
+msgstr "Округление вверх"
+
+#. module: mro_pm
+#: field:mro.pm.meter,min_utilization:0
+msgid "Min Utilization (per day)"
+msgstr "Мин использование (в день)"
+
+#. module: mro_pm
+#: model:ir.ui.menu,name:mro_pm.menu_meter_interval
+msgid "Meter Intervals"
+msgstr "Периоды счетчиков"
+
+#. module: mro_pm
+#: field:mro.pm.meter.interval,interval_max:0
+msgid "Max"
+msgstr "Макс"
+
+#. module: mro_pm
+#: field:mro.pm.meter.interval,interval_min:0
+msgid "Min"
+msgstr "Мин"
+
+#. module: mro_pm
+#: field:mro.pm.meter,utilization:0
+msgid "Utilization (per day)"
+msgstr "Использование (в день)"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Last Reading"
+msgstr "Последнее показание"
+
+#. module: mro_pm
+#: view:asset.asset:0
+#: field:mro.pm.meter,meter_line_ids:0
+msgid "Meters"
+msgstr "Счетчики"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Meter Name"
+msgstr "Название счетчика"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_update_meters
+#: model:ir.ui.menu,name:mro_pm.menu_update_meters
+#: view:mro.pm.meter:0
+msgid "Update Meters"
+msgstr "Обновление счетчиков"
+
+#. module: mro_pm
+#: field:mro.pm.meter,total_value:0
+#: field:mro.pm.meter.line,total_value:0
+msgid "Total Value"
+msgstr "Общее значение"
+
+#. module: mro_pm
+#: field:mro.pm.meter,date:0
+#: field:mro.pm.meter.line,date:0
+msgid "Date"
+msgstr "Дата"
+
+#. module: mro_pm
+#: field:asset.asset,meter_ids:0
+#: view:mro.pm.meter:0
+#: field:mro.pm.meter,name:0
+#: selection:mro.pm.meter,reading_type:0
+#: field:mro.pm.meter.line,meter_id:0
+#: field:mro.pm.rule,meter_id:0
+msgid "Meter"
+msgstr "Счетчик"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_rule
+msgid "Preventive Maintenance Rule"
+msgstr "Правило Предупредительного Обслуживания"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Detach"
+msgstr "Отсоединить"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,state:0
+msgid "Setup"
+msgstr "Настройка"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,reading_type:0
+msgid "Change"
+msgstr "Изменение"
+
+#. module: mro_pm
+#: view:asset.asset:0
+msgid "Info"
+msgstr "Информация"
+
+#. module: mro_pm
+#: field:mro.pm.meter,parent_ratio_id:0
+msgid "Ratio to Source"
+msgstr "Коэффициент к Источнику"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_rule_line
+msgid "Rule for Task"
+msgstr "Правило для Задачи"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Reading Date"
+msgstr "Дата считывания"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,name:0
+#: field:mro.pm.rule,name:0
+msgid "Name"
+msgstr "Наименование"
+
+#. module: mro_pm
+#: field:mro.pm.rule,horizon:0
+msgid "Planning horizon (months)"
+msgstr "Горизонт планирования (мес)"
+
+#. module: mro_pm
+#: model:ir.ui.menu,name:mro_pm.menu_pm_rules
+msgid "PM Rules"
+msgstr "Правила ППР"
+
+#. module: mro_pm
+#: field:mro.pm.meter,av_time:0
+msgid "Averaging time (days)"
+msgstr "Время усреднения (дней)"
+
+#. module: mro_pm
+#: field:mro.pm.meter.interval,name:0
+msgid "Interval"
+msgstr "Период"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_order
+msgid "Maintenance Order"
+msgstr "Заказ на Обслуживание"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_meter_interval
+#: view:mro.pm.meter.interval:0
+#: field:mro.pm.rule.line,meter_interval_id:0
+msgid "Meter Interval"
+msgstr "Период счетчика"
+
+#. module: mro_pm
+#: field:mro.pm.rule,active:0
+msgid "Active"
+msgstr "Активно"
+
+#. module: mro_pm
+#: view:mro.pm.rule:0
+#: field:mro.pm.rule,pm_rules_line_ids:0
+msgid "Tasks"
+msgstr "Задачи"
+
+#. module: mro_pm
+#: view:asset.asset:0
+#: model:ir.actions.act_window,name:mro_pm.open_reading_log
+#: view:mro.pm.meter:0
+#: view:mro.pm.meter.line:0
+msgid "Reading History"
+msgstr "История показаний"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter_line
+msgid "History of Asset Meter Reading"
+msgstr "История показаний счетчика актива"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,state:0
+msgid "Detached"
+msgstr "Отсоединен"
+
+#. module: mro_pm
+#: field:mro.pm.meter.line,value:0
+msgid "Reading Value"
+msgstr "Показание"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_meters_logs
+#: model:ir.ui.menu,name:mro_pm.menu_meters_logs
+#: view:mro.pm.meter:0
+msgid "Meters Logs"
+msgstr "Журнал счетчиков"
+
+#. module: mro_pm
+#: help:mro.pm.rule,active:0
+msgid "If the active field is set to False, it will allow you to hide the PM without removing it."
+msgstr "Если сбросить поле 'Активно', то можно скрыть правило ППР без его удаления."
+
+#. module: mro_pm
+#: field:mro.pm.meter,parent_meter_id:0
+msgid "Source Meter"
+msgstr "Счетчик источник"
+
+#. module: mro_pm
+#: model:ir.ui.menu,name:mro_pm.menu_maintenance_config
+msgid "Configuration"
+msgstr "Настройки"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,ratio_type:0
+msgid "Ratio Type"
+msgstr "Тип коэффициента"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,ratio_type:0
+msgid "Source Bigger"
+msgstr "Источник больше"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter
+msgid "Asset Meters"
+msgstr "Счетчики актива"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,ratio_type:0
+msgid "Source Smaller"
+msgstr "Источник меньше"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter_interval
+msgid "Meter interval"
+msgstr "Период счетчика"
+
+#. module: mro_pm
+#: field:mro.pm.meter,value:0
+msgid "Value"
+msgstr "Показание"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,rounding_type:0
+msgid "Rounding"
+msgstr "Округление"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,reading_type:0
+msgid "Decrease"
+msgstr "Уменьшение"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,rounding_type:0
+msgid "Rounding Type"
+msgstr "Тип округления"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter_ratio
+msgid "Rules for Meter to Meter Ratio"
+msgstr "Правила Коэффициентов Счетчика к Счетчику"
+
+#. module: mro_pm
+#: field:mro.pm.meter,view_line_ids:0
+msgid "unknown"
+msgstr ""
+
+#. module: mro_pm
+#: view:mro.pm.replan:0
+msgid "Cancel"
+msgstr "Отменить"
+
+#. module: mro_pm
+#: view:mro.pm.meter.line:0
+msgid "Meter History Search"
+msgstr "Поиск Истории Счетчика"
+
+#. module: mro_pm
+#: view:mro.pm.replan:0
+msgid "or"
+msgstr "или"
+
+#. module: mro_pm
+#: model:mro.pm.meter,name:mro_pm.mro_pm_meter_1
+msgid "Work Time"
+msgstr "Наработка"
+
+#. module: mro_pm
+#: model:mro.order,description:3
+#: model:mro.order,description:4
+#: model:mro.order,description:5
+#: model:mro.order,description:6
+#: model:mro.order,description:8
+#: model:mro.order,description:9
+#: model:mro.order,description:10
+#: model:mro.order,description:11
+#: model:mro.order,description:13
+#: model:mro.task,name:mro_pm.mro_task_2
+msgid "Small Maintenance"
+msgstr "ТО1"
+
+#. module: mro_pm
+#: model:mro.order,description:7
+#: model:mro.task,name:mro_pm.mro_task_3
+msgid "Medium Maintenance"
+msgstr "ТО2"
+
+#. module: mro_pm
+#: model:mro.order,description:12
+#: model:mro.task,name:mro_pm.mro_task_4
+msgid "Big Maintenance"
+msgstr "ТО3"
+
+#. module: mro_pm
+#: model:mro.pm.meter,name:mro_pm.mro_pm_meter_3
+#: model:product.uom,name:mro_pm.uom_mro_cycle
+msgid "Cycle"
+msgstr "Удары"
+
+#. module: mro_pm
+#: model:product.uom.categ,name:mro_pm.uom_categ_mro_work
+msgid "Work"
+msgstr "Работа"
+
+#. module: mro_pm
+#: model:mro.pm.meter,name:mro_pm.mro_pm_meter_2
+msgid "Produced"
+msgstr "Изготовлено"
+
+#. module: mro_pm
+#: model:asset.asset,name:mro_pm.asset_asset_4
+msgid "Mould"
+msgstr "Прессформа"
+
+#. module: mro_pm
+#: model:mro.pm.meter.ratio,name:mro_pm.mro_pm_meter_ratio_1
+msgid "2 nests"
+msgstr "2 гнезда"

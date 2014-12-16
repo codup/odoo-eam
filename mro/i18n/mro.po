@@ -1,0 +1,527 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* mro
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20130204-000102\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-29 05:41+0000\n"
+"PO-Revision-Date: 2013-03-29 05:41+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Description for Operations"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+msgid "Force Reservation"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Labor"
+msgstr ""
+
+#. module: mro
+#: view:mro.request:0
+msgid "Send Request"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Description for Labor"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,asset_id:0
+#: field:mro.request,asset_id:0
+#: field:mro.task,asset_id:0
+msgid "Asset"
+msgstr ""
+
+#. module: mro
+#: view:mro.request:0
+msgid "Search Maintenance Request"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: field:mro.order.parts.line,parts_uom:0
+#: field:mro.task.parts.line,parts_uom:0
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: field:mro.order,problem_description:0
+msgid "Problem Description"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: mro
+#: view:mro.task:0
+msgid "Task Name"
+msgstr ""
+
+#. module: mro
+#: model:res.groups,name:mro.group_create_maintenance_request
+msgid "Create Maintenance Request"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,task_id:0
+msgid "Task"
+msgstr ""
+
+#. module: mro
+#: model:ir.model,name:mro.model_mro_request
+#: view:mro.request:0
+msgid "Maintenance Request"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,maintenance_type:0
+#: field:mro.task,maintenance_type:0
+msgid "Maintenance Type"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Operations"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: field:mro.order,parts_ready_lines:0
+msgid "Available Parts"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,labor_description:0
+#: field:mro.task,labor_description:0
+msgid "Labor Description"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,name:0
+#: field:mro.request,name:0
+msgid "Reference"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,parts_lines:0
+msgid "Planned parts"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: field:mro.order,parts_move_lines:0
+msgid "Parts to Consume"
+msgstr ""
+
+#. module: mro
+#: model:ir.model,name:mro.model_mro_task
+#: field:mro.task.parts.line,task_id:0
+msgid "Maintenance Task"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,operations_description:0
+#: field:mro.task,operations_description:0
+msgid "Operations Description"
+msgstr ""
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "DONE"
+msgstr ""
+
+#. module: mro
+#: view:mro.request:0
+#: field:mro.request,reject_reason:0
+#: field:mro.request.reject,reject_reason:0
+msgid "Reject Reason"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,parts_picking_id:0
+msgid "Parts Picking List"
+msgstr ""
+
+#. module: mro
+#: selection:mro.order,maintenance_type:0
+#: field:mro.request,breakdown:0
+msgid "Breakdown"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+msgid "Recreate Picking"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,date_planned:0
+msgid "Planned Date"
+msgstr ""
+
+#. module: mro
+#: model:ir.module.category,description:mro.module_category_maintenance
+msgid "Helps you manage your maintenance processes."
+msgstr ""
+
+#. module: mro
+#: view:mro.request:0
+msgid "Undecided maintenance request"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Documentation"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+msgid "Order Date"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,tools_description:0
+#: field:mro.task,tools_description:0
+msgid "Tools Description"
+msgstr ""
+
+#. module: mro
+#: model:ir.ui.menu,name:mro.menu_maintenance_tasks
+#: model:ir.ui.menu,name:mro.menu_maintenance_tasks_tasks
+#: view:mro.task:0
+msgid "Tasks"
+msgstr ""
+
+#. module: mro
+#: model:ir.actions.act_window,name:mro.action_requests
+#: model:ir.ui.menu,name:mro.menu_mro_request
+#: view:mro.request:0
+msgid "Maintenance Requests"
+msgstr ""
+
+#. module: mro
+#: selection:mro.order,maintenance_type:0
+#: selection:mro.task,maintenance_type:0
+msgid "Corrective"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+msgid "Confirm Maintenance"
+msgstr ""
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Canceled"
+msgstr ""
+
+#. module: mro
+#: model:ir.model,name:mro.model_mro_order_parts_line
+#: model:ir.model,name:mro.model_mro_task_parts_line
+msgid "Maintenance Planned Parts"
+msgstr ""
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "PARTS EXCEPTION"
+msgstr ""
+
+#. module: mro
+#: view:mro.request.reject:0
+msgid "or"
+msgstr ""
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Draft"
+msgstr ""
+
+#. module: mro
+#: model:ir.module.category,name:mro.module_category_maintenance
+#: model:ir.ui.menu,name:mro.menu_mro_maintenance
+msgid "Maintenance"
+msgstr ""
+
+#. module: mro
+#: field:mro.request,requested_date:0
+msgid "Requested Date"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,state:0
+#: field:mro.request,state:0
+msgid "Status"
+msgstr ""
+
+#. module: mro
+#: help:mro.request,state:0
+msgid "When the maintenance request is created the status is set to 'Draft'.\n"
+"            If the request is sent the status is set to 'Claim'.\n"
+"            If the request is confirmed the status is set to 'Execution'.\n"
+"            If the request is rejected the status is set to 'Rejected'.\n"
+"            When the maintenance is over, the status is set to 'Done'."
+msgstr ""
+
+#. module: mro
+#: view:mro.request:0
+msgid "Confirm Request"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,parts_location_id:0
+msgid "Parts Location"
+msgstr ""
+
+#. module: mro
+#: model:res.groups,name:mro.group_mro_user
+msgid "User"
+msgstr ""
+
+#. module: mro
+#: model:ir.actions.act_window,name:mro.action_orders
+#: model:ir.ui.menu,name:mro.menu_mro_order
+#: view:mro.order:0
+msgid "Maintenance Orders"
+msgstr ""
+
+#. module: mro
+#: view:mro.request:0
+msgid "Date"
+msgstr ""
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Execution"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: field:mro.order,parts_moved_lines:0
+msgid "Consumed Parts"
+msgstr ""
+
+#. module: mro
+#: model:ir.model,name:mro.model_mro_order
+#: view:mro.order:0
+#: field:mro.order.parts.line,maintenance_id:0
+msgid "Maintenance Order"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+msgid "Planned Parts"
+msgstr ""
+
+#. module: mro
+#: help:mro.request,requested_date:0
+msgid "Date requested by the customer for maintenance."
+msgstr ""
+
+#. module: mro
+#: field:mro.task,active:0
+msgid "Active"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: field:mro.order.parts.line,parts_qty:0
+#: field:mro.task.parts.line,parts_qty:0
+msgid "Quantity"
+msgstr ""
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Claim"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Description for Documentation"
+msgstr ""
+
+#. module: mro
+#: model:ir.actions.act_window,name:mro.action_tasks
+#: view:mro.task:0
+msgid "Maintenance Tasks"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: selection:mro.request,state:0
+msgid "Done"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.request:0
+#: view:mro.request.reject:0
+msgid "Cancel"
+msgstr ""
+
+#. module: mro
+#: view:mro.request:0
+msgid "Open"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,origin:0
+msgid "Source Document"
+msgstr ""
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "WAITING PARTS"
+msgstr ""
+
+#. module: mro
+#: help:mro.order,parts_picking_id:0
+msgid "This is the Internal Picking List that brings parts to the asset"
+msgstr ""
+
+#. module: mro
+#: field:mro.request,create_uid:0
+msgid "Responsible"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Description for Tools"
+msgstr ""
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "CANCELED"
+msgstr ""
+
+#. module: mro
+#: model:ir.ui.menu,name:mro.menu_maintenance_parts
+#: model:ir.ui.menu,name:mro.menu_maintenance_parts_parts
+#: view:mro.order:0
+#: field:mro.order.parts.line,parts_id:0
+#: view:mro.task:0
+#: field:mro.task,parts_lines:0
+#: field:mro.task.parts.line,parts_id:0
+msgid "Parts"
+msgstr ""
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "DRAFT"
+msgstr ""
+
+#. module: mro
+#: help:mro.order,origin:0
+msgid "Reference of the document that generated this maintenance order."
+msgstr ""
+
+#. module: mro
+#: field:mro.request,cause:0
+msgid "Cause"
+msgstr ""
+
+#. module: mro
+#: model:ir.ui.menu,name:mro.menu_maintenance_assets
+#: model:ir.ui.menu,name:mro.menu_maintenance_assets_assets
+msgid "Assets"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,date_scheduled:0
+msgid "Scheduled Date"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,description:0
+#: field:mro.order.parts.line,name:0
+#: view:mro.request:0
+#: field:mro.request,description:0
+#: field:mro.task,name:0
+#: field:mro.task.parts.line,name:0
+msgid "Description"
+msgstr ""
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Rejected"
+msgstr ""
+
+#. module: mro
+#: model:res.groups,name:mro.group_mro_customer
+msgid "Customer"
+msgstr ""
+
+#. module: mro
+#: field:mro.order,documentation_description:0
+#: field:mro.task,documentation_description:0
+msgid "Documentation Description"
+msgstr ""
+
+#. module: mro
+#: help:mro.order,parts_location_id:0
+msgid "Location where the system will look for parts."
+msgstr ""
+
+#. module: mro
+#: field:mro.order,date_execution:0
+#: field:mro.request,execution_date:0
+msgid "Execution Date"
+msgstr ""
+
+#. module: mro
+#: model:ir.actions.act_window,name:mro.action_request_reject
+#: model:ir.model,name:mro.model_mro_request_reject
+#: view:mro.request:0
+#: view:mro.request.reject:0
+msgid "Reject Request"
+msgstr ""
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "READY TO MAINTENANCE"
+msgstr ""
+
+#. module: mro
+#: help:mro.order,state:0
+msgid "When the maintenance order is created the status is set to 'Draft'.\n"
+"            If the order is confirmed the status is set to 'Waiting Parts'.\n"
+"            If any exceptions are there, the status is set to 'Picking Exception'.\n"
+"            If the stock is available then the status is set to 'Ready to Maintenance'.\n"
+"            When the maintenance order gets started then the status is set to 'In Progress'.\n"
+"            When the maintenance is over, the status is set to 'Done'."
+msgstr ""
+
+#. module: mro
+#: model:res.groups,name:mro.group_mro_manager
+msgid "Manager"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Tools"
+msgstr ""
+

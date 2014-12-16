@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+        <!-- Maintenance -->
+        
+        <record id="maintenance_order" model="workflow">
+			<field name="name">Maintenance Order Basic Workflow</field>
+			<field name="osv">mro.order</field>
+            <field name="on_create">True</field>
+		</record>
+        
+        <record id="act_draft" model="workflow.activity">
+            <field name="wkf_id" ref="maintenance_order"/>
+            <field name="flow_start">True</field>
+			<field name="name">draft</field>
+		</record>
+        <record id="act_picking_parts" model="workflow.activity">
+            <field name="wkf_id" ref="maintenance_order"/>
+            <field name="name">picking_parts</field>
+			<field name="kind">function</field>
+			<field name="action">action_confirm()</field>
+		</record>
+		<record id="act_ready" model="workflow.activity">
+            <field name="wkf_id" ref="maintenance_order"/>
+			<field name="name">ready</field>
+            <field name="kind">function</field>
+            <field name="action">action_ready()</field>
+		</record>
+        <record id="act_done" model="workflow.activity">
+            <field name="wkf_id" ref="maintenance_order"/>
+            <field name="flow_stop">True</field>
+			<field name="name">done</field>
+            <field name="kind">function</field>
+            <field name="action">action_done()</field>            
+		</record>
+		<record id="act_cancel" model="workflow.activity">
+            <field name="wkf_id" ref="maintenance_order"/>
+            <field name="flow_stop">True</field>
+            <field name="name">cancel</field>
+            <field name="kind">function</field>
+            <field name="action">action_cancel()</field>
+		</record>
+        
+        <record id="trans_draft_picking_parts" model="workflow.transition">
+            <field name="act_from" ref="act_draft"/>
+            <field name="act_to" ref="act_picking_parts"/>
+			<field name="signal">button_confirm_order</field>
+			<field name="condition">test_if_parts()</field>
+		</record>
+        <record id="trans_picking_parts_ready" model="workflow.transition">
+            <field name="act_from" ref="act_picking_parts"/>
+            <field name="act_to" ref="act_ready"/>
+            <field name="signal">parts_ready</field>
+		</record>
+		<record id="trans_draft_ready" model="workflow.transition">
+            <field name="act_from" ref="act_draft"/>
+            <field name="act_to" ref="act_ready"/>
+			<field name="signal">button_confirm_order</field>
+			<field name="condition">not test_if_parts()</field>
+		</record>
+        <record id="trans_ready_done" model="workflow.transition">
+            <field name="act_from" ref="act_ready"/>
+            <field name="act_to" ref="act_done"/>
+			<field name="signal">button_done</field>
+		</record>
+        <record id="trans_picking_parts_cancel" model="workflow.transition">
+            <field name="act_from" ref="act_picking_parts"/>
+            <field name="act_to" ref="act_cancel"/>
+            <field name="signal">button_cancel</field>
+        </record>
+        <record id="trans_ready_cancel" model="workflow.transition">
+            <field name="act_from" ref="act_ready"/>
+            <field name="act_to" ref="act_cancel"/>
+            <field name="signal">button_cancel</field>
+        </record>
+        <record id="trans_draft_cancel" model="workflow.transition">
+            <field name="act_from" ref="act_draft"/>
+            <field name="act_to" ref="act_cancel"/>
+            <field name="signal">button_cancel</field>
+        </record>
+ 	</data>
+</openerp>

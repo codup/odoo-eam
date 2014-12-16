@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_request_reject_wizard" model="ir.ui.view">
+            <field name="name">Reject Request</field>
+            <field name="model">mro.request.reject</field>
+            <field name="arch" type="xml">
+                <form string="Reject Request" version="7.0">
+                    <group>
+                        <field name="reject_reason"/>
+                    </group>
+                    <footer>
+                        <button name="reject_request" string="Reject Request" type="object"  class="oe_highlight"  />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel" />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_request_reject" model="ir.actions.act_window">
+            <field name="name">Reject Request</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mro.request.reject</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+    </data>
+</openerp>

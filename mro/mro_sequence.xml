@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- Sequences for Maintenance orders -->       
+        <record id="sequence_mro_order_type" model="ir.sequence.type">
+            <field name="name">Maintenance order</field>
+            <field name="code">mro.order</field>
+        </record>
+        
+        <record id="sequence_mro_order" model="ir.sequence">
+            <field name="name">Maintenance order</field>
+            <field name="code">mro.order</field>
+            <field name="prefix">MRO</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+        
+        <!-- Sequences for Maintenance request -->       
+        <record id="sequence_mro_request_type" model="ir.sequence.type">
+            <field name="name">Maintenance request</field>
+            <field name="code">mro.request</field>
+        </record>
+        
+        <record id="sequence_mro_request" model="ir.sequence">
+            <field name="name">Maintenance request</field>
+            <field name="code">mro.request</field>
+            <field name="prefix">RM</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+    </data>
+</openerp>

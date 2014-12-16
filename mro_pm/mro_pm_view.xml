@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <!-- Update Meters menu -->
+        <record id="mro_pm_meter_tree_view" model="ir.ui.view">
+            <field name="name">mro.pm.meter.tree</field>
+            <field name="model">mro.pm.meter</field>
+            <field name="arch" type="xml">
+                <tree string="Update Meters" selector="0" create="false" delete="false" editable="bottom" version="7.0">
+                    <field name="asset_id" readonly="1"/>
+                    <field name="name" readonly="1"/>
+                    <field name="date" string="Reading Date" readonly="1"/>
+                    <field name="new_value" string="New Reading"/>
+                    <field name="value" string="Last Reading" readonly="1"/>
+                    <field name="total_value" readonly="1"/>
+                    <field name="meter_uom" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_update_meters" model="ir.actions.act_window">
+            <field name="name">Update Meters</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mro.pm.meter</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('state','=','reading'),('reading_type','!=','src')]</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="mro_pm_meter_tree_view"/>
+        </record>
+
+        <menuitem name="Update Meters"
+            action="action_update_meters"
+            id="menu_update_meters"
+            parent="mro.menu_mro_maintenance"
+            groups="asset.group_mro_user"
+            sequence="20"/>
+            
+        <!-- Meters Logs menu -->
+        <record model="ir.actions.act_window" id="open_reading_log">
+            <field name="context">{'search_default_meter_id': active_id}</field>
+            <field name="name">Reading History</field>
+            <field name="res_model">mro.pm.meter.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>  
+
+        <record id="mro_pm_meter_log_tree_view" model="ir.ui.view">
+            <field name="name">mro.pm.meter.log.tree</field>
+            <field name="model">mro.pm.meter</field>
+            <field name="arch" type="xml">
+                <tree string="Meters Logs" create="false" delete="false" readonly="1" editable="bottom" version="7.0">
+                    <field name="asset_id" readonly="1"/>
+                    <field name="name" readonly="1"/>
+                    <button icon="STOCK_JUSTIFY_FILL" string="Reading History" name="%(open_reading_log)d" type="action" states="reading,reset"/>
+                    <field name="date" string="Reading Date" readonly="1"/>
+                    <field name="value" string="Last Reading" readonly="1"/>
+                    <field name="total_value" readonly="1"/>
+                    <field name="meter_uom" readonly="1"/>
+                    <field name="state" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_meters_logs" model="ir.actions.act_window">
+            <field name="name">Meters Logs</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mro.pm.meter</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="mro_pm_meter_log_tree_view"/>
+        </record>
+
+        <menuitem name="Meters Logs"
+            action="action_meters_logs"
+            id="menu_meters_logs"
+            parent="asset.menu_maintenance_assets"
+            groups="asset.group_mro_user"
+            sequence="100"/>
+
+        <record id="mro_pm_meter_form_view" model="ir.ui.view">
+            <field name="name">mro.pm.meter.form</field>
+            <field name="model">mro.pm.meter</field>
+            <field name="arch" type="xml">
+                <form string="Meter" version="7.0">
+                    <header>
+                        <button name="activate_meter" states="draft" string="Attach" class="oe_highlight" type="object"/>
+                        <button name="reset_meter" states="reading" string="Detach" type="object"/>
+                        <button name="run_meter" states="reset" string="Attach" class="oe_highlight" type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="reading" statusbar_colors='{"reset":"red","draft":"blue"}'/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only">
+                                <label for="name" string="Meter Name"/>
+                            </div>
+                            <h1><field name="name" class="oe_inline"/></h1>
+                        </div>
+                        <div class="oe_right">
+                            <h2><field name="asset_id" readonly="1"/></h2>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="new_value" on_change="onchange_value(new_value)" attrs="{'invisible':['|',('state','not in',('reading', 'reset')),('reading_type','=','src'),'|',('state','not in',('reading', 'reset')),('state','=','reading'),]}"/>
+                                <field name="meter_uom"/>
+                                <field name="reading_type"/>
+                                <field name="parent_meter_id" domain="[('state','!=','draft'),('reading_type','!=','src')]" attrs="{'invisible':[('reading_type','!=','src')],'required':[('reading_type','=','src')]}"/>
+                                <field name="parent_ratio_id" attrs="{'invisible':[('reading_type','!=','src')]}"/>
+                            </group>
+                            <group>
+                                <field name="min_utilization"/>
+                                <field name="av_time"/>
+                                <field name="utilization" readonly="1" states="reading,reset"/>
+                            </group>
+                        </group>
+                        <group string="Last Reading">
+                            <field name="view_line_ids" colspan="4" nolabel="1" readonly="1" attrs="{'invisible':[('state','not in',('reading', 'reset'))]}"/>
+                            <group>
+                                <field name="value" attrs="{'invisible':[('state','in',('reading', 'reset'))]}"/>
+                                <field name="date" invisible="1"/>
+                            </group>
+                            <group>
+                                <field name="total_value" attrs="{'invisible':[('state','in',('reading', 'reset'))]}"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mro_pm_meter_line_tree_view" model="ir.ui.view">
+            <field name="name">mro.pm.meter.line.tree</field>
+            <field name="model">mro.pm.meter.line</field>
+            <field name="arch" type="xml">
+                <tree string="Reading History" create="false" delete="false" editable="bottom" version="7.0">
+                    <field name="date" readonly="1"/>
+                    <field name="value" readonly="1"/>
+                    <field name="total_value" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="meter_history_search">
+            <field name="name">mro.pm.meter.line.search</field>
+            <field name="model">mro.pm.meter.line</field>
+            <field name="arch" type="xml">
+                <search string="Meter History Search">
+                    <field name="meter_id"/>
+                </search>
+            </field>
+        </record>
+
+        <!-- Meters Ratio menu -->
+        <record id="mro_pm_meter_ratio_tree_view" model="ir.ui.view">
+            <field name="name">mro.pm.meter.ratio.tree</field>
+            <field name="model">mro.pm.meter.ratio</field>
+            <field name="arch" type="xml">
+                <tree string="Meter Ratio" version="7.0">
+                    <field name="name"/>
+                    <field name="ratio"/>
+                    <field name="ratio_type"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mro_pm_meter_ratio_form_view" model="ir.ui.view">
+            <field name="name">mro.pm.meter.ratio.form</field>
+            <field name="model">mro.pm.meter.ratio</field>
+            <field name="arch" type="xml">
+                <form string="Meter Ratio" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name"/>
+                            <h1><field name="name" class="oe_inline"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="ratio"/>
+                                <field name="ratio_type"/>
+                            </group>
+                            <group>
+                                <field name="rounding_type"/>
+                                <field name="precision" on_change="onchange_precision(precision)"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_meter_ratio" model="ir.actions.act_window">
+            <field name="name">Meter Ratio</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mro.pm.meter.ratio</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Configuration"
+            id="asset.menu_maintenance_config"
+            parent="base.menu_mro_root"
+            groups="asset.group_mro_manager"
+            sequence="200"/>
+
+        <menuitem name="Meter Ratio"
+            action="action_meter_ratio"
+            id="menu_meter_ratio"
+            parent="asset.menu_maintenance_config"
+            sequence="1"/>
+
+        <!-- Meters Interval menu -->
+        <record id="mro_pm_meter_interval_tree_view" model="ir.ui.view">
+            <field name="name">mro.pm.meter.interval.tree</field>
+            <field name="model">mro.pm.meter.interval</field>
+            <field name="arch" type="xml">
+                <tree string="Meter Interval" version="7.0">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mro_pm_meter_interval_form_view" model="ir.ui.view">
+            <field name="name">mro.pm.meter.interval.form</field>
+            <field name="model">mro.pm.meter.interval</field>
+            <field name="arch" type="xml">
+                <form string="Meter Interval" version="7.0">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="interval_min" on_change="onchange_min(interval_min,interval_max)"/>
+                            </group>
+                            <group>
+                                <field name="interval_max" on_change="onchange_max(interval_min,interval_max)"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_meter_interval" model="ir.actions.act_window">
+            <field name="name">Meter Interval</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mro.pm.meter.interval</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Meter Intervals"
+            action="action_meter_interval"
+            id="menu_meter_interval"
+            parent="asset.menu_maintenance_config"
+            sequence="1"/>
+
+        <!-- PM Rules menu -->
+        <record id="mro_pm_rule_tree_view" model="ir.ui.view">
+            <field name="name">mro.pm.rule.tree</field>
+            <field name="model">mro.pm.rule</field>
+            <field name="arch" type="xml">
+                <tree string="PM Rule" version="7.0">
+                    <field name="name"/>
+                    <field name="asset_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mro_pm_rule_form_view" model="ir.ui.view">
+            <field name="name">mro.pm.rule.form</field>
+            <field name="model">mro.pm.rule</field>
+            <field name="arch" type="xml">
+                <form string="PM Rule" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>PM Rule <field name="name" class="oe_inline" readonly="1"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="asset_id" on_change="onchange_asset(pm_rules_line_ids)"/>
+                                <field name="meter_id" domain="[('asset_id','=',asset_id),('state','=','reading')]" attrs="{'invisible':[('asset_id','=',False)]}" on_change="onchange_meter(meter_id)"/>
+                                <field name="horizon"/>
+                             </group>
+                            <group>
+                                <field name="active"/>
+                                <field name="meter_uom" readonly="1" attrs="{'invisible':['|',('asset_id','=',False),('meter_id','=',False)]}"/>
+                            </group>
+                        </group>
+                        <field name="pm_rules_line_ids" context="{'asset_id':asset_id}" attrs="{'invisible':[('asset_id','=',False)]}"  options='{"always_reload":True}'>
+                            <tree string="Tasks" editable="bottom">
+                                <field name="task_id" domain="[('asset_id','=',asset_id)]"/>
+                                <field name="meter_interval_id"/>
+                            </tree>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_pm_rules" model="ir.actions.act_window">
+            <field name="name">PM Rule</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mro.pm.rule</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="PM Rules"
+            action="action_pm_rules"
+            id="menu_pm_rules"
+            parent="asset.menu_maintenance_config"
+            sequence="1"/>
+
+        <!-- Replan PM menu -->
+        <menuitem name="Replan PM"
+            action="action_replan_pm"
+            id="menu_replan_pm"
+            parent="mro.menu_mro_maintenance"
+            groups="asset.group_mro_user"
+            sequence="30"/>
+
+ 	</data>
+</openerp>

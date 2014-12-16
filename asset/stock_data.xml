@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+    
+        <!-- Resource: stock.location -->
+        <record id="stock_location_locations_asset" model="stock.location">
+            <field name="name">Asset Locations</field>
+            <field name="usage">view</field>
+            <field name="company_id"></field>
+        </record>
+        
+        <record id="stock_location_assets" model="stock.location">
+            <field name="name">Assets</field>
+            <field name="location_id" ref="stock_location_locations_asset"/>
+            <field name="usage">asset</field>
+            <field name="company_id"></field>
+        </record>
+        
+        <!-- Properties -->
+        <record forcecreate="True" id="property_stock_asset" model="ir.property">
+            <field name="name">property_stock_asset</field>
+            <field name="fields_id" search="[('model','=','asset.asset'),('name','=','property_stock_asset')]"/>
+            <field eval="'stock.location,'+str(stock_location_assets)" name="value"/>
+        </record>
+        
+     </data>
+</openerp>

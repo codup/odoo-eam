@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_asset_asset_manager,asset.asset manager,model_asset_asset,asset.group_mro_manager,1,1,1,1
+access_asset_state_manager,asset.state manager,model_asset_state,asset.group_mro_manager,1,1,1,1
+access_asset_asset_user,asset.asset user,model_asset_asset,asset.group_mro_user,1,1,0,0
+access_asset_state_user,asset.state user,model_asset_state,asset.group_mro_user,1,0,0,0
+access_asset_asset_customer,asset.asset customer,model_asset_asset,asset.group_mro_customer,1,0,0,0
+access_asset_state_customer,asset.state customer,model_asset_state,asset.group_mro_customer,1,0,0,0

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        
+        <!-- Maintenance Request related subtypes for messaging / Chatter -->
+        <record id="mt_request_sent" model="mail.message.subtype">
+            <field name="name">Send Request</field>
+            <field name="res_model">mro.request</field>
+            <field name="default" eval="False"/>
+            <field name="description">Maintenance Request sent</field>
+        </record>
+        <record id="mt_request_confirmed" model="mail.message.subtype">
+            <field name="name">Confirm Request</field>
+            <field name="res_model">mro.request</field>
+            <field name="description">Maintenance Request confirmed</field>
+        </record>
+        <record id="mt_request_rejected" model="mail.message.subtype">
+            <field name="name">Reject Request</field>
+            <field name="res_model">mro.request</field>
+            <field name="description">Maintenance Request rejected</field>
+        </record>
+        <record id="mt_order_confirmed" model="mail.message.subtype">
+            <field name="name">Confirm Maintenance</field>
+            <field name="res_model">mro.order</field>
+            <field name="description">Maintenance Order confirmed</field>
+        </record>
+        <!-- Asset related subtypes for messaging / Chatter -->
+        <record id="mt_asset_request_sent" model="mail.message.subtype">
+            <field name="name">Send Request</field>
+            <field name="res_model">asset.asset</field>
+            <field name="default" eval="False"/>
+            <field name="parent_id" eval="ref('mt_request_sent')"/>
+            <field name="relation_field">asset_id</field>
+        </record>
+        <record id="mt_asset_request_confirmed" model="mail.message.subtype">
+            <field name="name">Confirm Request</field>
+            <field name="res_model">asset.asset</field>
+            <field name="default" eval="False"/>
+            <field name="parent_id" eval="ref('mt_request_confirmed')"/>
+            <field name="relation_field">asset_id</field>
+        </record>
+        <record id="mt_asset_request_rejected" model="mail.message.subtype">
+            <field name="name">Reject Request</field>
+            <field name="res_model">asset.asset</field>
+            <field name="default" eval="False"/>
+            <field name="parent_id" eval="ref('mt_request_rejected')"/>
+            <field name="relation_field">asset_id</field>
+        </record>
+
+    </data>
+</openerp>

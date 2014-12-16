@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <record id="assets_form_view" model="ir.ui.view">
+            <field name="name">account.asset.asset.form.inherit</field>
+            <field name="model">account.asset.asset</field>
+            <field name="inherit_id" ref="account_asset.view_account_asset_asset_form"/>
+            <field name="arch" type="xml">
+                <data>
+                    <field name="category_id" position="before" version="7.0">
+                        <field name="asset_id" attrs="{'readonly':[('state','!=','draft')]}" on_change="onchange_asset(asset_id)"/>
+                    </field>
+                    <label for="name" position="replace"/>
+                    <field name="name" position="attributes">
+                        <attribute name="invisible">1</attribute>
+                    </field>
+                </data>
+            </field>
+        </record>
+        
+ 	</data>
+</openerp>

@@ -1,0 +1,23 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mro_order_manager,mro.order manager,model_mro_order,asset.group_mro_manager,1,1,1,1
+access_mro_order_parts_line_manager,mro.order.parts.line manager,model_mro_order_parts_line,asset.group_mro_manager,1,1,1,1
+access_mro_task_manager,mro.task manager,model_mro_task,asset.group_mro_manager,1,1,1,1
+access_mro_task_parts_line_manager,mro.task.parts.line manager,model_mro_task_parts_line,asset.group_mro_manager,1,1,1,1
+access_mro_request_manager,mro.request manager,model_mro_request,asset.group_mro_manager,1,1,1,1
+access_product_product_mro_manager,product.product mro_manager,product.model_product_product,asset.group_mro_manager,1,1,1,1
+access_product_template_mro_manager,product.template mro_manager,product.model_product_template,asset.group_mro_manager,1,1,1,1
+access_stock_move_mro_manager,stock.move mro_manager,stock.model_stock_move,asset.group_mro_manager,1,1,1,0
+access_stock_picking_mro_manager,stock.picking mro_manager,stock.model_stock_picking,asset.group_mro_manager,1,1,1,1
+access_procurement_order_mro_manager,procurement.order mro_manager,procurement.model_procurement_order,asset.group_mro_manager,1,1,1,1
+access_mro_order_user,mro.order user,model_mro_order,asset.group_mro_user,1,1,1,1
+access_mro_order_parts_line_user,mro.order.parts.line user,model_mro_order_parts_line,asset.group_mro_user,1,1,1,1
+access_mro_task_user,mro.task user,model_mro_task,asset.group_mro_user,1,0,0,0
+access_mro_task_parts_line_user,mro.task.parts.line user,model_mro_task_parts_line,asset.group_mro_user,1,0,0,0
+access_mro_request_user,mro.request user,model_mro_request,asset.group_mro_user,1,1,0,0
+access_product_product_mro_user,product.product mro_user,product.model_product_product,asset.group_mro_user,1,0,0,0
+access_product_template_mro_user,product.template mro_user,product.model_product_template,asset.group_mro_user,1,0,0,0
+access_stock_move_mro_user,stock.move mro_user,stock.model_stock_move,asset.group_mro_user,1,1,1,0
+access_stock_picking_mro_user,stock.picking mro_user,stock.model_stock_picking,asset.group_mro_user,1,1,1,1
+access_procurement_order_mro_user,procurement.order mro_user,procurement.model_procurement_order,asset.group_mro_user,1,1,1,1
+access_mro_request_customer,mro.request customer,model_mro_request,asset.group_mro_customer,1,1,0,0
+access_mro_request_create,mro.request create,model_mro_request,mro.group_create_maintenance_request,0,0,1,0

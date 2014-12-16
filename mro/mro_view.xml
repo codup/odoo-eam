@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <!-- Top menu item -->
+        <menuitem name="Maintenance"
+            id="base.menu_mro_root"
+            groups="asset.group_mro_customer"
+            sequence="80"/>
+
+        <!-- Maintenance menu -->
+        <menuitem name="Maintenance"
+            id="menu_mro_maintenance"
+            parent="base.menu_mro_root"
+            sequence="1"/>
+            
+        <!-- Maintenance request menu -->
+        <record id="mro_request_tree_view" model="ir.ui.view">
+            <field name="name">mro.request.tree</field>
+            <field name="model">mro.request</field>
+            <field name="arch" type="xml">
+                <tree fonts="bold:message_unread==True" string="Maintenance Requests">
+                    <field name="message_unread" invisible="1"/>
+                    <field name="name"/>
+                    <field name="execution_date" string="Date"/>
+                    <field name="asset_id"/>
+                    <field name="cause"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mro_request_form_view" model="ir.ui.view">
+            <field name="name">mro.request.form</field>
+            <field name="model">mro.request</field>
+            <field name="arch" type="xml">
+                <form string="Maintenance Request" version="7.0">
+                    <header>
+                        <button name="button_send_request" states="draft" string="Send Request" class="oe_highlight"/>
+                        <button name="button_confirm_request" states="claim" string="Confirm Request" class="oe_highlight" groups="asset.group_mro_user"/>
+                        <button name="%(action_request_reject)d" states="claim" string="Reject Request" type="action" groups="asset.group_mro_user"/>
+                        <button name="button_cancel" states="draft" string="Cancel"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,claim,run,done"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>Maintenance Request <field name="name" class="oe_inline" readonly="1"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="asset_id"/>
+                                <field name="cause"/>
+                                <field name="breakdown"/>
+                            </group>
+                            <group>
+                                <field name="requested_date" attrs="{'invisible':[('breakdown','=',True),('state','=','draft')],'readonly':[('state','!=','draft')]}" on_change="onchange_requested_date(requested_date)"/>
+                                <field name="execution_date" on_change="onchange_execution_date(execution_date,state,breakdown)"/>
+                            </group>
+                        </group>
+                        <group string="Reject Reason" states="reject">
+                            <field name="reject_reason" colspan="4" nolabel="1"/>
+                        </group>
+                        <group string="Description">
+                            <field name="description" colspan="4" nolabel="1"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        
+        <record id="mro_request_search" model="ir.ui.view">
+            <field name="name">mro.request.search</field>
+            <field name="model">mro.request</field>
+            <field name="arch" type="xml">
+                <search string="Search Maintenance Request">
+                    <filter icon="terp-mail-message-new" string="Unread Messages" name="message_unread" domain="[('message_unread','=',True)]"/>
+                    <separator/>
+                    <filter icon="terp-document-new" name="open" string="Open" domain="['|',('state','in',('draft','claim')),('message_unread','=',True)]" help="Undecided maintenance request"/>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_requests" model="ir.actions.act_window">
+            <field name="name">Maintenance Requests</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mro.request</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'search_default_open': 1}</field>
+        </record>
+
+        <menuitem name="Maintenance Requests"
+            action="action_requests"
+            id="menu_mro_request"
+            parent="menu_mro_maintenance"
+            sequence="1"/>
+
+        <!-- Maintenance order menu -->
+        <record id="mro_order_tree_view" model="ir.ui.view">
+            <field name="name">mro.order.tree</field>
+            <field name="model">mro.order</field>
+            <field name="arch" type="xml">
+                <tree fonts="bold:message_unread==True" string="Maintenance Orders">
+                    <field name="message_unread" invisible="1"/>
+                    <field name="name"/>
+                    <field name="date_execution" string="Order Date" widget="date"/>
+                    <field name="asset_id"/>
+                    <field name="maintenance_type"/>
+                    <field name="description"/>
+                    <field name="origin"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mro_order_calendar_view" model="ir.ui.view">
+            <field name="name">mro.order.calendar</field>
+            <field name="model">mro.order</field>
+            <field name="arch" type="xml">
+                <calendar color="asset_id" date_start="date_execution" string="Maintenance Orders">
+                    <field name="name"/>
+                    <field name="description"/>
+                </calendar>
+            </field>
+        </record>
+        
+        <record id="mro_order_form_view" model="ir.ui.view">
+            <field name="name">mro.order.form</field>
+            <field name="model">mro.order</field>
+            <field name="arch" type="xml">
+                <form string="Maintenance Orders" version="7.0">
+                    <header>
+                        <button name="button_confirm_order" states="draft" string="Confirm Maintenance" class="oe_highlight"/>
+                        <button name="button_done" states="ready" string="Done" class="oe_highlight"/>
+                        <button name="force_done" states="released" string="Done" class="oe_highlight" type="object"/>
+                        <button name="force_parts_reservation" states="released" string="Force Reservation" type="object"/>
+                        <button name="button_recreate_picking_parts" states="parts_except" string="Recreate Picking" class="oe_highlight"/>
+                        <button name="button_cancel" states="draft,ready,parts_except" string="Cancel"/>
+                        <button name="action_cancel" type="object" states="released" string="Cancel"/>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,ready,done" statusbar_colors='{"parts_except":"red","released":"blue"}'/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>Maintenance Order <field name="name" class="oe_inline" readonly="1"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="asset_id"/>
+                                <field name="maintenance_type"/>
+                                <label for="task_id" attrs="{'invisible':[('maintenance_type','=','bm')]}"/>
+                                <div attrs="{'invisible':[('maintenance_type','=','bm')]}">
+                                    <field name="task_id" domain="[('asset_id','=',asset_id),('maintenance_type','=',maintenance_type)]" attrs="{'required':[('maintenance_type','!=','bm')]}" on_change="onchange_task(task_id,parts_lines)"/>
+                                </div>
+                                <field name="description"/>
+                            </group>
+                            <group>
+                                <field name="date_planned" on_change="onchange_planned_date(date_planned)"/>
+                                <field name="date_scheduled" on_change="onchange_scheduled_date(date_scheduled)"/>
+                                <field name="date_execution" on_change="onchange_execution_date(date_execution,state)"/>
+                                <field name="origin"/>
+                            </group>
+                            <group groups="stock.group_locations">
+                            </group>
+                            <group>
+                                <field name="company_id" groups="base.group_multi_company" widget="selection"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Parts">
+                                    <group string="Planned Parts" states="draft,released,done,parts_except,cancel">
+                                        <field name="parts_lines" nolabel="1">
+                                            <tree string="Planned Parts" editable="bottom">
+                                                <field name="parts_id" on_change="onchange_parts(parts_id)"/>
+                                                <field name="parts_qty"/>
+                                                <field name="parts_uom" groups="product.group_uom"/>
+                                                <field name="name"/>
+                                            </tree>
+                                        </field>
+                                    </group>
+                                    <group string="Available Parts" states="released,parts_except">
+                                        <field name="parts_ready_lines" nolabel="1" readonly="1">
+                                            <tree string="Available Parts">
+                                                <field name="product_id" string="Parts"/>
+                                                <field name="product_qty"/>
+                                                <field name="product_uom" groups="product.group_uom"/>
+                                                <field name="state" invisible="0"/>
+                                            </tree>
+                                        </field>
+                                    </group>
+                                    <group string="Parts to Consume" states="ready">
+                                        <field name="parts_move_lines" nolabel="1" readonly="1">
+                                            <tree string="Parts to Consume">
+                                                <field name="product_id" string="Parts"/>
+                                                <field name="product_qty" string="Quantity"/>
+                                                <field name="product_uom" string="Unit of Measure" groups="product.group_uom"/>
+                                                <field name="state" invisible="1"/>
+                                            </tree>
+                                        </field>
+                                    </group>
+                                    <group string="Consumed Parts" states="ready,done">
+                                        <field name="parts_moved_lines" nolabel="1" readonly="1">
+                                           <tree string="Consumed Parts">
+                                               <field name="product_id" readonly="1" string="Parts"/>
+                                               <field name="product_qty" readonly="1"/>
+                                               <field name="product_uom" readonly="1" string="Unit of Measure" groups="product.group_uom"/>
+                                               <field name="state" invisible="1"/>
+                                           </tree>
+                                        </field>
+                                    </group>
+                            </page>
+                            <page string="Tools">
+                                <separator string="Description for Tools"/>
+                                <field name="tools_description" placeholder="Specify the tools and mechanisms needed for execute this order..."/>
+                            </page>
+                            <page string="Labor">
+                                <separator string="Description for Labor"/>
+                                <field name="labor_description" placeholder="Specify the specialists needed for execute this order..."/>
+                            </page>
+                            <page string="Operations">
+                                <separator string="Description for Operations"/>
+                                <field name="operations_description" placeholder="Specify the jobs that need execute..."/>
+                            </page>
+                            <page string="Documentation">
+                                <separator string="Description for Documentation"/>
+                                <field name="documentation_description" placeholder="Specify the documentation useful when execute this order..."/>
+                            </page>
+                        </notebook>
+                        <group string="Problem Description">
+                            <field name="problem_description" colspan="4" nolabel="1"/>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="mro_order_search" model="ir.ui.view">
+            <field name="name">mro.order.search</field>
+            <field name="model">mro.order</field>
+            <field name="arch" type="xml">
+                <search string="Search Maintenance Order">
+                    <filter icon="terp-mail-message-new" string="Unread Messages" name="message_unread" domain="[('message_unread','=',True)]"/>
+                    <separator/>
+                </search>
+            </field>
+        </record>
+        
+        <record id="action_orders" model="ir.actions.act_window">
+            <field name="name">Maintenance Orders</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mro.order</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form,calendar</field>
+        </record>
+            
+        <menuitem name="Maintenance Orders"
+            action="action_orders"
+            id="menu_mro_order"
+            parent="menu_mro_maintenance"
+            sequence="10"/>
+            
+        <!-- Parts menu -->
+        <menuitem name="Parts"
+            id="menu_maintenance_parts"
+            parent="base.menu_mro_root"
+            groups="asset.group_mro_user"
+            sequence="9"/>
+            
+        <menuitem name="Parts"
+            action="product.product_normal_action"
+            id="menu_maintenance_parts_parts"
+            parent="menu_maintenance_parts"
+            sequence="100"/>
+            
+        <!-- Tasks menu -->
+
+        <record id="mro_task_tree_view" model="ir.ui.view">
+            <field name="name">mro.task.tree</field>
+            <field name="model">mro.task</field>
+            <field name="arch" type="xml">
+                <tree string="Maintenance Tasks">
+                    <field name="asset_id"/>
+                    <field name="name"/>
+                    <field name="maintenance_type"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record id="mro_task_form_view" model="ir.ui.view">
+            <field name="name">mro.task.form</field>
+            <field name="model">mro.task</field>
+            <field name="arch" type="xml">
+                <form string="Tasks" version="7.0">
+                <header>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>Task Name <field name="name" class="oe_inline"/></h1>
+                    </div>
+                    <group>
+                        <field name="asset_id"/>
+                        <field name="maintenance_type"/>
+                        <field name="active"/>
+                    </group>
+                    <notebook>
+                        <page string="Parts">
+                            <field name="parts_lines" nolabel="1">
+                                <tree string="Parts" editable="bottom">
+                                    <field name="parts_id" on_change="onchange_parts(parts_id)"/>
+                                    <field name="parts_qty"/>
+                                    <field name="parts_uom" groups="product.group_uom"/>
+                                    <field name="name"/>
+                                </tree>
+                            </field>
+                        </page>
+                        <page string="Tools">
+                            <separator string="Description for Tools"/>
+                            <field name="tools_description" placeholder="Specify the tools and mechanisms needed for execute this order..."/>
+                        </page>
+                        <page string="Labor">
+                            <separator string="Description for Labor"/>
+                            <field name="labor_description" placeholder="Specify the specialists needed for execute this order..."/>
+                        </page>
+                        <page string="Operations">
+                            <separator string="Description for Operations"/>
+                            <field name="operations_description" placeholder="Specify the jobs that need execute..."/>
+                        </page>
+                        <page string="Documentation">
+                            <separator string="Description for Documentation"/>
+                            <field name="documentation_description" placeholder="Specify the documentation useful when execute this order..."/>
+                        </page>
+                    </notebook>
+                </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_tasks" model="ir.actions.act_window">
+            <field name="name">Maintenance Tasks</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mro.task</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>        
+        
+        <menuitem name="Tasks"
+            id="menu_maintenance_tasks"
+            parent="base.menu_mro_root"
+            sequence="9"/>
+            
+        <menuitem name="Tasks"
+            action="action_tasks"
+            id="menu_maintenance_tasks_tasks"
+            parent="menu_maintenance_tasks"
+            sequence="100"/>
+    
+ 	</data>
+</openerp>
