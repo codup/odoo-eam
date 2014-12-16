@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_asset_asset_mrp_manager,asset.asset mrp_manager,asset.model_asset_asset,mrp.group_mrp_manager,1,1,1,1
-access_asset_state_mrp_manager,asset.state mrp_manager,asset.model_asset_state,mrp.group_mrp_manager,1,1,1,1
-access_asset_asset_mrp_user,asset.asset mrp_user,asset.model_asset_asset,mrp.group_mrp_user,1,1,0,0
-access_asset_state_mrp_user,asset.state mrp_user,asset.model_asset_state,mrp.group_mrp_user,1,0,0,0

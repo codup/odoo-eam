@@ -1,7 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_asset_asset_sale_manager,asset.asset sale_manager,asset.model_asset_asset,base.group_sale_manager,1,1,1,1
-access_asset_state_sale_manager,asset.state sale_manager,asset.model_asset_state,base.group_sale_manager,1,1,1,1
-access_asset_asset_salesman_all,asset.asset salesman_all,asset.model_asset_asset,base.group_sale_salesman_all_leads,1,1,0,0
-access_asset_state_salesman_all,asset.state salesman_all,asset.model_asset_state,base.group_sale_salesman_all_leads,1,0,0,0
-access_asset_asset_salesman,asset.asset salesman,asset.model_asset_asset,base.group_sale_salesman,1,0,0,0
-access_asset_state_salesman,asset.state salesman,asset.model_asset_state,base.group_sale_salesman,1,0,0,0

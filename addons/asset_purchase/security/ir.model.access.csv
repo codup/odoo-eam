@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_asset_asset_purchase_manager,asset.asset purchase_manager,asset.model_asset_asset,purchase.group_purchase_manager,1,1,1,1
-access_asset_state_purchase_manager,asset.state purchase_manager,asset.model_asset_state,purchase.group_purchase_manager,1,1,1,1
-access_asset_asset_purchase_user,asset.asset purchase_user,asset.model_asset_asset,purchase.group_purchase_user,1,1,0,0
-access_asset_state_purchase_user,asset.state purchase_user,asset.model_asset_state,purchase.group_purchase_user,1,0,0,0
