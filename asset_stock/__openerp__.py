@@ -32,6 +32,7 @@ Keep one entity in one place for escape mistakes!
     """,
     'author': 'CodUP',
     'website': 'http://codup.com',
+    'images': ['static/description/icon.png'],
     'category': 'Enterprise Asset Management',
     'sequence': 0,
     'depends': ['asset'],
