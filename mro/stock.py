@@ -36,13 +36,6 @@ class StockMove(osv.osv):
             for order_id in order_ids:
                 if mro_obj.test_ready(cr, uid, [order_id]):
                     workflow.trg_validate(uid, 'mro.order', order_id, 'parts_ready', cr)
-            # orders = mro_obj.browse(cr, uid, order_ids, context=context)
-
-            
-            # orders = list(set([x.raw_material_production_id.id for x in moves if x.raw_material_production_id and x.raw_material_production_id.state == 'confirmed']))
-            # for order_id in orders:
-                # if self.pool.get('mrp.production').test_ready(cr, uid, [order_id]):
-                    # workflow.trg_validate(uid, 'mrp.production', order_id, 'moves_ready', cr)
         return res
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
