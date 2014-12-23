@@ -19,6 +19,7 @@
 #
 ##############################################################################
 
+import asset
 import mro
 import stock
 import wizard

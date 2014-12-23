@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <record id="view_asset_asset_mro_buttons_from" model="ir.ui.view">
+            <field name="name">asset.asset.mro.button.inherit</field>
+            <field name="model">asset.asset</field>
+            <field name="inherit_id" ref="asset.assets_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='buttons']" position="inside">
+                   <button class="oe_inline oe_stat_button" name="action_view_maintenance" type="object" 
+                       icon="fa-cogs">
+                       <field string="Maintenance" name="mro_count" widget="statinfo"/>
+                   </button>
+                </xpath>
+            </field>
+        </record>
+
+ 	</data>
+</openerp>
