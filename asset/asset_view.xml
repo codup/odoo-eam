@@ -38,6 +38,8 @@
                         <field name="maintenance_state_id" widget="statusbar" clickable="True" groups="asset.group_mro_user"/>
                     </header>
                     <sheet>
+                        <div class="oe_right oe_button_box" style="width: 300px;" name="buttons">
+                        </div>
                         <field name="image_medium" widget="image" class="oe_avatar oe_left"/>
                         <div class="oe_title">
                             <label for="name" class="oe_edit_only"/>
