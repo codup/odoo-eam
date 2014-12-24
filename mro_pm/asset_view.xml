@@ -23,6 +23,11 @@
                         </field>
                     </page>
                 </page>
+                <xpath expr="//div[@name='buttons']" position="inside">
+                   <button class="oe_inline oe_stat_button" name="action_view_rules" type="object" 
+                       icon="fa-refresh" string="Scheduling Rules">
+                   </button>
+                </xpath>
             </field>
         </record>
 
