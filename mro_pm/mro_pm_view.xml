@@ -151,6 +151,21 @@
             </field>
         </record>
 
+        <!-- Parameters menu -->
+        <record id="action_parameters" model="ir.actions.act_window">
+            <field name="name">Parameters</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mro.pm.parameter</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Parameters"
+            action="action_parameters"
+            id="menu_parameters"
+            parent="asset.menu_maintenance_config"
+            sequence="1"/>
+
         <!-- Meters Ratio menu -->
         <record id="mro_pm_meter_ratio_tree_view" model="ir.ui.view">
             <field name="name">mro.pm.meter.ratio.tree</field>
@@ -196,12 +211,6 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
-
-        <menuitem name="Configuration"
-            id="asset.menu_maintenance_config"
-            parent="base.menu_mro_root"
-            groups="asset.group_mro_manager"
-            sequence="200"/>
 
         <menuitem name="Meter Ratio"
             action="action_meter_ratio"
