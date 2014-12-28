@@ -16,8 +16,8 @@
                                 <field name="date"/>
                                 <field name="value"/>
                                 <field name="total_value"/>
-                                <field name="meter_uom" groups="product.group_uom"/>
                                 <field name="utilization"/>
+                                <field name="meter_uom"/>
                                 <field name="state" invisible="1"/>
                             </tree>
                         </field>
