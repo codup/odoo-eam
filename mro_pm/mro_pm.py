@@ -99,7 +99,7 @@ class mro_pm_meter(osv.osv):
     
     _columns = {
         'name': fields.char('Meter', size=64, required=True, translate=True),
-        'parameter_id': fields.many2one('mro.pm.parameter', 'Parameter', ondelete='restrict'),
+        'parameter_id': fields.many2one('mro.pm.parameter', 'Parameter', ondelete='restrict', required=True, readonly=True, states={'draft': [('readonly', False)]}),
         'state': fields.selection(STATE_SELECTION, 'Status', readonly=True),
         'reading_type': fields.selection(READING_TYPE_SELECTION, 'Reading Type', required=True, readonly=True, states={'draft': [('readonly', False)]}),
         'meter_line_ids': fields.one2many('mro.pm.meter.line', 'meter_id', 'Meters'),
@@ -108,7 +108,7 @@ class mro_pm_meter(osv.osv):
         'date': fields.related('meter_line_ids', 'date', type='date', string='Date'),
         'value': fields.related('meter_line_ids', 'value', type='float', string='Value'),
         'total_value': fields.related('meter_line_ids', 'total_value', type='float', string='Total Value'),
-        'meter_uom': fields.many2one('product.uom', 'Unit of Measure', required=True, readonly=True, states={'draft': [('readonly', False)]}),
+        'meter_uom': fields.related('parameter_id', 'parameter_uom', type='many2one', relation='product.uom', string='Unit of Measure', readonly=True),
         'asset_id': fields.many2one('asset.asset', 'Asset', ondelete='restrict'),
         'parent_meter_id': fields.many2one('mro.pm.meter', 'Source Meter', ondelete='restrict', readonly=True, states={'draft': [('readonly', False)]}),
         'parent_ratio_id': fields.many2one('mro.pm.meter.ratio', 'Ratio to Source', ondelete='restrict'),
