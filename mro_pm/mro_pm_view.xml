@@ -103,6 +103,7 @@
                         <group>
                             <group>
                                 <field name="new_value" on_change="onchange_value(new_value)" attrs="{'invisible':['|',('state','not in',('reading', 'reset')),('reading_type','=','src'),'|',('state','not in',('reading', 'reset')),('state','=','reading'),]}"/>
+                                <field name="parameter_id"/>
                                 <field name="meter_uom"/>
                                 <field name="reading_type"/>
                                 <field name="parent_meter_id" domain="[('state','!=','draft'),('reading_type','!=','src')]" attrs="{'invisible':[('reading_type','!=','src')],'required':[('reading_type','=','src')]}"/>

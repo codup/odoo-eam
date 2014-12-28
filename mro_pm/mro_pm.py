@@ -99,6 +99,7 @@ class mro_pm_meter(osv.osv):
     
     _columns = {
         'name': fields.char('Meter', size=64, required=True, translate=True),
+        'parameter_id': fields.many2one('mro.pm.parameter', 'Parameter', ondelete='restrict'),
         'state': fields.selection(STATE_SELECTION, 'Status', readonly=True),
         'reading_type': fields.selection(READING_TYPE_SELECTION, 'Reading Type', required=True, readonly=True, states={'draft': [('readonly', False)]}),
         'meter_line_ids': fields.one2many('mro.pm.meter.line', 'meter_id', 'Meters'),
