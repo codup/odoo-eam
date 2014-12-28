@@ -24,6 +24,21 @@ import time
 import calendar
 from openerp.osv import fields, osv
 
+
+class mro_pm_parameter(osv.osv):
+    _name = 'mro.pm.parameter'
+    _description = 'Asset Parameters'
+
+    _columns = {
+        'name': fields.char('Parameter', size=64, required=True, translate=True),
+        'parameter_uom': fields.many2one('product.uom', 'Unit of Measure', required=True),
+    }
+
+    _defaults = {
+        'parameter_uom': lambda self, cr, uid, c: self.pool.get('ir.model.data').get_object(cr, uid, 'product', 'product_uom_hour', context=c).id,
+    }
+
+
 class mro_pm_meter(osv.osv):
     _name = 'mro.pm.meter'
     _description = 'Asset Meters'
