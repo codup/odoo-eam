@@ -152,12 +152,23 @@
         </record>
 
         <!-- Parameters menu -->
+        <record id="mro_pm_parameter_tree_view" model="ir.ui.view">
+            <field name="name">mro.pm.parameter.tree</field>
+            <field name="model">mro.pm.parameter</field>
+            <field name="arch" type="xml">
+                <tree string="Parameters" editable="top">
+                    <field name="name"/>
+                    <field name="parameter_uom"/>
+                </tree>
+            </field>
+        </record>
+
         <record id="action_parameters" model="ir.actions.act_window">
             <field name="name">Parameters</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">mro.pm.parameter</field>
             <field name="view_type">form</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree</field>
         </record>
 
         <menuitem name="Parameters"
