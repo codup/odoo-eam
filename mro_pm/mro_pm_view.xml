@@ -92,8 +92,8 @@
                     </header>
                     <sheet>
                         <div class="oe_title">
-                            <div class="oe_edit_only">
-                                <label for="name" string="Meter Name"/>
+                            <div class="oe_edit_only" states="draft">
+                                <label for="name" string="Parameter"/>
                             </div>
                             <h1><field name="name" class="oe_inline"/></h1>
                         </div>
@@ -103,7 +103,6 @@
                         <group>
                             <group>
                                 <field name="new_value" on_change="onchange_value(new_value)" attrs="{'invisible':['|',('state','not in',('reading', 'reset')),('reading_type','=','src'),'|',('state','not in',('reading', 'reset')),('state','=','reading'),]}"/>
-                                <field name="parameter_id"/>
                                 <field name="meter_uom"/>
                                 <field name="reading_type"/>
                                 <field name="parent_meter_id" domain="[('state','!=','draft'),('reading_type','!=','src')]" attrs="{'invisible':[('reading_type','!=','src')],'required':[('reading_type','=','src')]}"/>

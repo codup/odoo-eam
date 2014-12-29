@@ -63,18 +63,16 @@
 
         <!-- Meters -->
         <record id="mro_pm_meter_1" model="mro.pm.meter">
-            <field name="name">Work Time</field>
+            <field name="name" ref="mro_pm_parameter_1"/>
             <field name="asset_id" ref="asset.asset_asset_1"/>
-            <field name="parameter_id" ref="mro_pm_parameter_1"/>
             <field name="av_time">30</field>
             <field name="min_utilization">20</field>
             <field name="state">reading</field>
         </record>
 
         <record id="mro_pm_meter_2" model="mro.pm.meter">
-            <field name="name">Produced</field>
+            <field name="name" ref="mro_pm_parameter_2"/>
             <field name="asset_id" ref="asset_asset_4"/>
-            <field name="parameter_id" ref="mro_pm_parameter_2"/>
             <field name="meter_uom" ref="product.product_uom_unit"/>
             <field name="reading_type">cng</field>
             <field name="av_time">30</field>
@@ -83,9 +81,8 @@
         </record>
 
         <record id="mro_pm_meter_3" model="mro.pm.meter">
-            <field name="name">Cycle</field>
+            <field name="name" ref="mro_pm_parameter_3"/>
             <field name="asset_id" ref="asset_asset_4"/>
-            <field name="parameter_id" ref="mro_pm_parameter_3"/>
             <field name="meter_uom" ref="uom_mro_cycle"/>
             <field name="reading_type">src</field>
             <field name="parent_meter_id" ref="mro_pm_meter_2"/>
