@@ -264,7 +264,13 @@ class mro_pm_meter(osv.osv):
                                 })
                         vals.update({'new_value': 0})
         return super(mro_pm_meter, self).write(cr, uid, ids, vals, context=context)
-    
+
+    def onchange_parameter(self, cr, uid, ids, parameter):
+        value = {}
+        if parameter:
+            value['meter_uom'] = self.pool.get('mro.pm.parameter').browse(cr, uid, parameter).parameter_uom.id
+        return {'value': value}
+
     def onchange_value(self, cr, uid, ids, value):
         """
         onchange handler of value.

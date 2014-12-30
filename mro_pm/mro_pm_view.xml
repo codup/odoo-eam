@@ -95,7 +95,7 @@
                             <div class="oe_edit_only" states="draft">
                                 <label for="name" string="Parameter"/>
                             </div>
-                            <h1><field name="name" class="oe_inline"/></h1>
+                            <h1><field name="name" class="oe_inline" on_change="onchange_parameter(name)"/></h1>
                         </div>
                         <div class="oe_right">
                             <h2><field name="asset_id" readonly="1"/></h2>
