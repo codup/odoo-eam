@@ -70,6 +70,14 @@ class asset_state(osv.osv):
         return self.write(cr, uid, ids, {'state_color': str(color)}, context=context)
 
 
+class asset_category(osv.osv):
+    _description = 'Asset Tags'
+    _name = 'asset.category'
+    _columns = {
+        'name': fields.char('Tag', required=True, translate=True),
+    }
+
+
 class asset_asset(osv.osv):
     """
     Assets
@@ -169,6 +177,7 @@ class asset_asset(osv.osv):
             help="Small-sized image of the asset. It is automatically "\
                  "resized as a 64x64px image, with aspect ratio preserved. "\
                  "Use this field anywhere a small image is required."),
+        'category_id': fields.many2many('asset.category', id1='asset_id', id2='category_id', string='Tags'),
     }
 
     _defaults = {

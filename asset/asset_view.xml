@@ -46,6 +46,7 @@
                             <h1>
                                 <field name="name"/>
                             </h1>
+                            <field name="category_id" widget="many2many_tags" placeholder="Tags..."/>
                         </div>
                         <group>
                             <field name="property_stock_asset" domain="[('usage','=','asset')]"/>
@@ -322,6 +323,33 @@
             parent="menu_maintenance_config"
             groups="asset.group_mro_manager"
             sequence="100"/>
-    
+
+        <!-- Asset Tags Tree View -->
+        <record id="asset_category_tree_view" model="ir.ui.view">
+            <field name="name">asset.category.tree</field>
+            <field name="model">asset.category</field>
+            <field name="arch" type="xml">
+                <tree string="Asset Tags" editable="top">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_asset_category" model="ir.actions.act_window">
+            <field name="name">Asset Tags</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">asset.category</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>
+
+        <!-- Asset category item -->
+        <menuitem name="Asset Tags"
+            action="action_asset_category"
+            id="menu_asset_category"
+            parent="menu_maintenance_config"
+            groups="asset.group_mro_manager"
+            sequence="100"/>
+
  	</data>
 </openerp>
