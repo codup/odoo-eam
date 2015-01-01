@@ -280,13 +280,12 @@
             sequence="100"/>
             
         <!-- Tasks menu -->
-
         <record id="mro_task_tree_view" model="ir.ui.view">
             <field name="name">mro.task.tree</field>
             <field name="model">mro.task</field>
             <field name="arch" type="xml">
                 <tree string="Maintenance Tasks">
-                    <field name="asset_id"/>
+                    <field name="category_id"/>
                     <field name="name"/>
                     <field name="maintenance_type"/>
                 </tree>
@@ -305,7 +304,7 @@
                         <h1>Task Name <field name="name" class="oe_inline"/></h1>
                     </div>
                     <group>
-                        <field name="asset_id"/>
+                        <field name="category_id"/>
                         <field name="maintenance_type"/>
                         <field name="active"/>
                     </group>

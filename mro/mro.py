@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2013-2014 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2015 CodUP (<http://codup.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -312,7 +312,7 @@ class mro_task(osv.osv):
 
     _columns = {
         'name': fields.char('Description', size=64, required=True, translate=True),
-        'asset_id': fields.many2one('asset.asset', 'Asset', required=True),
+        'category_id': fields.many2one('asset.category', 'Asset Category', ondelete='restrict', required=True),
         'maintenance_type': fields.selection(MAINTENANCE_TYPE_SELECTION, 'Maintenance Type', required=True),
         'parts_lines': fields.one2many('mro.task.parts.line', 'task_id', 'Parts'),
         'tools_description': fields.text('Tools Description',translate=True),
