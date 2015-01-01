@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2013-2014 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2015 CodUP (<http://codup.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -21,7 +21,7 @@
 
 {
     'name': 'Assets',
-    'version': '1.6',
+    'version': '1.7',
     'summary': 'Asset Management',
     'description': """
 Managing Assets in Odoo.
@@ -33,6 +33,7 @@ Support following feature:
     * Custom states of Asset
     * States of Asset for different team: Finance, Warehouse, Manufacture, Maintenance and Accounting
     * Drag&Drop manage states of Asset
+    * Asset category
     """,
     'author': 'CodUP',
     'website': 'http://codup.com',
