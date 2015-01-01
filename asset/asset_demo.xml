@@ -2,7 +2,7 @@
 <openerp>
     <data noupdate="1">
     
-        <!-- Resource: res.partner -->
+        <!-- Partner -->
         <record id="res_partner_asset_1" model="res.partner">
             <field name="name">LSE</field>
         </record>
@@ -18,8 +18,21 @@
         <record id="res_partner_asset_4" model="res.partner">
             <field name="name">Global Leasing</field>
         </record>
-        
-        <!-- Resource: asset.asset -->
+
+        <!-- Asset Category -->
+        <record id="asset_category_1" model="asset.category">
+            <field name="name">Equipment</field>
+        </record>
+
+        <record id="asset_category_2" model="asset.category">
+            <field name="name">Vehicle</field>
+        </record>
+
+        <record id="asset_category_3" model="asset.category">
+            <field name="name">Building</field>
+        </record>
+
+        <!-- Assets -->
         <record id="asset_asset_1" model="asset.asset">
             <field name="name">Moulding machine 25</field>
             <field name="property_stock_asset" ref="asset.stock_location_assets"/>
