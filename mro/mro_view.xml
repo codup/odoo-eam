@@ -153,7 +153,7 @@
                                 <field name="maintenance_type"/>
                                 <label for="task_id" attrs="{'invisible':[('maintenance_type','=','bm')]}"/>
                                 <div attrs="{'invisible':[('maintenance_type','=','bm')]}">
-                                    <field name="task_id" domain="[('asset_id','=',asset_id),('maintenance_type','=',maintenance_type)]" attrs="{'required':[('maintenance_type','!=','bm')]}" on_change="onchange_task(task_id,parts_lines)"/>
+                                    <field name="task_id" domain="[('maintenance_type','=',maintenance_type)]" attrs="{'required':[('maintenance_type','!=','bm')]}" on_change="onchange_task(task_id,parts_lines)"/>
                                 </div>
                                 <field name="description"/>
                             </group>

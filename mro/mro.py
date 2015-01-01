@@ -26,6 +26,7 @@ import openerp.addons.decimal_precision as dp
 from openerp.tools.translate import _
 from openerp import netsvc
 
+
 class mro_order(osv.osv):
     """
     Maintenance Orders
@@ -99,7 +100,7 @@ class mro_order(osv.osv):
         'company_id': fields.many2one('res.company','Company',required=True, readonly=True, states={'draft':[('readonly',False)]}),
         'procurement_group_id': fields.many2one('procurement.group', 'Procurement group', copy=False),
     }
-    
+
     _defaults = {
         'state': lambda *a: 'draft',
         'maintenance_type': lambda *a: 'bm',
