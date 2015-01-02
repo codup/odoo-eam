@@ -149,8 +149,8 @@
                         </div>
                         <group>
                             <group>
-                                <field name="asset_id"/>
-                                <field name="category_id"/>
+                                <field name="asset_id" on_change="onchange_asset(asset_id)"/>
+                                <field name="category_id" invisible="1"/>
                                 <field name="maintenance_type"/>
                                 <label for="task_id" attrs="{'invisible':[('maintenance_type','=','bm')]}"/>
                                 <div attrs="{'invisible':[('maintenance_type','=','bm')]}">

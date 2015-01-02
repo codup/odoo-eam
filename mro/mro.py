@@ -113,6 +113,12 @@ class mro_order(osv.osv):
 
     _order = 'date_execution'
 
+    def onchange_asset(self, cr, uid, ids, asset):
+        value = {}
+        if asset:
+            value['category_id'] = self.pool.get('asset.asset').browse(cr, uid, asset).category_id
+        return {'value': value}
+
     def onchange_planned_date(self, cr, uid, ids, date):
         """
         onchange handler of date_planned.
