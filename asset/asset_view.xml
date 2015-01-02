@@ -324,19 +324,19 @@
             groups="asset.group_mro_manager"
             sequence="100"/>
 
-        <!-- Asset Tags Tree View -->
+        <!-- Asset Category Tree View -->
         <record id="asset_category_tree_view" model="ir.ui.view">
             <field name="name">asset.category.tree</field>
             <field name="model">asset.category</field>
             <field name="arch" type="xml">
-                <tree string="Asset Tags" editable="top">
+                <tree string="Asset Category" editable="top">
                     <field name="name"/>
                 </tree>
             </field>
         </record>
 
         <record id="action_asset_category" model="ir.actions.act_window">
-            <field name="name">Asset Tags</field>
+            <field name="name">Asset Category</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">asset.category</field>
             <field name="view_type">form</field>
@@ -344,7 +344,7 @@
         </record>
 
         <!-- Asset category item -->
-        <menuitem name="Asset Tags"
+        <menuitem name="Asset Category"
             action="action_asset_category"
             id="menu_asset_category"
             parent="menu_maintenance_config"
