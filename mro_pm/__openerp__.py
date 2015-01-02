@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2013-2014 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2015 CodUP (<http://codup.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -21,7 +21,7 @@
 
 {
     'name': 'MRO PM',
-    'version': '1.1',
+    'version': '1.2',
     'summary': 'Asset Proactive Maintenance',
     'description': """
 Manage Proactive Maintenance process in OpenERP
@@ -34,6 +34,7 @@ Main Features
 -------------
     * Meter Management for Asset
     * Planning Maintenance Work Orders base on Meters
+    * PM Rules for Assets by Category
 
 Required modules:
     * asset
