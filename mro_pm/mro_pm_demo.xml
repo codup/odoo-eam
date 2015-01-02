@@ -136,7 +136,7 @@
         </record>
 
         <!-- Replan -->
-        <!-- <function model="mro.order" name="replan_pm"/> -->
+        <function model="mro.order" name="replan_pm"/>
 
     </data>
 </openerp>

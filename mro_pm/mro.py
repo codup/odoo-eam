@@ -55,19 +55,22 @@ class mro_order(osv.osv):
 
     def replan_pm(self, cr, uid, context=None):
         rule_obj = self.pool.get('mro.pm.rule')
+        asset_obj = self.pool.get('asset.asset')
         ids = rule_obj.search(cr, uid, [])
         for rule in rule_obj.browse(cr,uid,ids,context=context):
             tasks = [x for x in rule.pm_rules_line_ids]
-            asset = rule.asset_id
-            meter = rule.meter_id
+            if not len(tasks): continue
             horizon = rule.horizon
             origin = rule.name
-            self.planning_strategy_1(cr, uid, asset, meter, tasks, horizon, origin, context=context)
+            asset_ids = asset_obj.search(cr, uid, [('category_id', '=', rule.category_id.id)])
+            for asset in asset_obj.browse(cr,uid,asset_ids,context=context):
+                for meter in asset.meter_ids:
+                    if meter.name != rule.parameter_id or meter.state != 'reading': continue
+                    self.planning_strategy_1(cr, uid, asset, meter, tasks, horizon, origin, context=context)
         return True
 
     def planning_strategy_1(self, cr, uid, asset, meter, tasks, horizon, origin, context=None):
         meter_obj = self.pool.get('mro.pm.meter')
-        if meter.state != 'reading' or not len(tasks): return True
         tasks.sort(lambda y,x: cmp(x.meter_interval_id.interval_max, y.meter_interval_id.interval_max))
         K = 3600.0*24
         hf = len(tasks)-1
