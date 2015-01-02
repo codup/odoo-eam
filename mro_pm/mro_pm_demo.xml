@@ -7,9 +7,19 @@
             <field name="name">TeckMould</field>
         </record>
 
+        <!-- Asset Category -->
+        <record id="asset_category_4" model="asset.category">
+            <field name="name">Mould</field>
+        </record>
+
+        <record id="asset_category_5" model="asset.category">
+            <field name="name">Motor</field>
+        </record>
+
         <!-- Assets -->
         <record id="asset_asset_4" model="asset.asset">
             <field name="name">Mould</field>
+            <field name="category_id" ref="asset_category_4"/>
             <field name="property_stock_asset" ref="asset.stock_location_assets"/>
             <field name="criticality">2</field>
             <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
