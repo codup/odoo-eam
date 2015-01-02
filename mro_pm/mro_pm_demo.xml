@@ -110,33 +110,33 @@
 
         <!-- Tasks -->
         <record id="mro_task_2" model="mro.task">
-            <field name="asset_id" ref="asset.asset_asset_1"/>
+            <field name="category_id" ref="asset.asset_category_1"/>
             <field name="name">Small Maintenance</field>
             <field name="maintenance_type">pm</field>
         </record>
 
         <record id="mro_task_3" model="mro.task">
-            <field name="asset_id" ref="asset.asset_asset_1"/>
+            <field name="category_id" ref="asset.asset_category_1"/>
             <field name="name">Medium Maintenance</field>
             <field name="maintenance_type">pm</field>
         </record>
 
         <record id="mro_task_4" model="mro.task">
-            <field name="asset_id" ref="asset.asset_asset_1"/>
+            <field name="category_id" ref="asset.asset_category_1"/>
             <field name="name">Big Maintenance</field>
             <field name="maintenance_type">pm</field>
         </record>
 
         <!-- Rules -->
         <record id="mro_pm_rule_1" model="mro.pm.rule">
-            <field name="asset_id" ref="asset.asset_asset_1"/>
-            <field name="meter_id" ref="mro_pm_meter_1"/>
+            <field name="category_id" ref="asset.asset_category_1"/>
+            <field name="parameter_id" ref="mro_pm_parameter_1"/>
             <field name="horizon">14</field>
             <field eval="[(0,0,{'task_id':ref('mro_task_2'),'meter_interval_id':ref('mro_pm_meter_interval_1')}),(0,0,{'task_id':ref('mro_task_3'),'meter_interval_id':ref('mro_pm_meter_interval_2')}),(0,0,{'task_id':ref('mro_task_4'),'meter_interval_id':ref('mro_pm_meter_interval_3')})]" name="pm_rules_line_ids"/>
         </record>
 
         <!-- Replan -->
-        <function model="mro.order" name="replan_pm"/>
+        <!-- <function model="mro.order" name="replan_pm"/> -->
 
     </data>
 </openerp>

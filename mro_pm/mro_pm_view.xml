@@ -280,7 +280,7 @@
             <field name="arch" type="xml">
                 <tree string="PM Rule" version="7.0">
                     <field name="name"/>
-                    <field name="asset_id"/>
+                    <field name="category_id"/>
                 </tree>
             </field>
         </record>
@@ -296,18 +296,18 @@
                         </div>
                         <group>
                             <group>
-                                <field name="asset_id" on_change="onchange_asset(pm_rules_line_ids)"/>
-                                <field name="meter_id" domain="[('asset_id','=',asset_id),('state','=','reading')]" attrs="{'invisible':[('asset_id','=',False)]}" on_change="onchange_meter(meter_id)"/>
+                                <field name="category_id" on_change="onchange_category(pm_rules_line_ids)"/>
+                                <field name="parameter_id" on_change="onchange_parameter(parameter_id)"/>
                                 <field name="horizon"/>
                              </group>
                             <group>
                                 <field name="active"/>
-                                <field name="meter_uom" readonly="1" attrs="{'invisible':['|',('asset_id','=',False),('meter_id','=',False)]}"/>
+                                <field name="parameter_uom" readonly="1" attrs="{'invisible':[('parameter_id','=',False)]}"/>
                             </group>
                         </group>
-                        <field name="pm_rules_line_ids" context="{'asset_id':asset_id}" attrs="{'invisible':[('asset_id','=',False)]}"  options='{"always_reload":True}'>
+                        <field name="pm_rules_line_ids" context="{'category_id':category_id}" attrs="{'invisible':[('category_id','=',False)]}"  options='{"always_reload":True}'>
                             <tree string="Tasks" editable="bottom">
-                                <field name="task_id" domain="[('asset_id','=',asset_id)]"/>
+                                <field name="task_id" domain="[('category_id','=',category_id)]"/>
                                 <field name="meter_interval_id"/>
                             </tree>
                         </field>

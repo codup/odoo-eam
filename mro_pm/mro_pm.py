@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2013-2014 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2015 CodUP (<http://codup.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -42,20 +42,20 @@ class mro_pm_parameter(osv.osv):
 class mro_pm_meter(osv.osv):
     _name = 'mro.pm.meter'
     _description = 'Asset Meters'
-    
+
     READING_TYPE_SELECTION = [
         ('inc', 'Increase'),
         ('dec', 'Decrease'),
         ('cng', 'Change'),
         ('src', 'Meter')
     ]
-    
+
     STATE_SELECTION = [
         ('draft', 'Setup'),
         ('reset', 'Detached'),
         ('reading', 'Reading')
     ]
-    
+
     def _get_utilization(self, cr, uid, ids, name, arg, context=None):
         res = {}
         for meter in self.browse(cr, uid, ids, context=context):
@@ -441,7 +441,7 @@ class mro_pm_meter_interval(osv.osv):
         if min > max: min = max
         return {'value': {'interval_min': min,'interval_max': max,}}        
 
-        
+
 class mro_pm_rule(osv.osv):
     """
     Defines Preventive Maintenance rules.
@@ -452,9 +452,9 @@ class mro_pm_rule(osv.osv):
     _columns = {
         'name': fields.char('Name', size=64),
         'active': fields.boolean('Active', help="If the active field is set to False, it will allow you to hide the PM without removing it."),
-        'asset_id': fields.many2one('asset.asset', 'Asset', ondelete='restrict', required=True),
-        'meter_id': fields.many2one('mro.pm.meter', 'Meter', ondelete='restrict', required=True),
-        'meter_uom': fields.related('meter_id', 'meter_uom', type='many2one', relation='product.uom', string='Unit of Measure'),
+        'category_id': fields.many2one('asset.category', 'Asset Category', ondelete='restrict', required=True),
+        'parameter_id': fields.many2one('mro.pm.parameter', 'Parameter', ondelete='restrict', required=True),
+        'parameter_uom': fields.related('parameter_id', 'parameter_uom', type='many2one', relation='product.uom', string='Unit of Measure'),
         'horizon': fields.float('Planning horizon (months)', digits=(12,0), required=True),
         'pm_rules_line_ids': fields.one2many('mro.pm.rule.line', 'pm_rule_id', 'Tasks'),
     }
@@ -462,33 +462,24 @@ class mro_pm_rule(osv.osv):
     _defaults = {
         'active': True,
     }
-    
-    def onchange_asset(self, cr, uid, ids, rule_lines):
-        """
-        onchange handler of asset.
-        """
+
+    def onchange_category(self, cr, uid, ids, rule_lines):
         value = {}
-        value['meter_id'] = False
         value['pm_rules_line_ids'] = [[2,line[1],line[2]] for line in rule_lines if line[0]]
         return {'value': value}
-    
-    def onchange_meter(self, cr, uid, ids, meter):
-        """
-        onchange handler of meter.
-        """
+
+    def onchange_parameter(self, cr, uid, ids, parameter):
         value = {}
-        if meter:
-            meter_uom = self.pool.get('mro.pm.meter').browse(cr, uid, meter).meter_uom.id
-            value['meter_uom'] = meter_uom
+        if parameter:
+            value['parameter_uom'] = self.pool.get('mro.pm.parameter').browse(cr, uid, parameter).parameter_uom.id
         return {'value': value}
-        
+
     def create(self, cr, uid, vals, context=None):
         if vals.get('name','/')=='/':
             vals['name'] = self.pool.get('ir.sequence').get(cr, uid, 'mro.pm.rule') or '/'
         return super(mro_pm_rule, self).create(cr, uid, vals, context=context)
-    
-    
-    
+
+
 class mro_pm_rule_line(osv.osv):
     _name = 'mro.pm.rule.line'
     _description = 'Rule for Task'
@@ -497,7 +488,6 @@ class mro_pm_rule_line(osv.osv):
         'meter_interval_id': fields.many2one('mro.pm.meter.interval', 'Meter Interval', ondelete='restrict', required=True),
         'pm_rule_id': fields.many2one('mro.pm.rule', 'PM Rule', ondelete='restrict'),
     }
-    
-    
-    
+
+
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
