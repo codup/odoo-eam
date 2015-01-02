@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2013 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2015 CodUP (<http://codup.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -30,8 +30,11 @@ class asset_asset(osv.osv):
     }
 
     def action_view_rules(self, cr, uid, ids, context=None):
+        category_ids = []
+        for asset in self.browse(cr,uid,ids,context=context):
+            category_ids.append(asset.category_id.id)
         return {
-            'domain': "[('asset_id','in',[" + ','.join(map(str, ids)) + "])]",
+            'domain': "[('category_id','in',[" + ','.join(map(str, category_ids)) + "])]",
             'name': _('Scheduling Rules'),
             'view_type': 'form',
             'view_mode': 'tree,form',
