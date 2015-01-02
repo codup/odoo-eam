@@ -99,6 +99,7 @@ class mro_order(osv.osv):
         'problem_description': fields.text('Problem Description'),
         'company_id': fields.many2one('res.company','Company',required=True, readonly=True, states={'draft':[('readonly',False)]}),
         'procurement_group_id': fields.many2one('procurement.group', 'Procurement group', copy=False),
+        'category_id': fields.related('asset_id', 'category_id', type='many2one', relation='asset.category', string='Asset Category', readonly=True),
     }
 
     _defaults = {
