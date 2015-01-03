@@ -21,7 +21,7 @@
 
 {
     'name': 'MRO',
-    'version': '1.2',
+    'version': '1.3',
     'summary': 'Asset Maintenance, Repair and Operation',
     'description': """
 Manage Maintenance process in OpenERP
@@ -36,6 +36,7 @@ Main Features
     * Maintenance Work Orders Management
     * Parts Management
     * Tasks Management (standard job)
+    * Convert Maintenance Order to Task
 
 Required modules:
     * asset
