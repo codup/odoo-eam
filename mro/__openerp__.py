@@ -51,6 +51,7 @@ Required modules:
         'security/mro_security.xml',
         'security/ir.model.access.csv',
         'wizard/reject_view.xml',
+        'wizard/convert_order.xml',
         'asset_view.xml',
         'mro_workflow.xml',
         'mro_request_workflow.xml',

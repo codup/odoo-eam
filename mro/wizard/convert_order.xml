@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="view_convert_order" model="ir.ui.view">
+            <field name="name">Convert to Task</field>
+            <field name="model">mro.convert.order</field>
+            <field name="arch" type="xml">
+                <form string="Convert to Task" version="7.0">
+                    <separator colspan="4" string="Do you really want convert Maintenance Order to Task?"/>
+                    <footer>
+                        <button name="convert_order" string="Convert to Task" type="object" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <act_window name="Convert to Task"
+            res_model="mro.convert.order"
+            src_model="mro.order"
+            target="new"
+            view_mode="form"
+            view_type="form"
+            id="action_view_convert_order"/>
+
+    </data>
+</openerp>
