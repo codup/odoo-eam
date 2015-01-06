@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <!-- Update Gauges menu -->
+        <record id="mro_gauge_tree_view" model="ir.ui.view">
+            <field name="name">mro.gauge.tree</field>
+            <field name="model">mro.gauge</field>
+            <field name="arch" type="xml">
+                <tree string="Update Gauges" selector="0" create="false" delete="false" editable="bottom" version="7.0">
+                    <field name="asset_id" readonly="1"/>
+                    <field name="name" readonly="1"/>
+                    <field name="date" string="Reading Date" readonly="1"/>
+                    <field name="new_value" string="New Reading"/>
+                    <field name="value" string="Last Reading" readonly="1"/>
+                    <field name="gauge_uom" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_update_gauges" model="ir.actions.act_window">
+            <field name="name">Update Gauges</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mro.gauge</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="domain">[('state','=','reading'),('reading_type','!=','src')]</field>
+            <field name="context">{}</field>
+            <field name="view_id" ref="mro_gauge_tree_view"/>
+        </record>
+
+        <menuitem name="Update Gauges"
+            action="action_update_gauges"
+            id="menu_update_gauges"
+            parent="mro.menu_mro_maintenance"
+            groups="asset.group_mro_user"
+            sequence="20"/>
+            
+        <!-- Gauges Logs menu -->
+        <record model="ir.actions.act_window" id="open_reading_log">
+            <field name="context">{'search_default_gauge_id': active_id}</field>
+            <field name="name">Reading History</field>
+            <field name="res_model">mro.gauge.line</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+        </record>  
+
+        <record id="mro_gauge_log_tree_view" model="ir.ui.view">
+            <field name="name">mro.gauge.log.tree</field>
+            <field name="model">mro.gauge</field>
+            <field name="arch" type="xml">
+                <tree string="Gauges Logs" create="false" delete="false" readonly="1" editable="bottom" version="7.0">
+                    <field name="asset_id" readonly="1"/>
+                    <field name="name" readonly="1"/>
+                    <button icon="STOCK_JUSTIFY_FILL" string="Reading History" name="%(open_reading_log)d" type="action" states="reading"/>
+                    <field name="date" string="Reading Date" readonly="1"/>
+                    <field name="value" string="Last Reading" readonly="1"/>
+                    <field name="gauge_uom" readonly="1"/>
+                    <field name="state" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_gauges_logs" model="ir.actions.act_window">
+            <field name="name">Gauges Logs</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mro.gauge</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="mro_gauge_log_tree_view"/>
+        </record>
+
+        <menuitem name="Gauges Logs"
+            action="action_gauges_logs"
+            id="menu_gauges_logs"
+            parent="asset.menu_maintenance_assets"
+            groups="asset.group_mro_user"
+            sequence="100"/>
+
+        <record id="mro_gauge_form_view" model="ir.ui.view">
+            <field name="name">mro.gauge.form</field>
+            <field name="model">mro.gauge</field>
+            <field name="arch" type="xml">
+                <form string="Gauge" version="7.0">
+                    <header>
+                        <button name="activate_gauge" states="draft" string="Attach" class="oe_highlight" type="object"/>
+                        <field name="state" widget="statusbar" statusbar_visible="reading"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <div class="oe_edit_only" states="draft">
+                                <label for="name" string="Parameter"/>
+                            </div>
+                            <h1><field name="name" class="oe_inline" on_change="onchange_parameter(name)"/></h1>
+                        </div>
+                        <div class="oe_right">
+                            <h2><field name="asset_id" readonly="1"/></h2>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="new_value" on_change="onchange_value(new_value)" attrs="{'invisible':['|',('state','!=','reading'),('reading_type','=','src')]}"/>
+                                <field name="gauge_uom"/>
+                                <field name="reading_type"/>
+                                <field name="parent_gauge_id" domain="[('state','!=','draft'),('reading_type','!=','src')]" attrs="{'invisible':[('reading_type','!=','src')],'required':[('reading_type','=','src')]}"/>
+                                <field name="parent_ratio_id" attrs="{'invisible':[('reading_type','!=','src')]}"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                        <group string="Last Reading">
+                            <field name="view_line_ids" colspan="4" nolabel="1" readonly="1" attrs="{'invisible':[('state','!=','reading')]}"/>
+                            <group>
+                                <field name="value" attrs="{'invisible':[('state','=','reading')]}"/>
+                                <field name="date" invisible="1"/>
+                            </group>
+                            <group>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="mro_gauge_line_tree_view" model="ir.ui.view">
+            <field name="name">mro.gauge.line.tree</field>
+            <field name="model">mro.gauge.line</field>
+            <field name="arch" type="xml">
+                <tree string="Reading History" create="false" delete="false" editable="bottom" version="7.0">
+                    <field name="date" readonly="1"/>
+                    <field name="value" readonly="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="gauge_history_search">
+            <field name="name">mro.gauge.line.search</field>
+            <field name="model">mro.gauge.line</field>
+            <field name="arch" type="xml">
+                <search string="Gauge History Search">
+                    <field name="gauge_id"/>
+                </search>
+            </field>
+        </record>
+
+ 	</data>
+</openerp>

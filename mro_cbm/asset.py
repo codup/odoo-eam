@@ -19,7 +19,14 @@
 #
 ##############################################################################
 
-import mro_cbm
-import asset
+from openerp.osv import fields, osv
+
+
+class asset_asset(osv.osv):
+    _inherit = 'asset.asset'
+    _columns = {
+        'gauge_ids': fields.one2many('mro.gauge', 'asset_id', 'Gauge'),
+    }
+
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

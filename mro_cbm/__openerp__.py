@@ -47,7 +47,10 @@ Required modules:
     'images': ['static/description/icon.png'],
     'depends': ['mro_pm'],
     'demo': [],
-    'data': [],
+    'data': [
+        'mro_cbm_view.xml',
+        'asset_view.xml',
+    ],
     'installable': True,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
