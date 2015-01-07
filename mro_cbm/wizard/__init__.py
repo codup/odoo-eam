@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2015 CodUP (<http://codup.com>).
+#    Copyright (C) 2013 CodUP (<http://codup.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,9 +19,6 @@
 #
 ##############################################################################
 
-import mro_cbm
-import asset
-import mro
-import wizard
+import replan
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

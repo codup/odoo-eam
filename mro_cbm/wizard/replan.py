@@ -19,40 +19,15 @@
 #
 ##############################################################################
 
-{
-    'name': 'MRO CBM',
-    'version': '0.0',
-    'summary': 'Asset Predictive Maintenance',
-    'description': """
-Manage Predictive Maintenance process in OpenERP
-=====================================
+from openerp.osv import fields, osv
 
-Asset Maintenance, Repair and Operation.
-Add support for Condition Based Maintenance.
+class mro_cbm_replan(osv.osv_memory):
+    _name = 'mro.cbm.replan'
+    _description = 'Replan PdM'
+    
+    def replan_cbm(self, cr, uid, ids, context=None):
+        self.pool.get('mro.order').replan_cbm(cr, uid, context=context)
+        return {'type': 'ir.actions.act_window_close',}
 
-Main Features
--------------
-    * Gauge Management for Asset
-    * Planning Maintenance Work Orders base on Gauges
 
-Required modules:
-    * asset
-    * mro
-    * mro_pm
-    """,
-    'author': 'CodUP',
-    'website': 'http://codup.com',
-    'category': 'Enterprise Asset Management',
-    'sequence': 0,
-    'images': ['static/description/icon.png'],
-    'depends': ['mro_pm'],
-    'demo': [],
-    'data': [
-        'wizard/replan_view.xml',
-        'mro_cbm_view.xml',
-        'mro_cbm_sequence.xml',
-        'asset_view.xml',
-    ],
-    'installable': True,
-}
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

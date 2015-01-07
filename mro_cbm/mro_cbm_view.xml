@@ -208,5 +208,13 @@
             parent="asset.menu_maintenance_config"
             sequence="1"/>
 
+        <!-- Replan PdM menu -->
+        <menuitem name="Replan PdM"
+            action="action_replan_cbm"
+            id="menu_replan_cbm"
+            parent="mro.menu_mro_maintenance"
+            groups="asset.group_mro_user"
+            sequence="30"/>
+
  	</data>
 </openerp>
