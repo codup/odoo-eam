@@ -142,5 +142,71 @@
             </field>
         </record>
 
+        <!-- PdM Rules menu -->
+        <record id="mro_cbm_rule_tree_view" model="ir.ui.view">
+            <field name="name">mro.cbm.rule.tree</field>
+            <field name="model">mro.cbm.rule</field>
+            <field name="arch" type="xml">
+                <tree string="PdM Rule" version="7.0">
+                    <field name="name"/>
+                    <field name="category_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mro_cbm_rule_form_view" model="ir.ui.view">
+            <field name="name">mro.cbm.rule.form</field>
+            <field name="model">mro.cbm.rule</field>
+            <field name="arch" type="xml">
+                <form string="PdM Rule" version="7.0">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>PdM Rule <field name="name" class="oe_inline" readonly="1"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="category_id" on_change="onchange_category(task_id, category_id)"/>
+                                <field name="parameter_id" on_change="onchange_parameter(parameter_id)"/>
+                                <field name="task_id" domain="[('category_id','=',category_id)]"/>
+                             </group>
+                            <group>
+                                <field name="active"/>
+                                <field name="parameter_uom" readonly="1" attrs="{'invisible':[('parameter_id','=',False)]}"/>
+                            </group>
+                        </group>
+                        <group>
+                            <label for="id" string="Trigger"/>
+                            <div>
+                                <div>
+                                    <field name="is_limit_min" class="oe_inline"/>
+                                    <label for="is_limit_min" string="Min Limit"/>
+                                    <field name="limit_min" class="oe_inline" attrs="{'invisible':[('is_limit_min','=',False)]}"/>
+                                </div>
+                                <div>
+                                    <field name="is_limit_max" class="oe_inline"/>
+                                    <label for="is_limit_max" string="Max Limit"/>
+                                    <field name="limit_max" class="oe_inline" attrs="{'invisible':[('is_limit_max','=',False)]}"/>
+                                </div>
+                            </div>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_cbm_rules" model="ir.actions.act_window">
+            <field name="name">PdM Rule</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mro.cbm.rule</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="PdM Rules"
+            action="action_cbm_rules"
+            id="menu_cbm_rules"
+            parent="asset.menu_maintenance_config"
+            sequence="1"/>
+
  	</data>
 </openerp>

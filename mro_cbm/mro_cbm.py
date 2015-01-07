@@ -139,4 +139,41 @@ class mro_gauge_line(osv.osv):
     _order = 'date desc'
 
 
+class mro_cbm_rule(osv.osv):
+    """
+    Defines Predictive Maintenance rules.
+    """
+    _name = "mro.cbm.rule"
+    _description = "Predictive Maintenance Rule"
+
+    _columns = {
+        'name': fields.char('Name', size=64),
+        'active': fields.boolean('Active', help="If the active field is set to False, it will allow you to hide the PdM without removing it."),
+        'category_id': fields.many2one('asset.category', 'Asset Category', ondelete='restrict', required=True),
+        'parameter_id': fields.many2one('mro.pm.parameter', 'Parameter', ondelete='restrict', required=True),
+        'parameter_uom': fields.related('parameter_id', 'parameter_uom', type='many2one', relation='product.uom', string='Unit of Measure'),
+        'task_id': fields.many2one('mro.task', 'Task', ondelete='restrict', required=True),
+        'limit_min': fields.float('Min Limit'),
+        'limit_max': fields.float('Max Limit'),
+        'is_limit_min': fields.boolean('Min Limit'),
+        'is_limit_max': fields.boolean('Max Limit'),
+    }
+
+    _defaults = {
+        'active': True,
+    }
+
+    def onchange_category(self, cr, uid, ids, task, category):
+        value = {}
+        if task and category and category != self.pool.get('mro.task').browse(cr, uid, task).category_id.id:
+            value['task_id'] = False
+        return {'value': value}
+
+    def onchange_parameter(self, cr, uid, ids, parameter):
+        value = {}
+        if parameter:
+            value['parameter_uom'] = self.pool.get('mro.pm.parameter').browse(cr, uid, parameter).parameter_uom.id
+        return {'value': value}
+
+
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
