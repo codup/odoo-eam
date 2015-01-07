@@ -49,6 +49,7 @@ Required modules:
     'demo': [],
     'data': [
         'mro_cbm_view.xml',
+        'mro_cbm_sequence.xml',
         'asset_view.xml',
     ],
     'installable': True,

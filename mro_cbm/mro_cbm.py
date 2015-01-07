@@ -175,5 +175,10 @@ class mro_cbm_rule(osv.osv):
             value['parameter_uom'] = self.pool.get('mro.pm.parameter').browse(cr, uid, parameter).parameter_uom.id
         return {'value': value}
 
+    def create(self, cr, uid, vals, context=None):
+        if vals.get('name','/')=='/':
+            vals['name'] = self.pool.get('ir.sequence').get(cr, uid, 'mro.cbm.rule') or '/'
+        return super(mro_cbm_rule, self).create(cr, uid, vals, context=context)
+
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
