@@ -46,7 +46,7 @@ Required modules:
     'sequence': 0,
     'images': ['static/description/icon.png'],
     'depends': ['mro_pm'],
-    'demo': [],
+    'demo': ['mro_cbm_demo.xml'],
     'data': [
         'wizard/replan_view.xml',
         'mro_cbm_view.xml',

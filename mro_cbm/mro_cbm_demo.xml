@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- UoM -->
+        <record id="uom_mro_degree" model="product.uom">
+            <field name="category_id" ref="mro_pm.uom_categ_mro_work"/>
+            <field name="name">°C</field>
+            <field name="factor" eval="1.0"/>
+            <field name="rounding" eval="1.0"/>
+        </record>        
+
+        <!-- Parameters -->
+        <record id="mro_cbm_parameter_1" model="mro.pm.parameter">
+            <field name="name">Bearing Temperature</field>
+            <field name="parameter_uom" ref="uom_mro_degree"/>
+        </record>
+
+        <!-- Gauges -->
+        <record id="mro_gauge_1" model="mro.gauge">
+            <field name="name" ref="mro_cbm_parameter_1"/>
+            <field name="asset_id" ref="mro_pm.asset_asset_5"/>
+            <field name="state">reading</field>
+            <field name="value">100</field>
+        </record>
+
+        <!-- Tasks -->
+        <record id="mro_task_6" model="mro.task">
+            <field name="category_id" ref="mro_pm.asset_category_5"/>
+            <field name="name">Replace bearings</field>
+            <field name="maintenance_type">cbm</field>
+        </record>
+
+        <!-- Rules -->
+        <record id="mro_cbm_rule_1" model="mro.cbm.rule">
+            <field name="category_id" ref="mro_pm.asset_category_5"/>
+            <field name="parameter_id" ref="mro_cbm_parameter_1"/>
+            <field name="task_id" ref="mro_task_6"/>
+            <field name="is_limit_max">True</field>
+            <field name="limit_max">75</field>
+        </record>
+
+        <!-- Replan -->
+        <function model="mro.order" name="replan_cbm"/>
+
+    </data>
+</openerp>
