@@ -19,8 +19,36 @@
 #
 ##############################################################################
 
-import mro_cbm
-import asset
-import mro
+from openerp.osv import fields, osv
+
+
+class mro_order(osv.osv):
+    _inherit = 'mro.order'
+    
+    MAINTENANCE_TYPE_SELECTION = [
+        ('bm', 'Breakdown'),
+        ('cm', 'Corrective'),
+        ('pm', 'Preventive'),
+        ('cbm', 'Predictive')
+    ]
+    
+    _columns = {
+        'maintenance_type': fields.selection(MAINTENANCE_TYPE_SELECTION, 'Maintenance Type', required=True, readonly=True, states={'draft': [('readonly', False)]}),
+    }
+
+
+class mro_task(osv.osv):
+    _inherit = 'mro.task'
+
+    MAINTENANCE_TYPE_SELECTION = [
+        ('cm', 'Corrective'),
+        ('pm', 'Preventive'),
+        ('cbm', 'Predictive')
+    ]
+
+    _columns = {
+        'maintenance_type': fields.selection(MAINTENANCE_TYPE_SELECTION, 'Maintenance Type', required=True),
+    }
+
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
