@@ -43,8 +43,7 @@ class mro_order(osv.osv):
         asset_obj = self.pool.get('asset.asset')
         ids = rule_obj.search(cr, uid, [])
         for rule in rule_obj.browse(cr,uid,ids,context=context):
-            asset_ids = asset_obj.search(cr, uid, [('category_id', '=', rule.category_id.id)])
-            for asset in asset_obj.browse(cr,uid,asset_ids,context=context):
+            for asset in rule.category_id.asset_ids:
                 for gauge in asset.gauge_ids:
                     if gauge.name != rule.parameter_id or gauge.state != 'reading': continue
                     self.planning_strategy_2(cr, uid, asset, gauge, rule, context=context)
