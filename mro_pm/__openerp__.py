@@ -34,7 +34,7 @@ Main Features
 -------------
     * Meter Management for Asset
     * Planning Maintenance Work Orders base on Meters
-    * PM Rules for Assets by Category
+    * PM Rules for Assets by Tag
 
 Required modules:
     * asset
