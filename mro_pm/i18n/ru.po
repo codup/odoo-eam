@@ -412,27 +412,16 @@ msgid "Work Time"
 msgstr "Наработка"
 
 #. module: mro_pm
-#: model:mro.order,description:3
-#: model:mro.order,description:4
-#: model:mro.order,description:5
-#: model:mro.order,description:6
-#: model:mro.order,description:8
-#: model:mro.order,description:9
-#: model:mro.order,description:10
-#: model:mro.order,description:11
-#: model:mro.order,description:13
 #: model:mro.task,name:mro_pm.mro_task_2
 msgid "Small Maintenance"
 msgstr "ТО1"
 
 #. module: mro_pm
-#: model:mro.order,description:7
 #: model:mro.task,name:mro_pm.mro_task_3
 msgid "Medium Maintenance"
 msgstr "ТО2"
 
 #. module: mro_pm
-#: model:mro.order,description:12
 #: model:mro.task,name:mro_pm.mro_task_4
 msgid "Big Maintenance"
 msgstr "ТО3"
