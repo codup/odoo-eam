@@ -71,10 +71,10 @@ class asset_state(osv.osv):
 
 
 class asset_category(osv.osv):
-    _description = 'Asset Category'
+    _description = 'Asset Tags'
     _name = 'asset.category'
     _columns = {
-        'name': fields.char('Category', required=True, translate=True),
+        'name': fields.char('Tag', required=True, translate=True),
     }
 
 

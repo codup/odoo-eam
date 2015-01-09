@@ -33,7 +33,7 @@ Support following feature:
     * Custom states of Asset
     * States of Asset for different team: Finance, Warehouse, Manufacture, Maintenance and Accounting
     * Drag&Drop manage states of Asset
-    * Asset category
+    * Asset Tags
     """,
     'author': 'CodUP',
     'website': 'http://codup.com',
