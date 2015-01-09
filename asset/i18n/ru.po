@@ -489,3 +489,41 @@ msgstr "Пользователь"
 #: model:res.groups,name:asset.group_mro_manager
 msgid "Manager"
 msgstr "Менеджер"
+
+#. module: asset
+#: field:asset.category,name:0
+msgid "Tag"
+msgstr "Тэг"
+
+#. module: asset
+#: field:asset.asset,category_ids:0
+msgid "Tags"
+msgstr "Тэги"
+
+#. module: asset
+#: view:asset.asset:asset.assets_form_view
+msgid "Tags..."
+msgstr "Тэги..."
+
+#. module: asset
+#: view:asset.category:asset.asset_category_tree_view
+#: model:ir.actions.act_window,name:asset.action_asset_category
+#: model:ir.model,name:asset.model_asset_category
+#: model:ir.ui.menu,name:asset.menu_asset_category
+msgid "Asset Tags"
+msgstr "Тэги активов"
+
+#. module: asset
+#: model:asset.category,name:asset.asset_category_1
+msgid "Equipment"
+msgstr "Оборудование"
+
+#. module: asset
+#: model:asset.category,name:asset.asset_category_2
+msgid "Vehicle"
+msgstr "Авто"
+
+#. module: asset
+#: model:asset.category,name:asset.asset_category_3
+msgid "Building"
+msgstr "Строение"
