@@ -360,7 +360,9 @@ msgstr "Пользователь"
 #. module: mro
 #: model:ir.actions.act_window,name:mro.action_orders
 #: model:ir.ui.menu,name:mro.menu_mro_order
-#: view:mro.order:0
+#: view:mro.order:mro.mro_order_calendar_view
+#: view:mro.order:mro.mro_order_form_view
+#: view:mro.order:mro.mro_order_tree_view
 msgid "Maintenance Orders"
 msgstr "Заказы на обслуживание"
 
@@ -645,3 +647,20 @@ msgstr "Запрос на обслуживание отклонен"
 #: model:mail.message.subtype,name:mro.mt_request_rejected
 msgid "Reject Request"
 msgstr "Отклонение запроса"
+
+#. module: mro
+#: view:asset.asset:mro.view_asset_asset_mro_buttons_from
+msgid "Maintenance"
+msgstr "Обслуживания"
+
+#. module: mro
+#: field:mro.order,category_ids:0
+#: field:mro.task,category_id:0
+msgid "Asset Category"
+msgstr "Категория актива"
+
+#. module: mro
+#: code:addons/mro/asset.py:44
+#, python-format
+msgid "Maintenance Orders"
+msgstr "Заказы на обслуживание"
