@@ -112,7 +112,8 @@ msgstr "Считывание"
 
 #. module: mro_pm
 #: field:mro.pm.meter,meter_uom:0
-#: field:mro.pm.rule,meter_uom:0
+#: field:mro.pm.parameter,parameter_uom:0
+#: field:mro.pm.rule,parameter_uom:0
 msgid "Unit of Measure"
 msgstr "ЕИ"
 
@@ -437,7 +438,7 @@ msgid "Big Maintenance"
 msgstr "ТО3"
 
 #. module: mro_pm
-#: model:mro.pm.meter,name:mro_pm.mro_pm_meter_3
+#: model:mro.pm.parameter,name:mro_pm.mro_pm_parameter_3
 #: model:product.uom,name:mro_pm.uom_mro_cycle
 msgid "Cycle"
 msgstr "Удары"
@@ -448,12 +449,13 @@ msgid "Work"
 msgstr "Работа"
 
 #. module: mro_pm
-#: model:mro.pm.meter,name:mro_pm.mro_pm_meter_2
+#: model:mro.pm.parameter,name:mro_pm.mro_pm_parameter_2
 msgid "Produced"
 msgstr "Изготовлено"
 
 #. module: mro_pm
 #: model:asset.asset,name:mro_pm.asset_asset_4
+#: model:asset.category,name:mro_pm.asset_category_4
 msgid "Mould"
 msgstr "Прессформа"
 
@@ -461,3 +463,71 @@ msgstr "Прессформа"
 #: model:mro.pm.meter.ratio,name:mro_pm.mro_pm_meter_ratio_1
 msgid "2 nests"
 msgstr "2 гнезда"
+
+#. module: mro_pm
+#: view:mro.pm.meter:mro_pm.mro_pm_meter_form_view
+#: field:mro.pm.parameter,name:0
+#: field:mro.pm.rule,parameter_id:0
+msgid "Parameter"
+msgstr "Параметр"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_parameters
+#: model:ir.ui.menu,name:mro_pm.menu_parameters
+#: view:mro.pm.parameter:mro_pm.mro_pm_parameter_tree_view
+msgid "Parameters"
+msgstr "Параметры"
+
+#. module: mro_pm
+#: model:mro.pm.parameter,name:mro_pm.mro_pm_parameter_1
+msgid "Work Time"
+msgstr "Наработка"
+
+#. module: mro_pm
+#: model:mro.pm.parameter,name:mro_pm.mro_pm_parameter_4
+msgid "Calendar Time"
+msgstr "Календарное время"
+
+#. module: mro_pm
+#: field:mro.pm.rule,category_id:0
+msgid "Asset Category"
+msgstr "Категория актива"
+
+#. module: mro_pm
+#: model:asset.category,name:mro_pm.asset_category_5
+msgid "Motor"
+msgstr "Мотор"
+
+#. module: mro_pm
+#: model:asset.asset,name:mro_pm.asset_asset_5
+msgid "Motor 1"
+msgstr "Мотор 1"
+
+#. module: mro_pm
+#: model:asset.asset,name:mro_pm.asset_asset_6
+msgid "Motor 2"
+msgstr "Мотор 2"
+
+#. module: mro_pm
+#: model:asset.asset,name:mro_pm.asset_asset_7
+msgid "Motor 3"
+msgstr "Мотор 3"
+
+#. module: mro_pm
+#: model:mro.order,description:mro_pm.mro_order_3
+#: model:mro.order,description:mro_pm.mro_order_4
+#: model:mro.order,description:mro_pm.mro_order_5
+#: model:mro.task,name:mro_pm.mro_task_5
+msgid "Lubrication"
+msgstr "Смазка"
+
+#. module: mro_pm
+#: view:asset.asset:mro_pm.assets_form_view
+msgid "Scheduling Rules"
+msgstr "Правила ППР"
+
+#. module: mro_pm
+#: code:addons/mro_pm/asset.py:38
+#, python-format
+msgid "Scheduling Rules"
+msgstr "Правила ППР"

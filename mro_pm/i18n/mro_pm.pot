@@ -1,0 +1,550 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mro_pm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-09 15:49+0000\n"
+"PO-Revision-Date: 2015-01-09 15:49+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mro_pm
+#: model:mro.pm.meter.ratio,name:mro_pm.mro_pm_meter_ratio_1
+msgid "2 nests"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.rule,active:0
+msgid "Active"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_asset_asset
+#: field:mro.pm.meter,asset_id:0
+msgid "Asset"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.rule,category_id:0
+msgid "Asset Category"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter
+msgid "Asset Meters"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_parameter
+msgid "Asset Parameters"
+msgstr ""
+
+#. module: mro_pm
+#: view:mro.pm.meter:mro_pm.mro_pm_meter_form_view
+msgid "Attach"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,av_time:0
+msgid "Averaging time (days)"
+msgstr ""
+
+#. module: mro_pm
+#: model:mro.task,name:mro_pm.mro_task_4
+msgid "Big Maintenance"
+msgstr ""
+
+#. module: mro_pm
+#: model:mro.pm.parameter,name:mro_pm.mro_pm_parameter_4
+msgid "Calendar Time"
+msgstr ""
+
+#. module: mro_pm
+#: view:mro.pm.replan:mro_pm.view_replan_pm_wizard
+msgid "Cancel"
+msgstr ""
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,rounding_type:0
+msgid "Ceiling"
+msgstr ""
+
+#. module: mro_pm
+#: selection:mro.pm.meter,reading_type:0
+msgid "Change"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,create_uid:0
+#: field:mro.pm.meter.interval,create_uid:0
+#: field:mro.pm.meter.line,create_uid:0
+#: field:mro.pm.meter.ratio,create_uid:0
+#: field:mro.pm.parameter,create_uid:0
+#: field:mro.pm.replan,create_uid:0
+#: field:mro.pm.rule,create_uid:0
+#: field:mro.pm.rule.line,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,create_date:0
+#: field:mro.pm.meter.interval,create_date:0
+#: field:mro.pm.meter.line,create_date:0
+#: field:mro.pm.meter.ratio,create_date:0
+#: field:mro.pm.parameter,create_date:0
+#: field:mro.pm.replan,create_date:0
+#: field:mro.pm.rule,create_date:0
+#: field:mro.pm.rule.line,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: mro_pm
+#: model:mro.pm.parameter,name:mro_pm.mro_pm_parameter_3
+#: model:product.uom,name:mro_pm.uom_mro_cycle
+msgid "Cycle"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,date:0
+#: field:mro.pm.meter.line,date:0
+msgid "Date"
+msgstr ""
+
+#. module: mro_pm
+#: selection:mro.pm.meter,reading_type:0
+msgid "Decrease"
+msgstr ""
+
+#. module: mro_pm
+#: view:mro.pm.meter:mro_pm.mro_pm_meter_form_view
+msgid "Detach"
+msgstr ""
+
+#. module: mro_pm
+#: selection:mro.pm.meter,state:0
+msgid "Detached"
+msgstr ""
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,rounding_type:0
+msgid "Floor"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter_line
+msgid "History of Asset Meter Reading"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,id:0
+#: field:mro.pm.meter.interval,id:0
+#: field:mro.pm.meter.line,id:0
+#: field:mro.pm.meter.ratio,id:0
+#: field:mro.pm.parameter,id:0
+#: field:mro.pm.replan,id:0
+#: field:mro.pm.rule,id:0
+#: field:mro.pm.rule.line,id:0
+msgid "ID"
+msgstr ""
+
+#. module: mro_pm
+#: help:mro.pm.rule,active:0
+msgid "If the active field is set to False, it will allow you to hide the PM without removing it."
+msgstr ""
+
+#. module: mro_pm
+#: selection:mro.pm.meter,reading_type:0
+msgid "Increase"
+msgstr ""
+
+#. module: mro_pm
+#: view:asset.asset:mro_pm.assets_form_view
+msgid "Info"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter.interval,name:0
+msgid "Interval"
+msgstr ""
+
+#. module: mro_pm
+#: view:mro.pm.meter:mro_pm.mro_pm_meter_form_view
+#: view:mro.pm.meter:mro_pm.mro_pm_meter_log_tree_view
+#: view:mro.pm.meter:mro_pm.mro_pm_meter_tree_view
+msgid "Last Reading"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,write_uid:0
+#: field:mro.pm.meter.interval,write_uid:0
+#: field:mro.pm.meter.line,write_uid:0
+#: field:mro.pm.meter.ratio,write_uid:0
+#: field:mro.pm.parameter,write_uid:0
+#: field:mro.pm.replan,write_uid:0
+#: field:mro.pm.rule,write_uid:0
+#: field:mro.pm.rule.line,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,write_date:0
+#: field:mro.pm.meter.interval,write_date:0
+#: field:mro.pm.meter.line,write_date:0
+#: field:mro.pm.meter.ratio,write_date:0
+#: field:mro.pm.parameter,write_date:0
+#: field:mro.pm.replan,write_date:0
+#: field:mro.pm.rule,write_date:0
+#: field:mro.pm.rule.line,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mro_pm
+#: model:mro.order,description:mro_pm.mro_order_3
+#: model:mro.order,description:mro_pm.mro_order_4
+#: model:mro.order,description:mro_pm.mro_order_5
+#: model:mro.task,name:mro_pm.mro_task_5
+msgid "Lubrication"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_order
+msgid "Maintenance Order"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_task
+msgid "Maintenance Task"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter.interval,interval_max:0
+msgid "Max"
+msgstr ""
+
+#. module: mro_pm
+#: model:mro.task,name:mro_pm.mro_task_3
+msgid "Medium Maintenance"
+msgstr ""
+
+#. module: mro_pm
+#: field:asset.asset,meter_ids:0
+#: view:mro.pm.meter:mro_pm.mro_pm_meter_form_view
+#: field:mro.pm.meter,name:0
+#: selection:mro.pm.meter,reading_type:0
+#: field:mro.pm.meter.line,meter_id:0
+msgid "Meter"
+msgstr ""
+
+#. module: mro_pm
+#: view:mro.pm.meter.line:mro_pm.meter_history_search
+msgid "Meter History Search"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_meter_interval
+#: view:mro.pm.meter.interval:mro_pm.mro_pm_meter_interval_form_view
+#: view:mro.pm.meter.interval:mro_pm.mro_pm_meter_interval_tree_view
+#: field:mro.pm.rule.line,meter_interval_id:0
+msgid "Meter Interval"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.ui.menu,name:mro_pm.menu_meter_interval
+msgid "Meter Intervals"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_meter_ratio
+#: model:ir.ui.menu,name:mro_pm.menu_meter_ratio
+#: view:mro.pm.meter.ratio:mro_pm.mro_pm_meter_ratio_form_view
+#: view:mro.pm.meter.ratio:mro_pm.mro_pm_meter_ratio_tree_view
+msgid "Meter Ratio"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter_interval
+msgid "Meter interval"
+msgstr ""
+
+#. module: mro_pm
+#: view:asset.asset:mro_pm.assets_form_view
+#: field:mro.pm.meter,meter_line_ids:0
+msgid "Meters"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_meters_logs
+#: model:ir.ui.menu,name:mro_pm.menu_meters_logs
+#: view:mro.pm.meter:mro_pm.mro_pm_meter_log_tree_view
+msgid "Meters Logs"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter.interval,interval_min:0
+msgid "Min"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,min_utilization:0
+msgid "Min Utilization (per day)"
+msgstr ""
+
+#. module: mro_pm
+#: model:asset.category,name:mro_pm.asset_category_5
+msgid "Motor"
+msgstr ""
+
+#. module: mro_pm
+#: model:asset.asset,name:mro_pm.asset_asset_5
+msgid "Motor 1"
+msgstr ""
+
+#. module: mro_pm
+#: model:asset.asset,name:mro_pm.asset_asset_6
+msgid "Motor 2"
+msgstr ""
+
+#. module: mro_pm
+#: model:asset.asset,name:mro_pm.asset_asset_7
+msgid "Motor 3"
+msgstr ""
+
+#. module: mro_pm
+#: model:asset.asset,name:mro_pm.asset_asset_4
+#: model:asset.category,name:mro_pm.asset_category_4
+msgid "Mould"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,name:0
+#: field:mro.pm.rule,name:0
+msgid "Name"
+msgstr ""
+
+#. module: mro_pm
+#: view:mro.pm.meter:mro_pm.mro_pm_meter_tree_view
+msgid "New Reading"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,new_value:0
+msgid "New value"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_pm_rules
+#: view:mro.pm.rule:mro_pm.mro_pm_rule_form_view
+#: view:mro.pm.rule:mro_pm.mro_pm_rule_tree_view
+#: field:mro.pm.rule.line,pm_rule_id:0
+msgid "PM Rule"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.ui.menu,name:mro_pm.menu_pm_rules
+msgid "PM Rules"
+msgstr ""
+
+#. module: mro_pm
+#: view:mro.pm.meter:mro_pm.mro_pm_meter_form_view
+#: field:mro.pm.parameter,name:0
+#: field:mro.pm.rule,parameter_id:0
+msgid "Parameter"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_parameters
+#: model:ir.ui.menu,name:mro_pm.menu_parameters
+#: view:mro.pm.parameter:mro_pm.mro_pm_parameter_tree_view
+msgid "Parameters"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.rule,horizon:0
+msgid "Planning horizon (months)"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_rule
+msgid "Preventive Maintenance Rule"
+msgstr ""
+
+#. module: mro_pm
+#: model:mro.pm.parameter,name:mro_pm.mro_pm_parameter_2
+msgid "Produced"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,ratio:0
+msgid "Ratio"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,ratio_type:0
+msgid "Ratio Type"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,parent_ratio_id:0
+msgid "Ratio to Source"
+msgstr ""
+
+#. module: mro_pm
+#: selection:mro.pm.meter,state:0
+msgid "Reading"
+msgstr ""
+
+#. module: mro_pm
+#: view:mro.pm.meter:mro_pm.mro_pm_meter_log_tree_view
+#: view:mro.pm.meter:mro_pm.mro_pm_meter_tree_view
+msgid "Reading Date"
+msgstr ""
+
+#. module: mro_pm
+#: view:asset.asset:mro_pm.assets_form_view
+#: model:ir.actions.act_window,name:mro_pm.open_reading_log
+#: view:mro.pm.meter:mro_pm.mro_pm_meter_log_tree_view
+#: view:mro.pm.meter.line:mro_pm.mro_pm_meter_line_tree_view
+msgid "Reading History"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,reading_type:0
+msgid "Reading Type"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter.line,value:0
+msgid "Reading Value"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_replan_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_replan
+#: model:ir.ui.menu,name:mro_pm.menu_replan_pm
+#: view:mro.pm.replan:mro_pm.view_replan_pm_wizard
+msgid "Replan PM"
+msgstr ""
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,rounding_type:0
+msgid "Rounding"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,precision:0
+msgid "Rounding Precision"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,rounding_type:0
+msgid "Rounding Type"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_rule_line
+msgid "Rule for Task"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter_ratio
+msgid "Rules for Meter to Meter Ratio"
+msgstr ""
+
+#. module: mro_pm
+#: view:asset.asset:mro_pm.assets_form_view
+msgid "Scheduling Rules"
+msgstr ""
+
+#. module: mro_pm
+#: selection:mro.pm.meter,state:0
+msgid "Setup"
+msgstr ""
+
+#. module: mro_pm
+#: model:mro.task,name:mro_pm.mro_task_2
+msgid "Small Maintenance"
+msgstr ""
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,ratio_type:0
+msgid "Source Bigger"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,parent_meter_id:0
+msgid "Source Meter"
+msgstr ""
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,ratio_type:0
+msgid "Source Smaller"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,state:0
+msgid "Status"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.rule.line,task_id:0
+msgid "Task"
+msgstr ""
+
+#. module: mro_pm
+#: view:mro.pm.rule:mro_pm.mro_pm_rule_form_view
+#: field:mro.pm.rule,pm_rules_line_ids:0
+msgid "Tasks"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,total_value:0
+#: field:mro.pm.meter.line,total_value:0
+msgid "Total Value"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,meter_uom:0
+#: field:mro.pm.parameter,parameter_uom:0
+#: field:mro.pm.rule,parameter_uom:0
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_update_meters
+#: model:ir.ui.menu,name:mro_pm.menu_update_meters
+#: view:mro.pm.meter:mro_pm.mro_pm_meter_tree_view
+msgid "Update Meters"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,utilization:0
+msgid "Utilization (per day)"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,value:0
+msgid "Value"
+msgstr ""
+
+#. module: mro_pm
+#: model:product.uom.categ,name:mro_pm.uom_categ_mro_work
+msgid "Work"
+msgstr ""
+
+#. module: mro_pm
+#: model:mro.pm.parameter,name:mro_pm.mro_pm_parameter_1
+msgid "Work Time"
+msgstr ""
+
+#. module: mro_pm
+#: field:mro.pm.meter,view_line_ids:0
+msgid "unknown"
+msgstr ""
+
