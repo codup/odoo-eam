@@ -34,6 +34,7 @@ Main Features
 -------------
     * Gauge Management for Asset
     * Planning Maintenance Work Orders base on Gauges
+    * PdM Rules for Assets by Tag
 
 Required modules:
     * asset
