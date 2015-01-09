@@ -6,6 +6,7 @@
             <field name="name">asset.asset.mro.button.inherit</field>
             <field name="model">asset.asset</field>
             <field name="inherit_id" ref="asset.assets_form_view"/>
+            <field name="groups_id" eval="[(4, ref('asset.group_mro_user'))]"/>
             <field name="arch" type="xml">
                 <xpath expr="//div[@name='buttons']" position="inside">
                    <button class="oe_inline oe_stat_button" name="action_view_maintenance" type="object" 
