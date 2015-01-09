@@ -48,6 +48,7 @@ Required modules:
     'depends': ['mro_pm'],
     'demo': ['mro_cbm_demo.xml'],
     'data': [
+        'security/ir.model.access.csv',
         'wizard/replan_view.xml',
         'mro_cbm_view.xml',
         'mro_cbm_sequence.xml',

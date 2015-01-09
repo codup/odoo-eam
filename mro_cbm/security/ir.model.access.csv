@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mro_gauge_manager,mro.gauge manager,model_mro_gauge,asset.group_mro_manager,1,1,1,1
+access_mro_gauge_line_manager,mro.gauge.line manager,model_mro_gauge_line,asset.group_mro_manager,1,1,1,1
+access_mro_cbm_rule_manager,mro.cbm.rule manager,model_mro_cbm_rule,asset.group_mro_manager,1,1,1,1
+access_mro_gauge_user,mro.gauge user,model_mro_gauge,asset.group_mro_user,1,1,0,0
+access_mro_gauge_line_user,mro.gauge.line user,model_mro_gauge_line,asset.group_mro_user,1,1,1,0
+access_mro_cbm_rule_user,mro.cbm.rule user,model_mro_cbm_rule,asset.group_mro_user,1,0,0,0
+access_mro_gauge_customer,mro.gauge customer,model_mro_gauge,asset.group_mro_customer,1,0,0,0
+access_mro_gauge_line_customer,mro.gauge.line customer,model_mro_gauge_line,asset.group_mro_customer,1,0,0,0
