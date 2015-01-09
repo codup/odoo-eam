@@ -31,7 +31,7 @@
         <!-- Assets -->
         <record id="asset_asset_4" model="asset.asset">
             <field name="name">Mould</field>
-            <field name="category_id" ref="asset_category_4"/>
+            <field name="category_ids" eval="[(6,0,[ref('mro_pm.asset_category_4')])]"/>
             <field name="property_stock_asset" ref="asset.stock_location_assets"/>
             <field name="criticality">2</field>
             <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
@@ -50,7 +50,7 @@
 
         <record id="asset_asset_5" model="asset.asset">
             <field name="name">Motor 1</field>
-            <field name="category_id" ref="asset_category_5"/>
+            <field name="category_ids" eval="[(6,0,[ref('mro_pm.asset_category_5')])]"/>
             <field name="property_stock_asset" ref="asset.stock_location_assets"/>
             <field name="criticality">2</field>
             <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
@@ -69,7 +69,7 @@
 
         <record id="asset_asset_6" model="asset.asset">
             <field name="name">Motor 2</field>
-            <field name="category_id" ref="asset_category_5"/>
+            <field name="category_ids" eval="[(6,0,[ref('mro_pm.asset_category_5')])]"/>
             <field name="property_stock_asset" ref="asset.stock_location_assets"/>
             <field name="criticality">2</field>
             <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
@@ -88,7 +88,7 @@
 
         <record id="asset_asset_7" model="asset.asset">
             <field name="name">Motor 3</field>
-            <field name="category_id" ref="asset_category_5"/>
+            <field name="category_ids" eval="[(6,0,[ref('mro_pm.asset_category_5')])]"/>
             <field name="property_stock_asset" ref="asset.stock_location_assets"/>
             <field name="criticality">2</field>
             <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
