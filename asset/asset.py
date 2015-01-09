@@ -75,6 +75,7 @@ class asset_category(osv.osv):
     _name = 'asset.category'
     _columns = {
         'name': fields.char('Tag', required=True, translate=True),
+        'asset_ids': fields.many2many('asset.asset', id1='category_id', id2='asset_id', string='Assets'),
     }
 
 
@@ -177,7 +178,6 @@ class asset_asset(osv.osv):
             help="Small-sized image of the asset. It is automatically "\
                  "resized as a 64x64px image, with aspect ratio preserved. "\
                  "Use this field anywhere a small image is required."),
-        'category_id': fields.many2one('asset.category', 'Category'),
         'category_ids': fields.many2many('asset.category', id1='asset_id', id2='category_id', string='Tags'),
     }
 
