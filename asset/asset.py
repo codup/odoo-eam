@@ -178,6 +178,7 @@ class asset_asset(osv.osv):
                  "resized as a 64x64px image, with aspect ratio preserved. "\
                  "Use this field anywhere a small image is required."),
         'category_id': fields.many2one('asset.category', 'Category'),
+        'category_ids': fields.many2many('asset.category', id1='asset_id', id2='category_id', string='Tags'),
     }
 
     _defaults = {

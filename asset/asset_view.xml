@@ -46,6 +46,7 @@
                             <h1>
                                 <field name="name"/>
                             </h1>
+                            <field name="category_ids" widget="many2many_tags" placeholder="Tags..."/>
                         </div>
                         <group>
                             <field name="category_id"/>
