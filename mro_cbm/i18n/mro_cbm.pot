@@ -1,0 +1,315 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* mro_cbm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-01-09 16:55+0000\n"
+"PO-Revision-Date: 2015-01-09 16:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mro_cbm
+#: field:mro.cbm.rule,active:0
+msgid "Active"
+msgstr ""
+
+#. module: mro_cbm
+#: model:ir.model,name:mro_cbm.model_asset_asset
+#: field:mro.gauge,asset_id:0
+msgid "Asset"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.cbm.rule,category_id:0
+msgid "Asset Category"
+msgstr ""
+
+#. module: mro_cbm
+#: model:ir.model,name:mro_cbm.model_mro_gauge
+msgid "Asset Gauges"
+msgstr ""
+
+#. module: mro_cbm
+#: view:mro.gauge:mro_cbm.mro_gauge_form_view
+msgid "Attach"
+msgstr ""
+
+#. module: mro_cbm
+#: model:mro.pm.parameter,name:mro_cbm.mro_cbm_parameter_1
+msgid "Bearing Temperature"
+msgstr ""
+
+#. module: mro_cbm
+#: view:mro.cbm.replan:mro_cbm.view_replan_cbm_wizard
+msgid "Cancel"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.cbm.replan,create_uid:0
+#: field:mro.cbm.rule,create_uid:0
+#: field:mro.gauge,create_uid:0
+#: field:mro.gauge.line,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.cbm.replan,create_date:0
+#: field:mro.cbm.rule,create_date:0
+#: field:mro.gauge,create_date:0
+#: field:mro.gauge.line,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.gauge,date:0
+#: field:mro.gauge.line,date:0
+msgid "Date"
+msgstr ""
+
+#. module: mro_cbm
+#: selection:mro.gauge,reading_type:0
+msgid "Direct"
+msgstr ""
+
+#. module: mro_cbm
+#: field:asset.asset,gauge_ids:0
+#: view:mro.gauge:mro_cbm.mro_gauge_form_view
+#: field:mro.gauge,name:0
+#: selection:mro.gauge,reading_type:0
+#: field:mro.gauge.line,gauge_id:0
+msgid "Gauge"
+msgstr ""
+
+#. module: mro_cbm
+#: view:mro.gauge.line:mro_cbm.gauge_history_search
+msgid "Gauge History Search"
+msgstr ""
+
+#. module: mro_cbm
+#: view:asset.asset:mro_cbm.assets_form_view
+#: field:mro.gauge,gauge_line_ids:0
+msgid "Gauges"
+msgstr ""
+
+#. module: mro_cbm
+#: model:ir.actions.act_window,name:mro_cbm.action_gauges_logs
+#: model:ir.ui.menu,name:mro_cbm.menu_gauges_logs
+#: view:mro.gauge:mro_cbm.mro_gauge_log_tree_view
+msgid "Gauges Logs"
+msgstr ""
+
+#. module: mro_cbm
+#: model:ir.model,name:mro_cbm.model_mro_gauge_line
+msgid "History of Asset Gauge Reading"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.cbm.replan,id:0
+#: field:mro.cbm.rule,id:0
+#: field:mro.gauge,id:0
+#: field:mro.gauge.line,id:0
+msgid "ID"
+msgstr ""
+
+#. module: mro_cbm
+#: help:mro.cbm.rule,active:0
+msgid "If the active field is set to False, it will allow you to hide the PdM without removing it."
+msgstr ""
+
+#. module: mro_cbm
+#: view:mro.gauge:mro_cbm.mro_gauge_form_view
+#: view:mro.gauge:mro_cbm.mro_gauge_log_tree_view
+#: view:mro.gauge:mro_cbm.mro_gauge_tree_view
+msgid "Last Reading"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.cbm.replan,write_uid:0
+#: field:mro.cbm.rule,write_uid:0
+#: field:mro.gauge,write_uid:0
+#: field:mro.gauge.line,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.cbm.replan,write_date:0
+#: field:mro.cbm.rule,write_date:0
+#: field:mro.gauge,write_date:0
+#: field:mro.gauge.line,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: mro_cbm
+#: model:ir.model,name:mro_cbm.model_mro_order
+msgid "Maintenance Order"
+msgstr ""
+
+#. module: mro_cbm
+#: model:ir.model,name:mro_cbm.model_mro_task
+msgid "Maintenance Task"
+msgstr ""
+
+#. module: mro_cbm
+#: view:mro.cbm.rule:mro_cbm.mro_cbm_rule_form_view
+#: field:mro.cbm.rule,is_limit_max:0
+#: field:mro.cbm.rule,limit_max:0
+msgid "Max Limit"
+msgstr ""
+
+#. module: mro_cbm
+#: view:asset.asset:mro_cbm.assets_form_view
+msgid "Meters"
+msgstr ""
+
+#. module: mro_cbm
+#: view:mro.cbm.rule:mro_cbm.mro_cbm_rule_form_view
+#: field:mro.cbm.rule,is_limit_min:0
+#: field:mro.cbm.rule,limit_min:0
+msgid "Min Limit"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.cbm.rule,name:0
+msgid "Name"
+msgstr ""
+
+#. module: mro_cbm
+#: view:mro.gauge:mro_cbm.mro_gauge_tree_view
+msgid "New Reading"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.gauge,new_value:0
+msgid "New value"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.cbm.rule,parameter_id:0
+#: view:mro.gauge:mro_cbm.mro_gauge_form_view
+msgid "Parameter"
+msgstr ""
+
+#. module: mro_cbm
+#: model:ir.actions.act_window,name:mro_cbm.action_cbm_rules
+#: view:mro.cbm.rule:mro_cbm.mro_cbm_rule_form_view
+#: view:mro.cbm.rule:mro_cbm.mro_cbm_rule_tree_view
+msgid "PdM Rule"
+msgstr ""
+
+#. module: mro_cbm
+#: model:ir.ui.menu,name:mro_cbm.menu_cbm_rules
+msgid "PdM Rules"
+msgstr ""
+
+#. module: mro_cbm
+#: model:ir.model,name:mro_cbm.model_mro_cbm_rule
+msgid "Predictive Maintenance Rule"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.gauge,parent_ratio_id:0
+msgid "Ratio to Source"
+msgstr ""
+
+#. module: mro_cbm
+#: selection:mro.gauge,state:0
+msgid "Reading"
+msgstr ""
+
+#. module: mro_cbm
+#: view:mro.gauge:mro_cbm.mro_gauge_log_tree_view
+#: view:mro.gauge:mro_cbm.mro_gauge_tree_view
+msgid "Reading Date"
+msgstr ""
+
+#. module: mro_cbm
+#: view:asset.asset:mro_cbm.assets_form_view
+#: model:ir.actions.act_window,name:mro_cbm.open_reading_log
+#: view:mro.gauge:mro_cbm.mro_gauge_log_tree_view
+#: view:mro.gauge.line:mro_cbm.mro_gauge_line_tree_view
+msgid "Reading History"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.gauge,reading_type:0
+msgid "Reading Type"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.gauge.line,value:0
+msgid "Reading Value"
+msgstr ""
+
+#. module: mro_cbm
+#: model:mro.task,name:mro_cbm.mro_task_6
+msgid "Replace bearings"
+msgstr ""
+
+#. module: mro_cbm
+#: model:ir.actions.act_window,name:mro_cbm.action_replan_cbm
+#: model:ir.model,name:mro_cbm.model_mro_cbm_replan
+#: model:ir.ui.menu,name:mro_cbm.menu_replan_cbm
+#: view:mro.cbm.replan:mro_cbm.view_replan_cbm_wizard
+msgid "Replan PdM"
+msgstr ""
+
+#. module: mro_cbm
+#: selection:mro.gauge,state:0
+msgid "Setup"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.gauge,parent_gauge_id:0
+msgid "Source Gauge"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.gauge,state:0
+msgid "Status"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.cbm.rule,task_id:0
+msgid "Task"
+msgstr ""
+
+#. module: mro_cbm
+#: view:mro.cbm.rule:mro_cbm.mro_cbm_rule_form_view
+msgid "Trigger"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.cbm.rule,parameter_uom:0
+#: field:mro.gauge,gauge_uom:0
+msgid "Unit of Measure"
+msgstr ""
+
+#. module: mro_cbm
+#: model:ir.actions.act_window,name:mro_cbm.action_update_gauges
+#: model:ir.ui.menu,name:mro_cbm.menu_update_gauges
+#: view:mro.gauge:mro_cbm.mro_gauge_tree_view
+msgid "Update Gauges"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.gauge,value:0
+msgid "Value"
+msgstr ""
+
+#. module: mro_cbm
+#: field:mro.gauge,view_line_ids:0
+msgid "unknown"
+msgstr ""
+
+#. module: mro_cbm
+#: model:product.uom,name:mro_cbm.uom_mro_degree
+msgid "°C"
+msgstr ""
+
