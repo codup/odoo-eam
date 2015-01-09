@@ -62,8 +62,7 @@ class mro_order(osv.osv):
             if not len(tasks): continue
             horizon = rule.horizon
             origin = rule.name
-            asset_ids = asset_obj.search(cr, uid, [('category_id', '=', rule.category_id.id)])
-            for asset in asset_obj.browse(cr,uid,asset_ids,context=context):
+            for asset in rule.category_id.asset_ids:
                 for meter in asset.meter_ids:
                     if meter.name != rule.parameter_id or meter.state != 'reading': continue
                     self.planning_strategy_1(cr, uid, asset, meter, tasks, horizon, origin, context=context)

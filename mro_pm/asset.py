@@ -32,7 +32,7 @@ class asset_asset(osv.osv):
     def action_view_rules(self, cr, uid, ids, context=None):
         category_ids = []
         for asset in self.browse(cr,uid,ids,context=context):
-            category_ids.append(asset.category_id.id)
+            category_ids = category_ids + [category.id for category in asset.category_ids]
         return {
             'domain': "[('category_id','in',[" + ','.join(map(str, category_ids)) + "])]",
             'name': _('Scheduling Rules'),
