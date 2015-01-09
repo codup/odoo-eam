@@ -99,7 +99,7 @@ class mro_order(osv.osv):
         'problem_description': fields.text('Problem Description'),
         'company_id': fields.many2one('res.company','Company',required=True, readonly=True, states={'draft':[('readonly',False)]}),
         'procurement_group_id': fields.many2one('procurement.group', 'Procurement group', copy=False),
-        'category_id': fields.related('asset_id', 'category_id', type='many2one', relation='asset.category', string='Asset Category', readonly=True),
+        'category_ids': fields.related('asset_id', 'category_ids', type='many2many', relation='asset.category', string='Asset Category', readonly=True),
     }
 
     _defaults = {
@@ -116,7 +116,7 @@ class mro_order(osv.osv):
     def onchange_asset(self, cr, uid, ids, asset):
         value = {}
         if asset:
-            value['category_id'] = self.pool.get('asset.asset').browse(cr, uid, asset).category_id
+            value['category_ids'] = self.pool.get('asset.asset').browse(cr, uid, asset).category_ids
         return {'value': value}
 
     def onchange_planned_date(self, cr, uid, ids, date):
