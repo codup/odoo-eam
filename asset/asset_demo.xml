@@ -35,6 +35,7 @@
         <!-- Assets -->
         <record id="asset_asset_1" model="asset.asset">
             <field name="name">Moulding machine 25</field>
+            <field name="category_ids" eval="[(6,0,[ref('asset.asset_category_1')])]"/>
             <field name="category_id" ref="asset.asset_category_1"/>
             <field name="property_stock_asset" ref="asset.stock_location_assets"/>
             <field name="criticality">3</field>
@@ -54,6 +55,7 @@
 
         <record id="asset_asset_2" model="asset.asset">
             <field name="name">Truck</field>
+            <field name="category_ids" eval="[(6,0,[ref('asset.asset_category_2')])]"/>
             <field name="category_id" ref="asset.asset_category_2"/>
             <field name="property_stock_asset" ref="asset.stock_location_assets"/>
             <field name="criticality">1</field>
@@ -73,6 +75,7 @@
 
         <record id="asset_asset_3" model="asset.asset">
             <field name="name">Building</field>
+            <field name="category_ids" eval="[(6,0,[ref('asset.asset_category_3')])]"/>
             <field name="category_id" ref="asset.asset_category_3"/>
             <field name="property_stock_asset" ref="asset.stock_location_assets"/>
             <field name="criticality">0</field>
