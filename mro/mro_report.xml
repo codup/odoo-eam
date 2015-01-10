@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <report 
+            string="Maintenance Order" 
+            id="action_report_maintenance_order" 
+            model="mro.order" 
+            name="mro.report_mro_order" 
+            file="mro.report_mro_order" 
+            report_type="qweb-pdf"
+        />
+
+    </data>
+</openerp>
