@@ -412,16 +412,27 @@ msgid "Work Time"
 msgstr "Наработка"
 
 #. module: mro_pm
+#: model:mro.order,description:6
+#: model:mro.order,description:7
+#: model:mro.order,description:8
+#: model:mro.order,description:9
+#: model:mro.order,description:11
+#: model:mro.order,description:12
+#: model:mro.order,description:13
+#: model:mro.order,description:14
+#: model:mro.order,description:16
 #: model:mro.task,name:mro_pm.mro_task_2
 msgid "Small Maintenance"
 msgstr "ТО1"
 
 #. module: mro_pm
+#: model:mro.order,description:10
 #: model:mro.task,name:mro_pm.mro_task_3
 msgid "Medium Maintenance"
 msgstr "ТО2"
 
 #. module: mro_pm
+#: model:mro.order,description:15
 #: model:mro.task,name:mro_pm.mro_task_4
 msgid "Big Maintenance"
 msgstr "ТО3"
@@ -506,6 +517,14 @@ msgstr "Мотор 3"
 #: model:mro.order,description:mro_pm.mro_order_3
 #: model:mro.order,description:mro_pm.mro_order_4
 #: model:mro.order,description:mro_pm.mro_order_5
+#: model:mro.order,description:17
+#: model:mro.order,description:18
+#: model:mro.order,description:19
+#: model:mro.order,description:20
+#: model:mro.order,description:21
+#: model:mro.order,description:22
+#: model:mro.order,description:23
+#: model:mro.order,description:24
 #: model:mro.task,name:mro_pm.mro_task_5
 msgid "Lubrication"
 msgstr "Смазка"
