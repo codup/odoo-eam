@@ -259,6 +259,7 @@ msgstr "Показание"
 
 #. module: mro_cbm
 #: model:mro.task,name:mro_cbm.mro_task_6
+#: model:mro.order,description:25
 msgid "Replace bearings"
 msgstr "Замена подшипника"
 
@@ -268,7 +269,7 @@ msgstr "Замена подшипника"
 #: model:ir.ui.menu,name:mro_cbm.menu_replan_cbm
 #: view:mro.cbm.replan:mro_cbm.view_replan_cbm_wizard
 msgid "Replan PdM"
-msgstr "Перепланировать ТО"
+msgstr "Перепланировать ТОС"
 
 #. module: mro_cbm
 #: selection:mro.gauge,state:0
