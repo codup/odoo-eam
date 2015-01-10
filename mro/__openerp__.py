@@ -37,6 +37,8 @@ Main Features
     * Parts Management
     * Tasks Management (standard job)
     * Convert Maintenance Order to Task
+    * Print Maintenance Order
+    * Print Maintenance Request
 
 Required modules:
     * asset
