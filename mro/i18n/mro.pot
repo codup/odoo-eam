@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-09 15:13+0000\n"
-"PO-Revision-Date: 2015-01-09 15:13+0000\n"
+"POT-Creation-Date: 2015-01-10 11:31+0000\n"
+"PO-Revision-Date: 2015-01-10 11:31+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,6 +18,11 @@ msgstr ""
 #. module: mro
 #: field:asset.asset,mro_count:0
 msgid "# Maintenance"
+msgstr ""
+
+#. module: mro
+#: view:website:mro.report_mro_request
+msgid "(Breakdown)"
 msgstr ""
 
 #. module: mro
@@ -39,8 +44,19 @@ msgid "Asset Category"
 msgstr ""
 
 #. module: mro
+#: view:website:mro.report_mro_order
+#: view:website:mro.report_mro_request
+msgid "Asset:"
+msgstr ""
+
+#. module: mro
 #: view:mro.order:mro.mro_order_form_view
 msgid "Available Parts"
+msgstr ""
+
+#. module: mro
+#: view:website:mro.report_mro_order
+msgid "Bill Of Material"
 msgstr ""
 
 #. module: mro
@@ -70,6 +86,11 @@ msgstr ""
 #. module: mro
 #: field:mro.request,cause:0
 msgid "Cause"
+msgstr ""
+
+#. module: mro
+#: view:website:mro.report_mro_request
+msgid "Cause:"
 msgstr ""
 
 #. module: mro
@@ -176,6 +197,7 @@ msgstr ""
 #: field:mro.request,description:0
 #: field:mro.task,name:0
 #: field:mro.task.parts.line,name:0
+#: view:website:mro.report_mro_order
 msgid "Description"
 msgstr ""
 
@@ -204,6 +226,11 @@ msgid "Description for Tools"
 msgstr ""
 
 #. module: mro
+#: view:website:mro.report_mro_order
+msgid "Description:"
+msgstr ""
+
+#. module: mro
 #: view:mro.convert.order:mro.view_convert_order
 msgid "Do you really want convert Maintenance Order to Task?"
 msgstr ""
@@ -211,6 +238,7 @@ msgstr ""
 #. module: mro
 #: view:mro.order:mro.mro_order_form_view
 #: view:mro.task:mro.mro_task_form_view
+#: view:website:mro.report_mro_order
 msgid "Documentation"
 msgstr ""
 
@@ -245,6 +273,11 @@ msgstr ""
 #: field:mro.order,date_execution:0
 #: field:mro.request,execution_date:0
 msgid "Execution Date"
+msgstr ""
+
+#. module: mro
+#: view:website:mro.report_mro_request
+msgid "Execution Date:"
 msgstr ""
 
 #. module: mro
@@ -290,6 +323,7 @@ msgstr ""
 #. module: mro
 #: view:mro.order:mro.mro_order_form_view
 #: view:mro.task:mro.mro_task_form_view
+#: view:website:mro.report_mro_order
 msgid "Labor"
 msgstr ""
 
@@ -334,6 +368,7 @@ msgid "Maintenance"
 msgstr ""
 
 #. module: mro
+#: model:ir.actions.report.xml,name:mro.action_report_maintenance_order
 #: model:ir.model,name:mro.model_mro_order
 #: view:mro.order:mro.mro_order_form_view
 #: field:mro.order.parts.line,maintenance_id:0
@@ -343,6 +378,11 @@ msgstr ""
 #. module: mro
 #: model:mail.message.subtype,description:mro.mt_order_confirmed
 msgid "Maintenance Order confirmed"
+msgstr ""
+
+#. module: mro
+#: view:website:mro.report_mro_order
+msgid "Maintenance Order № :"
 msgstr ""
 
 #. module: mro
@@ -361,6 +401,7 @@ msgid "Maintenance Planned Parts"
 msgstr ""
 
 #. module: mro
+#: model:ir.actions.report.xml,name:mro.action_report_maintenance_request
 #: model:ir.model,name:mro.model_mro_request
 #: view:mro.request:mro.mro_request_form_view
 msgid "Maintenance Request"
@@ -379,6 +420,11 @@ msgstr ""
 #. module: mro
 #: model:mail.message.subtype,description:mro.mt_request_sent
 msgid "Maintenance Request sent"
+msgstr ""
+
+#. module: mro
+#: view:website:mro.report_mro_request
+msgid "Maintenance Request № :"
 msgstr ""
 
 #. module: mro
@@ -407,6 +453,11 @@ msgid "Maintenance Type"
 msgstr ""
 
 #. module: mro
+#: view:website:mro.report_mro_order
+msgid "Maintenance Type:"
+msgstr ""
+
+#. module: mro
 #: field:mro.order,message_ids:0
 #: field:mro.request,message_ids:0
 msgid "Messages"
@@ -431,6 +482,7 @@ msgstr ""
 #. module: mro
 #: view:mro.order:mro.mro_order_form_view
 #: view:mro.task:mro.mro_task_form_view
+#: view:website:mro.report_mro_order
 msgid "Operations"
 msgstr ""
 
@@ -468,7 +520,13 @@ msgid "Planned Date"
 msgstr ""
 
 #. module: mro
+#: view:website:mro.report_mro_order
+msgid "Planned Date:"
+msgstr ""
+
+#. module: mro
 #: view:mro.order:mro.mro_order_form_view
+#: view:website:mro.report_mro_order
 msgid "Planned Parts"
 msgstr ""
 
@@ -478,14 +536,39 @@ msgid "Planned parts"
 msgstr ""
 
 #. module: mro
+#: selection:mro.order,maintenance_type:0
+#: selection:mro.task,maintenance_type:0
+msgid "Predictive"
+msgstr ""
+
+#. module: mro
+#: selection:mro.order,maintenance_type:0
+#: selection:mro.task,maintenance_type:0
+msgid "Preventive"
+msgstr ""
+
+#. module: mro
+#: view:website:mro.report_mro_order
+#: view:website:mro.report_mro_request
+msgid "Printing date:"
+msgstr ""
+
+#. module: mro
 #: view:mro.order:mro.mro_order_form_view
 #: field:mro.order,problem_description:0
+#: view:website:mro.report_mro_order
+#: view:website:mro.report_mro_request
 msgid "Problem Description"
 msgstr ""
 
 #. module: mro
 #: field:mro.order,procurement_group_id:0
 msgid "Procurement group"
+msgstr ""
+
+#. module: mro
+#: view:website:mro.report_mro_order
+msgid "Product"
 msgstr ""
 
 #. module: mro
@@ -497,6 +580,7 @@ msgstr ""
 #: view:mro.order:mro.mro_order_form_view
 #: field:mro.order.parts.line,parts_qty:0
 #: field:mro.task.parts.line,parts_qty:0
+#: view:website:mro.report_mro_order
 msgid "Quantity"
 msgstr ""
 
@@ -549,6 +633,11 @@ msgid "Requested Date"
 msgstr ""
 
 #. module: mro
+#: view:website:mro.report_mro_request
+msgid "Requested Date:"
+msgstr ""
+
+#. module: mro
 #: field:mro.request,create_uid:0
 msgid "Responsible"
 msgstr ""
@@ -556,6 +645,11 @@ msgstr ""
 #. module: mro
 #: field:mro.order,date_scheduled:0
 msgid "Scheduled Date"
+msgstr ""
+
+#. module: mro
+#: view:website:mro.report_mro_order
+msgid "Scheduled Date:"
 msgstr ""
 
 #. module: mro
@@ -578,6 +672,11 @@ msgstr ""
 #. module: mro
 #: field:mro.order,origin:0
 msgid "Source Document"
+msgstr ""
+
+#. module: mro
+#: view:website:mro.report_mro_order
+msgid "Source Document:"
 msgstr ""
 
 #. module: mro
@@ -646,6 +745,7 @@ msgstr ""
 #. module: mro
 #: view:mro.order:mro.mro_order_form_view
 #: view:mro.task:mro.mro_task_form_view
+#: view:website:mro.report_mro_order
 msgid "Tools"
 msgstr ""
 

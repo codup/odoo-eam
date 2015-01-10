@@ -118,6 +118,7 @@ msgid "Task"
 msgstr "Задача"
 
 #. module: mro
+#: model:ir.actions.report.xml,name:mro.action_report_maintenance_request
 #: model:ir.model,name:mro.model_mro_request
 #: view:mro.request:0
 msgid "Maintenance Request"
@@ -383,6 +384,7 @@ msgid "Consumed Parts"
 msgstr "Потребленные запчасти"
 
 #. module: mro
+#: model:ir.actions.report.xml,name:mro.action_report_maintenance_order
 #: model:ir.model,name:mro.model_mro_order
 #: view:mro.order:0
 #: field:mro.order.parts.line,maintenance_id:0
