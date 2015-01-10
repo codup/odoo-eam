@@ -11,5 +11,14 @@
             report_type="qweb-pdf"
         />
 
+        <report 
+            string="Maintenance Request" 
+            id="action_report_maintenance_request" 
+            model="mro.request" 
+            name="mro.report_mro_request" 
+            file="mro.report_mro_request" 
+            report_type="qweb-pdf"
+        />
+
     </data>
 </openerp>

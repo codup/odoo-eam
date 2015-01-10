@@ -61,6 +61,7 @@ Required modules:
         'mro_report.xml',
         'mro_data.xml',
         'views/report_mro_order.xml',
+        'views/report_mro_request.xml',
     ],
     'application': True,
 }
