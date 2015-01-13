@@ -2,10 +2,28 @@
 <openerp>
     <data noupdate="1">
 
+        <!-- Routes -->
+        <record id="route_maintenance" model='stock.location.route'>
+            <field name="name">Maintenance</field>
+            <field name="product_categ_selectable" eval="True"/>
+            <field name="product_selectable" eval="False"/>
+        </record>
+
+        <!-- Procurement rules -->
+        <record id="rule_wh_asset" model='procurement.rule'>
+            <field name="name">WH: Stock -> Asset</field>
+            <field name="action">move</field>
+            <field name="picking_type_id" ref="stock.picking_type_internal"/>
+            <field name="location_src_id" ref="stock.stock_location_stock"/>
+            <field name="location_id" ref="asset.stock_location_assets"/>
+            <field name="route_id" ref="mro.route_maintenance"/>
+        </record>
+
         <!-- Spare Parts Category -->
         <record id="product_category_mro" model="product.category">
             <field name="parent_id" ref="product.product_category_all"/>
             <field name="name">Parts</field>
+            <field name="route_ids" eval="[(6,0,[ref('mro.route_maintenance')])]"/>
         </record>
 
         <!-- Spare Parts -->
@@ -27,8 +45,19 @@
             <field name="standard_price">80.0</field>
             <field name="list_price">90.0</field>
             <field name="type">consu</field>
-            <field name="uom_id" ref="product.product_uom_unit"/>
-            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="uom_id" ref="product.product_uom_litre"/>
+            <field name="uom_po_id" ref="product.product_uom_litre"/>
+        </record>
+
+        <record id="product_product_mro_water" model="product.product">
+            <field name="name">Water</field>
+            <field name="default_code">WAT</field>
+            <field name="categ_id" ref="product_category_mro"/>
+            <field name="standard_price">80.0</field>
+            <field name="list_price">90.0</field>
+            <field name="type">consu</field>
+            <field name="uom_id" ref="product.product_uom_litre"/>
+            <field name="uom_po_id" ref="product.product_uom_litre"/>
         </record>
 
         <!-- Requests -->
@@ -57,6 +86,7 @@
             <field name="maintenance_type">cm</field>
             <field name="task_id" ref="mro_task_1"/>
             <field name="description">Wash the truck</field>
+            <field eval="[(0,0,{'parts_id':ref('product_product_mro_water'),'parts_qty':10,'parts_uom':ref('product.product_uom_litre')})]" name="parts_lines"/>
         </record>
 
     </data>
