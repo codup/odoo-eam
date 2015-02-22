@@ -1,0 +1,658 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* mro
+#
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20130204-000102\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-29 05:41+0000\n"
+"PO-Revision-Date: 2015-02-22 08:38+0100\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian <translate@matmoz.si>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+"Language: sl\n"
+"X-Generator: Lokalize 1.5\n"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_mro
+msgid "MRO"
+msgstr "Vzdrževanje, popravila in operacije"
+
+#. module: base
+#: model:ir.module.module,summary:base.module_mro
+msgid "Asset Maintenance, Repair and Operation"
+msgstr "Vzdrževanje, popravila in operacije sredstev"
+
+#. module: base
+#: model:ir.module.category,name:base.module_category_maintenance
+msgid "Maintenance"
+msgstr "Vzdrževanje"
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Description for Operations"
+msgstr "Opis za operacije"
+
+#. module: mro
+#: view:mro.order:0
+msgid "Force Reservation"
+msgstr "Vsili rezervacijo"
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Labor"
+msgstr "Delo"
+
+#. module: mro
+#: view:mro.request:0
+msgid "Send Request"
+msgstr "Pošlji zahtevek"
+
+#. module: mro
+#: model:mail.message.subtype,name:mro.mt_asset_request_sent
+#: model:mail.message.subtype,name:mro.mt_request_sent
+msgid "Send Request"
+msgstr "Pošlji zahtevek"
+
+#. module: mro
+#: view:mro.order:0
+#: field:mro.order,message_unread:0
+#: view:mro.request:0
+#: field:mro.request,message_unread:0
+msgid "Unread Messages"
+msgstr "Neprebrana sporočila"
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Description for Labor"
+msgstr "Opis za delo"
+
+#. module: mro
+#: field:mro.order,asset_id:0
+#: field:mro.request,asset_id:0
+#: field:mro.task,asset_id:0
+msgid "Asset"
+msgstr "Sredstvo"
+
+#. module: mro
+#: view:mro.request:0
+msgid "Search Maintenance Request"
+msgstr "Iskalnik vzdrževalnih zahtevkov"
+
+#. module: mro
+#: view:mro.order:0
+#: field:mro.order.parts.line,parts_uom:0
+#: field:mro.task.parts.line,parts_uom:0
+msgid "Unit of Measure"
+msgstr "Enota mere"
+
+#. module: mro
+#: view:mro.order:0
+#: field:mro.order,problem_description:0
+msgid "Problem Description"
+msgstr "Opis težave"
+
+#. module: mro
+#: field:mro.order,company_id:0
+msgid "Company"
+msgstr "Družba"
+
+#. module: mro
+#: view:mro.task:0
+msgid "Task Name"
+msgstr "Naziv opravila"
+
+#. module: mro
+#: model:res.groups,name:mro.group_create_maintenance_request
+msgid "Create Maintenance Request"
+msgstr "Ustvari vzdrževalni zahtevek"
+
+#. module: mro
+#: field:mro.order,task_id:0
+msgid "Task"
+msgstr "Opravilo"
+
+#. module: mro
+#: model:ir.model,name:mro.model_mro_request
+#: view:mro.request:0
+msgid "Maintenance Request"
+msgstr "Vzdrževalni zahtevek"
+
+#. module: mro
+#: field:mro.order,maintenance_type:0
+#: field:mro.task,maintenance_type:0
+msgid "Maintenance Type"
+msgstr "Tip vzdrževanja"
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Operations"
+msgstr "Uporaba"
+
+#. module: mro
+#: view:mro.order:0
+#: field:mro.order,parts_ready_lines:0
+msgid "Available Parts"
+msgstr "Razpoložljivi deli"
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Specify the tools and mechanisms needed for execute this order..."
+msgstr "Specifikacija orodja in mehanizmov potrebnih za izvedbo tega naloga..."
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Specify the specialists needed for execute this order..."
+msgstr "Specifikacija potrebnih strokovnjakov za izvedbo tega naloga..."
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Specify the jobs that need execute..."
+msgstr "Specifikacija del potrebnih za izvedbo..."
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Specify the documentation useful when execute this order..."
+msgstr "Specifikacija dokumentacije, ki bi koristila pri izvedbi naloga..."
+
+#. module: mro
+#: field:mro.order,labor_description:0
+#: field:mro.task,labor_description:0
+msgid "Labor Description"
+msgstr "Opis dela"
+
+#. module: mro
+#: field:mro.order,name:0
+#: field:mro.request,name:0
+msgid "Reference"
+msgstr "Sklic"
+
+#. module: mro
+#: field:mro.order,parts_lines:0
+msgid "Planned parts"
+msgstr "Načrtovani deli"
+
+#. module: mro
+#: view:mro.order:0
+#: field:mro.order,parts_move_lines:0
+msgid "Parts to Consume"
+msgstr "Deli, ki se porabijo"
+
+#. module: mro
+#: model:ir.model,name:mro.model_mro_task
+#: field:mro.task.parts.line,task_id:0
+msgid "Maintenance Task"
+msgstr "Vzdrževalno opravilo"
+
+#. module: mro
+#: field:mro.order,operations_description:0
+#: field:mro.task,operations_description:0
+msgid "Operations Description"
+msgstr "Opis operacij"
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "DONE"
+msgstr "Opravljeno"
+
+#. module: mro
+#: view:mro.request:0
+#: field:mro.request,reject_reason:0
+#: field:mro.request.reject,reject_reason:0
+msgid "Reject Reason"
+msgstr "Razlog zavrnitve"
+
+#. module: mro
+#: field:mro.order,parts_picking_id:0
+msgid "Parts Picking List"
+msgstr "Prevzemnica delov"
+
+#. module: mro
+#: selection:mro.order,maintenance_type:0
+#: field:mro.request,breakdown:0
+msgid "Breakdown"
+msgstr "Okvara"
+
+#. module: mro
+#: view:mro.order:0
+msgid "Recreate Picking"
+msgstr "Poustvari prevzemnico"
+
+#. module: mro
+#: field:mro.order,date_planned:0
+msgid "Planned Date"
+msgstr "Načrtovani datum"
+
+#. module: mro
+#: model:ir.module.category,description:mro.module_category_maintenance
+msgid "Helps you manage your maintenance processes."
+msgstr "Pomaga pri upravljanju vzdrževalnih procesov."
+
+#. module: mro
+#: view:mro.request:0
+msgid "Undecided maintenance request"
+msgstr "Neobdelani vzdrževalni zahtevki"
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Documentation"
+msgstr "Dokumentacija"
+
+#. module: mro
+#: view:mro.order:0
+msgid "Order Date"
+msgstr "Datum naloga"
+
+#. module: mro
+#: field:mro.order,tools_description:0
+#: field:mro.task,tools_description:0
+msgid "Tools Description"
+msgstr "Opis orodja"
+
+#. module: mro
+#: model:ir.ui.menu,name:mro.menu_maintenance_tasks
+#: model:ir.ui.menu,name:mro.menu_maintenance_tasks_tasks
+#: view:mro.task:0
+msgid "Tasks"
+msgstr "Opravila"
+
+#. module: mro
+#: model:ir.actions.act_window,name:mro.action_requests
+#: model:ir.ui.menu,name:mro.menu_mro_request
+#: view:mro.request:0
+msgid "Maintenance Requests"
+msgstr "Vzdrževalni zahtevki"
+
+#. module: mro
+#: selection:mro.order,maintenance_type:0
+#: selection:mro.task,maintenance_type:0
+msgid "Corrective"
+msgstr "Korektivni ukrepi"
+
+#. module: mro
+#: view:mro.order:0
+msgid "Confirm Maintenance"
+msgstr "Potrditev vzdrževanja"
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Canceled"
+msgstr "Preklicano"
+
+#. module: mro
+#: model:ir.model,name:mro.model_mro_order_parts_line
+#: model:ir.model,name:mro.model_mro_task_parts_line
+msgid "Maintenance Planned Parts"
+msgstr "Načrtovani deli za vzdrževanje"
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "PARTS EXCEPTION"
+msgstr "IZJEMA PRI DELIH"
+
+#. module: mro
+#: view:mro.request.reject:0
+msgid "or"
+msgstr "ali"
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Draft"
+msgstr "Osnutek"
+
+#. module: mro
+#: model:ir.module.category,name:mro.module_category_maintenance
+#: model:ir.ui.menu,name:mro.menu_mro_maintenance
+#: model:ir.ui.menu,name:base.menu_mro_root
+msgid "Maintenance"
+msgstr "Vzdrževanje"
+
+#. module: mro
+#: field:mro.request,requested_date:0
+msgid "Requested Date"
+msgstr "Zahtevani datum"
+
+#. module: mro
+#: field:mro.order,state:0
+#: field:mro.request,state:0
+msgid "Status"
+msgstr "Status"
+
+#. module: mro
+#: help:mro.request,state:0
+msgid ""
+"When the maintenance request is created the status is set to 'Draft'.\n"
+"            If the request is sent the status is set to 'Claim'.\n"
+"            If the request is confirmed the status is set to 'Execution'.\n"
+"            If the request is rejected the status is set to 'Rejected'.\n"
+"            When the maintenance is over, the status is set to 'Done'."
+msgstr ""
+"Ob nastanku vzdrževalnega zahtevka je status nastavljen na 'Osnutek'.\n"
+"            Ko je zahtevek poslan je status 'Zahtevek'.\n"
+"            Ko je zahtevek potrjen je status 'Izvedba'.\n"
+"            Će ke zahtevek zavrnjen je status 'Zavrnjeno'.\n"
+"            Ko se vzdrževanje konča je status 'Opravljeno'."
+
+#. module: mro
+#: view:mro.request:0
+msgid "Confirm Request"
+msgstr "Potrditev zahtevka"
+
+#. module: mro
+#: field:mro.order,parts_location_id:0
+msgid "Parts Location"
+msgstr "Lokacija delov"
+
+#. module: mro
+#: model:res.groups,name:mro.group_mro_user
+msgid "User"
+msgstr "Uporabnik"
+
+#. module: mro
+#: model:ir.actions.act_window,name:mro.action_orders
+#: model:ir.ui.menu,name:mro.menu_mro_order
+#: view:mro.order:0
+msgid "Maintenance Orders"
+msgstr "Vzdrževalni zahtevki"
+
+#. module: mro
+#: view:mro.request:0
+msgid "Date"
+msgstr "Datum"
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Execution"
+msgstr "Izvedba"
+
+#. module: mro
+#: view:mro.order:0
+#: field:mro.order,parts_moved_lines:0
+msgid "Consumed Parts"
+msgstr "Porabljeni deli"
+
+#. module: mro
+#: model:ir.model,name:mro.model_mro_order
+#: view:mro.order:0
+#: field:mro.order.parts.line,maintenance_id:0
+msgid "Maintenance Order"
+msgstr "Vzdrževalni nalog"
+
+#. module: mro
+#: view:mro.order:0
+msgid "Planned Parts"
+msgstr "Načrtovani deli"
+
+#. module: mro
+#: help:mro.request,requested_date:0
+msgid "Date requested by the customer for maintenance."
+msgstr "Kupčev zahtevani datum vzdrževanja."
+
+#. module: mro
+#: field:mro.task,active:0
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: mro
+#: view:mro.order:0
+#: field:mro.order.parts.line,parts_qty:0
+#: field:mro.task.parts.line,parts_qty:0
+msgid "Quantity"
+msgstr "Količina"
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Claim"
+msgstr "Zahtevek"
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Description for Documentation"
+msgstr "Opis za dokumentacijo"
+
+#. module: mro
+#: model:ir.actions.act_window,name:mro.action_tasks
+#: view:mro.task:0
+msgid "Maintenance Tasks"
+msgstr "Vzdrževalna opravila"
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Done"
+msgstr "Opravljeno"
+
+#. module: mro
+#: view:mro.order:0
+msgid "Done"
+msgstr "Opravljeno"
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.request:0
+#: view:mro.request.reject:0
+msgid "Cancel"
+msgstr "Preklic"
+
+#. module: mro
+#: view:mro.request:0
+msgid "Open"
+msgstr "Odprto"
+
+#. module: mro
+#: field:mro.order,origin:0
+msgid "Source Document"
+msgstr "Izvorni dokument"
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "WAITING PARTS"
+msgstr "ČAKANJE DELOV"
+
+#. module: mro
+#: help:mro.order,parts_picking_id:0
+msgid "This is the Internal Picking List that brings parts to the asset"
+msgstr "To je interna prevzemnica, ki prenese dele do sredstva"
+
+#. module: mro
+#: field:mro.request,create_uid:0
+msgid "Responsible"
+msgstr "Odgovorni"
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Description for Tools"
+msgstr "Opis za orodje"
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "CANCELED"
+msgstr "Preklicano"
+
+#. module: mro
+#: model:ir.ui.menu,name:mro.menu_maintenance_parts
+#: model:ir.ui.menu,name:mro.menu_maintenance_parts_parts
+#: view:mro.order:0
+#: field:mro.order.parts.line,parts_id:0
+#: view:mro.task:0
+#: field:mro.task,parts_lines:0
+#: field:mro.task.parts.line,parts_id:0
+msgid "Parts"
+msgstr "Deli"
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "DRAFT"
+msgstr "Osnutek"
+
+#. module: mro
+#: help:mro.order,origin:0
+msgid "Reference of the document that generated this maintenance order."
+msgstr "Sklic dokumenta, ki je osnova za ta vzdrževalni nalog."
+
+#. module: mro
+#: field:mro.request,cause:0
+msgid "Cause"
+msgstr "Vzrok"
+
+#. module: mro
+#: model:ir.ui.menu,name:mro.menu_maintenance_assets
+#: model:ir.ui.menu,name:mro.menu_maintenance_assets_assets
+msgid "Assets"
+msgstr "Sredstva"
+
+#. module: mro
+#: field:mro.order,date_scheduled:0
+msgid "Scheduled Date"
+msgstr "Načrtovani datum"
+
+#. module: mro
+#: field:mro.order,description:0
+#: field:mro.order.parts.line,name:0
+#: view:mro.request:0
+#: field:mro.request,description:0
+#: field:mro.task,name:0
+#: field:mro.task.parts.line,name:0
+msgid "Description"
+msgstr "Opis"
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Rejected"
+msgstr "Zavrnjeno"
+
+#. module: mro
+#: model:res.groups,name:mro.group_mro_customer
+msgid "Customer"
+msgstr "Kupec"
+
+#. module: mro
+#: field:mro.order,documentation_description:0
+#: field:mro.task,documentation_description:0
+msgid "Documentation Description"
+msgstr "Opis dokumentacije"
+
+#. module: mro
+#: help:mro.order,parts_location_id:0
+msgid "Location where the system will look for parts."
+msgstr "Lokacija, kjer bo sistem iskal dele."
+
+#. module: mro
+#: field:mro.order,date_execution:0
+#: field:mro.request,execution_date:0
+msgid "Execution Date"
+msgstr "Datum izvedbe"
+
+#. module: mro
+#: model:ir.actions.act_window,name:mro.action_request_reject
+#: model:ir.model,name:mro.model_mro_request_reject
+#: view:mro.request:0
+#: view:mro.request.reject:0
+msgid "Reject Request"
+msgstr "Zavrnitev zahtevka"
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "READY TO MAINTENANCE"
+msgstr "Pripravljeno na vzdrževanje"
+
+#. module: mro
+#: help:mro.order,state:0
+msgid ""
+"When the maintenance order is created the status is set to 'Draft'.\n"
+"            If the order is confirmed the status is set to 'Waiting Parts'.\n"
+"            If any exceptions are there, the status is set to 'Picking "
+"Exception'.\n"
+"            If the stock is available then the status is set to 'Ready to "
+"Maintenance'.\n"
+"            When the maintenance order gets started then the status is set to "
+"'In Progress'.\n"
+"            When the maintenance is over, the status is set to 'Done'."
+msgstr ""
+"Ko se vzdrževalni nalog ustvari je status nastavljen na 'Osnutek'.\n"
+"            Ob potrditvi status preide na 'Čakanje delov'.\n"
+"            V primeru izjem je status 'Prevzemna izjema'.\n"
+"            Če je zaloga na voljo je status 'Pripravljeno na vzdrževanje'.\n"
+"            Ob začetku vzdrževalnega naloga je status 'V teku'.\n"
+"            Ob dokončanju vzdrževanja je status 'Opravljeno'."
+
+#. module: mro
+#: model:res.groups,name:mro.group_mro_manager
+msgid "Manager"
+msgstr "Upravitelj"
+
+#. module: mro
+#: view:mro.order:0
+#: view:mro.task:0
+msgid "Tools"
+msgstr "Orodja"
+
+#. module: mro
+#: model:mro.order,description:mro.mro_order_2
+#: model:mro.task,name:mro.mro_task_1
+msgid "Wash the truck"
+msgstr "Pranje tovornjaka"
+
+#. module: mro
+#: model:mro.request,cause:mro.mro_request_1
+msgid "Don't work Pump"
+msgstr "Črpalka ne deluje"
+
+#. module: mro
+#: model:mro.order,description:1
+#: model:mro.request,cause:mro.mro_request_2
+msgid "There is no light"
+msgstr "Ne sveti"
+
+#. module: mro
+#: model:mail.message.subtype,description:mro.mt_request_confirmed
+msgid "Maintenance Request confirmed"
+msgstr "Vzdrževalni zahtevek potrjen"
+
+#. module: mro
+#: model:mail.message.subtype,description:mro.mt_request_sent
+msgid "Maintenance Request sent"
+msgstr "Vzdrževalni zahtevek poslan"
+
+#. module: mro
+#: model:mail.message.subtype,name:mro.mt_order_confirmed
+msgid "Confirm Maintenance"
+msgstr "Potrditev vzdrževanja"
+
+#. module: mro
+#: model:mail.message.subtype,name:mro.mt_asset_request_confirmed
+#: model:mail.message.subtype,name:mro.mt_request_confirmed
+msgid "Confirm Request"
+msgstr "Potrditev zahtevka"
+
+#. module: mro
+#: model:mail.message.subtype,description:mro.mt_order_confirmed
+msgid "Maintenance Order confirmed"
+msgstr "Vzdrževalni nalog potrjen"
+
+#. module: mro
+#: model:mail.message.subtype,description:mro.mt_request_rejected
+msgid "Maintenance Request rejected"
+msgstr "Vzdrževalni zahtevek zavrnjen"
+
+#. module: mro
+#: model:mail.message.subtype,name:mro.mt_asset_request_rejected
+#: model:mail.message.subtype,name:mro.mt_request_rejected
+msgid "Reject Request"
+msgstr "Zavrnitev zahtevka"
+
