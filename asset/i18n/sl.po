@@ -1,0 +1,514 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* asset
+#
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20130204-000102\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-29 04:56+0000\n"
+"PO-Revision-Date: 2015-02-22 08:14+0100\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian <translate@matmoz.si>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+"Language: sl\n"
+"X-Generator: Lokalize 1.5\n"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_asset
+msgid "Assets"
+msgstr "Sredstva"
+
+#. module: base
+#: model:ir.module.module,summary:base.module_asset
+msgid "Asset Management"
+msgstr "Upravljanje sredstev"
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Info"
+msgstr "Informacije"
+
+#. module: asset
+#: field:asset.asset,manufacturer_id:0
+msgid "Manufacturer"
+msgstr "Proizvajalec"
+
+#. module: asset
+#: field:asset.asset,property_stock_asset:0
+msgid "Asset Location"
+msgstr "Lokacija sredstva"
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Serial No:"
+msgstr "Serijska številka"
+
+#. module: asset
+#: view:asset.asset:0
+#: model:ir.actions.act_window,name:asset.action_assets
+#: model:ir.ui.menu,name:asset.menu_maintenance_assets
+#: model:ir.ui.menu,name:asset.menu_maintenance_assets_assets
+#: model:stock.location,name:asset.stock_location_assets
+msgid "Assets"
+msgstr "Sredstva"
+
+#. module: asset
+#: model:ir.ui.menu,name:base.menu_mro_root
+msgid "Maintenance"
+msgstr "Vzdrževanje"
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Model:"
+msgstr "Model:"
+
+#. module: asset
+#: help:asset.asset,image_small:0
+msgid ""
+"Small-sized image of the asset. It is automatically resized as a 64x64px "
+"image, with aspect ratio preserved. Use this field anywhere a small image is "
+"required."
+msgstr ""
+"Manjša slika sredstva. Samodejno prilagodi velikost na 64x64 px in ohrani "
+"razmerja. To polje uporabite kjerkoli je potrebna majhna slika."
+
+#. module: asset
+#: field:asset.asset,image:0
+msgid "Image"
+msgstr "Slika"
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Manufacturer:"
+msgstr "Proizvajalec:"
+
+#. module: asset
+#: model:stock.location,name:asset.stock_location_locations_asset
+msgid "Asset Locations"
+msgstr "Lokacije sredstev"
+
+#. module: asset
+#: field:asset.asset,serial:0
+msgid "Serial no."
+msgstr "Serijska številka"
+
+#. module: asset
+#: field:asset.asset,image_medium:0
+msgid "Medium-sized image"
+msgstr "Srednje velika slika"
+
+#. module: asset
+#: help:asset.asset,image_medium:0
+msgid ""
+"Medium-sized image of the asset. It is automatically resized as a 128x128px "
+"image, with aspect ratio preserved, only when the image exceeds one of those "
+"sizes. Use this field in form views or some kanban views."
+msgstr ""
+"Srednje velika slika sredstva.  Samodejno prilagodi velikost na 128x128 px in "
+"ohrani razmerja, če presega to velikost. To polje uporabite v obrazcih in "
+"pogledih tipa kanban."
+
+#. module: asset
+#: model:ir.model,name:asset.model_asset_asset
+msgid "Asset"
+msgstr "Sredstvo"
+
+#. module: asset
+#: field:asset.asset,active:0
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: asset
+#: field:asset.asset,image_small:0
+msgid "Small-sized image"
+msgstr "Manjša slika"
+
+#. module: asset
+#: field:asset.asset,model:0
+msgid "Model"
+msgstr "Model"
+
+#. module: asset
+#: view:asset.asset:0
+#: field:asset.asset,name:0
+msgid "Asset Name"
+msgstr "Naziv sredstva"
+
+#. module: asset
+#: help:asset.asset,property_stock_asset:0
+msgid ""
+"This location will be used as the destination location for installed parts "
+"during asset life."
+msgstr ""
+"Ta lokacija bo uporabljena kot ciljna lokacija za nameščene dele med "
+"življenjskim ciklom sredstva."
+
+#. module: asset
+#: help:asset.asset,image:0
+msgid ""
+"This field holds the image used as image for the asset, limited to "
+"1024x1024px."
+msgstr ""
+"To polje vsebuje sliko, ki se uporabi kot slika sredstva, omejena je na "
+"1024x1024 px."
+
+#. module: asset
+#: model:ir.model,name:asset.model_stock_location
+msgid "Location"
+msgstr "Lokacija"
+
+#. module: asset
+#: field:asset.asset,user_id:0
+msgid "Assigned to"
+msgstr "Dodeljeno k"
+
+#. module: asset
+#: model:asset.asset,name:asset.asset_asset_1
+msgid "Moulding machine 25"
+msgstr "Preoblikovalni stroj 25"
+
+#. module: asset
+#: model:asset.asset,name:asset.asset_asset_2
+msgid "Truck"
+msgstr "Tovornjak"
+
+#. module: asset
+#: model:asset.asset,name:asset.asset_asset_3
+msgid "Building"
+msgstr "Zgradba"
+
+#. module: asset
+#: field:asset.asset,asset_number:0
+msgid "Asset Number"
+msgstr "Številka sredstva"
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Warranty"
+msgstr "Garancija"
+
+#. module: asset
+#: field:asset.asset,warranty_start_date:0
+msgid "Warranty Start"
+msgstr "Začetek garancijske dobe"
+
+#. module: asset
+#: field:asset.asset,warranty_end_date:0
+msgid "Warranty End"
+msgstr "Konec garancijske dobe"
+
+#. module: asset
+#: field:asset.asset,vendor_id:0
+msgid "Vendor"
+msgstr "Prodajalec"
+
+#. module: asset
+#: field:asset.asset,start_date:0
+msgid "Start Date"
+msgstr "Začetni datum"
+
+#. module: asset
+#: field:asset.asset,purchase_date:0
+msgid "Purchase Date"
+msgstr "Datum nabave"
+
+#. module: asset
+#: field:asset.asset,criticality:0
+msgid "Criticality"
+msgstr "Kritičnost"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "General"
+msgstr "Splošno"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "Important"
+msgstr "Pomembno"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "Very important"
+msgstr "Zelo pomembno"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "Critical"
+msgstr "Kritično"
+
+#. module: asset
+#: field:asset.asset,maintenance_state_id:0
+#: view:asset.state:0
+#: field:asset.state,name:0
+msgid "State"
+msgstr "Stanje"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_planned
+msgid "Planned"
+msgstr "Načrtovano"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_rented
+msgid "Rented"
+msgstr "Posojeno"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_purchased
+msgid "Purchased"
+msgstr "Kupljeno"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_leased
+msgid "Leased"
+msgstr "Dano v najem"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_sold
+msgid "Sold"
+msgstr "Prodano"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_shipped
+msgid "Shipped"
+msgstr "Odpremljeno"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_moves
+msgid "Moves"
+msgstr "Premiki"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_stored
+msgid "Stored"
+msgstr "Skladiščeno"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_installed
+msgid "Installed"
+msgstr "Nameščeno"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_use
+msgid "Use"
+msgstr "Uporaba"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_stolen
+msgid "Stolen"
+msgstr "Ukradeno"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_retired
+msgid "Retired"
+msgstr "Umaknjeno"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_shutdown
+msgid "Shutdown"
+msgstr "Izključitev"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_run
+msgid "Run"
+msgstr "Zagon"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_setup
+msgid "Setup"
+msgstr "Nastavitev"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_standby
+msgid "Standby"
+msgstr "V pripravljenosti"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_down
+msgid "Down"
+msgstr "Odklopljeno"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_breakdown
+msgid "Breakdown"
+msgstr "Okvara"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_repair
+msgid "Repair"
+msgstr "Popravilo"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_maintenance
+msgid "Maintenance"
+msgstr "Vzdrževanje"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_operable
+msgid "Operable"
+msgstr "Delujoče"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_draft
+msgid "Draft"
+msgstr "Osnutek"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_depreciation
+msgid "Depreciation"
+msgstr "Amortizacija"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_close
+msgid "Close"
+msgstr "Zaključi"
+
+#. module: asset
+#: field:asset.state,sequence:0
+msgid "Sequence"
+msgstr "Zaporedje"
+
+#. module: asset
+#: field:asset.state,team:0
+msgid "Scope Team"
+msgstr "Razporejena ekipa"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Finance"
+msgstr "Finance"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Warehouse"
+msgstr "Skladišče"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Manufacture"
+msgstr "Proizvodnja"
+
+#. module: asset
+#: selection:asset.state,team:0
+#: model:ir.module.category,name:asset.module_category_maintenance
+msgid "Maintenance"
+msgstr "Vzdrževanje"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Accounting"
+msgstr "Računovodstvo"
+
+#. module: asset
+#: field:asset.asset,maintenance_state_color:0
+msgid "Color"
+msgstr "Barva"
+
+#. module: asset
+#: field:asset.state,state_color:0
+msgid "State Color"
+msgstr "Barva indikatorja"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Red"
+msgstr "Rdeča"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Green"
+msgstr "Zelena"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Blue"
+msgstr "Modra"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Yellow"
+msgstr "Rumena"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Magenta"
+msgstr "Škrlatna"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Cyan"
+msgstr "Sinja"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Black"
+msgstr "Črna"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "White"
+msgstr "Bela"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Orange"
+msgstr "Oranžna"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "SkyBlue"
+msgstr "Nebesno modra"
+
+#. module: asset
+#: view:asset.state:0
+msgid "Change color"
+msgstr "Sprememba barve"
+
+#. module: asset
+#: model:ir.ui.menu,name:asset.menu_maintenance_config
+msgid "Configuration"
+msgstr "Nastavitve"
+
+#. module: asset
+#: model:ir.actions.act_window,name:asset.action_asset_state
+#: model:ir.ui.menu,name:asset.menu_asset_state
+msgid "Asset States"
+msgstr "Stanja sredstva"
+
+#. module: asset
+#: model:ir.actions.act_window,name:asset.action_management_assets
+#: model:ir.ui.menu,name:asset.menu_maintenance_assets_management
+msgid "Manage states"
+msgstr "Upravljanje stanj"
+
+#. module: asset
+#: model:res.groups,name:asset.group_mro_customer
+msgid "Customer"
+msgstr "Kupec"
+
+#. module: asset
+#: model:res.groups,name:asset.group_mro_user
+msgid "User"
+msgstr "Uporabnik"
+
+#. module: asset
+#: model:res.groups,name:asset.group_mro_manager
+msgid "Manager"
+msgstr "Upravitelj"
+

@@ -1,0 +1,471 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* mro_pm
+#
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20130204-000102\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-29 09:45+0000\n"
+"PO-Revision-Date: 2015-02-22 08:50+0100\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian <translate@matmoz.si>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+"Language: sl\n"
+"X-Generator: Lokalize 1.5\n"
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_mro_pm
+msgid "MRO_PM"
+msgstr "Proaktivno vzdrževanje"
+
+#. module: base
+#: model:ir.module.module,summary:base.module_mro_pm
+msgid "Asset Proactive Maintenance"
+msgstr "Proaktivno vzdrževanje sredstva"
+
+#. module: mro
+#: selection:mro.order,maintenance_type:0
+#: selection:mro.task,maintenance_type:0
+msgid "Preventive"
+msgstr "Preventiva"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_replan_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_replan
+#: model:ir.ui.menu,name:mro_pm.menu_replan_pm
+#: view:mro.pm.replan:0
+msgid "Replan PM"
+msgstr "Ponovno načrtovanje proaktivnega vzdrževanja"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,ratio:0
+msgid "Ratio"
+msgstr "Razmerje"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_pm_rules
+#: view:mro.pm.rule:0
+#: field:mro.pm.rule.line,pm_rule_id:0
+msgid "PM Rule"
+msgstr "Pravilo proaktivnega vzdrževanja"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,rounding_type:0
+msgid "Floor"
+msgstr "Tla"
+
+#. module: mro_pm
+#: field:mro.pm.meter,new_value:0
+msgid "New value"
+msgstr "Nova vrednost"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_meter_ratio
+#: model:ir.ui.menu,name:mro_pm.menu_meter_ratio
+#: view:mro.pm.meter.ratio:0
+msgid "Meter Ratio"
+msgstr "Razmerje meritve"
+
+#. module: mro_pm
+#: field:mro.pm.meter,reading_type:0
+msgid "Reading Type"
+msgstr "Tip odčitavanja"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,reading_type:0
+msgid "Increase"
+msgstr "Povišanje"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Attach"
+msgstr "Priklop"
+
+#. module: mro_pm
+#: field:mro.pm.rule.line,task_id:0
+msgid "Task"
+msgstr "Opravilo"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_task
+msgid "Maintenance Task"
+msgstr "Vzdrževalno opravilo"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_asset_asset
+#: field:mro.pm.meter,asset_id:0
+#: field:mro.pm.rule,asset_id:0
+msgid "Asset"
+msgstr "Sredstvo"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,precision:0
+msgid "Rounding Precision"
+msgstr "Natančnost zaokroževanja"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,state:0
+msgid "Reading"
+msgstr "Odčitavanje"
+
+#. module: mro_pm
+#: field:mro.pm.meter,meter_uom:0
+#: field:mro.pm.rule,meter_uom:0
+msgid "Unit of Measure"
+msgstr "Enota mere"
+
+#. module: mro_pm
+#: field:mro.pm.meter,state:0
+msgid "Status"
+msgstr "Status"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "New Reading"
+msgstr "Novo odčitavanje"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,rounding_type:0
+msgid "Ceiling"
+msgstr "Strop"
+
+#. module: mro_pm
+#: field:mro.pm.meter,min_utilization:0
+msgid "Min Utilization (per day)"
+msgstr "Minimalna uporaba (dnevno)"
+
+#. module: mro_pm
+#: model:ir.ui.menu,name:mro_pm.menu_meter_interval
+msgid "Meter Intervals"
+msgstr "Intervali meritve"
+
+#. module: mro_pm
+#: field:mro.pm.meter.interval,interval_max:0
+msgid "Max"
+msgstr "Maks."
+
+#. module: mro_pm
+#: field:mro.pm.meter.interval,interval_min:0
+msgid "Min"
+msgstr "Min."
+
+#. module: mro_pm
+#: field:mro.pm.meter,utilization:0
+msgid "Utilization (per day)"
+msgstr "Uporava (dnevno)"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Last Reading"
+msgstr "Zadnje odčitavanje"
+
+#. module: mro_pm
+#: view:asset.asset:0
+#: field:mro.pm.meter,meter_line_ids:0
+msgid "Meters"
+msgstr "Meritve"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Meter Name"
+msgstr "Naziv meritve"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_update_meters
+#: model:ir.ui.menu,name:mro_pm.menu_update_meters
+#: view:mro.pm.meter:0
+msgid "Update Meters"
+msgstr "Posodobitev meritev"
+
+#. module: mro_pm
+#: field:mro.pm.meter,total_value:0
+#: field:mro.pm.meter.line,total_value:0
+msgid "Total Value"
+msgstr "Skupna vrednost"
+
+#. module: mro_pm
+#: field:mro.pm.meter,date:0
+#: field:mro.pm.meter.line,date:0
+msgid "Date"
+msgstr "Datum"
+
+#. module: mro_pm
+#: field:asset.asset,meter_ids:0
+#: view:mro.pm.meter:0
+#: field:mro.pm.meter,name:0
+#: selection:mro.pm.meter,reading_type:0
+#: field:mro.pm.meter.line,meter_id:0
+#: field:mro.pm.rule,meter_id:0
+msgid "Meter"
+msgstr "Meritev"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_rule
+msgid "Preventive Maintenance Rule"
+msgstr "Pravilo preventivnega vzdrževanja"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Detach"
+msgstr "Odklop"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,state:0
+msgid "Setup"
+msgstr "Nastavitev"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,reading_type:0
+msgid "Change"
+msgstr "Sprememba"
+
+#. module: mro_pm
+#: view:asset.asset:0
+msgid "Info"
+msgstr "Informacije"
+
+#. module: mro_pm
+#: field:mro.pm.meter,parent_ratio_id:0
+msgid "Ratio to Source"
+msgstr "Razmerje do vira"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_rule_line
+msgid "Rule for Task"
+msgstr "Pravilo opravila"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Reading Date"
+msgstr "Datum odčitavanja"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,name:0
+#: field:mro.pm.rule,name:0
+msgid "Name"
+msgstr "Naziv"
+
+#. module: mro_pm
+#: field:mro.pm.rule,horizon:0
+msgid "Planning horizon (months)"
+msgstr "Obseg načrtovanja (mesecev)"
+
+#. module: mro_pm
+#: model:ir.ui.menu,name:mro_pm.menu_pm_rules
+msgid "PM Rules"
+msgstr "Pravila proaktivnega vzdrževanja"
+
+#. module: mro_pm
+#: field:mro.pm.meter,av_time:0
+msgid "Averaging time (days)"
+msgstr "Povprečni čas (dni)"
+
+#. module: mro_pm
+#: field:mro.pm.meter.interval,name:0
+msgid "Interval"
+msgstr "Interval"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_order
+msgid "Maintenance Order"
+msgstr "Vzdrževalni nalog"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_meter_interval
+#: view:mro.pm.meter.interval:0
+#: field:mro.pm.rule.line,meter_interval_id:0
+msgid "Meter Interval"
+msgstr "Interval meritve"
+
+#. module: mro_pm
+#: field:mro.pm.rule,active:0
+msgid "Active"
+msgstr "Aktivno"
+
+#. module: mro_pm
+#: view:mro.pm.rule:0
+#: field:mro.pm.rule,pm_rules_line_ids:0
+msgid "Tasks"
+msgstr "Opravila"
+
+#. module: mro_pm
+#: view:asset.asset:0
+#: model:ir.actions.act_window,name:mro_pm.open_reading_log
+#: view:mro.pm.meter:0
+#: view:mro.pm.meter.line:0
+msgid "Reading History"
+msgstr "Kronologija odčitavanj"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter_line
+msgid "History of Asset Meter Reading"
+msgstr "Kronologija odčitavanj meritev sredstva"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,state:0
+msgid "Detached"
+msgstr "Odklopljeno"
+
+#. module: mro_pm
+#: field:mro.pm.meter.line,value:0
+msgid "Reading Value"
+msgstr "Vrednost odčitavanja"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_meters_logs
+#: model:ir.ui.menu,name:mro_pm.menu_meters_logs
+#: view:mro.pm.meter:0
+msgid "Meters Logs"
+msgstr "Dnevniki meritev"
+
+#. module: mro_pm
+#: help:mro.pm.rule,active:0
+msgid ""
+"If the active field is set to False, it will allow you to hide the PM without "
+"removing it."
+msgstr ""
+"Če je polje neoznačeno, bo omogočilo skrivanje proaktivnega vzdrževanja, ne "
+"da bi ga odstranili."
+
+#. module: mro_pm
+#: field:mro.pm.meter,parent_meter_id:0
+msgid "Source Meter"
+msgstr "Izvorna meritev"
+
+#. module: mro_pm
+#: model:ir.ui.menu,name:mro_pm.menu_maintenance_config
+msgid "Configuration"
+msgstr "Nastavitve"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,ratio_type:0
+msgid "Ratio Type"
+msgstr "Tip razmerja"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,ratio_type:0
+msgid "Source Bigger"
+msgstr "Izvor večji"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter
+msgid "Asset Meters"
+msgstr "Meritve sredstva"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,ratio_type:0
+msgid "Source Smaller"
+msgstr "Izvor manjši"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter_interval
+msgid "Meter interval"
+msgstr "Interval meritve"
+
+#. module: mro_pm
+#: field:mro.pm.meter,value:0
+msgid "Value"
+msgstr "Vrednost"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,rounding_type:0
+msgid "Rounding"
+msgstr "Zaokroževanje"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,reading_type:0
+msgid "Decrease"
+msgstr "Zmanjšaj"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,rounding_type:0
+msgid "Rounding Type"
+msgstr "Tip zaokroževanja"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter_ratio
+msgid "Rules for Meter to Meter Ratio"
+msgstr "Pravila za razmerje med meritvami"
+
+#. module: mro_pm
+#: field:mro.pm.meter,view_line_ids:0
+msgid "unknown"
+msgstr "neznano"
+
+#. module: mro_pm
+#: view:mro.pm.replan:0
+msgid "Cancel"
+msgstr "Preklic"
+
+#. module: mro_pm
+#: view:mro.pm.meter.line:0
+msgid "Meter History Search"
+msgstr "Iskalnik po kronologiji meritev"
+
+#. module: mro_pm
+#: view:mro.pm.replan:0
+msgid "or"
+msgstr "ali"
+
+#. module: mro_pm
+#: model:mro.pm.meter,name:mro_pm.mro_pm_meter_1
+msgid "Work Time"
+msgstr "Delovni čas"
+
+#. module: mro_pm
+#: model:mro.order,description:3
+#: model:mro.order,description:4
+#: model:mro.order,description:5
+#: model:mro.order,description:6
+#: model:mro.order,description:8
+#: model:mro.order,description:9
+#: model:mro.order,description:10
+#: model:mro.order,description:11
+#: model:mro.order,description:13
+#: model:mro.task,name:mro_pm.mro_task_2
+msgid "Small Maintenance"
+msgstr "Majhno vzdrževanje"
+
+#. module: mro_pm
+#: model:mro.order,description:7
+#: model:mro.task,name:mro_pm.mro_task_3
+msgid "Medium Maintenance"
+msgstr "Srednje vzdrževanje"
+
+#. module: mro_pm
+#: model:mro.order,description:12
+#: model:mro.task,name:mro_pm.mro_task_4
+msgid "Big Maintenance"
+msgstr "Veliko vzdrževanje"
+
+#. module: mro_pm
+#: model:mro.pm.meter,name:mro_pm.mro_pm_meter_3
+#: model:product.uom,name:mro_pm.uom_mro_cycle
+msgid "Cycle"
+msgstr "Cikel"
+
+#. module: mro_pm
+#: model:product.uom.categ,name:mro_pm.uom_categ_mro_work
+msgid "Work"
+msgstr "Delo"
+
+#. module: mro_pm
+#: model:mro.pm.meter,name:mro_pm.mro_pm_meter_2
+msgid "Produced"
+msgstr "Proizvedeno"
+
+#. module: mro_pm
+#: model:asset.asset,name:mro_pm.asset_asset_4
+msgid "Mould"
+msgstr "Oblikovano"
+
+#. module: mro_pm
+#: model:mro.pm.meter.ratio,name:mro_pm.mro_pm_meter_ratio_1
+msgid "2 nests"
+msgstr "2 gnezdi"
+
