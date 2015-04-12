@@ -1,0 +1,55 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* asset_mrp
+#
+# Matjaž Mozetič <m.mozetic@matmoz.si>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0-edf679c\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-18 10:09+0000\n"
+"PO-Revision-Date: 2015-02-22 08:14+0100\n"
+"Last-Translator: Matjaž Mozetič <m.mozetic@matmoz.si>\n"
+"Language-Team: Slovenian <translate@matmoz.si>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+"Language: sl\n"
+"X-Generator: Lokalize 1.5\n"
+
+#. module: asset_mrp
+#: model:ir.model,name:asset_mrp.model_asset_asset
+#: view:mrp.bom:asset_mrp.asset_mrp_bom_view
+#: view:mrp.workcenter:asset_mrp.asset_mrp_workcenter_view
+#: field:mrp.workcenter,asset_ids:0
+msgid "Asset"
+msgstr "Sredstvo"
+
+#. module: asset_mrp
+#: model:ir.ui.menu,name:asset_mrp.menu_asset_state
+msgid "Asset States"
+msgstr "Stanja sredstva"
+
+#. module: asset_mrp
+#: view:asset.asset:asset_mrp.assets_form_view_mrp
+#: model:ir.actions.act_window,name:asset_mrp.action_assets_mrp
+#: model:ir.ui.menu,name:asset_mrp.menu_maintenance_assets
+#: model:ir.ui.menu,name:asset_mrp.menu_maintenance_assets_assets
+#: view:mrp.bom:asset_mrp.asset_mrp_bom_view
+#: view:mrp.workcenter:asset_mrp.asset_mrp_workcenter_view
+msgid "Assets"
+msgstr "Sredstva"
+
+#. module: asset_mrp
+#: view:mrp.bom:asset_mrp.asset_mrp_bom_view
+#: view:mrp.workcenter:asset_mrp.asset_mrp_workcenter_view
+msgid "Location"
+msgstr "Lokacija"
+
+#. module: asset_mrp
+#: model:ir.actions.act_window,name:asset_mrp.action_management_assets_mrp
+#: model:ir.ui.menu,name:asset_mrp.menu_maintenance_assets_management
+msgid "Manage states"
+msgstr "Upravljanje stanj"
+
