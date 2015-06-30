@@ -20,6 +20,7 @@
             <field name="model">asset.asset</field>
             <field name="arch" type="xml">
                 <tree string="Assets">
+                    <field name="asset_number"/>
                     <field name="name"/>
                     <field name="property_stock_asset"/>
                     <field name="criticality"/>
@@ -143,8 +144,11 @@
             <field name="model">asset.asset</field>
             <field name="arch" type="xml">
                 <search string="Asset Search">
+                    <field name="asset_number"/>
                     <field name="name"/>
                     <field name="property_stock_asset"/>
+                    <field name="criticality"/>
+                    <field name="user_id"/>
                 </search>
             </field>
         </record>

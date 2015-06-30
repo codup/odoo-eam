@@ -21,7 +21,7 @@
 
 {
     'name': 'Assets',
-    'version': '1.7',
+    'version': '1.8',
     'summary': 'Asset Management',
     'description': """
 Managing Assets in Odoo.
@@ -34,6 +34,7 @@ Support following feature:
     * States of Asset for different team: Finance, Warehouse, Manufacture, Maintenance and Accounting
     * Drag&Drop manage states of Asset
     * Asset Tags
+    * Search by main fields
     """,
     'author': 'CodUP',
     'website': 'http://codup.com',
