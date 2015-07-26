@@ -33,6 +33,7 @@ Support following feature:
     'website': 'http://codup.com',
     'category': 'Enterprise Asset Management',
     'sequence': 0,
+    'images': ['images/assets.png'],
     'depends': ['asset'],
     'installable': True,
 }
