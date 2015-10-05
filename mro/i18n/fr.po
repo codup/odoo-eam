@@ -510,12 +510,12 @@ msgstr "Pièces à consommer"
 #. module: mro
 #: field:mro.order,date_planned:0
 msgid "Planned Date"
-msgstr "Date planifiée"
+msgstr "Date prévue"
 
 #. module: mro
 #: view:website:mro.report_mro_order
 msgid "Planned Date:"
-msgstr "Date planifiée:"
+msgstr "Date prévue:"
 
 #. module: mro
 #: view:mro.order:mro.mro_order_form_view
