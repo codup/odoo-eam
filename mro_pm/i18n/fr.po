@@ -64,7 +64,7 @@ msgstr "Plafond"
 #. module: mro_pm
 #: selection:mro.pm.meter,reading_type:0
 msgid "Change"
-msgstr "Écraser"
+msgstr "Delta"
 
 #. module: mro_pm
 #: field:mro.pm.meter,create_uid:0
