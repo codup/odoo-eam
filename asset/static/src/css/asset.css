@@ -44,7 +44,7 @@
   border-color: #C8C8C8 !important;
 }
 .codup_kanban_status:hover {
-  box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+  box-shadow:1px 1px 2px 1px #6f6f6f !important;
   border-color: #D8D8D8 #C8C8C8 #C8C8C8 #D8D8D8 !important;
 }
 .codup_kanban_status:hover .codup_status {
