@@ -147,13 +147,8 @@ class mro_order(osv.osv):
         return value
 
     def onchange_task(self, cr, uid, ids, task_id, parts_lines):
-        """
-        onchange handler of task_id.
-        """
         task = self.pool.get('mro.task').browse(cr, uid, task_id)
-        #clear old parts
-        new_parts_lines = [[2,line[1],line[2]] for line in parts_lines if line[0]]
-        #copy parts from task
+        new_parts_lines = []
         for line in task.parts_lines:
             new_parts_lines.append([0,0,{
                 'name': line.name,
