@@ -61,8 +61,6 @@
   margin-left: 20px;
 }
 .codup_attention_on, .codup_attention_off {
-  font-family: "entypoRegular";
-  font-size: 24px;
   color: #cccccc !important;
   text-shadow: 0 0 2px black;
   text-decoration: none !important;
