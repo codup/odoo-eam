@@ -52,6 +52,8 @@
 }
 .codup_kanban_left {
   display: inline-block;
+  float: left;
+  padding-right: 8px;
 }
 .codup_kanban_left .codup_status {
   display: block;
