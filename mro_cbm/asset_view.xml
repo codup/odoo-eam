@@ -8,7 +8,7 @@
             <field name="inherit_id" ref="mro_pm.assets_form_view"/>
             <field name="groups_id" eval="[(4, ref('asset.group_mro_user'))]"/>
             <field name="arch" type="xml">
-                <page string="Meters" position="after" version="7.0">
+                <xpath expr="//page[@name='meters']" position="after">
                     <page string="Gauges">
                         <field name="gauge_ids">
                             <tree string="Gauges">
@@ -21,7 +21,7 @@
                             </tree>
                         </field>
                     </page>
-                </page>
+                </xpath>
             </field>
         </record>
 
