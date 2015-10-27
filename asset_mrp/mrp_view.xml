@@ -7,7 +7,7 @@
             <field name="model">mrp.workcenter</field>
             <field name="inherit_id" ref="mrp.mrp_workcenter_view"/>
             <field name="arch" type="xml">
-                <page string="General Information" position="after">
+                <page position="after">
                     <page string="Assets">
                         <field name="asset_ids">
                             <tree string="Assets">
@@ -26,7 +26,7 @@
             <field name="model">mrp.bom</field>
             <field name="inherit_id" ref="mrp.mrp_bom_form_view"/>
             <field name="arch" type="xml">
-                <page string="Components" position="after">
+                <page position="after">
                     <page string="Assets" groups="mrp.group_mrp_routings">
                         <field name="asset_ids">
                             <tree string="Assets">
