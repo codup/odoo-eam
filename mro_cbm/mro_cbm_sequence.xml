@@ -3,11 +3,6 @@
     <data noupdate="1">
 
         <!-- Sequences for PdM Rules -->       
-        <record id="sequence_mro_cbm_rule_type" model="ir.sequence.type">
-            <field name="name">PdM Rule</field>
-            <field name="code">mro.cbm.rule</field>
-        </record>
-
         <record id="sequence_mro_cbm_rule" model="ir.sequence">
             <field name="name">PdM Rule</field>
             <field name="code">mro.cbm.rule</field>
