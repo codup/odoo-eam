@@ -8,7 +8,7 @@
             <field name="inherit_id" ref="asset.assets_form_view"/>
             <field name="groups_id" eval="[(4, ref('asset.group_mro_user'))]"/>
             <field name="arch" type="xml">
-                <page string="Info" position="after" version="7.0">
+                <xpath expr="//page[@name='info']" position="after">
                     <page string="Meters">
                         <field name="meter_ids">
                             <tree string="Meters">
@@ -23,7 +23,7 @@
                             </tree>
                         </field>
                     </page>
-                </page>
+                </xpath>
                 <xpath expr="//div[@name='buttons']" position="inside">
                    <button class="oe_inline oe_stat_button" name="action_view_rules" type="object" 
                        icon="fa-refresh" string="Scheduling Rules">

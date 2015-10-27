@@ -62,7 +62,7 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Info">
+                            <page name="info" string="Info">
                                 <group>
                                     <group>
                                         <field name="asset_number"/>
