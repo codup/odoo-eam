@@ -2,11 +2,6 @@
 <openerp>
     <data noupdate="1">
         <!-- Sequences for PM Rules -->       
-        <record id="sequence_mro_pm_rule_type" model="ir.sequence.type">
-            <field name="name">PM Rule</field>
-            <field name="code">mro.pm.rule</field>
-        </record>
-        
         <record id="sequence_mro_pm_rule" model="ir.sequence">
             <field name="name">PM Rule</field>
             <field name="code">mro.pm.rule</field>
