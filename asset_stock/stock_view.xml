@@ -223,7 +223,7 @@
         <menuitem name="Asset States"
             action="asset.action_asset_state"
             id="menu_asset_state"
-            parent="stock.menu_stock_configuration"
+            parent="stock.menu_stock_config_settings"
             groups="stock.group_stock_manager"
             sequence="100"/>
     
