@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-10 11:31+0000\n"
-"PO-Revision-Date: 2015-01-10 11:31+0000\n"
+"POT-Creation-Date: 2015-10-29 23:06+0000\n"
+"PO-Revision-Date: 2015-10-29 23:06+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -32,6 +32,7 @@ msgstr ""
 
 #. module: mro
 #: model:ir.model,name:mro.model_asset_asset
+#: view:mro.order:mro.mro_order_search
 #: field:mro.order,asset_id:0
 #: field:mro.request,asset_id:0
 msgid "Asset"
@@ -270,6 +271,7 @@ msgid "Execution"
 msgstr ""
 
 #. module: mro
+#: view:mro.order:mro.mro_order_search
 #: field:mro.order,date_execution:0
 #: field:mro.request,execution_date:0
 msgid "Execution Date"
@@ -289,6 +291,12 @@ msgstr ""
 #. module: mro
 #: view:mro.order:mro.mro_order_form_view
 msgid "Force Reservation"
+msgstr ""
+
+#. module: mro
+#: view:mro.order:mro.mro_order_search
+#: view:mro.request:mro.mro_request_search
+msgid "Group By"
 msgstr ""
 
 #. module: mro
@@ -386,11 +394,13 @@ msgid "Maintenance Order № :"
 msgstr ""
 
 #. module: mro
+#: code:addons/mro/asset.py:44
 #: model:ir.actions.act_window,name:mro.action_orders
 #: model:ir.ui.menu,name:mro.menu_mro_order
 #: view:mro.order:mro.mro_order_calendar_view
 #: view:mro.order:mro.mro_order_form_view
 #: view:mro.order:mro.mro_order_tree_view
+#, python-format
 msgid "Maintenance Orders"
 msgstr ""
 
@@ -447,6 +457,7 @@ msgid "Maintenance Tasks"
 msgstr ""
 
 #. module: mro
+#: view:mro.order:mro.mro_order_search
 #: field:mro.order,maintenance_type:0
 #: field:mro.task,maintenance_type:0
 msgid "Maintenance Type"
@@ -643,6 +654,7 @@ msgid "Responsible"
 msgstr ""
 
 #. module: mro
+#: view:mro.order:mro.mro_order_search
 #: field:mro.order,date_scheduled:0
 msgid "Scheduled Date"
 msgstr ""
@@ -704,6 +716,13 @@ msgid "Specify the tools and mechanisms needed for execute this order..."
 msgstr ""
 
 #. module: mro
+#: view:mro.order:mro.mro_order_search
+#: view:mro.request:mro.mro_request_search
+msgid "State"
+msgstr ""
+
+#. module: mro
+#: view:asset.asset:mro.view_asset_search_mro
 #: field:mro.order,state:0
 #: field:mro.request,state:0
 msgid "Status"
@@ -721,7 +740,9 @@ msgid "Summary"
 msgstr ""
 
 #. module: mro
+#: code:addons/mro/wizard/convert_order.py:52
 #: field:mro.order,task_id:0
+#, python-format
 msgid "Task"
 msgstr ""
 
@@ -801,6 +822,12 @@ msgid "When the maintenance request is created the status is set to 'Draft'.\n"
 "            If the request is confirmed the status is set to 'Execution'.\n"
 "            If the request is rejected the status is set to 'Rejected'.\n"
 "            When the maintenance is over, the status is set to 'Done'."
+msgstr ""
+
+#. module: mro
+#: view:mro.convert.order:mro.view_convert_order
+#: view:mro.request.reject:mro.view_request_reject_wizard
+msgid "or"
 msgstr ""
 
 #. module: mro
