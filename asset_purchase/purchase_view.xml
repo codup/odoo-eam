@@ -223,7 +223,7 @@
         <menuitem name="Asset States"
             action="asset.action_asset_state"
             id="menu_asset_state"
-            parent="purchase.menu_purchase_config_purchase"
+            parent="purchase.menu_purchase_config"
             groups="purchase.group_purchase_manager"
             sequence="100"/>
     
