@@ -149,6 +149,18 @@
                     <field name="property_stock_asset"/>
                     <field name="criticality"/>
                     <field name="user_id"/>
+                    <field name="category_ids"/>
+                    <separator />
+                    <group expand="0" string="Group By">
+                      <filter name="group_name"
+                              string="Name"
+                              context="{'group_by': 'name'}"
+                              />
+                      <filter name="group_user"
+                              string="User"
+                              context="{'group_by': 'user_id'}"
+                              />
+                    </group>
                 </search>
             </field>
         </record>

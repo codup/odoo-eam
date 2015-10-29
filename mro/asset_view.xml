@@ -17,5 +17,30 @@
             </field>
         </record>
 
+        <record id="view_asset_tree_mro" model="ir.ui.view">
+            <field name="name">asset tree view mro</field>
+            <field name="model">asset.asset</field>
+            <field name="inherit_id" ref="asset.asset_tree_view"/>
+            <field name="arch" type="xml">
+                <field name="user_id" position="after">
+                    <field name="maintenance_state_id"/>
+                </field>
+            </field>
+        </record>
+
+        <record id="view_asset_search_mro" model="ir.ui.view">
+            <field name="name">asset search view mro</field>
+            <field name="model">asset.asset</field>
+            <field name="inherit_id" ref="asset.asset_search"/>
+            <field name="arch" type="xml">
+                <xpath expr="filter[@name='group_user']" position="after">
+                  <filter name="group_maintenance_state"
+                          string="Status"
+                          context="{'group_by': 'maintenance_state_id'}"
+                          />
+                </xpath>
+            </field>
+        </record>
+
  	</data>
 </openerp>
