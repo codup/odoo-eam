@@ -77,9 +77,18 @@
             <field name="model">mro.request</field>
             <field name="arch" type="xml">
                 <search string="Search Maintenance Request">
+                    <field name="state"/>
+                    <field name="name"/>
+                    <field name="asset_id"/>
                     <filter icon="terp-mail-message-new" string="Unread Messages" name="message_unread" domain="[('message_unread','=',True)]"/>
                     <separator/>
                     <filter icon="terp-document-new" name="open" string="Open" domain="['|',('state','in',('draft','claim')),('message_unread','=',True)]" help="Undecided maintenance request"/>
+                    <group expand="0" string="Group By">
+                      <filter name="group_state"
+                              string="State"
+                              context="{'group_by': 'state'}"
+                              />
+                    </group>
                 </search>
             </field>
         </record>
@@ -247,8 +256,34 @@
             <field name="model">mro.order</field>
             <field name="arch" type="xml">
                 <search string="Search Maintenance Order">
+                    <field name="name"/>
+                    <field name="maintenance_type"/>
+                    <field name="asset_id"/>
+                    <field name="category_ids"/>
                     <filter icon="terp-mail-message-new" string="Unread Messages" name="message_unread" domain="[('message_unread','=',True)]"/>
                     <separator/>
+                    <group expand="0" string="Group By">
+                      <filter name="group_state"
+                              string="State"
+                              context="{'group_by': 'state'}"
+                              />
+                      <filter name="group_type"
+                              string="Maintenance Type"
+                              context="{'group_by': 'maintenance_type'}"
+                              />
+                      <filter name="group_asset"
+                              string="Asset"
+                              context="{'group_by': 'asset_id'}"
+                              />
+                      <filter name="group_date_scheduled"
+                              string="Scheduled Date"
+                              context="{'group_by': 'date_scheduled'}"
+                              />
+                      <filter name="group_date_execution"
+                              string="Execution Date"
+                              context="{'group_by': 'date_execution'}"
+                              />
+                    </group>
                 </search>
             </field>
         </record>
