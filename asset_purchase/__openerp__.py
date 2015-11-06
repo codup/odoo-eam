@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2014 CodUP (<http://codup.com>).
+#    Copyright (C) 2014-2015 CodUP (<http://codup.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -21,7 +21,7 @@
 
 {
     'name': 'Assets & Purchase',
-    'version': '1.1',
+    'version': '1.2',
     'summary': 'Integrate Asset and Purchase',
     'description': """
 Integrate Maintenance and Purchase.

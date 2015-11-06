@@ -21,7 +21,7 @@
 
 {
     'name': 'MRO PM',
-    'version': '1.2',
+    'version': '1.3',
     'summary': 'Asset Proactive Maintenance',
     'description': """
 Manage Proactive Maintenance process in OpenERP
