@@ -309,8 +309,34 @@
             groups="asset.group_mro_user"
             sequence="9"/>
             
+        <record id="part_search_form_view" model="ir.ui.view">
+            <field name="name">product.template.search.mro</field>
+            <field name="model">product.template</field>
+            <field name="mode">primary</field>
+            <field name="inherit_id" ref="product.product_template_search_view"/>
+            <field name="arch" type="xml">
+                <filter name="services" position="before">
+                    <filter string="Parts" name="parts" domain="[('categ_id','=','Parts')]" help="Parts your store in the inventory"/>
+                </filter>
+            </field>
+        </record>
+
+        <record id="part_action" model="ir.actions.act_window">
+            <field name="name">Part</field>
+            <field name="res_model">product.template</field>
+            <field name="view_mode">tree,form,kanban</field>
+            <field name="view_type">form</field>
+            <field name="search_view_id" ref="part_search_form_view"/>
+            <field name="context">{'search_default_parts': 1}</field>
+            <field name="help" type="html">
+              <p class="oe_view_nocontent_create">
+                Click to define a new spare part.
+              </p>
+            </field>
+        </record>
+
         <menuitem name="Parts"
-            action="product.product_normal_action"
+            action="part_action"
             id="menu_maintenance_parts_parts"
             parent="menu_maintenance_parts"
             sequence="100"/>
