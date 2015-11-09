@@ -373,9 +373,9 @@
                     </group>
                     <notebook>
                         <page string="Parts">
-                            <field name="parts_lines" nolabel="1">
+                            <field name="parts_lines" nolabel="1" context="{'default_categ_id': context.get('default_categ_id')}">
                                 <tree string="Parts" editable="bottom">
-                                    <field name="parts_id" on_change="onchange_parts(parts_id)" domain="[('categ_id','=','Parts')]"/>
+                                    <field name="parts_id" on_change="onchange_parts(parts_id)" domain="[('categ_id','=','Parts')]" context="{'default_categ_id': context.get('default_categ_id')}"/>
                                     <field name="parts_qty"/>
                                     <field name="parts_uom" groups="product.group_uom"/>
                                     <field name="name"/>
@@ -410,6 +410,7 @@
             <field name="res_model">mro.task</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
+            <field name="context" eval="{'default_categ_id': ref('mro.product_category_mro')}"/>
         </record>        
         
         <menuitem name="Tasks"
