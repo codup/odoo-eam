@@ -2,30 +2,6 @@
 <openerp>
     <data noupdate="1">
 
-        <!-- Routes -->
-        <record id="route_maintenance" model='stock.location.route'>
-            <field name="name">Maintenance</field>
-            <field name="product_categ_selectable" eval="True"/>
-            <field name="product_selectable" eval="False"/>
-        </record>
-
-        <!-- Procurement rules -->
-        <record id="rule_wh_asset" model='procurement.rule'>
-            <field name="name">WH: Stock -> Asset</field>
-            <field name="action">move</field>
-            <field name="picking_type_id" ref="stock.picking_type_internal"/>
-            <field name="location_src_id" ref="stock.stock_location_stock"/>
-            <field name="location_id" ref="asset.stock_location_assets"/>
-            <field name="route_id" ref="mro.route_maintenance"/>
-        </record>
-
-        <!-- Spare Parts Category -->
-        <record id="product_category_mro" model="product.category">
-            <field name="parent_id" ref="product.product_category_all"/>
-            <field name="name">Parts</field>
-            <field name="route_ids" eval="[(6,0,[ref('mro.route_maintenance')])]"/>
-        </record>
-
         <!-- Spare Parts -->
         <record id="product_product_mro_pump" model="product.product">
             <field name="name">Pump</field>

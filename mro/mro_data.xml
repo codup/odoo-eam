@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data noupdate="1">
-        
+
         <!-- Maintenance Request related subtypes for messaging / Chatter -->
         <record id="mt_request_sent" model="mail.message.subtype">
             <field name="name">Send Request</field>
@@ -24,6 +24,7 @@
             <field name="res_model">mro.order</field>
             <field name="description">Maintenance Order confirmed</field>
         </record>
+
         <!-- Asset related subtypes for messaging / Chatter -->
         <record id="mt_asset_request_sent" model="mail.message.subtype">
             <field name="name">Send Request</field>
@@ -45,6 +46,30 @@
             <field name="default" eval="False"/>
             <field name="parent_id" eval="ref('mt_request_rejected')"/>
             <field name="relation_field">asset_id</field>
+        </record>
+
+        <!-- Routes -->
+        <record id="route_maintenance" model='stock.location.route'>
+            <field name="name">Maintenance</field>
+            <field name="product_categ_selectable" eval="True"/>
+            <field name="product_selectable" eval="False"/>
+        </record>
+
+        <!-- Procurement rules -->
+        <record id="rule_wh_asset" model='procurement.rule'>
+            <field name="name">WH: Stock -> Asset</field>
+            <field name="action">move</field>
+            <field name="picking_type_id" ref="stock.picking_type_internal"/>
+            <field name="location_src_id" ref="stock.stock_location_stock"/>
+            <field name="location_id" ref="asset.stock_location_assets"/>
+            <field name="route_id" ref="mro.route_maintenance"/>
+        </record>
+
+        <!-- Spare Parts Category -->
+        <record id="product_category_mro" model="product.category">
+            <field name="parent_id" ref="product.product_category_all"/>
+            <field name="name">Parts</field>
+            <field name="route_ids" eval="[(6,0,[ref('mro.route_maintenance')])]"/>
         </record>
 
     </data>
