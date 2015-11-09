@@ -184,7 +184,7 @@
                                     <group string="Planned Parts" states="draft,released,done,parts_except,cancel">
                                         <field name="parts_lines" nolabel="1">
                                             <tree string="Planned Parts" editable="bottom">
-                                                <field name="parts_id" on_change="onchange_parts(parts_id)"/>
+                                                <field name="parts_id" on_change="onchange_parts(parts_id)" domain="[('categ_id','=','Parts')]"/>
                                                 <field name="parts_qty"/>
                                                 <field name="parts_uom" groups="product.group_uom"/>
                                                 <field name="name"/>
@@ -374,7 +374,7 @@
                         <page string="Parts">
                             <field name="parts_lines" nolabel="1">
                                 <tree string="Parts" editable="bottom">
-                                    <field name="parts_id" on_change="onchange_parts(parts_id)"/>
+                                    <field name="parts_id" on_change="onchange_parts(parts_id)" domain="[('categ_id','=','Parts')]"/>
                                     <field name="parts_qty"/>
                                     <field name="parts_uom" groups="product.group_uom"/>
                                     <field name="name"/>
