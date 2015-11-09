@@ -287,7 +287,7 @@
                 </search>
             </field>
         </record>
-        
+
         <record id="action_orders" model="ir.actions.act_window">
             <field name="name">Maintenance Orders</field>
             <field name="type">ir.actions.act_window</field>
@@ -295,20 +295,20 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form,calendar</field>
         </record>
-            
+
         <menuitem name="Maintenance Orders"
             action="action_orders"
             id="menu_mro_order"
             parent="menu_mro_maintenance"
             sequence="10"/>
-            
+
         <!-- Parts menu -->
         <menuitem name="Parts"
             id="menu_maintenance_parts"
             parent="base.menu_mro_root"
             groups="asset.group_mro_user"
             sequence="9"/>
-            
+
         <record id="part_search_form_view" model="ir.ui.view">
             <field name="name">product.template.search.mro</field>
             <field name="model">product.template</field>
@@ -327,7 +327,7 @@
             <field name="view_mode">tree,form,kanban</field>
             <field name="view_type">form</field>
             <field name="search_view_id" ref="part_search_form_view"/>
-            <field name="context">{'search_default_parts': 1}</field>
+            <field name="context" eval="{'default_categ_id': ref('mro.product_category_mro'), 'search_default_parts':1}"/>
             <field name="help" type="html">
               <p class="oe_view_nocontent_create">
                 Click to define a new spare part.
@@ -340,7 +340,7 @@
             id="menu_maintenance_parts_parts"
             parent="menu_maintenance_parts"
             sequence="100"/>
-            
+
         <!-- Tasks menu -->
         <record id="mro_task_tree_view" model="ir.ui.view">
             <field name="name">mro.task.tree</field>
