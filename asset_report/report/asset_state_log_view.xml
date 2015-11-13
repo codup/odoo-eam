@@ -27,7 +27,7 @@
         <menuitem name="States Logs"
             action="action_state_log"
             id="menu_maintenance_report_state_log"
-            parent="menu_maintenance_report"
+            parent="asset.menu_maintenance_report"
             groups="asset.group_mro_customer"
             sequence="100"/>
 

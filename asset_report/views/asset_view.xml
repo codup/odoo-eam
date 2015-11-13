@@ -2,13 +2,6 @@
 <openerp>
 	<data>
 
-        <!-- Report menu -->
-        <menuitem name="Reports"
-            id="menu_maintenance_report"
-            parent="base.menu_mro_root"
-            groups="asset.group_mro_customer"
-            sequence="10"/>
-
         <record id="asset_work_state_form_view" model="ir.ui.view">
             <field name="name">asset.state.form</field>
             <field name="model">asset.state</field>

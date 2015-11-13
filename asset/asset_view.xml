@@ -267,7 +267,14 @@
             id="menu_maintenance_assets_management"
             parent="menu_maintenance_assets"
             groups="asset.group_mro_user"
-            sequence="100"/>    
+            sequence="100"/>
+
+        <!-- Report menu -->
+        <menuitem name="Reports"
+            id="menu_maintenance_report"
+            parent="base.menu_mro_root"
+            groups="asset.group_mro_customer"
+            sequence="30"/>
 
         <!-- Configuration menu -->
         <menuitem name="Configuration"
