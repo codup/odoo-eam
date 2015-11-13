@@ -86,7 +86,7 @@ class mro_order(osv.osv):
         'asset_id': fields.many2one('asset.asset', 'Asset', required=True, readonly=True, states={'draft': [('readonly', False)]}),
         'date_planned': fields.datetime('Planned Date', required=True, select=1, readonly=True, states={'draft':[('readonly',False)]}),
         'date_scheduled': fields.datetime('Scheduled Date', required=True, select=1, readonly=True, states={'draft':[('readonly',False)],'released':[('readonly',False)],'ready':[('readonly',False)]}),
-        'date_execution': fields.datetime('Execution Date', required=True, select=1, readonly=True, states={'draft':[('readonly',False)],'released':[('readonly',False)],'ready':[('readonly',False)]}),
+        'date_execution': fields.datetime('Execution Date', required=True, states={'done':[('readonly',True)],'cancel':[('readonly',True)]}),
         'parts_lines': fields.one2many('mro.order.parts.line', 'maintenance_id', 'Planned parts',
             readonly=True, states={'draft':[('readonly',False)]}),
         'parts_ready_lines': fields.function(_get_available_parts, relation="stock.move", method=True, type="one2many", multi='parts'),
