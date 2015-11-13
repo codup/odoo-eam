@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <!-- Report menu -->
+        <menuitem name="Reports"
+            id="menu_maintenance_report"
+            parent="base.menu_mro_root"
+            groups="asset.group_mro_customer"
+            sequence="10"/>
+
+        <record id="asset_work_state_form_view" model="ir.ui.view">
+            <field name="name">asset.state.form</field>
+            <field name="model">asset.state</field>
+            <field name="inherit_id" ref="asset.asset_state_form_view"/>
+            <field name="arch" type="xml">
+                <field name="team" position="after">
+                    <field name="work_time"/>
+                </field>
+            </field>
+        </record>
+
+ 	</data>
+</openerp>

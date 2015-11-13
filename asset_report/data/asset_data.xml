@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <!-- Asset states in Manufacture -->
+        <record id="asset.asset_state_run" model="asset.state">
+            <field name="work_time">1</field>
+        </record>
+        <record id="asset.asset_state_setup" model="asset.state">
+            <field name="work_time">0</field>
+        </record>
+        <record id="asset.asset_state_standby" model="asset.state">
+            <field name="work_time">0</field>
+        </record>
+        <record id="asset.asset_state_down" model="asset.state">
+            <field name="work_time">0</field>
+        </record>
+        <!-- Asset states in Maintenance -->
+        <record id="asset.asset_state_breakdown" model="asset.state">
+            <field name="work_time">0</field>
+        </record>
+        <record id="asset.asset_state_repair" model="asset.state">
+            <field name="work_time">0</field>
+        </record>
+        <record id="asset.asset_state_operable" model="asset.state">
+            <field name="work_time">1</field>
+        </record>
+     </data>
+</openerp>
