@@ -41,8 +41,8 @@ class AssetStateLog(models.Model):
     def init(self, cr):
         tools.drop_view_if_exists(cr, self._table)
         cr.execute("""CREATE or REPLACE VIEW %s as (
-            SELECT id, asset_id, maintenance_state_id, create_date date,
-            (EXTRACT(EPOCH FROM LEAD(create_date,1,now() at time zone 'utc') OVER (PARTITION BY asset_id ORDER BY create_date)) - EXTRACT(EPOCH FROM create_date))/3600 duration
+            SELECT id, asset_id, maintenance_state_id, date,
+            (EXTRACT(EPOCH FROM LEAD(date,1,now() at time zone 'utc') OVER (PARTITION BY asset_id ORDER BY date)) - EXTRACT(EPOCH FROM date))/3600 duration
             FROM asset_state_history
         )""" % (self._table))
 

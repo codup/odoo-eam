@@ -33,6 +33,7 @@ class asset_state_history(models.Model):
     
     asset_id = fields.Many2one('asset.asset', 'Asset')
     maintenance_state_id = fields.Many2one('asset.state', 'State', domain=[('team','=','3')])
+    date = fields.Datetime('Date', default=fields.Datetime.now)
 
 
 class asset_state(models.Model):
