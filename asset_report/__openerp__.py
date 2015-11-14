@@ -40,6 +40,9 @@ Support following feature:
         'data/asset_data.xml',
         'report/asset_state_log_view.xml',
     ],
+    'demo': [
+        'demo/asset_demo.xml',
+    ],
     'installable': True,
 }
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

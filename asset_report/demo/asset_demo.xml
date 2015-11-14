@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!-- asset_1 states log -->
+        <record id="asset_1_state_1" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_1"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-389)"/>
+        </record>
+        <record id="asset_1_state_2" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_1"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-410)"/>
+        </record>
+        <record id="asset_1_state_3" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_1"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-621)"/>
+        </record>
+        <record id="asset_1_state_4" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_1"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-636)"/>
+        </record>
+        <record id="asset_1_state_5" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_1"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-845)"/>
+        </record>
+        <record id="asset_1_state_6" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_1"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_maintenance"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-852)"/>
+        </record>
+        <record id="asset_1_state_7" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_1"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-999)"/>
+        </record>
+        <record id="asset_1_state_8" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_1"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-1012)"/>
+        </record>
+        <record id="asset_1_state_9" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_1"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-1215)"/>
+        </record>
+        
+        <!-- asset_2 states log -->
+        <record id="asset_2_state_1" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_2"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_breakdown"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-30)"/>
+        </record>
+        <record id="asset_2_state_2" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_2"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-88)"/>
+        </record>
+        <record id="asset_2_state_3" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_2"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_maintenance"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-89)"/>
+        </record>
+        <record id="asset_2_state_4" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_2"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-212)"/>
+        </record>
+        <record id="asset_2_state_5" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_2"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_maintenance"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-215)"/>
+        </record>
+        <record id="asset_2_state_6" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_2"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-313)"/>
+        </record>
+        <record id="asset_2_state_7" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_2"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-315)"/>
+        </record>
+        <record id="asset_2_state_8" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_2"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_breakdown"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-316)"/>
+        </record>
+        <record id="asset_2_state_9" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_2"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-466)"/>
+        </record>
+        
+        <!-- asset_3 states log -->
+        <record id="asset_3_state_1" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_3"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_maintenance"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-45)"/>
+        </record>
+        <record id="asset_3_state_2" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_3"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-264)"/>
+        </record>
+        <record id="asset_3_state_3" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_3"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-267)"/>
+        </record>
+        <record id="asset_3_state_4" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_3"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-643)"/>
+        </record>
+        <record id="asset_3_state_5" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_3"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-648)"/>
+        </record>
+        <record id="asset_3_state_6" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_3"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_breakdown"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-649)"/>
+        </record>
+        <record id="asset_3_state_7" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_3"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-767)"/>
+        </record>
+        <record id="asset_3_state_8" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_3"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_maintenance"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-787)"/>
+        </record>
+        
+        <!-- asset_4 states log -->
+        <record id="asset_4_state_1" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_4"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-250)"/>
+        </record>
+        <record id="asset_4_state_2" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_4"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-277)"/>
+        </record>
+        <record id="asset_4_state_3" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_4"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_breakdown"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-278)"/>
+        </record>
+        <record id="asset_4_state_4" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_4"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-510)"/>
+        </record>
+        <record id="asset_4_state_5" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_4"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-512)"/>
+        </record>
+        <record id="asset_4_state_6" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_4"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-639)"/>
+        </record>
+        <record id="asset_4_state_7" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_4"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-671)"/>
+        </record>
+        <record id="asset_4_state_8" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_4"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_breakdown"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-686)"/>
+        </record>
+        
+        <!-- asset_5 states log -->
+        <record id="asset_5_state_1" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_5"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-178)"/>
+        </record>
+        <record id="asset_5_state_2" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_5"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-187)"/>
+        </record>
+        <record id="asset_5_state_3" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_5"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-405)"/>
+        </record>
+        <record id="asset_5_state_4" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_5"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-427)"/>
+        </record>
+        <record id="asset_5_state_5" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_5"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_breakdown"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-432)"/>
+        </record>
+        <record id="asset_5_state_6" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_5"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-577)"/>
+        </record>
+        <record id="asset_5_state_7" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_5"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-594)"/>
+        </record>
+        
+        <!-- asset_6 states log -->
+        <record id="asset_6_state_1" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_6"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-25)"/>
+        </record>
+        <record id="asset_6_state_2" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_6"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-326)"/>
+        </record>
+        <record id="asset_6_state_3" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_6"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-350)"/>
+        </record>
+        <record id="asset_6_state_4" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_6"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_breakdown"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-355)"/>
+        </record>
+        <record id="asset_6_state_5" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_6"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-630)"/>
+        </record>
+        <record id="asset_6_state_6" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_6"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_maintenance"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-637)"/>
+        </record>
+        <record id="asset_6_state_7" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_6"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-887)"/>
+        </record>
+        <record id="asset_6_state_8" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_6"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_repair"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-896)"/>
+        </record>
+        <record id="asset_6_state_9" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_6"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-1172)"/>
+        </record>
+        <record id="asset_6_state_10" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_6"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_maintenance"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-1180)"/>
+        </record>
+        <record id="asset_6_state_11" model="asset.state.history">
+            <field name="asset_id" ref="asset.asset_asset_6"/>
+            <field name="maintenance_state_id" ref="asset.asset_state_operable"/>
+            <field name="date" eval="DateTime.now() + timedelta(hours=-1483)"/>
+        </record>
+
+    </data>
+</openerp>
