@@ -1,0 +1,789 @@
+av# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* mro
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-29 23:06+0000\n"
+"PO-Revision-Date: 2016-01-08 23:27-0200\n"
+"Last-Translator: webmaster@plusti.net\n"
+"Language-Team: webmaster@plusti.net\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Language: pt_BR\n"
+"X-Generator: Poedit 1.8.4\n"
+
+#. module: mro
+#: field:asset.asset,mro_count:0
+msgid "# Maintenance"
+msgstr "# Manutenção"
+
+#. module: mro
+#: view:website:mro.report_mro_request
+msgid "(Breakdown)"
+msgstr "(Defeito)"
+
+#. module: mro
+#: field:mro.task,active:0
+msgid "Active"
+msgstr "Ativo"
+
+#. module: mro
+#: model:ir.model,name:mro.model_asset_asset
+#: view:mro.order:mro.mro_order_search field:mro.order,asset_id:0
+#: field:mro.request,asset_id:0
+msgid "Asset"
+msgstr "Equipamento"
+
+#. module: mro
+#: field:mro.order,category_ids:0 field:mro.task,category_id:0
+msgid "Asset Category"
+msgstr "Categorias de Equipamentos"
+
+#. module: mro
+#: view:website:mro.report_mro_order view:website:mro.report_mro_request
+msgid "Asset:"
+msgstr "Equipamento:"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view
+msgid "Available Parts"
+msgstr "Peças Disponíveis"
+
+#. module: mro
+#: view:website:mro.report_mro_order
+msgid "Bill Of Material"
+msgstr "Lista de Material"
+
+#. module: mro
+#: selection:mro.order,maintenance_type:0 field:mro.request,breakdown:0
+msgid "Breakdown"
+msgstr "Defeito"
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "CANCELED"
+msgstr "CANCELADO"
+
+#. module: mro
+#: view:mro.convert.order:mro.view_convert_order
+#: view:mro.order:mro.mro_order_form_view
+#: view:mro.request:mro.mro_request_form_view
+#: view:mro.request.reject:mro.view_request_reject_wizard
+msgid "Cancel"
+msgstr "Cancela"
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Canceled"
+msgstr "Cancelado"
+
+#. module: mro
+#: field:mro.request,cause:0
+msgid "Cause"
+msgstr "Causa"
+
+#. module: mro
+#: view:website:mro.report_mro_request
+msgid "Cause:"
+msgstr "Causa:"
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Claim"
+msgstr "Pedido"
+
+#. module: mro
+#: field:mro.order,company_id:0
+msgid "Company"
+msgstr "Empresa"
+
+#. module: mro
+#: model:mail.message.subtype,name:mro.mt_order_confirmed
+#: view:mro.order:mro.mro_order_form_view
+msgid "Confirm Maintenance"
+msgstr "Confirma Manutenção"
+
+#. module: mro
+#: model:mail.message.subtype,name:mro.mt_asset_request_confirmed
+#: model:mail.message.subtype,name:mro.mt_request_confirmed
+#: view:mro.request:mro.mro_request_form_view
+msgid "Confirm Request"
+msgstr "Confirma Solicitação"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view
+msgid "Consumed Parts"
+msgstr "Peças Utilizadas"
+
+#. module: mro
+#: model:ir.model,name:mro.model_mro_convert_order
+msgid "Convert Order to Task"
+msgstr "Converter Ordem para Tarefa"
+
+#. module: mro
+#: model:ir.actions.act_window,name:mro.action_view_convert_order
+#: view:mro.convert.order:mro.view_convert_order
+msgid "Convert to Task"
+msgstr "Converter para Tarefa"
+
+#. module: mro
+#: selection:mro.order,maintenance_type:0
+#: selection:mro.task,maintenance_type:0
+msgid "Corrective"
+msgstr "Corretiva / Upgrade"
+
+#. module: mro
+#: model:res.groups,name:mro.group_create_maintenance_request
+msgid "Create Maintenance Request"
+msgstr "Criar Solicitação de Serviço"
+
+#. module: mro
+#: field:mro.convert.order,create_uid:0 field:mro.order,create_uid:0
+#: field:mro.order.parts.line,create_uid:0
+#: field:mro.request.reject,create_uid:0 field:mro.task,create_uid:0
+#: field:mro.task.parts.line,create_uid:0
+msgid "Created by"
+msgstr "Criado por"
+
+#. module: mro
+#: field:mro.convert.order,create_date:0 field:mro.order,create_date:0
+#: field:mro.order.parts.line,create_date:0 field:mro.request,create_date:0
+#: field:mro.request.reject,create_date:0 field:mro.task,create_date:0
+#: field:mro.task.parts.line,create_date:0
+msgid "Created on"
+msgstr "Criado em"
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "DONE"
+msgstr "PRONTO"
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "DRAFT"
+msgstr "AGUARDANDO ANÁLISE"
+
+#. module: mro
+#: view:mro.request:mro.mro_request_tree_view
+msgid "Date"
+msgstr "Data"
+
+#. module: mro
+#: help:mro.order,message_last_post:0 help:mro.request,message_last_post:0
+msgid "Date of the last message posted on the record."
+msgstr "Data da última mensagem postada neste registro"
+
+#. module: mro
+#: help:mro.request,requested_date:0
+msgid "Date requested by the customer for maintenance."
+msgstr "Data da solicitação do serviço pelo cliente"
+
+#. module: mro
+#: field:mro.order,description:0 field:mro.order.parts.line,name:0
+#: view:mro.request:mro.mro_request_form_view field:mro.request,description:0
+#: field:mro.task,name:0 field:mro.task.parts.line,name:0
+#: view:website:mro.report_mro_order
+msgid "Description"
+msgstr "Descrição"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view view:mro.task:mro.mro_task_form_view
+msgid "Description for Documentation"
+msgstr "Descrição para Documentação"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view view:mro.task:mro.mro_task_form_view
+msgid "Description for Labor"
+msgstr "Descrição da Mão de Obra"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view view:mro.task:mro.mro_task_form_view
+msgid "Description for Operations"
+msgstr "Descrição das Operações"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view view:mro.task:mro.mro_task_form_view
+msgid "Description for Tools"
+msgstr "Descrição das Ferramentas"
+
+#. module: mro
+#: view:website:mro.report_mro_order
+msgid "Description:"
+msgstr "Descrição"
+
+#. module: mro
+#: view:mro.convert.order:mro.view_convert_order
+msgid "Do you really want convert Maintenance Order to Task?"
+msgstr "Você quer mesmo converter esta Ordem em Tarefa?"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view view:mro.task:mro.mro_task_form_view
+#: view:website:mro.report_mro_order
+msgid "Documentation"
+msgstr "Documentação"
+
+#. module: mro
+#: field:mro.order,documentation_description:0
+#: field:mro.task,documentation_description:0
+msgid "Documentation Description"
+msgstr "Descrição da Documentação"
+
+#. module: mro
+#: model:mro.request,cause:mro.mro_request_1
+msgid "Don't work Pump"
+msgstr "Bomba não Funciona"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view selection:mro.request,state:0
+msgid "Done"
+msgstr "Pronto"
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Draft"
+msgstr "Aguardando Análise"
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Execution"
+msgstr "Execução"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_search field:mro.order,date_execution:0
+#: field:mro.request,execution_date:0
+msgid "Execution Date"
+msgstr "Data de Execução"
+
+#. module: mro
+#: view:website:mro.report_mro_request
+msgid "Execution Date:"
+msgstr "Data de Execução:"
+
+#. module: mro
+#: field:mro.order,message_follower_ids:0
+#: field:mro.request,message_follower_ids:0
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view
+msgid "Force Reservation"
+msgstr "Forçar Reserva"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_search view:mro.request:mro.mro_request_search
+msgid "Group By"
+msgstr "Agrupar Por"
+
+#. module: mro
+#: help:mro.order,message_summary:0 help:mro.request,message_summary:0
+msgid "Holds the Chatter summary (number of messages, ...). This summary is directly in html format in order to be inserted in kanban views."
+msgstr "Resumo de Mensagens. Este é direto em HTML por facilitar a inserção em views kanban."
+
+#. module: mro
+#: field:mro.convert.order,id:0 field:mro.order,id:0
+#: field:mro.order.parts.line,id:0 field:mro.request,id:0
+#: field:mro.request.reject,id:0 field:mro.task,id:0
+#: field:mro.task.parts.line,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: mro
+#: help:mro.order,message_unread:0 help:mro.request,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "Se marcado, novas mensagens precisam de sua atenção."
+
+#. module: mro
+#: field:mro.order,message_is_follower:0
+#: field:mro.request,message_is_follower:0
+msgid "Is a Follower"
+msgstr "É um Seguidor"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view view:mro.task:mro.mro_task_form_view
+#: view:website:mro.report_mro_order
+msgid "Labor"
+msgstr "Mao de Obra"
+
+#. module: mro
+#: field:mro.order,labor_description:0 field:mro.task,labor_description:0
+msgid "Labor Description"
+msgstr "Descrição da Mão de Obra"
+
+#. module: mro
+#: field:mro.order,message_last_post:0 field:mro.request,message_last_post:0
+msgid "Last Message Date"
+msgstr "Data Última Mensagem"
+
+#. module: mro
+#: field:mro.convert.order,write_uid:0 field:mro.order,write_uid:0
+#: field:mro.order.parts.line,write_uid:0 field:mro.request,write_uid:0
+#: field:mro.request.reject,write_uid:0 field:mro.task,write_uid:0
+#: field:mro.task.parts.line,write_uid:0
+msgid "Last Updated by"
+msgstr "Última Atualização por"
+
+#. module: mro
+#: field:mro.convert.order,write_date:0 field:mro.order,write_date:0
+#: field:mro.order.parts.line,write_date:0 field:mro.request,write_date:0
+#: field:mro.request.reject,write_date:0 field:mro.task,write_date:0
+#: field:mro.task.parts.line,write_date:0
+msgid "Last Updated on"
+msgstr "Última Atualização em "
+
+#. module: mro
+#: view:asset.asset:mro.view_asset_asset_mro_buttons_from
+#: model:ir.ui.menu,name:mro.menu_mro_maintenance
+msgid "Maintenance"
+msgstr "Manutenção"
+
+#. module: mro
+#: model:ir.actions.report.xml,name:mro.action_report_maintenance_order
+#: model:ir.model,name:mro.model_mro_order
+#: view:mro.order:mro.mro_order_form_view
+#: field:mro.order.parts.line,maintenance_id:0
+msgid "Maintenance Order"
+msgstr "Ordem de Serviço"
+
+#. module: mro
+#: model:mail.message.subtype,description:mro.mt_order_confirmed
+msgid "Maintenance Order confirmed"
+msgstr "Ordem de Serviço confirmada"
+
+#. module: mro
+#: view:website:mro.report_mro_order
+msgid "Maintenance Order № :"
+msgstr "Nº da Ordem de Serviço:"
+
+#. module: mro
+#: code:addons/mro/asset.py:44
+#: model:ir.actions.act_window,name:mro.action_orders
+#: model:ir.ui.menu,name:mro.menu_mro_order
+#: view:mro.order:mro.mro_order_calendar_view
+#: view:mro.order:mro.mro_order_form_view
+#: view:mro.order:mro.mro_order_tree_view
+#, python-format
+msgid "Maintenance Orders"
+msgstr "Ordens de Serviço"
+
+#. module: mro
+#: model:ir.model,name:mro.model_mro_order_parts_line
+#: model:ir.model,name:mro.model_mro_task_parts_line
+msgid "Maintenance Planned Parts"
+msgstr "Etapas da Manutenção"
+
+#. module: mro
+#: model:ir.actions.report.xml,name:mro.action_report_maintenance_request
+#: model:ir.model,name:mro.model_mro_request
+#: view:mro.request:mro.mro_request_form_view
+msgid "Maintenance Request"
+msgstr "Solicitação de Serviço"
+
+#. module: mro
+#: model:mail.message.subtype,description:mro.mt_request_confirmed
+msgid "Maintenance Request confirmed"
+msgstr " Solicitação de Serviço confirmada"
+
+#. module: mro
+#: model:mail.message.subtype,description:mro.mt_request_rejected
+msgid "Maintenance Request rejected"
+msgstr "Solicitação de Serviço rejeitada"
+
+#. module: mro
+#: model:mail.message.subtype,description:mro.mt_request_sent
+msgid "Maintenance Request sent"
+msgstr "Solicitação de Serviço enviada"
+
+#. module: mro
+#: view:website:mro.report_mro_request
+msgid "Maintenance Request № :"
+msgstr "Solicitação de Serviço Nº:"
+
+#. module: mro
+#: model:ir.actions.act_window,name:mro.action_requests
+#: model:ir.ui.menu,name:mro.menu_mro_request
+#: view:mro.request:mro.mro_request_tree_view
+msgid "Maintenance Requests"
+msgstr "Solicitações de Serviço"
+
+#. module: mro
+#: model:ir.model,name:mro.model_mro_task field:mro.task.parts.line,task_id:0
+msgid "Maintenance Task"
+msgstr "Tarefa de Manutenção"
+
+#. module: mro
+#: model:ir.actions.act_window,name:mro.action_tasks
+#: view:mro.task:mro.mro_task_tree_view
+msgid "Maintenance Tasks"
+msgstr "Tarefas de Manutenção"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_search field:mro.order,maintenance_type:0
+#: field:mro.task,maintenance_type:0
+msgid "Maintenance Type"
+msgstr "Tipo de Manutenção"
+
+#. module: mro
+#: view:website:mro.report_mro_order
+msgid "Maintenance Type:"
+msgstr "Tipo de Manutenção:"
+
+#. module: mro
+#: field:mro.order,message_ids:0 field:mro.request,message_ids:0
+msgid "Messages"
+msgstr "Mensagens"
+
+#. module: mro
+#: help:mro.order,message_ids:0 help:mro.request,message_ids:0
+msgid "Messages and communication history"
+msgstr "Mensagens e histórico de comunicação"
+
+#. module: mro
+#: model:product.template,name:mro.product_product_mro_oil_product_template
+msgid "Oil"
+msgstr "Óleo"
+
+#. module: mro
+#: view:mro.request:mro.mro_request_search
+msgid "Open"
+msgstr "Aberto"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view view:mro.task:mro.mro_task_form_view
+#: view:website:mro.report_mro_order
+msgid "Operations"
+msgstr "Operações"
+
+#. module: mro
+#: field:mro.order,operations_description:0
+#: field:mro.task,operations_description:0
+msgid "Operations Description"
+msgstr "Descrição Operações"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_tree_view
+msgid "Order Date"
+msgstr "Data da O.S."
+
+#. module: mro
+#: model:ir.ui.menu,name:mro.menu_maintenance_parts
+#: model:ir.ui.menu,name:mro.menu_maintenance_parts_parts
+#: view:mro.order:mro.mro_order_form_view
+#: field:mro.order.parts.line,parts_id:0 view:mro.task:mro.mro_task_form_view
+#: field:mro.task,parts_lines:0 field:mro.task.parts.line,parts_id:0
+#: model:product.category,name:mro.product_category_mro
+msgid "Parts"
+msgstr "Peças"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view
+msgid "Parts to Consume"
+msgstr "Peças para Consumo"
+
+#. module: mro
+#: field:mro.order,date_planned:0
+msgid "Planned Date"
+msgstr "Data Programada"
+
+#. module: mro
+#: view:website:mro.report_mro_order
+msgid "Planned Date:"
+msgstr "Data Programada:"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view view:website:mro.report_mro_order
+msgid "Planned Parts"
+msgstr "Peças Programadas"
+
+#. module: mro
+#: field:mro.order,parts_lines:0
+msgid "Planned parts"
+msgstr "Peças programadas"
+
+#. module: mro
+#: selection:mro.order,maintenance_type:0
+#: selection:mro.task,maintenance_type:0
+msgid "Predictive"
+msgstr "Preditiva"
+
+#. module: mro
+#: selection:mro.order,maintenance_type:0
+#: selection:mro.task,maintenance_type:0
+msgid "Preventive"
+msgstr "Preventiva"
+
+#. module: mro
+#: view:website:mro.report_mro_order view:website:mro.report_mro_request
+msgid "Printing date:"
+msgstr "Data Impressão:"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view
+#: field:mro.order,problem_description:0 view:website:mro.report_mro_order
+#: view:website:mro.report_mro_request
+msgid "Problem Description"
+msgstr "Problema Relatado"
+
+#. module: mro
+#: field:mro.order,procurement_group_id:0
+msgid "Procurement group"
+msgstr "Grupo de aquisição"
+
+#. module: mro
+#: view:website:mro.report_mro_order
+msgid "Product"
+msgstr "Produto"
+
+#. module: mro
+#: model:product.template,name:mro.product_product_mro_pump_product_template
+msgid "Pump"
+msgstr "Bomba"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view
+#: field:mro.order.parts.line,parts_qty:0
+#: field:mro.task.parts.line,parts_qty:0 view:website:mro.report_mro_order
+msgid "Quantity"
+msgstr "Quantidade"
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "READY TO MAINTENANCE"
+msgstr "AGUARDANDO MANUTENÇÃO"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view
+msgid "Recreate Picking"
+msgstr "Recriar Coleta"
+
+#. module: mro
+#: field:mro.order,name:0 field:mro.request,name:0
+msgid "Reference"
+msgstr "Referência"
+
+#. module: mro
+#: help:mro.order,origin:0
+msgid "Reference of the document that generated this maintenance order."
+msgstr "Referência do documento que gerou estar ordem de serviço."
+
+#. module: mro
+#: view:mro.request:mro.mro_request_form_view
+#: field:mro.request,reject_reason:0 field:mro.request.reject,reject_reason:0
+msgid "Reject Reason"
+msgstr "Razão da Rejeição"
+
+#. module: mro
+#: model:ir.actions.act_window,name:mro.action_request_reject
+#: model:ir.model,name:mro.model_mro_request_reject
+#: model:mail.message.subtype,name:mro.mt_asset_request_rejected
+#: model:mail.message.subtype,name:mro.mt_request_rejected
+#: view:mro.request:mro.mro_request_form_view
+#: view:mro.request.reject:mro.view_request_reject_wizard
+msgid "Reject Request"
+msgstr "Solicitação Rejeitada"
+
+#. module: mro
+#: selection:mro.request,state:0
+msgid "Rejected"
+msgstr "Rejeitada"
+
+#. module: mro
+#: field:mro.request,requested_date:0
+msgid "Requested Date"
+msgstr "Data da Solicitação"
+
+#. module: mro
+#: view:website:mro.report_mro_request
+msgid "Requested Date:"
+msgstr "Data Solicitação:"
+
+#. module: mro
+#: field:mro.request,create_uid:0
+msgid "Responsible"
+msgstr "Responsável"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_search field:mro.order,date_scheduled:0
+msgid "Scheduled Date"
+msgstr "Data Agendamento"
+
+#. module: mro
+#: view:website:mro.report_mro_order
+msgid "Scheduled Date:"
+msgstr "Data Agendamento:"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_search
+msgid "Search Maintenance Order"
+msgstr "Buscar Ordem de Serviço"
+
+#. module: mro
+#: view:mro.request:mro.mro_request_search
+msgid "Search Maintenance Request"
+msgstr "Buscar Solicitação de Serviço"
+
+#. module: mro
+#: model:mail.message.subtype,name:mro.mt_asset_request_sent
+#: model:mail.message.subtype,name:mro.mt_request_sent
+#: view:mro.request:mro.mro_request_form_view
+msgid "Send Request"
+msgstr "Enviar Solicitação"
+
+#. module: mro
+#: field:mro.order,origin:0
+msgid "Source Document"
+msgstr "Documento Fonte"
+
+#. module: mro
+#: view:website:mro.report_mro_order
+msgid "Source Document:"
+msgstr "Documento Fonte:"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view view:mro.task:mro.mro_task_form_view
+msgid "Specify the documentation useful when execute this order..."
+msgstr "Especifique a documentação útil quando executar esta ordem..."
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view view:mro.task:mro.mro_task_form_view
+msgid "Specify the jobs that need execute..."
+msgstr "Especifique as tarefas que precisa executar"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view view:mro.task:mro.mro_task_form_view
+msgid "Specify the specialists needed for execute this order..."
+msgstr "Especifique os especialistas necessários para executar esta ordem..."
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view view:mro.task:mro.mro_task_form_view
+msgid "Specify the tools and mechanisms needed for execute this order..."
+msgstr "Especifique as ferramentas e mecanismos necessários para executar esta ordem..."
+
+#. module: mro
+#: view:mro.order:mro.mro_order_search view:mro.request:mro.mro_request_search
+msgid "State"
+msgstr "Estado"
+
+#. module: mro
+#: view:asset.asset:mro.view_asset_search_mro field:mro.order,state:0
+#: field:mro.request,state:0
+msgid "Status"
+msgstr "Status"
+
+#. module: mro
+#: model:ir.model,name:mro.model_stock_move
+msgid "Stock Move"
+msgstr "Movimentação de Estoque"
+
+#. module: mro
+#: field:mro.order,message_summary:0 field:mro.request,message_summary:0
+msgid "Summary"
+msgstr "Resumo"
+
+#. module: mro
+#: code:addons/mro/wizard/convert_order.py:52 field:mro.order,task_id:0
+#, python-format
+msgid "Task"
+msgstr "Tarefa"
+
+#. module: mro
+#: view:mro.task:mro.mro_task_form_view
+msgid "Task Name"
+msgstr "Nome da Tarefa"
+
+#. module: mro
+#: model:ir.ui.menu,name:mro.menu_maintenance_tasks
+#: model:ir.ui.menu,name:mro.menu_maintenance_tasks_tasks
+#: view:mro.task:mro.mro_task_form_view
+msgid "Tasks"
+msgstr "Tarefas"
+
+#. module: mro
+#: model:mro.request,cause:mro.mro_request_2
+msgid "There is no light"
+msgstr "Não há luz"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view view:mro.task:mro.mro_task_form_view
+#: view:website:mro.report_mro_order
+msgid "Tools"
+msgstr "Ferramentas"
+
+#. module: mro
+#: field:mro.order,tools_description:0 field:mro.task,tools_description:0
+msgid "Tools Description"
+msgstr "Descrição para Ferramentas"
+
+#. module: mro
+#: view:mro.request:mro.mro_request_search
+msgid "Undecided maintenance request"
+msgstr "Solicitação de serviço não decidida"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_form_view
+#: field:mro.order.parts.line,parts_uom:0
+#: field:mro.task.parts.line,parts_uom:0
+msgid "Unit of Measure"
+msgstr "Unidade de Medida"
+
+#. module: mro
+#: view:mro.order:mro.mro_order_search field:mro.order,message_unread:0
+#: view:mro.request:mro.mro_request_search field:mro.request,message_unread:0
+msgid "Unread Messages"
+msgstr "Mensagens Não Lidas"
+
+#. module: mro
+#: selection:mro.order,state:0
+msgid "WAITING PARTS"
+msgstr "AGUARDANDO PEÇAS"
+
+#. module: mro
+#: model:mro.order,description:mro.mro_order_2
+#: model:mro.task,name:mro.mro_task_1
+msgid "Wash the truck"
+msgstr "Lavar o caminhão"
+
+#. module: mro
+#: help:mro.order,state:0
+msgid ""
+"When the maintenance order is created the status is set to 'Draft'.\n"
+"            If the order is confirmed the status is set to 'Waiting Parts'.\n"
+"            If the stock is available then the status is set to 'Ready to Maintenance'.\n"
+"            When the maintenance is over, the status is set to 'Done'."
+msgstr ""
+"Quando uma ordem de serviço é criada o status é definido como 'Aguardando Análise'.\n"
+"\t\tSe a ordem é confirmada o status é definido como 'Aguardando Peças'.\n"
+"\t\tSe há disponibilidade em estoque então o status é definido como 'Aguardando Manutenção'.\n"
+"\t\tQuando a manutenção é finalizada, o status é definido como 'Pronto'."
+
+#. module: mro
+#: help:mro.request,state:0
+msgid ""
+"When the maintenance request is created the status is set to 'Draft'.\n"
+"            If the request is sent the status is set to 'Claim'.\n"
+"            If the request is confirmed the status is set to 'Execution'.\n"
+"            If the request is rejected the status is set to 'Rejected'.\n"
+"            When the maintenance is over, the status is set to 'Done'."
+msgstr ""
+"Quando uma solicitação de serviço é criada o status é definido como 'Aguardando Análise'.\n"
+"\t\tSe a solicitação é enviada o status é definido como 'Pedido'.\n"
+"\t\tSe a solicitação é confirmada o status é definido como 'Execução'.\n"
+"\t\tSe a solicitação é rejeitada o status é definido como 'Rejeitada'.\n"
+"\t\tQuando a manutenção é finalizada, o status é definido como 'Pronto'."
+
+#. module: mro
+#: view:mro.convert.order:mro.view_convert_order
+#: view:mro.request.reject:mro.view_request_reject_wizard
+msgid "or"
+msgstr "ou"
+
+#. module: mro
+#: field:mro.order,parts_move_lines:0 field:mro.order,parts_moved_lines:0
+#: field:mro.order,parts_ready_lines:0
+msgid "unknown"
+msgstr "desconhecido"
