@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2015 CodUP (<http://codup.com>).
+#    Copyright (C) 2015-2016 CodUP (<http://codup.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -38,9 +38,14 @@ class mro_convert_order(osv.osv_memory):
                     'parts_qty': line.parts_qty,
                     'parts_uom': line.parts_uom.id,
                     }])
+            category_id = 1
+            if order.asset_id.category_ids:
+                for category in order.asset_id.category_ids:
+                    category_id = category.id
+                    break
             values = {
                 'name': order.description,
-                'category_id': order.asset_id.category_id.id if order.asset_id.category_id else 1,
+                'category_id': category_id,
                 'maintenance_type': order.maintenance_type if order.maintenance_type != 'bm' else 'cm',
                 'parts_lines': new_parts_lines,
                 'tools_description': order.tools_description,
