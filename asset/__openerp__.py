@@ -38,7 +38,7 @@ Support following feature:
     """,
     'author': 'CodUP',
     'website': 'http://codup.com',
-    'category': 'Enterprise Asset Management',
+    'category': 'Industries',
     'sequence': 0,
     'depends': ['stock'],
     'demo': ['asset_demo.xml'],

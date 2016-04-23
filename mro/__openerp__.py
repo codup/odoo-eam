@@ -45,7 +45,7 @@ Required modules:
     """,
     'author': 'CodUP',
     'website': 'http://codup.com',
-    'category': 'Enterprise Asset Management',
+    'category': 'Industries',
     'sequence': 0,
     'depends': ['asset','purchase'],
     'demo': ['mro_demo.xml'],
