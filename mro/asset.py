@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2014 CodUP (<http://codup.com>).
+#    Copyright (C) 2014-2016 CodUP (<http://codup.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -34,8 +34,21 @@ class asset_asset(osv.Model):
             res[asset.id] = maintenance.search_count(cr,uid, [('asset_id', '=', asset.id)], context=context)
         return res
 
+    def _next_maintenance(self, cr, uid, ids, field_name, arg, context=None):
+        res = dict.fromkeys(ids, 0)
+        maintenance = self.pool['mro.order']
+        for asset in self.browse(cr, uid, ids, context=context):
+            order_ids = maintenance.search(cr,uid,
+                [('asset_id', '=', asset.id),
+                ('state', 'not in', ('done','cancel'))],
+                limit=1, order='date_execution')
+            if len(order_ids) > 0:
+                res[asset.id] = maintenance.browse(cr, uid, order_ids[0], context=context).date_execution
+        return res
+
     _columns = {
         'mro_count': fields.function(_mro_count, string='# Maintenance', type='integer'),
+        'maintenance_date': fields.function(_next_maintenance, string='Maintenance Date', type='date'),
     }
 
     def action_view_maintenance(self, cr, uid, ids, context=None):
