@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2013-2015 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2016 CodUP (<http://codup.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -465,7 +465,7 @@ class mro_pm_rule(osv.osv):
 
     def onchange_category(self, cr, uid, ids, rule_lines):
         value = {}
-        value['pm_rules_line_ids'] = [[2,line[1],line[2]] for line in rule_lines if line[0]]
+        value['pm_rules_line_ids'] = [[2,line[1],line[2]] for line in rule_lines if line[0] in (0,1)]
         return {'value': value}
 
     def onchange_parameter(self, cr, uid, ids, parameter):
