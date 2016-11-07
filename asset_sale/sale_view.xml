@@ -5,8 +5,8 @@
         <!-- Asset menu -->
         <menuitem name="Assets"
             id="menu_maintenance_assets"
-            parent="base.menu_base_partner"
-            groups="base.group_sale_salesman"
+            parent="sales_team.menu_base_partner"
+            groups="sales_team.group_sale_salesman"
             sequence="9"/>
 
         <!-- Asset Form View  -->
@@ -16,7 +16,7 @@
             <field name="arch" type="xml">
                 <form string="Assets" version="7.0">
                     <header>
-                        <field name="finance_state_id" widget="statusbar" clickable="True" groups="base.group_sale_salesman_all_leads"/>
+                        <field name="finance_state_id" widget="statusbar" clickable="True" groups="sales_team.group_sale_salesman_all_leads"/>
                     </header>
                     <sheet>
                         <field name="image_medium" widget="image" class="oe_avatar oe_left"/>
@@ -150,7 +150,7 @@
             action="action_assets_sale"
             id="menu_maintenance_assets_assets"
             parent="menu_maintenance_assets"
-            groups="base.group_sale_salesman"
+            groups="sales_team.group_sale_salesman"
             sequence="100"/>
 
         <!-- Management Asset Kanban View  -->
@@ -216,15 +216,15 @@
             action="action_management_assets_sale"
             id="menu_maintenance_assets_management"
             parent="menu_maintenance_assets"
-            groups="base.group_sale_salesman_all_leads"
+            groups="sales_team.group_sale_salesman_all_leads"
             sequence="100"/>    
 
         <!-- Asset state item -->
         <menuitem name="Asset States"
             action="asset.action_asset_state"
             id="menu_asset_state"
-            parent="base.menu_sale_config"
-            groups="base.group_sale_manager"
+            parent="sales_team.menu_sale_config"
+            groups="sales_team.group_sale_manager"
             sequence="100"/>
     
  	</data>
