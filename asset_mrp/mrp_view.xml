@@ -43,7 +43,7 @@
         <!-- Asset menu -->
         <menuitem name="Assets"
             id="menu_maintenance_assets"
-            parent="base.menu_mrp_root"
+            parent="mrp.menu_mrp_root"
             groups="mrp.group_mrp_user"
             sequence="9"/>
 
