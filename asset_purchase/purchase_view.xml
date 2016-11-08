@@ -5,7 +5,7 @@
         <!-- Asset menu -->
         <menuitem name="Assets"
             id="menu_maintenance_assets"
-            parent="base.menu_purchase_root"
+            parent="purchase.menu_purchase_root"
             groups="purchase.group_purchase_user"
             sequence="9"/>
 
