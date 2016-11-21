@@ -1,35 +1,21 @@
 ﻿# -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
+#    Odoo
 #    Copyright (C) 2015-2016 CodUP (<http://codup.com>).
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
 
-from openerp.osv import fields, osv
-from openerp.tools.translate import _
+from odoo import api, fields, models, _
 
-class mro_convert_order(osv.osv_memory):
+class mro_convert_order(models.TransientModel):
     _name = 'mro.convert.order'
     _description = 'Convert Order to Task'
 
-    def convert_order(self, cr, uid, ids, context=None):
-        order_id = context.get('active_id', False)
+    def convert_order(self):
+        order_id = self._context.get('active_id', False)
         if order_id:
-            order = self.pool.get('mro.order').browse(cr, uid, order_id)
+            order = self.env['mro.order'].browse(order_id)
             new_parts_lines = []
             for line in order.parts_lines:
                 new_parts_lines.append([0,0,{
@@ -60,7 +46,7 @@ class mro_convert_order(osv.osv_memory):
                 'res_model': 'mro.task',
                 'type': 'ir.actions.act_window',
                 'target': 'current',
-                'res_id': self.pool.get('mro.task').create(cr, uid, values),
+                'res_id': self.env['mro.task'].create(values).id,
             }
         return True
 

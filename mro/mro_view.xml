@@ -53,8 +53,8 @@
                                 <field name="breakdown"/>
                             </group>
                             <group>
-                                <field name="requested_date" attrs="{'invisible':[('breakdown','=',True),('state','=','draft')],'readonly':[('state','!=','draft')]}" on_change="onchange_requested_date(requested_date)"/>
-                                <field name="execution_date" on_change="onchange_execution_date(execution_date,state,breakdown)"/>
+                                <field name="requested_date" attrs="{'invisible':[('breakdown','=',True),('state','=','draft')],'readonly':[('state','!=','draft')]}"/>
+                                <field name="execution_date"/>
                             </group>
                         </group>
                         <group string="Reject Reason" states="reject">
@@ -158,19 +158,19 @@
                         </div>
                         <group>
                             <group>
-                                <field name="asset_id" on_change="onchange_asset(asset_id)"/>
+                                <field name="asset_id"/>
                                 <field name="category_ids" invisible="1"/>
                                 <field name="maintenance_type"/>
                                 <label for="task_id" attrs="{'invisible':[('maintenance_type','=','bm')]}"/>
                                 <div attrs="{'invisible':[('maintenance_type','=','bm')]}">
-                                    <field name="task_id" domain="[('category_id','in',category_ids[0][2]),('maintenance_type','=',maintenance_type)]" attrs="{'required':[('maintenance_type','!=','bm')]}" on_change="onchange_task(task_id,parts_lines)"/>
+                                    <field name="task_id" domain="[('category_id','in',category_ids[0][2]),('maintenance_type','=',maintenance_type)]" attrs="{'required':[('maintenance_type','!=','bm')]}"/>
                                 </div>
                                 <field name="description"/>
                             </group>
                             <group>
-                                <field name="date_planned" on_change="onchange_planned_date(date_planned)"/>
-                                <field name="date_scheduled" on_change="onchange_scheduled_date(date_scheduled)"/>
-                                <field name="date_execution" on_change="onchange_execution_date(date_execution,state)"/>
+                                <field name="date_planned"/>
+                                <field name="date_scheduled"/>
+                                <field name="date_execution"/>
                                 <field name="origin"/>
                             </group>
                             <group groups="stock.group_locations">
@@ -184,7 +184,7 @@
                                     <group string="Planned Parts" states="draft,released,done,parts_except,cancel">
                                         <field name="parts_lines" nolabel="1" context="{'default_categ_id': context.get('default_categ_id')}">
                                             <tree string="Planned Parts" editable="bottom">
-                                                <field name="parts_id" on_change="onchange_parts(parts_id)" domain="[('categ_id','=','Parts')]" context="{'default_categ_id': context.get('default_categ_id')}"/>
+                                                <field name="parts_id" domain="[('categ_id','=','Parts')]" context="{'default_categ_id': context.get('default_categ_id')}"/>
                                                 <field name="parts_qty"/>
                                                 <field name="parts_uom" groups="product.group_uom"/>
                                                 <field name="name"/>
@@ -375,7 +375,7 @@
                         <page string="Parts">
                             <field name="parts_lines" nolabel="1" context="{'default_categ_id': context.get('default_categ_id')}">
                                 <tree string="Parts" editable="bottom">
-                                    <field name="parts_id" on_change="onchange_parts(parts_id)" domain="[('categ_id','=','Parts')]" context="{'default_categ_id': context.get('default_categ_id')}"/>
+                                    <field name="parts_id" domain="[('categ_id','=','Parts')]" context="{'default_categ_id': context.get('default_categ_id')}"/>
                                     <field name="parts_qty"/>
                                     <field name="parts_uom" groups="product.group_uom"/>
                                     <field name="name"/>
