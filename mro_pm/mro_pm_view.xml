@@ -53,7 +53,7 @@
                 <tree string="Meters Logs" create="false" delete="false" readonly="1" editable="bottom" version="7.0">
                     <field name="asset_id" readonly="1"/>
                     <field name="name" readonly="1"/>
-                    <button icon="STOCK_JUSTIFY_FILL" string="Reading History" name="%(open_reading_log)d" type="action" states="reading,reset"/>
+                    <button icon="fa-list-alt" string="Reading History" name="%(open_reading_log)d" type="action" states="reading,reset"/>
                     <field name="date" string="Reading Date" readonly="1"/>
                     <field name="value" string="Last Reading" readonly="1"/>
                     <field name="total_value" readonly="1"/>
@@ -95,15 +95,15 @@
                             <div class="oe_edit_only" states="draft">
                                 <label for="name" string="Parameter"/>
                             </div>
-                            <h1><field name="name" class="oe_inline" on_change="onchange_parameter(name)"/></h1>
+                            <h1><field name="name" class="oe_inline"/></h1>
                         </div>
                         <div class="oe_right">
                             <h2><field name="asset_id" readonly="1"/></h2>
                         </div>
                         <group>
                             <group>
-                                <field name="new_value" on_change="onchange_value(new_value)" attrs="{'invisible':['|',('state','not in',('reading', 'reset')),('reading_type','=','src'),'|',('state','not in',('reading', 'reset')),('state','=','reading'),]}"/>
-                                <field name="meter_uom"/>
+                                <field name="new_value" attrs="{'invisible':['|',('state','not in',('reading', 'reset')),('reading_type','=','src'),'|',('state','not in',('reading', 'reset')),('state','=','reading'),]}"/>
+                                <field name="meter_uom" attrs="{'invisible':[('name','=',False)]}"/>
                                 <field name="reading_type"/>
                                 <field name="parent_meter_id" domain="[('state','!=','draft'),('reading_type','!=','src')]" attrs="{'invisible':[('reading_type','!=','src')],'required':[('reading_type','=','src')]}"/>
                                 <field name="parent_ratio_id" attrs="{'invisible':[('reading_type','!=','src')]}"/>
@@ -207,7 +207,7 @@
                             </group>
                             <group>
                                 <field name="rounding_type"/>
-                                <field name="precision" on_change="onchange_precision(precision)"/>
+                                <field name="precision"/>
                             </group>
                         </group>
                     </sheet>
@@ -248,10 +248,10 @@
                     <sheet>
                         <group>
                             <group>
-                                <field name="interval_min" on_change="onchange_min(interval_min,interval_max)"/>
+                                <field name="interval_min"/>
                             </group>
                             <group>
-                                <field name="interval_max" on_change="onchange_max(interval_min,interval_max)"/>
+                                <field name="interval_max"/>
                             </group>
                         </group>
                     </sheet>
@@ -296,8 +296,8 @@
                         </div>
                         <group>
                             <group>
-                                <field name="category_id" on_change="onchange_category(pm_rules_line_ids)"/>
-                                <field name="parameter_id" on_change="onchange_parameter(parameter_id)"/>
+                                <field name="category_id"/>
+                                <field name="parameter_id"/>
                                 <field name="horizon"/>
                              </group>
                             <group>

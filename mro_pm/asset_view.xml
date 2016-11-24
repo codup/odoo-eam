@@ -12,8 +12,8 @@
                     <page name="meters" string="Meters">
                         <field name="meter_ids">
                             <tree string="Meters">
+                                <button icon="fa-list-alt" string="Reading History" name="%(open_reading_log)d" type="action" states="reading,reset"/>
                                 <field name="name"/>
-                                <button icon="STOCK_JUSTIFY_FILL" string="Reading History" name="%(open_reading_log)d" type="action" states="reading,reset"/>
                                 <field name="date"/>
                                 <field name="value"/>
                                 <field name="total_value"/>

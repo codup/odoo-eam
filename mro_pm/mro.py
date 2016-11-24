@@ -1,42 +1,27 @@
 ﻿# -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
-#    Copyright (C) 2013-2015 CodUP (<http://codup.com>).
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#    Odoo
+#    Copyright (C) 2013-2016 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 import time
 import calendar
+from odoo import api, fields, models
 
-from openerp.osv import fields, osv
 
-class mro_order(osv.osv):
+class mro_order(models.Model):
     _inherit = 'mro.order'
-    
+
     MAINTENANCE_TYPE_SELECTION = [
         ('bm', 'Breakdown'),
         ('cm', 'Corrective'),
         ('pm', 'Preventive')
     ]
-    
-    _columns = {
-        'maintenance_type': fields.selection(MAINTENANCE_TYPE_SELECTION, 'Maintenance Type', required=True, readonly=True, states={'draft': [('readonly', False)]}),
-    }
-    
+
+    maintenance_type = fields.Selection(MAINTENANCE_TYPE_SELECTION, 'Maintenance Type', required=True, readonly=True, states={'draft': [('readonly', False)]})
+
     def find_step(self, start, end, tmin, tmax):
         M = round(2*(end - start)/(tmin + tmax),0)
         if M != 0:
@@ -53,11 +38,11 @@ class mro_order(osv.osv):
         else: step = tmin
         return step
 
-    def replan_pm(self, cr, uid, context=None):
-        rule_obj = self.pool.get('mro.pm.rule')
-        asset_obj = self.pool.get('asset.asset')
-        ids = rule_obj.search(cr, uid, [])
-        for rule in rule_obj.browse(cr,uid,ids,context=context):
+    def replan_pm(self):
+        rule_obj = self.env['mro.pm.rule']
+        asset_obj = self.env['asset.asset']
+        ids = rule_obj.search([])
+        for rule in ids:
             tasks = [x for x in rule.pm_rules_line_ids]
             if not len(tasks): continue
             horizon = rule.horizon
@@ -65,11 +50,10 @@ class mro_order(osv.osv):
             for asset in rule.category_id.asset_ids:
                 for meter in asset.meter_ids:
                     if meter.name != rule.parameter_id or meter.state != 'reading': continue
-                    self.planning_strategy_1(cr, uid, asset, meter, tasks, horizon, origin, context=context)
+                    self.planning_strategy_1(asset, meter, tasks, horizon, origin)
         return True
 
-    def planning_strategy_1(self, cr, uid, asset, meter, tasks, horizon, origin, context=None):
-        meter_obj = self.pool.get('mro.pm.meter')
+    def planning_strategy_1(self, asset, meter, tasks, horizon, origin):
         tasks.sort(lambda y,x: cmp(x.meter_interval_id.interval_max, y.meter_interval_id.interval_max))
         K = 3600.0*24
         hf = len(tasks)-1
@@ -84,15 +68,15 @@ class mro_order(osv.osv):
         Dopt = []
         for task in tasks:
             task_ids.append(task.task_id.id)
-            order_ids = self.search(cr, uid, 
+            order_ids = self.search(
                 [('asset_id', '=', asset.id),
                 ('state', 'not in', ('draft','cancel')),
                 ('maintenance_type', '=', 'pm'),
                 ('task_id', 'in', task_ids)],
                 limit=1, order='date_execution desc')
             if len(order_ids) > 0:
-                date = self.browse(cr, uid, order_ids[0], context=context).date_execution
-                Ci.append(K*meter_obj.get_reading(cr, uid, meter.id, date))
+                date = order_ids[0].date_execution
+                Ci.append(K*meter.get_reading(date))
             else: Ci.append(0)
             Imin.append(K*task.meter_interval_id.interval_min)
             Imax.append(K*task.meter_interval_id.interval_max)
@@ -118,13 +102,13 @@ class mro_order(osv.osv):
         if Dp<Dn: Dp=Dn
         Cp = C + (Dp - Dc)*N
         delta = Cp - Ci[hf]
-        order_ids = self.search(cr, uid, 
+        order_ids = self.search(
             [('asset_id', '=', asset.id),
             ('state', '=', 'draft'),
             ('maintenance_type', '=', 'pm'),
             ('task_id', 'in', task_ids)],
             order='date_execution')
-        for order in self.browse(cr, uid, order_ids, context=context):
+        for order in order_ids:
             Tp = time.strftime('%Y-%m-%d %H:%M:%S',time.gmtime(Dp))
             values = {
                 'date_planned':Tp,
@@ -168,7 +152,7 @@ class mro_order(osv.osv):
                     'parts_uom': line.parts_uom.id,
                     }])
             values['parts_lines'] = parts_lines
-            self.write(cr, uid, [order.id], values)
+            order.write(values)
             Dp = Dopt[hf]
             for i in range(hf):
                 if Dp > Dmax[i]: Dp = Dmax[i]
@@ -220,7 +204,7 @@ class mro_order(osv.osv):
                     'parts_uom': line.parts_uom.id,
                     }])
             values['parts_lines'] = parts_lines
-            self.create(cr, uid, values)
+            self.create(values)
             Dp = Dopt[hf]
             for i in range(hf):
                 if Dp > Dmax[i]: Dp = Dmax[i]
@@ -230,17 +214,14 @@ class mro_order(osv.osv):
         return True
 
 
-class mro_task(osv.osv):
+class mro_task(models.Model):
     _inherit = 'mro.task'
-    
+
     MAINTENANCE_TYPE_SELECTION = [
         ('cm', 'Corrective'),
         ('pm', 'Preventive')
     ]
-    
-    _columns = {
-        'maintenance_type': fields.selection(MAINTENANCE_TYPE_SELECTION, 'Maintenance Type', required=True),
-    }
 
-    
+    maintenance_type = fields.Selection(MAINTENANCE_TYPE_SELECTION, 'Maintenance Type', required=True)
+
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

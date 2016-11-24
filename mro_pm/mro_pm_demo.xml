@@ -290,7 +290,9 @@
         </record>
 
         <!-- Replan -->
-        <function model="mro.order" name="replan_pm"/>
+        <function model="mro.order" name="replan_pm">
+            <value eval="[]"/>
+        </function>
 
     </data>
 </openerp>
