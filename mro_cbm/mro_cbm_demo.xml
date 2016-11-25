@@ -41,7 +41,9 @@
         </record>
 
         <!-- Replan -->
-        <function model="mro.order" name="replan_cbm"/>
+        <function model="mro.order" name="replan_cbm">
+            <value eval="[]"/>
+        </function>
 
     </data>
 </openerp>

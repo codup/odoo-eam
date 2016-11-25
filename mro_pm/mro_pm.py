@@ -232,10 +232,6 @@ class mro_pm_meter(models.Model):
                         vals.update({'new_value': 0})
         return super(mro_pm_meter, self).write(vals)
 
-    @api.onchange('parameter_id')
-    def onchange_parameter(self):
-        self.meter_uom = self.parameter_id.parameter_uom
-        
     @api.onchange('new_value')
     def onchange_value(self):
         new_date = time.strftime('%Y-%m-%d')
@@ -376,10 +372,6 @@ class mro_pm_rule(models.Model):
     @api.onchange('category_id')
     def onchange_category(self):
         self.pm_rules_line_ids = []
-
-    @api.onchange('parameter_id')
-    def onchange_parameter(self):
-        self.parameter_uom = self.parameter_id.parameter_uom
 
     @api.model
     def create(self, vals):

@@ -1,72 +1,56 @@
 ﻿# -*- coding: utf-8 -*-
 ##############################################################################
 #
-#    OpenERP, Open Source Management Solution
-#    Copyright (C) 2015 CodUP (<http://codup.com>).
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU Affero General Public License as
-#    published by the Free Software Foundation, either version 3 of the
-#    License, or (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU Affero General Public License for more details.
-#
-#    You should have received a copy of the GNU Affero General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#    Odoo
+#    Copyright (C) 2015-2016 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 import time
 import calendar
-from openerp.osv import fields, osv
+from odoo import api, fields, models
 
 
-class mro_order(osv.osv):
+class mro_order(models.Model):
     _inherit = 'mro.order'
-    
+
     MAINTENANCE_TYPE_SELECTION = [
         ('bm', 'Breakdown'),
         ('cm', 'Corrective'),
         ('pm', 'Preventive'),
         ('cbm', 'Predictive')
     ]
-    
-    _columns = {
-        'maintenance_type': fields.selection(MAINTENANCE_TYPE_SELECTION, 'Maintenance Type', required=True, readonly=True, states={'draft': [('readonly', False)]}),
-    }
 
-    def replan_cbm(self, cr, uid, context=None):
-        rule_obj = self.pool.get('mro.cbm.rule')
-        asset_obj = self.pool.get('asset.asset')
-        ids = rule_obj.search(cr, uid, [])
-        for rule in rule_obj.browse(cr,uid,ids,context=context):
+    maintenance_type = fields.Selection(MAINTENANCE_TYPE_SELECTION, 'Maintenance Type', required=True, readonly=True, states={'draft': [('readonly', False)]})
+
+    def replan_cbm(self):
+        rule_obj = self.env['mro.cbm.rule']
+        asset_obj = self.env['asset.asset']
+        ids = rule_obj.search([])
+        for rule in ids:
             for asset in rule.category_id.asset_ids:
                 for gauge in asset.gauge_ids:
                     if gauge.name != rule.parameter_id or gauge.state != 'reading': continue
-                    self.planning_strategy_2(cr, uid, asset, gauge, rule, context=context)
+                    self.planning_strategy_2(asset, gauge, rule)
         return True
 
-    def planning_strategy_2(self, cr, uid, asset, gauge, rule, context=None):
-        gauge_line_obj = self.pool.get('mro.gauge.line')
-        last_read = gauge_line_obj.search(cr, uid, [('gauge_id', '=', gauge.id)], limit=1, order='date desc')
-        gauge_reads = gauge_line_obj.browse(cr, uid, last_read)
+    def planning_strategy_2(self, asset, gauge, rule):
+        gauge_line_obj = self.env['mro.gauge.line']
+        gauge_reads = gauge_line_obj.search([('gauge_id', '=', gauge.id)], limit=1, order='date desc')[0]
         if (rule.is_limit_min and rule.limit_min>gauge_reads.value) or (rule.is_limit_max and rule.limit_max<gauge_reads.value):
             task = rule.task_id
-            order_ids = self.search(cr, uid, 
+            order_ids = self.search( 
                 [('asset_id', '=', asset.id),
                 ('state', 'not in', ('draft','cancel')),
                 ('maintenance_type', '=', 'cbm'),
                 ('task_id', '=', task.id)],
                 limit=1, order='date_execution desc')
             if len(order_ids) > 0:
-                date = self.browse(cr, uid, order_ids[0], context=context).date_execution
+                date = order_ids[0].date_execution
                 Do = 1.0*calendar.timegm(time.strptime(date, "%Y-%m-%d %H:%M:%S"))
                 Dg = 1.0*calendar.timegm(time.strptime(gauge_reads.date, "%Y-%m-%d"))
                 if Do>Dg: return True
-            order_ids = self.search(cr, uid, 
+            order_ids = self.search( 
                 [('asset_id', '=', asset.id),
                 ('state', '=', 'draft'),
                 ('maintenance_type', '=', 'cbm'),
@@ -97,16 +81,16 @@ class mro_order(osv.osv):
                     'parts_uom': line.parts_uom.id,
                     }])
             if len(order_ids) > 0:
-                order = self.browse(cr, uid, order_ids[0], context=context)
+                order = order_ids[0]
                 values['parts_lines'] = parts_lines + [[2,line.id] for line in order.parts_lines]
-                self.write(cr, uid, [order.id], values)
+                order.write(values)
                 return True
             values['parts_lines'] = parts_lines
-            self.create(cr, uid, values)
+            self.create(values)
         return True
 
 
-class mro_task(osv.osv):
+class mro_task(models.Model):
     _inherit = 'mro.task'
 
     MAINTENANCE_TYPE_SELECTION = [
@@ -115,9 +99,6 @@ class mro_task(osv.osv):
         ('cbm', 'Predictive')
     ]
 
-    _columns = {
-        'maintenance_type': fields.selection(MAINTENANCE_TYPE_SELECTION, 'Maintenance Type', required=True),
-    }
-
+    maintenance_type = fields.Selection(MAINTENANCE_TYPE_SELECTION, 'Maintenance Type', required=True)
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

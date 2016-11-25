@@ -12,8 +12,8 @@
                     <page string="Gauges">
                         <field name="gauge_ids">
                             <tree string="Gauges">
+                                <button icon="fa-list-alt" string="Reading History" name="%(open_reading_log)d" type="action" states="reading"/>
                                 <field name="name"/>
-                                <button icon="STOCK_JUSTIFY_FILL" string="Reading History" name="%(open_reading_log)d" type="action" states="reading"/>
                                 <field name="date"/>
                                 <field name="value"/>
                                 <field name="gauge_uom"/>
