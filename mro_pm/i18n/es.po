@@ -261,7 +261,7 @@ msgstr "Orden de mantenimiento"
 #: view:mro.pm.meter.interval:0
 #: field:mro.pm.rule.line,meter_interval_id:0
 msgid "Meter Interval"
-msgstr "Invertalo de medida"
+msgstr "Intervalo de medida"
 
 #. module: mro_pm
 #: field:mro.pm.rule,active:0
