@@ -1,0 +1,391 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#	* mro_pm
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20130204-000102\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-03-29 09:45+0000\n"
+"PO-Revision-Date: 2013-03-29 09:45+0000\n"
+"Last-Translator: Glen Sojo <glen.sojo@clearcorp.co.cr>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_replan_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_replan
+#: model:ir.ui.menu,name:mro_pm.menu_replan_pm
+#: view:mro.pm.replan:0
+msgid "Replan PM"
+msgstr "Replanificar MP"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,ratio:0
+msgid "Ratio"
+msgstr "Proporción"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_pm_rules
+#: view:mro.pm.rule:0
+#: field:mro.pm.rule.line,pm_rule_id:0
+msgid "PM Rule"
+msgstr "Regla de MP"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,rounding_type:0
+msgid "Floor"
+msgstr "Menor más cercano"
+
+#. module: mro_pm
+#: field:mro.pm.meter,new_value:0
+msgid "New value"
+msgstr "Nuevo valor"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_meter_ratio
+#: model:ir.ui.menu,name:mro_pm.menu_meter_ratio
+#: view:mro.pm.meter.ratio:0
+msgid "Meter Ratio"
+msgstr "Medidor de proporción"
+
+#. module: mro_pm
+#: field:mro.pm.meter,reading_type:0
+msgid "Reading Type"
+msgstr "Tipo de lectura"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,reading_type:0
+msgid "Increase"
+msgstr "Incrementar"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Attach"
+msgstr "Adjuntar"
+
+#. module: mro_pm
+#: field:mro.pm.rule.line,task_id:0
+msgid "Task"
+msgstr "Tarea"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_task
+msgid "Maintenance Task"
+msgstr "Tarea de mantenimiento"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_asset_asset
+#: field:mro.pm.meter,asset_id:0
+#: field:mro.pm.rule,asset_id:0
+msgid "Asset"
+msgstr "Activo"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,precision:0
+msgid "Rounding Precision"
+msgstr "Precisión de redondeo"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,state:0
+msgid "Reading"
+msgstr "Leyendo"
+
+#. module: mro_pm
+#: field:mro.pm.meter,meter_uom:0
+#: field:mro.pm.rule,meter_uom:0
+msgid "Unit of Measure"
+msgstr "Unidad de medida"
+
+#. module: mro_pm
+#: field:mro.pm.meter,state:0
+msgid "Status"
+msgstr "Estado"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "New Reading"
+msgstr "Nueva lectura"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,rounding_type:0
+msgid "Ceiling"
+msgstr "Mayor más cercano"
+
+#. module: mro_pm
+#: field:mro.pm.meter,min_utilization:0
+msgid "Min Utilization (per day)"
+msgstr "Utilización mínima (por día)"
+
+#. module: mro_pm
+#: model:ir.ui.menu,name:mro_pm.menu_meter_interval
+msgid "Meter Intervals"
+msgstr "Intervalor de medición"
+
+#. module: mro_pm
+#: field:mro.pm.meter.interval,interval_max:0
+msgid "Max"
+msgstr "Máximo"
+
+#. module: mro_pm
+#: field:mro.pm.meter.interval,interval_min:0
+msgid "Min"
+msgstr "Mínimo"
+
+#. module: mro_pm
+#: field:mro.pm.meter,utilization:0
+msgid "Utilization (per day)"
+msgstr "Utilización (por día)"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Last Reading"
+msgstr "Última lectura"
+
+#. module: mro_pm
+#: view:asset.asset:0
+#: field:mro.pm.meter,meter_line_ids:0
+msgid "Meters"
+msgstr "Medidas"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Meter Name"
+msgstr "Nombre medida"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_update_meters
+#: model:ir.ui.menu,name:mro_pm.menu_update_meters
+#: view:mro.pm.meter:0
+msgid "Update Meters"
+msgstr "Actualizar medidas"
+
+#. module: mro_pm
+#: field:mro.pm.meter,total_value:0
+#: field:mro.pm.meter.line,total_value:0
+msgid "Total Value"
+msgstr "Valor total"
+
+#. module: mro_pm
+#: field:mro.pm.meter,date:0
+#: field:mro.pm.meter.line,date:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: mro_pm
+#: field:asset.asset,meter_ids:0
+#: view:mro.pm.meter:0
+#: field:mro.pm.meter,name:0
+#: selection:mro.pm.meter,reading_type:0
+#: field:mro.pm.meter.line,meter_id:0
+#: field:mro.pm.rule,meter_id:0
+msgid "Meter"
+msgstr "Medida"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_rule
+msgid "Preventive Maintenance Rule"
+msgstr "Regla de mantenimiento preventivo"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Detach"
+msgstr "Desligar"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,state:0
+msgid "Setup"
+msgstr "Preparar"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,reading_type:0
+msgid "Change"
+msgstr "Cambio"
+
+#. module: mro_pm
+#: view:asset.asset:0
+msgid "Info"
+msgstr "Información"
+
+#. module: mro_pm
+#: field:mro.pm.meter,parent_ratio_id:0
+msgid "Ratio to Source"
+msgstr "Proporción a la fuente"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_rule_line
+msgid "Rule for Task"
+msgstr "Regla para tarea"
+
+#. module: mro_pm
+#: view:mro.pm.meter:0
+msgid "Reading Date"
+msgstr "Fecha de lectura"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,name:0
+#: field:mro.pm.rule,name:0
+msgid "Name"
+msgstr "Nombre"
+
+#. module: mro_pm
+#: field:mro.pm.rule,horizon:0
+msgid "Planning horizon (months)"
+msgstr "Horizonte de planificación (meses)"
+
+#. module: mro_pm
+#: model:ir.ui.menu,name:mro_pm.menu_pm_rules
+msgid "PM Rules"
+msgstr "Reglas MP"
+
+#. module: mro_pm
+#: field:mro.pm.meter,av_time:0
+msgid "Averaging time (days)"
+msgstr "Tiempo promedio (días)"
+
+#. module: mro_pm
+#: field:mro.pm.meter.interval,name:0
+msgid "Interval"
+msgstr "Intevalo"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_order
+msgid "Maintenance Order"
+msgstr "Orden de mantenimiento"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_meter_interval
+#: view:mro.pm.meter.interval:0
+#: field:mro.pm.rule.line,meter_interval_id:0
+msgid "Meter Interval"
+msgstr "Intervalo de medida"
+
+#. module: mro_pm
+#: field:mro.pm.rule,active:0
+msgid "Active"
+msgstr "Activo"
+
+#. module: mro_pm
+#: view:mro.pm.rule:0
+#: field:mro.pm.rule,pm_rules_line_ids:0
+msgid "Tasks"
+msgstr "Tareas"
+
+#. module: mro_pm
+#: view:asset.asset:0
+#: model:ir.actions.act_window,name:mro_pm.open_reading_log
+#: view:mro.pm.meter:0
+#: view:mro.pm.meter.line:0
+msgid "Reading History"
+msgstr "Historial de lectura"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter_line
+msgid "History of Asset Meter Reading"
+msgstr "Historial de lectura de medidas del activo"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,state:0
+msgid "Detached"
+msgstr "Desligado"
+
+#. module: mro_pm
+#: field:mro.pm.meter.line,value:0
+msgid "Reading Value"
+msgstr "Valor de lectura"
+
+#. module: mro_pm
+#: model:ir.actions.act_window,name:mro_pm.action_meters_logs
+#: model:ir.ui.menu,name:mro_pm.menu_meters_logs
+#: view:mro.pm.meter:0
+msgid "Meters Logs"
+msgstr "Logs de medida"
+
+#. module: mro_pm
+#: help:mro.pm.rule,active:0
+msgid "If the active field is set to False, it will allow you to hide the PM without removing it."
+msgstr "Si el campo activo se establece a Falso, te permitirá esconder el MP sin removerlo."
+
+#. module: mro_pm
+#: field:mro.pm.meter,parent_meter_id:0
+msgid "Source Meter"
+msgstr "Fuente de medida"
+
+#. module: mro_pm
+#: model:ir.ui.menu,name:mro_pm.menu_maintenance_config
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,ratio_type:0
+msgid "Ratio Type"
+msgstr "Tipo de proporción"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,ratio_type:0
+msgid "Source Bigger"
+msgstr "Fuente mayor"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter
+msgid "Asset Meters"
+msgstr "Medidas de activo"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,ratio_type:0
+msgid "Source Smaller"
+msgstr "Fuente menor"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter_interval
+msgid "Meter interval"
+msgstr "Intervalo de medida"
+
+#. module: mro_pm
+#: field:mro.pm.meter,value:0
+msgid "Value"
+msgstr "Valor"
+
+#. module: mro_pm
+#: selection:mro.pm.meter.ratio,rounding_type:0
+msgid "Rounding"
+msgstr "Redondeo"
+
+#. module: mro_pm
+#: selection:mro.pm.meter,reading_type:0
+msgid "Decrease"
+msgstr "Disminuir"
+
+#. module: mro_pm
+#: field:mro.pm.meter.ratio,rounding_type:0
+msgid "Rounding Type"
+msgstr "Tipo de redondeo"
+
+#. module: mro_pm
+#: model:ir.model,name:mro_pm.model_mro_pm_meter_ratio
+msgid "Rules for Meter to Meter Ratio"
+msgstr "Reglas medición a proporción de medida"
+
+#. module: mro_pm
+#: field:mro.pm.meter,view_line_ids:0
+msgid "unknown"
+msgstr "desconocido"
+
+#. module: mro_pm
+#: view:mro.pm.replan:0
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: mro_pm
+#: view:mro.pm.meter.line:0
+msgid "Meter History Search"
+msgstr "Busqueda de historial de medida"
+
+#. module: mro_pm
+#: view:mro.pm.replan:0
+msgid "or"
+msgstr "ó"
+
