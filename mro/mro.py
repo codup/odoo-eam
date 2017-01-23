@@ -66,8 +66,8 @@ class mro_order(models.Model):
     task_id = fields.Many2one('mro.task', 'Task', readonly=True, states={'draft': [('readonly', False)]})
     description = fields.Char('Description', size=64, translate=True, required=True, readonly=True, states={'draft': [('readonly', False)]})
     asset_id = fields.Many2one('asset.asset', 'Asset', required=True, readonly=True, states={'draft': [('readonly', False)]})
-    date_planned = fields.Datetime('Planned Date', required=True, select=1, readonly=True, states={'draft':[('readonly',False)]}, default=time.strftime('%Y-%m-%d %H:%M:%S'))
-    date_scheduled = fields.Datetime('Scheduled Date', required=True, select=1, readonly=True, states={'draft':[('readonly',False)],'released':[('readonly',False)],'ready':[('readonly',False)]}, default=time.strftime('%Y-%m-%d %H:%M:%S'))
+    date_planned = fields.Datetime('Planned Date', required=True, readonly=True, states={'draft':[('readonly',False)]}, default=time.strftime('%Y-%m-%d %H:%M:%S'))
+    date_scheduled = fields.Datetime('Scheduled Date', required=True, readonly=True, states={'draft':[('readonly',False)],'released':[('readonly',False)],'ready':[('readonly',False)]}, default=time.strftime('%Y-%m-%d %H:%M:%S'))
     date_execution = fields.Datetime('Execution Date', required=True, states={'done':[('readonly',True)],'cancel':[('readonly',True)]}, default=time.strftime('%Y-%m-%d %H:%M:%S'))
     parts_lines = fields.One2many('mro.order.parts.line', 'maintenance_id', 'Planned parts',
         readonly=True, states={'draft':[('readonly',False)]})
@@ -219,7 +219,7 @@ class mro_order_parts_line(models.Model):
     parts_id = fields.Many2one('product.product', 'Parts', required=True)
     parts_qty = fields.Float('Quantity', digits_compute=dp.get_precision('Product Unit of Measure'), required=True, default=1.0)
     parts_uom = fields.Many2one('product.uom', 'Unit of Measure', required=True)
-    maintenance_id = fields.Many2one('mro.order', 'Maintenance Order', select=True)
+    maintenance_id = fields.Many2one('mro.order', 'Maintenance Order')
 
     @api.onchange('parts_id')
     def onchange_parts(self):
@@ -273,7 +273,7 @@ class mro_task_parts_line(models.Model):
     parts_id = fields.Many2one('product.product', 'Parts', required=True)
     parts_qty = fields.Float('Quantity', digits_compute=dp.get_precision('Product Unit of Measure'), required=True, default=1.0)
     parts_uom = fields.Many2one('product.uom', 'Unit of Measure', required=True)
-    task_id = fields.Many2one('mro.task', 'Maintenance Task', select=True)
+    task_id = fields.Many2one('mro.task', 'Maintenance Task')
 
     @api.onchange('parts_id')
     def onchange_parts(self):
@@ -333,8 +333,8 @@ class mro_request(models.Model):
     cause = fields.Char('Cause', size=64, translate=True, required=True, readonly=True, states={'draft': [('readonly', False)]})
     description = fields.Text('Description', readonly=True, states={'draft': [('readonly', False)]})
     reject_reason = fields.Text('Reject Reason', readonly=True)
-    requested_date = fields.Datetime('Requested Date', required=True, select=1, readonly=True, states={'draft': [('readonly', False)]}, help="Date requested by the customer for maintenance.", default=time.strftime('%Y-%m-%d %H:%M:%S'))
-    execution_date = fields.Datetime('Execution Date', required=True, select=1, readonly=True, states={'draft':[('readonly',False)],'claim':[('readonly',False)]}, default=time.strftime('%Y-%m-%d %H:%M:%S'))
+    requested_date = fields.Datetime('Requested Date', required=True, readonly=True, states={'draft': [('readonly', False)]}, help="Date requested by the customer for maintenance.", default=time.strftime('%Y-%m-%d %H:%M:%S'))
+    execution_date = fields.Datetime('Execution Date', required=True, readonly=True, states={'draft':[('readonly',False)],'claim':[('readonly',False)]}, default=time.strftime('%Y-%m-%d %H:%M:%S'))
     breakdown = fields.Boolean('Breakdown', readonly=True, states={'draft': [('readonly', False)]}, default=False)
     create_uid = fields.Many2one('res.users', 'Responsible')
 
