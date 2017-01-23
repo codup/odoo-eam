@@ -217,7 +217,7 @@ class mro_order_parts_line(models.Model):
 
     name = fields.Char('Description', size=64)
     parts_id = fields.Many2one('product.product', 'Parts', required=True)
-    parts_qty = fields.Float('Quantity', digits_compute=dp.get_precision('Product Unit of Measure'), required=True, default=1.0)
+    parts_qty = fields.Float('Quantity', digits=dp.get_precision('Product Unit of Measure'), required=True, default=1.0)
     parts_uom = fields.Many2one('product.uom', 'Unit of Measure', required=True)
     maintenance_id = fields.Many2one('mro.order', 'Maintenance Order')
 
@@ -271,7 +271,7 @@ class mro_task_parts_line(models.Model):
 
     name = fields.Char('Description', size=64)
     parts_id = fields.Many2one('product.product', 'Parts', required=True)
-    parts_qty = fields.Float('Quantity', digits_compute=dp.get_precision('Product Unit of Measure'), required=True, default=1.0)
+    parts_qty = fields.Float('Quantity', digits=dp.get_precision('Product Unit of Measure'), required=True, default=1.0)
     parts_uom = fields.Many2one('product.uom', 'Unit of Measure', required=True)
     task_id = fields.Many2one('mro.task', 'Maintenance Task')
 
