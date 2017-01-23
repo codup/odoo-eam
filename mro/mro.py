@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2017 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -194,7 +194,7 @@ class mro_order(models.Model):
     @api.model
     def create(self, vals):
         if vals.get('name','/')=='/':
-            vals['name'] = self.env['ir.sequence'].get('mro.order') or '/'
+            vals['name'] = self.env['ir.sequence'].next_by_code('mro.order') or '/'
         return super(mro_order, self).create(vals)
 
     @api.multi
@@ -387,7 +387,7 @@ class mro_request(models.Model):
     @api.model
     def create(self, vals):
         if vals.get('name','/')=='/':
-            vals['name'] = self.env['ir.sequence'].get('mro.request') or '/'
+            vals['name'] = self.env['ir.sequence'].next_by_code('mro.request') or '/'
         return super(mro_request, self).create(vals)
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
