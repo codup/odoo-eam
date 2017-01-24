@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2017 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -376,7 +376,7 @@ class mro_pm_rule(models.Model):
     @api.model
     def create(self, vals):
         if vals.get('name','/')=='/':
-            vals['name'] = self.env['ir.sequence'].get('mro.pm.rule') or '/'
+            vals['name'] = self.env['ir.sequence'].next_by_code('mro.pm.rule') or '/'
         return super(mro_pm_rule, self).create(vals)
 
 
