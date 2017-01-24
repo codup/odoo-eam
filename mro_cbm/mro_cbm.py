@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2015-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2015-2017 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -131,7 +131,7 @@ class mro_cbm_rule(models.Model):
     @api.model
     def create(self, vals):
         if vals.get('name','/')=='/':
-            vals['name'] = self.env['ir.sequence'].get('mro.cbm.rule') or '/'
+            vals['name'] = self.env['ir.sequence'].next_by_code('mro.cbm.rule') or '/'
         return super(mro_cbm_rule, self).create(vals)
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
