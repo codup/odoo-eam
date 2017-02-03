@@ -184,7 +184,7 @@
                                     <group string="Planned Parts" states="draft,released,done,parts_except,cancel">
                                         <field name="parts_lines" nolabel="1" context="{'default_categ_id': context.get('default_categ_id')}">
                                             <tree string="Planned Parts" editable="bottom">
-                                                <field name="parts_id" domain="[('categ_id','=','Parts')]" context="{'default_categ_id': context.get('default_categ_id')}"/>
+                                                <field name="parts_id" domain="[('isParts','=',True)]" context="{'default_categ_id': context.get('default_categ_id')}"/>
                                                 <field name="parts_qty"/>
                                                 <field name="parts_uom" groups="product.group_uom"/>
                                                 <field name="name"/>
@@ -317,7 +317,7 @@
             <field name="inherit_id" ref="product.product_template_search_view"/>
             <field name="arch" type="xml">
                 <filter name="services" position="before">
-                    <filter string="Parts" name="parts" domain="[('categ_id','=','Parts')]" help="Parts your store in the inventory"/>
+                    <filter string="Parts" name="parts" domain="[('isParts','=',True)]" help="Parts your store in the inventory"/>
                 </filter>
             </field>
         </record>
@@ -375,7 +375,7 @@
                         <page string="Parts">
                             <field name="parts_lines" nolabel="1" context="{'default_categ_id': context.get('default_categ_id')}">
                                 <tree string="Parts" editable="bottom">
-                                    <field name="parts_id" domain="[('categ_id','=','Parts')]" context="{'default_categ_id': context.get('default_categ_id')}"/>
+                                    <field name="parts_id" domain="[('isParts','=','True')]" context="{'default_categ_id': context.get('default_categ_id')}"/>
                                     <field name="parts_qty"/>
                                     <field name="parts_uom" groups="product.group_uom"/>
                                     <field name="name"/>
