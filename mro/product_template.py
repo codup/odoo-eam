@@ -17,8 +17,9 @@ class ProductTemplate(models.Model):
     @api.depends('categ_id')
     def _check_category(self):
         parts_category = self.env.ref('mro.product_category_mro', raise_if_not_found=False)
-        for product in self:
-            product.isParts = product.categ_id.id == parts_category.id
+        if parts_category:
+            for product in self:
+                product.isParts = product.categ_id.id == parts_category.id
 
     isParts = fields.Boolean(compute='_check_category', store=True)
 
