@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <!-- Assets -->
+        <record id="asset.asset_asset_1" model="asset.asset">
+            <field name="position">{"position":{"lat":40.71822129574887,"lng":-73.99800109444186},"zoom":13}</field>
+        </record>
+
+        <record id="asset.asset_asset_2" model="asset.asset">
+            <field name="position">{"position":{"lat":39.906310441145045,"lng":116.42132949724328},"zoom":13}</field>
+        </record>
+
+        <record id="asset.asset_asset_3" model="asset.asset">
+            <field name="position">{"position":{"lat":55.753779885907505,"lng":37.60678482474759},"zoom":13}</field>
+        </record>
+
+        <record id="asset.asset_asset_4" model="asset.asset">
+            <field name="position">{"position":{"lat":51.51514892100701,"lng":-0.11315917130559683},"zoom":13}</field>
+        </record>
+
+        <record id="asset.asset_asset_5" model="asset.asset">
+            <field name="position">{"position":{"lat":52.51695035311784,"lng":13.413345335866325},"zoom":13}</field>
+        </record>
+
+        <record id="asset.asset_asset_6" model="asset.asset">
+            <field name="position">{"position":{"lat":48.85488738974392,"lng":2.359554294962436},"zoom":13}</field>
+        </record>
+
+    </data>
+</openerp>
