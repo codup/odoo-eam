@@ -12,6 +12,7 @@
             <field name="type">consu</field>
             <field name="uom_id" ref="product.product_uom_unit"/>
             <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="isParts" eval="True"/>
         </record>
 
         <record id="product_product_mro_oil" model="product.product">
@@ -23,6 +24,7 @@
             <field name="type">consu</field>
             <field name="uom_id" ref="product.product_uom_litre"/>
             <field name="uom_po_id" ref="product.product_uom_litre"/>
+            <field name="isParts" eval="True"/>
         </record>
 
         <record id="product_product_mro_water" model="product.product">
@@ -34,6 +36,7 @@
             <field name="type">consu</field>
             <field name="uom_id" ref="product.product_uom_litre"/>
             <field name="uom_po_id" ref="product.product_uom_litre"/>
+            <field name="isParts" eval="True"/>
         </record>
 
         <!-- Requests -->

@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2017 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -42,6 +42,7 @@ Required modules:
         'wizard/reject_view.xml',
         'wizard/convert_order.xml',
         'asset_view.xml',
+        'product_view.xml',
         'mro_workflow.xml',
         'mro_request_workflow.xml',
         'mro_sequence.xml',
