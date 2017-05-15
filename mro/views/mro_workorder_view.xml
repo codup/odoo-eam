@@ -36,7 +36,7 @@
                             </group>
                         </group>
                         <notebook>
-                            <page string="Orders">
+                            <page name="orders" string="Orders">
                                 <group>
                                     <field name="mo_ids" domain="[('state','=','draft'),('wo_id','=',False),('user_id','=',user_id)]" nolabel="1" widget="many2many" attrs="{'readonly': [('state','in',['in_process','done'])]}"/>
                                 </group>
