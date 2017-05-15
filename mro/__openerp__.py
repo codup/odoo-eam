@@ -8,7 +8,7 @@
 
 {
     'name': 'MRO',
-    'version': '1.6',
+    'version': '1.7',
     'summary': 'Asset Maintenance, Repair and Operation',
     'description': """
 Manage Maintenance process in OpenERP
@@ -20,7 +20,8 @@ Support Breakdown Maintenance and Corrective Maintenance.
 Main Features
 -------------
     * Request Service/Maintenance Management
-    * Maintenance Work Orders Management
+    * Maintenance Orders Management
+    * Work Orders Management (group MO)
     * Parts Management
     * Tasks Management (standard job)
     * Convert Maintenance Order to Task
@@ -51,6 +52,7 @@ Required modules:
         'mro_report.xml',
         'views/report_mro_order.xml',
         'views/report_mro_request.xml',
+        'views/mro_workorder_view.xml',
     ],
     'application': True,
 }

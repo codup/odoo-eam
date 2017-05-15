@@ -171,6 +171,7 @@
                                 <field name="date_planned"/>
                                 <field name="date_scheduled"/>
                                 <field name="date_execution"/>
+                                <field name="user_id"/>
                                 <field name="origin"/>
                             </group>
                             <group groups="stock.group_locations">

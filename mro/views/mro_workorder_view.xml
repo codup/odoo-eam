@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <!-- Work order menu -->
+        <record id="mro_workorder_tree_view" model="ir.ui.view">
+            <field name="name">mro.workorder.tree</field>
+            <field name="model">mro.workorder</field>
+            <field name="arch" type="xml">
+                <tree string="Work Orders">
+                    <field name="name"/>
+                    <field name="user_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="mro_workorder_form_view" model="ir.ui.view">
+            <field name="name">mro.workorder.form</field>
+            <field name="model">mro.workorder</field>
+            <field name="arch" type="xml">
+                <form string="Work Orders" version="7.0">
+                    <header>
+                        <field name="state" widget="statusbar"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1><field name="name" nolabel="1"/></h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="user_id"/>
+                            </group>
+                            <group>
+                                <field name="company_id" groups="base.group_multi_company" widget="selection"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Orders">
+                                <group>
+                                    <field name="mo_ids" domain="[('state','=','draft'),('wo_id','=',False),('user_id','=',user_id)]" nolabel="1" widget="many2many" attrs="{'readonly': [('state','in',['in_process','done'])]}"/>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_workorders" model="ir.actions.act_window">
+            <field name="name">Work Orders</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">mro.workorder</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Work Orders"
+            action="action_workorders"
+            id="menu_mro_workorder"
+            parent="menu_mro_maintenance"
+            sequence="10"/>
+
+ 	</data>
+</openerp>

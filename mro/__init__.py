@@ -24,5 +24,6 @@ import mro
 import stock
 import product_template
 import wizard
+import models
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

@@ -79,9 +79,11 @@ class mro_order(models.Model):
     operations_description = fields.Text('Operations Description',translate=True)
     documentation_description = fields.Text('Documentation Description',translate=True)
     problem_description = fields.Text('Problem Description')
+    user_id = fields.Many2one('res.users', 'Responsible', default=lambda self: self._uid)
     company_id = fields.Many2one('res.company','Company',required=True, readonly=True, states={'draft':[('readonly',False)]}, default=lambda self: self.env['res.company']._company_default_get('mro.order'))
     procurement_group_id = fields.Many2one('procurement.group', 'Procurement group', copy=False)
     category_ids = fields.Many2many(related='asset_id.category_ids', string='Asset Category', readonly=True)
+    wo_id = fields.Many2one('mro.workorder', 'Work Order', ondelete='cascade')
 
     _order = 'date_execution'
 
