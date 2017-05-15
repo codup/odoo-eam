@@ -10,7 +10,17 @@
             <field name="number_next">1</field>
             <field name="number_increment">1</field>
         </record>
-        
+
+        <!-- Sequences for Work orders -->       
+        <record id="sequence_mro_workorder" model="ir.sequence">
+            <field name="name">Work order</field>
+            <field name="code">mro.workorder</field>
+            <field name="prefix">WO</field>
+            <field name="padding">5</field>
+            <field name="number_next">1</field>
+            <field name="number_increment">1</field>
+        </record>
+
         <!-- Sequences for Maintenance request -->       
         <record id="sequence_mro_request" model="ir.sequence">
             <field name="name">Maintenance request</field>
