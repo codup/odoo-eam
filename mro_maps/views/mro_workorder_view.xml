@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+        <record id="mro_workorder_form_view" model="ir.ui.view">
+            <field name="name">mro.workorder.form.inherit</field>
+            <field name="model">mro.workorder</field>
+            <field name="inherit_id" ref="mro.mro_workorder_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//page[@name='orders']" position="after">
+                    <page name="maps" string="Map">
+                        <field name="positions" widget="maps"/>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+
+ 	</data>
+</openerp>
