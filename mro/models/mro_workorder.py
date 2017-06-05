@@ -39,6 +39,7 @@ class MroWorkOrder(models.Model):
     name = fields.Char(
         'Work Order', copy=False, readonly=True, default=lambda x: _('New'))
     state = fields.Selection(STATE_SELECTION, 'Status', compute='_get_state')
+    date_order = fields.Datetime(string='Order Date', required=True, readonly=True, index=True, states={'draft': [('readonly', False)]}, copy=False, default=fields.Datetime.now)
     user_id = fields.Many2one('res.users', 'Responsible', default=lambda self: self._uid)
     company_id = fields.Many2one(
         'res.company', 'Company',
