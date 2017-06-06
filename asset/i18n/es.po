@@ -1,0 +1,552 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* asset
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20140125-002455\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-05 15:20+0200\n"
+"PO-Revision-Date: 2017-06-05 15:39+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.7.1\n"
+"Last-Translator: \n"
+"Language: es\n"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Blue"
+msgstr "Azul"
+
+#. module: asset
+#: help:asset.state,fold:0
+msgid ""
+"This stage is not visible, for example in status bar or kanban view, when "
+"there are no records in that stage to display."
+msgstr ""
+"Este estado no es visible, por ejemplo en la barra de estado o vista kanban, "
+"cuando no hay registros en ese estado para mostrar."
+
+#. module: asset
+#: model:ir.model,name:asset.model_asset_asset
+msgid "Asset"
+msgstr "Activo"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "White"
+msgstr "Blanco"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Manufacture"
+msgstr "Producción"
+
+#. module: asset
+#: field:asset.asset,criticality:0
+msgid "Criticality"
+msgstr "Criticidad"
+
+#. module: asset
+#: field:asset.asset,message_unread:0
+msgid "Unread Messages"
+msgstr "Mensajes no leídos"
+
+#. module: asset
+#: field:asset.asset,warranty_end_date:0
+msgid "Warranty End"
+msgstr "Fin de garantía"
+
+#. module: asset
+#: model:asset.asset,name:asset.asset_asset_3
+msgid "Building"
+msgstr "Edificio"
+
+#. module: asset
+#: view:asset.asset:0 model:ir.actions.act_window,name:asset.action_assets
+#: model:ir.ui.menu,name:asset.menu_maintenance_assets
+#: model:ir.ui.menu,name:asset.menu_maintenance_assets_assets
+#: model:stock.location,name:asset.stock_location_assets
+msgid "Assets"
+msgstr "Activos"
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Model:"
+msgstr "Modelo:"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_setup
+msgid "Setup"
+msgstr "Configurar"
+
+#. module: asset
+#: field:asset.asset,message_ids:0
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: asset
+#: help:asset.asset,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr "Si establecido, mensajes nuevos requieren su atención."
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_installed
+msgid "Installed"
+msgstr "Instalado"
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Warranty"
+msgstr "Garantía"
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Manufacturer:"
+msgstr "Fabricante:"
+
+#. module: asset
+#: help:asset.asset,message_summary:0
+msgid ""
+"Holds the Chatter summary (number of messages, ...). This summary is "
+"directly in html format in order to be inserted in kanban views."
+msgstr ""
+"Guarda el sumario del chat (número de mensajes, ...). Este sumario está en "
+"formato html para ser insertado en vistas kanban."
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_stored
+msgid "Stored"
+msgstr "Guardado"
+
+#. module: asset
+#: model:ir.actions.act_window,name:asset.action_management_assets
+#: model:ir.ui.menu,name:asset.menu_maintenance_assets_management
+msgid "Manage states"
+msgstr "Gestionar estados"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_draft
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Magenta"
+msgstr "Magenta"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_rented
+msgid "Rented"
+msgstr "Alquilado"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_operable
+msgid "Operable"
+msgstr "Operable"
+
+#. module: asset
+#: field:asset.asset,maintenance_state_id:0 view:asset.state:0
+#: field:asset.state,name:0
+msgid "State"
+msgstr "Estado"
+
+#. module: asset
+#: field:asset.asset,message_follower_ids:0
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: asset
+#: model:ir.model,name:asset.model_stock_location
+msgid "Location"
+msgstr "Ubicación"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Orange"
+msgstr "Naranja"
+
+#. module: asset
+#: view:asset.state:0
+msgid "Change color"
+msgstr "Cambiar color"
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Serial No:"
+msgstr "Serial No:"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Red"
+msgstr "Rojo"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_breakdown
+msgid "Breakdown"
+msgstr "Averiado"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_run
+msgid "Run"
+msgstr "Ejecutar"
+
+#. module: asset
+#: help:asset.asset,image_medium:0
+msgid ""
+"Medium-sized image of the asset. It is automatically resized as a 128x128px "
+"image, with aspect ratio preserved, only when the image exceeds one of those "
+"sizes. Use this field in form views or some kanban views."
+msgstr ""
+"Imagen de tamaño medio del activo. Se escala automáticamente a 128x128px, y "
+"preserva el aspecto ratio, sólo cuando la imagen excede esos tamaños. "
+"Utiliza este campo en la vista de formulario o algunas vistas kanban."
+
+#. module: asset
+#: model:asset.asset,name:asset.asset_asset_1
+msgid "Moulding machine 25"
+msgstr "Máquina amasado 25"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Cyan"
+msgstr "Cyan"
+
+#. module: asset
+#: model:ir.ui.menu,name:asset.menu_maintenance_config
+msgid "Configuration"
+msgstr "Configuración"
+
+#. module: asset
+#: help:asset.asset,image:0
+msgid ""
+"This field holds the image used as image for the asset, limited to "
+"1024x1024px."
+msgstr ""
+"Este campo guarda la imagen utilizada en el activo, límite de 1024x1024px."
+
+#. module: asset
+#: view:asset.asset:0
+msgid "Info"
+msgstr "Información"
+
+#. module: asset
+#: field:asset.asset,property_stock_asset:0
+msgid "Asset Location"
+msgstr "Localización Activo"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_purchased
+msgid "Purchased"
+msgstr "Comprado"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_standby
+msgid "Standby"
+msgstr "En espera"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "Very important"
+msgstr "Muy importante"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_shipped
+msgid "Shipped"
+msgstr "Enviado"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Green"
+msgstr "Verde"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_planned
+msgid "Planned"
+msgstr "Planeado"
+
+#. module: asset
+#: field:asset.asset,image_small:0
+msgid "Small-sized image"
+msgstr "Imagen de tamaño pequeño"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "SkyBlue"
+msgstr "Azul cielo"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_retired
+msgid "Retired"
+msgstr "Retirado"
+
+#. module: asset
+#: field:asset.asset,image:0
+msgid "Image"
+msgstr "Imagen"
+
+#. module: asset
+#: field:asset.asset,serial:0
+msgid "Serial no."
+msgstr "Serial no."
+
+#. module: asset
+#: field:asset.asset,image_medium:0
+msgid "Medium-sized image"
+msgstr "Imagen de tamaño medio"
+
+#. module: asset
+#: field:asset.asset,start_date:0
+msgid "Start Date"
+msgstr "Fecha Inicio"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_use
+msgid "Use"
+msgstr "Usar"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "Critical"
+msgstr "Crítico"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Black"
+msgstr "Negro"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_maintenance
+#: selection:asset.state,team:0
+msgid "Maintenance"
+msgstr "Mantenimiento"
+
+#. module: asset
+#: model:ir.module.category,description:asset.module_category_eam
+msgid "Helps you manage your assets."
+msgstr "Te ayuda a gestionar tus activos."
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Finance"
+msgstr "Finanzas"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_sold
+msgid "Sold"
+msgstr "Vendido"
+
+#. module: asset
+#: field:asset.asset,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Es un seguidor"
+
+#. module: asset
+#: field:asset.asset,active:0
+msgid "Active"
+msgstr "Activo"
+
+#. module: asset
+#: selection:asset.asset,maintenance_state_color:0
+#: selection:asset.state,state_color:0
+msgid "Yellow"
+msgstr "Amarillo"
+
+#. module: asset
+#: field:asset.asset,manufacturer_id:0
+msgid "Manufacturer"
+msgstr "Fabricante"
+
+#. module: asset
+#: help:asset.asset,image_small:0
+msgid ""
+"Small-sized image of the asset. It is automatically resized as a 64x64px "
+"image, with aspect ratio preserved. Use this field anywhere a small image is "
+"required."
+msgstr ""
+"Imagen de tamaño pequeño del activo. Se escala automáticamente a 64x64px, y "
+"preserva el aspecto ratio. Usa este campo donde se requiera una imagen "
+"pequeña."
+
+#. module: asset
+#: model:ir.actions.act_window,name:asset.action_asset_state
+#: model:ir.ui.menu,name:asset.menu_asset_state
+msgid "Asset States"
+msgstr "Estados de los activos"
+
+#. module: asset
+#: field:asset.asset,message_summary:0
+msgid "Summary"
+msgstr "Sumario"
+
+#. module: asset
+#: model:ir.model,name:asset.model_asset_state
+msgid "State of Asset"
+msgstr "Estado del activo"
+
+#. module: asset
+#: field:asset.asset,user_id:0
+msgid "Assigned to"
+msgstr "Asignado a"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_repair
+msgid "Repair"
+msgstr "Reparar"
+
+#. module: asset
+#: field:asset.state,team:0
+msgid "Scope Team"
+msgstr "Alcance equipo"
+
+#. module: asset
+#: help:asset.state,sequence:0
+msgid "Used to order states."
+msgstr "Utilizar para ordenar estados."
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "General"
+msgstr "General"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_down
+msgid "Down"
+msgstr "Abajo"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_shutdown
+msgid "Shutdown"
+msgstr "Apagado"
+
+#. module: asset
+#: field:asset.asset,asset_number:0
+msgid "Asset Number"
+msgstr "Número Activo"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_close
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_moves
+msgid "Moves"
+msgstr "Movimientos"
+
+#. module: asset
+#: help:asset.asset,property_stock_asset:0
+msgid ""
+"This location will be used as the destination location for installed parts "
+"during asset life."
+msgstr ""
+"Esta localización será usada como localización de destino para las partes "
+"instaladas durante la vida del activo."
+
+#. module: asset
+#: field:asset.state,state_color:0
+msgid "State Color"
+msgstr "Color Estado"
+
+#. module: asset
+#: field:asset.asset,purchase_date:0
+msgid "Purchase Date"
+msgstr "Fecha Compra"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Warehouse"
+msgstr "Almacén"
+
+#. module: asset
+#: field:asset.asset,name:0
+msgid "Asset Name"
+msgstr "Nombre Activo"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_leased
+msgid "Leased"
+msgstr "Prestado"
+
+#. module: asset
+#: field:asset.state,fold:0
+msgid "Hide in views if empty"
+msgstr "Ocultar en vistas si está vacío"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "Important"
+msgstr "Importante"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_stolen
+msgid "Stolen"
+msgstr "Robado"
+
+#. module: asset
+#: model:asset.asset,name:asset.asset_asset_2
+msgid "Truck"
+msgstr "Camión"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_depreciation
+msgid "Depreciation"
+msgstr "Depreciación"
+
+#. module: asset
+#: field:asset.asset,vendor_id:0
+msgid "Vendor"
+msgstr "Vendedor"
+
+#. module: asset
+#: field:asset.asset,model:0
+msgid "Model"
+msgstr "Modelo"
+
+#. module: asset
+#: model:stock.location,name:asset.stock_location_locations_asset
+msgid "Asset Locations"
+msgstr "Localización Activos"
+
+#. module: asset
+#: help:asset.asset,message_ids:0
+msgid "Messages and communication history"
+msgstr "Histórico de mensajes y comunicación"
+
+#. module: asset
+#: field:asset.state,sequence:0
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: asset
+#: field:asset.asset,maintenance_state_color:0
+msgid "Color"
+msgstr "Color"
+
+#. module: asset
+#: field:asset.asset,warranty_start_date:0
+msgid "Warranty Start"
+msgstr "Comienzo Garantía"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Accounting"
+msgstr "Contabilidad"
+
+#. module: asset
+#: model:ir.module.category,name:asset.module_category_eam
+msgid "Enterprise Asset Management"
+msgstr "Gestión de Activos"
