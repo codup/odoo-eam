@@ -329,7 +329,7 @@
             <field name="view_mode">tree,form,kanban</field>
             <field name="view_type">form</field>
             <field name="search_view_id" ref="part_search_form_view"/>
-            <field name="context" eval="{'default_categ_id': ref('mro.product_category_mro'), 'search_default_parts':1}"/>
+            <field name="context" eval="{'default_categ_id': ref('mro.product_category_mro'), 'default_isParts': True, 'search_default_parts':1}"/>
             <field name="help" type="html">
               <p class="oe_view_nocontent_create">
                 Click to define a new spare part.
