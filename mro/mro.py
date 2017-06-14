@@ -87,10 +87,11 @@ class mro_order(models.Model):
 
     _order = 'date_execution'
 
-    @api.onchange('asset_id')
+    @api.onchange('asset_id','maintenance_type')
     def onchange_asset(self):
         if self.asset_id:
             self.category_ids = self.asset_id.category_ids
+        return {'domain': {'task_id': [('category_id', 'in', self.category_ids.ids),('maintenance_type','=',self.maintenance_type)]}}
 
     @api.onchange('date_planned')
     def onchange_planned_date(self):
