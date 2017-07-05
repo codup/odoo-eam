@@ -19,7 +19,7 @@ msgstr ""
 #: selection:asset.asset,maintenance_state_color:0
 #: selection:asset.state,state_color:0
 msgid "Blue"
-msgstr "Blaauw"
+msgstr "Blauw"
 
 #. module: asset
 #: help:asset.state,fold:0
