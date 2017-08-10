@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2017 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -33,7 +33,8 @@ class mro_order(models.Model):
                 if step < tmin or step > tmax: step = tmin
             elif step > tmax:
                 M = M + 1
-                step = (end - start)/M
+                if M != 0:
+                    step = (end - start)/M
                 if step < tmin or step > tmax: step = tmax
         else: step = tmin
         return step
