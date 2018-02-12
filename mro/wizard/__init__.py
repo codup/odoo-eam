@@ -19,7 +19,7 @@
 #
 ##############################################################################
 
-import reject
-import convert_order
+from . import reject
+from . import convert_order
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

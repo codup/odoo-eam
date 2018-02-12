@@ -19,9 +19,9 @@
 #
 ##############################################################################
 
-import mro_pm
-import asset
-import mro
-import wizard
+from . import mro_pm
+from . import asset
+from . import mro
+from . import wizard
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
