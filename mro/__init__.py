@@ -19,11 +19,11 @@
 #
 ##############################################################################
 
-import asset
-import mro
-import stock
-import product_template
-import wizard
-import models
+from . import asset
+from . import mro
+from . import stock
+from . import product_template
+from . import wizard
+from . import models
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

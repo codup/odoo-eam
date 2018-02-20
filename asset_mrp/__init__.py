@@ -19,7 +19,7 @@
 #
 ##############################################################################
 
-import asset
-import mrp
+from . import asset
+from . import mrp
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
