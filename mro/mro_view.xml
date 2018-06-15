@@ -145,7 +145,7 @@
                     <header>
                         <button name="action_confirm" states="draft" string="Confirm Maintenance" type="object" class="oe_highlight"/>
                         <button name="action_done" states="ready" string="Done" type="object" class="oe_highlight"/>
-                        <button name="force_done" states="released" string="Done" type="object" class="oe_highlight" type="object"/>
+                        <button name="force_done" states="released" string="Done" type="object" class="oe_highlight"/>
                         <button name="force_parts_reservation" states="released" string="Force Reservation" type="object"/>
                         <button name="button_recreate_picking_parts" states="parts_except" string="Recreate Picking" type="object" class="oe_highlight"/>
                         <button name="action_cancel" type="object" states="draft,ready,parts_except" string="Cancel"/>
