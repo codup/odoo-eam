@@ -120,6 +120,7 @@
                     <field name="manufacture_state_color"/>
                     <field name="user_id"/>
                     <field name="criticality"/>
+                    <field name="id" />
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_vignette">
@@ -201,6 +202,7 @@
                     <field name="manufacture_state_color"/>
                     <field name="user_id"/>
                     <field name="criticality"/>
+                    <field name="id" />
                     <templates>
                         <t t-name="kanban-box">
                             <div t-attf-class="oe_kanban_card codup_kanban_status oe_kanban_global_click">
