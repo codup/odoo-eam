@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo
@@ -34,5 +34,3 @@ class stock_location(models.Model):
              "\n* Production: Virtual counterpart location for production operations: this location consumes the raw material and produces finished products"
              "\n* Transit Location: Counterpart location that should be used in inter-companies or inter-warehouses operations"
              "\n* Asset Location: Physical locations representing the destination location for parts installed on the asset (Maintenance and Repair)")
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

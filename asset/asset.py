@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo
@@ -146,5 +146,3 @@ class asset_asset(models.Model):
     def write(self, vals):
         tools.image_resize_images(vals)
         return super(asset_asset, self).write(vals)
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
