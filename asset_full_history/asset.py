@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo
@@ -29,5 +29,3 @@ class asset_asset(models.Model):
     purchase_date = fields.Date(track_visibility='onchange')
     warranty_start_date = fields.Date(track_visibility='onchange')
     warranty_end_date = fields.Date(track_visibility='onchange')
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
