@@ -18,7 +18,7 @@ class mro_order(models.Model):
     """
     _name = 'mro.order'
     _description = 'Maintenance Order'
-    _inherit = ['mail.thread', 'ir.needaction_mixin']
+    _inherit = ['mail.thread']
 
     STATE_SELECTION = [
         ('draft', 'DRAFT'),
@@ -303,7 +303,7 @@ class mro_task_parts_line(models.Model):
 class mro_request(models.Model):
     _name = 'mro.request'
     _description = 'Maintenance Request'
-    _inherit = ['mail.thread', 'ir.needaction_mixin']
+    _inherit = ['mail.thread']
 
     STATE_SELECTION = [
         ('draft', 'Draft'),
