@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo
@@ -17,5 +17,3 @@ class AccountAssetAsset(models.Model):
     @api.onchange('asset_id')
     def onchange_asset(self):
         self.name = self.asset_id.name
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
