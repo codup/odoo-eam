@@ -46,6 +46,7 @@
 .codup_kanban_status:hover {
   box-shadow:1px 1px 2px 1px #6f6f6f !important;
   border-color: #D8D8D8 #C8C8C8 #C8C8C8 #D8D8D8 !important;
+  z-index: 1 !important;
 }
 .codup_kanban_status:hover .codup_status {
   background-image: radial-gradient(at 33% 34%, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0) 40%), radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9) 80%);
@@ -73,11 +74,9 @@
 .codup_attention_on {
   color: gold !important;
 }
-.openerp .oe_kanban_view .codup_kanban_details {
+.o_kanban_view .codup_kanban_details {
     display: inline-block;
     vertical-align: top;
-    width: 140px;
     font-size: 13px;
-    padding: 0px 5px;
     color: #4C4C4C;
 }
