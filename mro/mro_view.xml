@@ -143,12 +143,12 @@
             <field name="arch" type="xml">
                 <form string="Maintenance Orders" version="7.0">
                     <header>
-                        <button name="button_confirm_order" states="draft" string="Confirm Maintenance" class="oe_highlight"/>
-                        <button name="button_done" states="ready" string="Done" class="oe_highlight"/>
-                        <button name="force_done" states="released" string="Done" class="oe_highlight" type="object"/>
+                        <button name="action_confirm" states="draft" string="Confirm Maintenance" type="object" class="oe_highlight"/>
+                        <button name="action_done" states="ready" string="Done" type="object" class="oe_highlight"/>
+                        <button name="force_done" states="released" string="Done" type="object" class="oe_highlight" type="object"/>
                         <button name="force_parts_reservation" states="released" string="Force Reservation" type="object"/>
-                        <button name="button_recreate_picking_parts" states="parts_except" string="Recreate Picking" class="oe_highlight"/>
-                        <button name="button_cancel" states="draft,ready,parts_except" string="Cancel"/>
+                        <button name="button_recreate_picking_parts" states="parts_except" string="Recreate Picking" type="object" class="oe_highlight"/>
+                        <button name="action_cancel" type="object" states="draft,ready,parts_except" string="Cancel"/>
                         <button name="action_cancel" type="object" states="released" string="Cancel"/>
                         <field name="state" widget="statusbar" statusbar_visible="draft,ready,done" statusbar_colors='{"parts_except":"red","released":"blue"}'/>
                     </header>
