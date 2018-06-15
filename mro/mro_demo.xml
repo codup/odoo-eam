@@ -49,8 +49,6 @@
             <field name="asset_id" ref="asset.asset_asset_3"/>
             <field name="cause">There is no light</field>
         </record>
-        <workflow action="button_send_request" model="mro.request" ref="mro_request_2"/>
-        <workflow action="button_confirm_request" model="mro.request" ref="mro_request_2"/>
 
         <!-- Tasks -->
         <record id="mro_task_1" model="mro.task">
