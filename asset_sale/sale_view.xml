@@ -5,7 +5,7 @@
         <!-- Asset menu -->
         <menuitem name="Assets"
             id="menu_maintenance_assets"
-            parent="sales_team.menu_base_partner"
+            parent="sale.sale_menu_root"
             groups="sales_team.group_sale_salesman"
             sequence="9"/>
 
@@ -82,6 +82,7 @@
                     <field name="finance_state_color"/>
                     <field name="user_id"/>
                     <field name="criticality"/>
+                    <field name="id" />
                     <templates>
                         <t t-name="kanban-box">
                             <div class="oe_kanban_vignette">
@@ -163,6 +164,7 @@
                     <field name="finance_state_color"/>
                     <field name="user_id"/>
                     <field name="criticality"/>
+                    <field name="id" />
                     <templates>
                         <t t-name="kanban-box">
                             <div t-attf-class="oe_kanban_card codup_kanban_status oe_kanban_global_click">
@@ -223,7 +225,7 @@
         <menuitem name="Asset States"
             action="asset.action_asset_state"
             id="menu_asset_state"
-            parent="sales_team.menu_sale_config"
+            parent="sale.menu_sale_config"
             groups="sales_team.group_sale_manager"
             sequence="100"/>
     
