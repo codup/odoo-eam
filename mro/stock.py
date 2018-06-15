@@ -1,8 +1,8 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2014-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2014-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -22,5 +22,3 @@ class StockMove(models.Model):
                 if order_id.test_ready():
                     workflow.trg_validate(self.env.user.id, 'mro.order', order_id.id, 'parts_ready', self.env.cr)
         return res
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

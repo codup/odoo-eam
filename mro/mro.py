@@ -1,8 +1,8 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2017 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -392,5 +392,3 @@ class mro_request(models.Model):
         if vals.get('name','/')=='/':
             vals['name'] = self.env['ir.sequence'].next_by_code('mro.request') or '/'
         return super(mro_request, self).create(vals)
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

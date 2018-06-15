@@ -2,13 +2,13 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2017 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 {
     'name': 'MRO',
-    'version': '1.7',
+    'version': '1.8',
     'summary': 'Asset Maintenance, Repair and Operation',
     'description': """
 Manage Maintenance process in OpenERP
@@ -56,4 +56,3 @@ Required modules:
     ],
     'application': True,
 }
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

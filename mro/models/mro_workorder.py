@@ -1,8 +1,8 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2017 CodUP (<http://codup.com>).
+#    Copyright (C) 2017-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -52,6 +52,3 @@ class MroWorkOrder(models.Model):
         if not values.get('name', False) or values['name'] == _('New'):
             values['name'] = self.env['ir.sequence'].next_by_code('mro.workorder') or _('New')
         return super(MroWorkOrder, self).create(values)
-    
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
