@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo
@@ -28,5 +28,3 @@ class mrp_bom(models.Model):
             bom.asset_ids = line_ids
 
     asset_ids = fields.One2many('asset.asset', compute='_get_assets')
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
