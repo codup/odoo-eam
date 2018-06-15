@@ -44,8 +44,6 @@ Required modules:
         'wizard/convert_order.xml',
         'asset_view.xml',
         'product_view.xml',
-        'mro_workflow.xml',
-        'mro_request_workflow.xml',
         'mro_sequence.xml',
         'mro_data.xml',
         'mro_view.xml',
