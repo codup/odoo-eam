@@ -29,4 +29,3 @@ Keep one entity in one place for escape mistakes!
     ],
     'installable': True,
 }
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
