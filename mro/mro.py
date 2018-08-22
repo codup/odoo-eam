@@ -137,26 +137,8 @@ class mro_order(models.Model):
         return res
 
     def action_confirm(self):        
-        procurement_obj = self.env['procurement.order']
         for order in self:
-            proc_ids = []
-            group_id = self.env['procurement.group'].create({'name': order.name})
-            for line in order.parts_lines:
-                vals = {
-                    'name': order.name,
-                    'origin': order.name,
-                    'company_id': order.company_id.id,
-                    'group_id': group_id.id,
-                    'date_planned': order.date_planned,
-                    'product_id': line.parts_id.id,
-                    'product_qty': line.parts_qty,
-                    'product_uom': line.parts_uom.id,
-                    'location_id': order.asset_id.property_stock_asset.id
-                    }
-                proc_id = procurement_obj.create(vals)
-                proc_ids.append(proc_id)
-            procurement_obj.run(proc_ids)
-            order.write({'state':'released','procurement_group_id':group_id.id})
+            order.write({'state':'released'})
         return 0
 
     def action_ready(self):
@@ -164,14 +146,10 @@ class mro_order(models.Model):
         return True
 
     def action_done(self):
-        for order in self:
-            order.parts_move_lines.action_done()
         self.write({'state': 'done', 'date_execution': time.strftime('%Y-%m-%d %H:%M:%S')})
         return True
 
     def action_cancel(self):
-        for order in self:
-            order.parts_ready_lines.action_cancel()
         self.write({'state': 'cancel'})
         return True
 
@@ -183,15 +161,11 @@ class mro_order(models.Model):
         return res
 
     def force_done(self):
-        self.force_parts_reservation()
-        wf_service = netsvc.LocalService("workflow")
-        for order in self:
-            wf_service.trg_validate(self.env.user.id, 'mro.order', order.id, 'button_done', self.env.cr)
+        self.write({'state': 'done', 'date_execution': time.strftime('%Y-%m-%d %H:%M:%S')})
         return True
 
     def force_parts_reservation(self):
-        for order in self:
-            order.parts_ready_lines.force_assign()
+        self.write({'state': 'ready'})
         return True
 
     @api.model
