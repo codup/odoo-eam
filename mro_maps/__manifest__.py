@@ -2,13 +2,13 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2017 CodUP (<http://codup.com>).
+#    Copyright (C) 2017-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 {
     'name': 'MRO Maps',
-    'version': '0.1',
+    'version': '0.2',
     'category': 'Industries',
     'summary': 'Show asset positions',
     'description': """
