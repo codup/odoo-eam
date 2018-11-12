@@ -1,8 +1,8 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2017 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -387,5 +387,3 @@ class mro_pm_rule_line(models.Model):
     task_id = fields.Many2one('mro.task', 'Task', ondelete='restrict', required=True)
     meter_interval_id = fields.Many2one('mro.pm.meter.interval', 'Meter Interval', ondelete='restrict', required=True)
     pm_rule_id = fields.Many2one('mro.pm.rule', 'PM Rule', ondelete='restrict')
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

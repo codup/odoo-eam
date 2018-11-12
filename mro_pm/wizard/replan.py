@@ -1,8 +1,8 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -16,5 +16,3 @@ class mro_pm_replan(models.TransientModel):
     def replan_pm(self):
         self.env['mro.order'].replan_pm()
         return {'type': 'ir.actions.act_window_close',}
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
