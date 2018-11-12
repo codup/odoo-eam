@@ -7,7 +7,7 @@
             <field name="name">mro.pm.meter.tree</field>
             <field name="model">mro.pm.meter</field>
             <field name="arch" type="xml">
-                <tree string="Update Meters" selector="0" create="false" delete="false" editable="bottom" version="7.0">
+                <tree string="Update Meters" create="false" delete="false" editable="bottom">
                     <field name="asset_id" readonly="1"/>
                     <field name="name" readonly="1"/>
                     <field name="date" string="Reading Date" readonly="1"/>
@@ -50,7 +50,7 @@
             <field name="name">mro.pm.meter.log.tree</field>
             <field name="model">mro.pm.meter</field>
             <field name="arch" type="xml">
-                <tree string="Meters Logs" create="false" delete="false" readonly="1" editable="bottom" version="7.0">
+                <tree string="Meters Logs" create="false" delete="false" editable="bottom">
                     <field name="asset_id" readonly="1"/>
                     <field name="name" readonly="1"/>
                     <button icon="fa-list-alt" string="Reading History" name="%(open_reading_log)d" type="action" states="reading,reset"/>
@@ -83,7 +83,7 @@
             <field name="name">mro.pm.meter.form</field>
             <field name="model">mro.pm.meter</field>
             <field name="arch" type="xml">
-                <form string="Meter" version="7.0">
+                <form string="Meter">
                     <header>
                         <button name="activate_meter" states="draft" string="Attach" class="oe_highlight" type="object"/>
                         <button name="reset_meter" states="reading" string="Detach" type="object"/>
@@ -133,7 +133,7 @@
             <field name="name">mro.pm.meter.line.tree</field>
             <field name="model">mro.pm.meter.line</field>
             <field name="arch" type="xml">
-                <tree string="Reading History" create="false" delete="false" editable="bottom" version="7.0">
+                <tree string="Reading History" create="false" delete="false" editable="bottom">
                     <field name="date" readonly="1"/>
                     <field name="value" readonly="1"/>
                     <field name="total_value" readonly="1"/>
@@ -182,7 +182,7 @@
             <field name="name">mro.pm.meter.ratio.tree</field>
             <field name="model">mro.pm.meter.ratio</field>
             <field name="arch" type="xml">
-                <tree string="Meter Ratio" version="7.0">
+                <tree string="Meter Ratio">
                     <field name="name"/>
                     <field name="ratio"/>
                     <field name="ratio_type"/>
@@ -194,7 +194,7 @@
             <field name="name">mro.pm.meter.ratio.form</field>
             <field name="model">mro.pm.meter.ratio</field>
             <field name="arch" type="xml">
-                <form string="Meter Ratio" version="7.0">
+                <form string="Meter Ratio">
                     <sheet>
                         <div class="oe_title">
                             <label for="name"/>
@@ -234,7 +234,7 @@
             <field name="name">mro.pm.meter.interval.tree</field>
             <field name="model">mro.pm.meter.interval</field>
             <field name="arch" type="xml">
-                <tree string="Meter Interval" version="7.0">
+                <tree string="Meter Interval">
                     <field name="name"/>
                 </tree>
             </field>
@@ -244,7 +244,7 @@
             <field name="name">mro.pm.meter.interval.form</field>
             <field name="model">mro.pm.meter.interval</field>
             <field name="arch" type="xml">
-                <form string="Meter Interval" version="7.0">
+                <form string="Meter Interval">
                     <sheet>
                         <group>
                             <group>
@@ -278,7 +278,7 @@
             <field name="name">mro.pm.rule.tree</field>
             <field name="model">mro.pm.rule</field>
             <field name="arch" type="xml">
-                <tree string="PM Rule" version="7.0">
+                <tree string="PM Rule">
                     <field name="name"/>
                     <field name="category_id"/>
                 </tree>
@@ -289,7 +289,7 @@
             <field name="name">mro.pm.rule.form</field>
             <field name="model">mro.pm.rule</field>
             <field name="arch" type="xml">
-                <form string="PM Rule" version="7.0">
+                <form string="PM Rule">
                     <sheet>
                         <div class="oe_title">
                             <h1>PM Rule <field name="name" class="oe_inline" readonly="1"/></h1>
@@ -307,7 +307,7 @@
                         </group>
                         <field name="pm_rules_line_ids" context="{'category_id':category_id}" attrs="{'invisible':[('category_id','=',False)]}"  options='{"always_reload":True}'>
                             <tree string="Tasks" editable="bottom">
-                                <field name="task_id" domain="[('category_id','=',category_id)]"/>
+                                <field name="task_id" domain="[('category_id','=',parent.category_id)]"/>
                                 <field name="meter_interval_id"/>
                             </tree>
                         </field>

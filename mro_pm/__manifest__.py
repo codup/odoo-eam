@@ -2,13 +2,13 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 {
     'name': 'MRO PM',
-    'version': '1.4',
+    'version': '1.5',
     'summary': 'Asset Proactive Maintenance',
     'description': """
 Manage Proactive Maintenance process in OpenERP

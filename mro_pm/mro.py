@@ -1,8 +1,8 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2017 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -22,6 +22,7 @@ class mro_order(models.Model):
 
     maintenance_type = fields.Selection(MAINTENANCE_TYPE_SELECTION, 'Maintenance Type', required=True, readonly=True, states={'draft': [('readonly', False)]})
 
+    @api.model
     def find_step(self, start, end, tmin, tmax):
         M = round(2*(end - start)/(tmin + tmax),0)
         if M != 0:
@@ -39,6 +40,7 @@ class mro_order(models.Model):
         else: step = tmin
         return step
 
+    @api.model
     def replan_pm(self):
         rule_obj = self.env['mro.pm.rule']
         asset_obj = self.env['asset.asset']
@@ -54,8 +56,9 @@ class mro_order(models.Model):
                     self.planning_strategy_1(asset, meter, tasks, horizon, origin)
         return True
 
+    @api.model
     def planning_strategy_1(self, asset, meter, tasks, horizon, origin):
-        tasks.sort(lambda y,x: cmp(x.meter_interval_id.interval_max, y.meter_interval_id.interval_max))
+        tasks.sort(key=lambda x: x.meter_interval_id.interval_max)
         K = 3600.0*24
         hf = len(tasks)-1
         lf = 0
@@ -224,5 +227,3 @@ class mro_task(models.Model):
     ]
 
     maintenance_type = fields.Selection(MAINTENANCE_TYPE_SELECTION, 'Maintenance Type', required=True)
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
