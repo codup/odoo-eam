@@ -7,7 +7,7 @@
             <field name="name">mro.gauge.tree</field>
             <field name="model">mro.gauge</field>
             <field name="arch" type="xml">
-                <tree string="Update Gauges" selector="0" create="false" delete="false" editable="bottom" version="7.0">
+                <tree string="Update Gauges" create="false" delete="false" editable="bottom">
                     <field name="asset_id" readonly="1"/>
                     <field name="name" readonly="1"/>
                     <field name="date" string="Reading Date" readonly="1"/>
@@ -49,7 +49,7 @@
             <field name="name">mro.gauge.log.tree</field>
             <field name="model">mro.gauge</field>
             <field name="arch" type="xml">
-                <tree string="Gauges Logs" create="false" delete="false" readonly="1" editable="bottom" version="7.0">
+                <tree string="Gauges Logs" create="false" delete="false" editable="bottom">
                     <field name="asset_id" readonly="1"/>
                     <field name="name" readonly="1"/>
                     <button icon="fa-list-alt" string="Reading History" name="%(open_reading_log)d" type="action" states="reading"/>
@@ -81,7 +81,7 @@
             <field name="name">mro.gauge.form</field>
             <field name="model">mro.gauge</field>
             <field name="arch" type="xml">
-                <form string="Gauge" version="7.0">
+                <form string="Gauge">
                     <header>
                         <button name="activate_gauge" states="draft" string="Attach" class="oe_highlight" type="object"/>
                         <field name="state" widget="statusbar" statusbar_visible="reading"/>
@@ -125,7 +125,7 @@
             <field name="name">mro.gauge.line.tree</field>
             <field name="model">mro.gauge.line</field>
             <field name="arch" type="xml">
-                <tree string="Reading History" create="false" delete="false" editable="bottom" version="7.0">
+                <tree string="Reading History" create="false" delete="false" editable="bottom">
                     <field name="date" readonly="1"/>
                     <field name="value" readonly="1"/>
                 </tree>
@@ -147,7 +147,7 @@
             <field name="name">mro.cbm.rule.tree</field>
             <field name="model">mro.cbm.rule</field>
             <field name="arch" type="xml">
-                <tree string="PdM Rule" version="7.0">
+                <tree string="PdM Rule">
                     <field name="name"/>
                     <field name="category_id"/>
                 </tree>
@@ -158,7 +158,7 @@
             <field name="name">mro.cbm.rule.form</field>
             <field name="model">mro.cbm.rule</field>
             <field name="arch" type="xml">
-                <form string="PdM Rule" version="7.0">
+                <form string="PdM Rule">
                     <sheet>
                         <div class="oe_title">
                             <h1>PdM Rule <field name="name" class="oe_inline" readonly="1"/></h1>

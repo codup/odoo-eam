@@ -1,8 +1,8 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2015-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2015-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -100,5 +100,3 @@ class mro_task(models.Model):
     ]
 
     maintenance_type = fields.Selection(MAINTENANCE_TYPE_SELECTION, 'Maintenance Type', required=True)
-
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
