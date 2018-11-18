@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data noupdate="1">
-        <!-- Sequences for Maintenance orders -->       
+        <!-- Sequences for Maintenance orders -->
         <record id="sequence_mro_order" model="ir.sequence">
             <field name="name">Maintenance order</field>
             <field name="code">mro.order</field>
@@ -11,7 +11,7 @@
             <field name="number_increment">1</field>
         </record>
 
-        <!-- Sequences for Work orders -->       
+        <!-- Sequences for Work orders -->
         <record id="sequence_mro_workorder" model="ir.sequence">
             <field name="name">Work order</field>
             <field name="code">mro.workorder</field>
@@ -21,7 +21,7 @@
             <field name="number_increment">1</field>
         </record>
 
-        <!-- Sequences for Maintenance request -->       
+        <!-- Sequences for Maintenance request -->
         <record id="sequence_mro_request" model="ir.sequence">
             <field name="name">Maintenance request</field>
             <field name="code">mro.request</field>
@@ -31,4 +31,4 @@
             <field name="number_increment">1</field>
         </record>
     </data>
-</openerp>
+</odoo>
