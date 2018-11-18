@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
 	<data>
 
         <!-- Top menu item -->
@@ -13,7 +13,7 @@
             id="menu_mro_maintenance"
             parent="base.menu_mro_root"
             sequence="1"/>
-            
+
         <!-- Maintenance request menu -->
         <record id="mro_request_tree_view" model="ir.ui.view">
             <field name="name">mro.request.tree</field>
@@ -29,7 +29,7 @@
                 </tree>
             </field>
         </record>
-        
+
         <record id="mro_request_form_view" model="ir.ui.view">
             <field name="name">mro.request.form</field>
             <field name="model">mro.request</field>
@@ -71,7 +71,7 @@
                 </form>
             </field>
         </record>
-        
+
         <record id="mro_request_search" model="ir.ui.view">
             <field name="name">mro.request.search</field>
             <field name="model">mro.request</field>
@@ -125,7 +125,7 @@
                 </tree>
             </field>
         </record>
-        
+
         <record id="mro_order_calendar_view" model="ir.ui.view">
             <field name="name">mro.order.calendar</field>
             <field name="model">mro.order</field>
@@ -136,7 +136,7 @@
                 </calendar>
             </field>
         </record>
-        
+
         <record id="mro_order_form_view" model="ir.ui.view">
             <field name="name">mro.order.form</field>
             <field name="model">mro.order</field>
@@ -355,7 +355,7 @@
                 </tree>
             </field>
         </record>
-        
+
         <record id="mro_task_form_view" model="ir.ui.view">
             <field name="name">mro.task.form</field>
             <field name="model">mro.task</field>
@@ -412,18 +412,18 @@
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="context" eval="{'default_categ_id': ref('mro.product_category_mro')}"/>
-        </record>        
-        
+        </record>
+
         <menuitem name="Tasks"
             id="menu_maintenance_tasks"
             parent="base.menu_mro_root"
             sequence="9"/>
-            
+
         <menuitem name="Tasks"
             action="action_tasks"
             id="menu_maintenance_tasks_tasks"
             parent="menu_maintenance_tasks"
             sequence="100"/>
-    
+
  	</data>
-</openerp>
+</odoo>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<openerp>
+<odoo>
     <data noupdate="1">
 
         <!-- Maintenance Request related subtypes for messaging / Chatter -->
@@ -56,9 +56,9 @@
         </record>
 
         <!-- Procurement rules -->
-        <record id="rule_wh_asset" model='procurement.rule'>
+        <record id="rule_wh_asset" model="stock.rule">
             <field name="name">WH: Stock -> Asset</field>
-            <field name="action">move</field>
+            <field name="action">pull</field>
             <field name="picking_type_id" ref="stock.picking_type_internal"/>
             <field name="location_src_id" ref="stock.stock_location_stock"/>
             <field name="location_id" ref="asset.stock_location_assets"/>
@@ -73,4 +73,4 @@
         </record>
 
     </data>
-</openerp>
+</odoo>
