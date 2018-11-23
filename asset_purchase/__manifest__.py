@@ -2,13 +2,13 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2014-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2014-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 {
     'name': 'Assets & Purchase',
-    'version': '1.3',
+    'version': '1.4',
     'summary': 'Integrate Asset and Purchase',
     'description': """
 Integrate Maintenance and Purchase.
