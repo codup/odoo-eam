@@ -2,13 +2,13 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2015-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2015-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 {
     'name': 'Asset Full History',
-    'version': '1.2',
+    'version': '1.3',
     'summary': 'Track Asset History',
     'description': """
 Track all Asset Hystory in Odoo.
