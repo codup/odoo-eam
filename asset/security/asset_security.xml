@@ -28,7 +28,14 @@
             <field name="name">Manager</field>
             <field name="category_id" ref="module_category_maintenance"/>
             <field name="implied_ids" eval="[(4, ref('group_mro_user'))]"/>
-            <field name="users" eval="[(4, ref('base.user_root'))]"/>
+        </record>
+        
+        <record model="res.users" id="base.user_root">
+            <field eval="[(4,ref('group_mro_manager'))]" name="groups_id"/>
+        </record>
+
+        <record model="res.users" id="base.user_admin">
+            <field eval="[(4,ref('group_mro_manager'))]" name="groups_id"/>
         </record>
     </data>
 
