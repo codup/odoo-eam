@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        
+        <!-- Resource: asset.asset -->
+        <record id="asset.asset_asset_1" model="asset.asset">
+            <field name="accounting_state_id" ref="asset.asset_state_depreciation"/>
+        </record>
+
+        <record id="asset.asset_asset_2" model="asset.asset">
+            <field name="accounting_state_id" ref="asset.asset_state_depreciation"/>
+        </record>
+
+        <record id="asset.asset_asset_3" model="asset.asset">
+            <field name="accounting_state_id" ref="asset.asset_state_depreciation"/>
+        </record>
+        
+        <record id="asset.asset_asset_4" model="asset.asset">
+            <field name="accounting_state_id" ref="asset.asset_state_depreciation"/>
+        </record>
+
+        <record id="asset.asset_asset_5" model="asset.asset">
+            <field name="accounting_state_id" ref="asset.asset_state_draft"/>
+        </record>
+
+        <record id="asset.asset_asset_6" model="asset.asset">
+            <field name="accounting_state_id" ref="asset.asset_state_close"/>
+        </record>
+
+    </data>
+</openerp>

@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -95,6 +95,9 @@ class asset_asset(models.Model):
 
     def _read_group_maintenance_state_ids(self, domain, read_group_order=None, access_rights_uid=None):
         return self._read_group_state_ids(domain, read_group_order, access_rights_uid, '3')
+        
+    def _read_group_accounting_state_ids(self, domain, read_group_order=None, access_rights_uid=None):
+        return self._read_group_state_ids(domain, read_group_order, access_rights_uid, '4')
 
     CRITICALITY_SELECTION = [
         ('0', 'General'),
@@ -108,6 +111,7 @@ class asset_asset(models.Model):
     warehouse_state_id = fields.Many2one('asset.state', 'State', domain=[('team','=','1')])
     manufacture_state_id = fields.Many2one('asset.state', 'State', domain=[('team','=','2')])
     maintenance_state_id = fields.Many2one('asset.state', 'State', domain=[('team','=','3')])
+    accounting_state_id = fields.Many2one('asset.state', 'State', domain=[('team','=','4')])
     maintenance_state_color = fields.Selection(related='maintenance_state_id.state_color', selection=STATE_COLOR_SELECTION, string="Color", readonly=True)
     criticality = fields.Selection(CRITICALITY_SELECTION, 'Criticality')
     property_stock_asset = fields.Many2one(
@@ -135,6 +139,7 @@ class asset_asset(models.Model):
         'warehouse_state_id': _read_group_warehouse_state_ids,
         'manufacture_state_id': _read_group_manufacture_state_ids,
         'maintenance_state_id': _read_group_maintenance_state_ids,
+        'accounting_state_id': _read_group_accounting_state_ids,
     }
 
     @api.model

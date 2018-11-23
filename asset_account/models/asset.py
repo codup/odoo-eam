@@ -1,0 +1,16 @@
+# -*- coding: utf-8 -*-
+##############################################################################
+#
+#    Odoo
+#    Copyright (C) 2013-2018 CodUP (<http://codup.com>).
+#
+##############################################################################
+
+from odoo import api, fields, models
+from odoo.addons.asset.asset import STATE_COLOR_SELECTION
+
+
+class asset_asset(models.Model):
+    _inherit = 'asset.asset'
+
+    accounting_state_color = fields.Selection(related='accounting_state_id.state_color', selection=STATE_COLOR_SELECTION, string="Color", readonly=True)

@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -21,7 +21,8 @@ Keep one entity in one place for escape mistakes!
     'website': 'http://codup.com',
     'category': 'Industries',
     'sequence': 0,
-    'depends': ['asset','account_asset'],
-    'data': ['asset_view.xml'],
+    'depends': ['asset','account'],
+    'data': ['views/account_view.xml'],
+    'demo': ['demo/asset_demo.xml'],
     'installable': True,
 }
