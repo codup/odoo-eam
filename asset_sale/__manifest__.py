@@ -2,13 +2,13 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2014-2016 CodUP (<http://codup.com>).
+#    Copyright (C) 2014-2018 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 {
     'name': 'Assets & Sale',
-    'version': '1.3',
+    'version': '1.4',
     'summary': 'Integrate Asset and Sale',
     'description': """
 Integrate Maintenance and Sale.
@@ -21,7 +21,7 @@ Keep one entity in one place for escape mistakes!
     'website': 'http://codup.com',
     'category': 'Industries',
     'sequence': 0,
-    'depends': ['sale','asset'],
+    'depends': ['sale_management','asset'],
     'demo': ['asset_demo.xml'],
     'data': [
         'security/ir.model.access.csv',
