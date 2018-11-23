@@ -8,7 +8,7 @@
 
 {
     'name': 'Assets & Finance',
-    'version': '1.3',
+    'version': '1.4',
     'summary': 'Integrate Asset and Accounting',
     'description': """
 Integrate financial and maintenance asset management.
