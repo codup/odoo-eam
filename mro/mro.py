@@ -84,6 +84,7 @@ class mro_order(models.Model):
     procurement_group_id = fields.Many2one('procurement.group', 'Procurement group', copy=False)
     category_ids = fields.Many2many(related='asset_id.category_ids', string='Asset Category', readonly=True)
     wo_id = fields.Many2one('mro.workorder', 'Work Order', ondelete='cascade')
+    request_id = fields.Many2one('mro.request', 'Request')
 
     _order = 'date_execution'
 
@@ -147,6 +148,8 @@ class mro_order(models.Model):
 
     def action_done(self):
         self.write({'state': 'done', 'date_execution': time.strftime('%Y-%m-%d %H:%M:%S')})
+        for order in self:
+            if order.request_id: order.request_id.action_done()
         return True
 
     def action_cancel(self):
@@ -162,6 +165,8 @@ class mro_order(models.Model):
 
     def force_done(self):
         self.write({'state': 'done', 'date_execution': time.strftime('%Y-%m-%d %H:%M:%S')})
+        for order in self:
+            if order.request_id: order.request_id.action_done()
         return True
 
     def force_parts_reservation(self):
@@ -345,6 +350,7 @@ class mro_request(models.Model):
                 'asset_id': request.asset_id.id,
                 'description': request.cause,
                 'problem_description': request.description,
+                'request_id': request.id,
             })
         self.write({'state': 'run'})
         return order_id.id

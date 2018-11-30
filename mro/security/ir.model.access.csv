@@ -1,7 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_mro_order_manager,mro.order manager,model_mro_order,asset.group_mro_manager,1,1,1,1
 access_mro_order_parts_line_manager,mro.order.parts.line manager,model_mro_order_parts_line,asset.group_mro_manager,1,1,1,1
-access_mro_workorder,access_mro_workorder,model_mro_workorder,asset.group_mro_manager,1,1,1,1
+access_mro_workorder_manager,mro.workorder manager,model_mro_workorder,asset.group_mro_manager,1,1,1,1
 access_mro_task_manager,mro.task manager,model_mro_task,asset.group_mro_manager,1,1,1,1
 access_mro_task_parts_line_manager,mro.task.parts.line manager,model_mro_task_parts_line,asset.group_mro_manager,1,1,1,1
 access_mro_request_manager,mro.request manager,model_mro_request,asset.group_mro_manager,1,1,1,1
@@ -11,7 +11,7 @@ access_stock_move_mro_manager,stock.move mro_manager,stock.model_stock_move,asse
 access_stock_picking_mro_manager,stock.picking mro_manager,stock.model_stock_picking,asset.group_mro_manager,1,1,1,1
 access_mro_order_user,mro.order user,model_mro_order,asset.group_mro_user,1,1,1,1
 access_mro_order_parts_line_user,mro.order.parts.line user,model_mro_order_parts_line,asset.group_mro_user,1,1,1,1
-access_mro_workorder,access_mro_workorder,model_mro_workorder,asset.group_mro_user,1,1,1,1
+access_mro_workorder_user,mro.workorder user,model_mro_workorder,asset.group_mro_user,1,1,1,1
 access_mro_task_user,mro.task user,model_mro_task,asset.group_mro_user,1,0,0,0
 access_mro_task_parts_line_user,mro.task.parts.line user,model_mro_task_parts_line,asset.group_mro_user,1,0,0,0
 access_mro_request_user,mro.request user,model_mro_request,asset.group_mro_user,1,1,0,0

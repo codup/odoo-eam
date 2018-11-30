@@ -10,8 +10,8 @@
             <field name="standard_price">55.0</field>
             <field name="list_price">70.0</field>
             <field name="type">consu</field>
-            <field name="uom_id" ref="product.product_uom_unit"/>
-            <field name="uom_po_id" ref="product.product_uom_unit"/>
+            <field name="uom_id" ref="uom.product_uom_unit"/>
+            <field name="uom_po_id" ref="uom.product_uom_unit"/>
             <field name="isParts" eval="True"/>
         </record>
 
@@ -22,8 +22,8 @@
             <field name="standard_price">80.0</field>
             <field name="list_price">90.0</field>
             <field name="type">consu</field>
-            <field name="uom_id" ref="product.product_uom_litre"/>
-            <field name="uom_po_id" ref="product.product_uom_litre"/>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
             <field name="isParts" eval="True"/>
         </record>
 
@@ -34,8 +34,8 @@
             <field name="standard_price">80.0</field>
             <field name="list_price">90.0</field>
             <field name="type">consu</field>
-            <field name="uom_id" ref="product.product_uom_litre"/>
-            <field name="uom_po_id" ref="product.product_uom_litre"/>
+            <field name="uom_id" ref="uom.product_uom_litre"/>
+            <field name="uom_po_id" ref="uom.product_uom_litre"/>
             <field name="isParts" eval="True"/>
         </record>
 
@@ -63,7 +63,7 @@
             <field name="maintenance_type">cm</field>
             <field name="task_id" ref="mro_task_1"/>
             <field name="description">Wash the truck</field>
-            <field eval="[(0,0,{'parts_id':ref('product_product_mro_water'),'parts_qty':10,'parts_uom':ref('product.product_uom_litre')})]" name="parts_lines"/>
+            <field eval="[(0,0,{'parts_id':ref('product_product_mro_water'),'parts_qty':10,'parts_uom':ref('uom.product_uom_litre')})]" name="parts_lines"/>
         </record>
 
     </data>
