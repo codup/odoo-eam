@@ -29,7 +29,7 @@ class asset_asset(models.Model):
                 self.maintenance_date = order_ids[0].date_execution
 
     mro_count = fields.Integer(compute='_mro_count', string='# Maintenance')
-    maintenance_date = fields.Date(compute='_next_maintenance', string='Maintenance Date')
+    maintenance_date = fields.Datetime(compute='_next_maintenance', string='Maintenance Date')
 
     def action_view_maintenance(self):
         return {

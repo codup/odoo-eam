@@ -89,10 +89,10 @@ class mro_order(models.Model):
             Dmax.append(0)
             Dopt.append(0)
         C = K*meter.total_value
-        Dc = 1.0*calendar.timegm(time.strptime(meter.date, "%Y-%m-%d"))
+        Dc = 1.0*calendar.timegm(time.strptime(str(meter.date), "%Y-%m-%d"))
         N = meter.utilization
         Hp = 3600.0*24*31*horizon
-        Dn = 1.0*calendar.timegm(time.strptime(time.strftime('%Y-%m-%d',time.gmtime()),"%Y-%m-%d"))
+        Dn = 1.0*calendar.timegm(time.strptime(str(time.strftime('%Y-%m-%d',time.gmtime())),"%Y-%m-%d"))
         Si[lf] = Imin[lf]
         for i in range(hf):
             Si[i+1] = self.find_step(Ci[i+1], Ci[i] + Si[i], Imin[i+1], Imax[i+1])

@@ -113,12 +113,12 @@
         </record>
 
         <!-- UoM Category -->
-        <record id="uom_categ_mro_work" model="product.uom.categ">
+        <record id="uom_categ_mro_work" model="uom.category">
             <field name="name">Work</field>
         </record>
 
         <!-- UoM -->
-        <record id="uom_mro_cycle" model="product.uom">
+        <record id="uom_mro_cycle" model="uom.uom">
             <field name="category_id" ref="uom_categ_mro_work"/>
             <field name="name">Cycle</field>
             <field name="factor" eval="1.0"/>
@@ -132,7 +132,7 @@
 
         <record id="mro_pm_parameter_2" model="mro.pm.parameter">
             <field name="name">Produced</field>
-            <field name="parameter_uom" ref="product.product_uom_unit"/>
+            <field name="parameter_uom" ref="uom.product_uom_unit"/>
         </record>
 
         <record id="mro_pm_parameter_3" model="mro.pm.parameter">
@@ -142,7 +142,7 @@
 
         <record id="mro_pm_parameter_4" model="mro.pm.parameter">
             <field name="name">Calendar Time</field>
-            <field name="parameter_uom" ref="product.product_uom_day"/>
+            <field name="parameter_uom" ref="uom.product_uom_day"/>
         </record>
 
         <!-- Meters -->
@@ -157,7 +157,7 @@
         <record id="mro_pm_meter_2" model="mro.pm.meter">
             <field name="name" ref="mro_pm_parameter_2"/>
             <field name="asset_id" ref="asset_asset_4"/>
-            <field name="meter_uom" ref="product.product_uom_unit"/>
+            <field name="meter_uom" ref="uom.product_uom_unit"/>
             <field name="reading_type">cng</field>
             <field name="av_time">30</field>
             <field name="min_utilization">20</field>

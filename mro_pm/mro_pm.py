@@ -17,10 +17,10 @@ class mro_pm_parameter(models.Model):
     _description = 'Asset Parameters'
 
     def _get_default_uom_id(self):
-        return self.env['ir.model.data'].get_object('product', 'product_uom_hour').id
+        return self.env['ir.model.data'].get_object('uom', 'product_uom_hour').id
 
     name = fields.Char('Parameter', size=64, required=True, translate=True)
-    parameter_uom = fields.Many2one('product.uom', 'Unit of Measure', required=True, default=_get_default_uom_id)
+    parameter_uom = fields.Many2one('uom.uom', 'Unit of Measure', required=True, default=_get_default_uom_id)
 
 
 class mro_pm_meter(models.Model):
@@ -42,7 +42,7 @@ class mro_pm_meter(models.Model):
 
     def _get_utilization(self):
         for meter in self:
-            Dn = 1.0*calendar.timegm(time.strptime(time.strftime('%Y-%m-%d',time.gmtime()),"%Y-%m-%d"))
+            Dn = 1.0*calendar.timegm(time.strptime(str(time.strftime('%Y-%m-%d',time.gmtime())),"%Y-%m-%d"))
             Da = Dn - 3600*24*meter.av_time
             meter_line_obj = self.env['mro.pm.meter.line']
             meter_line_ids = meter_line_obj.search([('meter_id', '=', meter.id),('date', '<=', time.strftime('%Y-%m-%d',time.gmtime(Da)))], limit=1, order='date desc')
@@ -52,13 +52,13 @@ class mro_pm_meter(models.Model):
                     meter.utilization = meter.min_utilization
                     continue
             meter_line = meter_line_ids[0]
-            Dci = 1.0*calendar.timegm(time.strptime(meter_line.date, "%Y-%m-%d"))
+            Dci = 1.0*calendar.timegm(time.strptime(str(meter_line.date), "%Y-%m-%d"))
             Ci = meter_line.total_value
             number = 0
             Us = 0
             meter_line_ids = meter_line_obj.search([('meter_id', '=', meter.id),('date', '>',meter_line.date)], order='date')
             for meter_line in meter_line_ids:
-                Dci1 = 1.0*calendar.timegm(time.strptime(meter_line.date, "%Y-%m-%d"))
+                Dci1 = 1.0*calendar.timegm(time.strptime(str(meter_line.date), "%Y-%m-%d"))
                 Ci1 = meter_line.total_value
                 if Dci1 != Dci:
                     Us = Us + (3600*24*(Ci1 - Ci))/(Dci1 - Dci)
@@ -94,29 +94,29 @@ class mro_pm_meter(models.Model):
     av_time = fields.Float('Averaging time (days)', required=True)
 
     def get_reading(self, date):
-        D = 1.0*calendar.timegm(time.strptime(date, "%Y-%m-%d %H:%M:%S"))
+        D = 1.0*calendar.timegm(time.strptime(str(date), "%Y-%m-%d %H:%M:%S"))
         meter = self
         meter_line_obj = self.env['mro.pm.meter.line']
         prev_read = meter_line_obj.search([('meter_id', '=', meter.id),('date', '<=', date)], limit=1, order='date desc')
         next_read = meter_line_obj.search([('meter_id', '=', meter.id),('date', '>', date)], limit=2, order='date')
         if not len(prev_read):
             if len(next_read) == 2:
-                D1 = 1.0*calendar.timegm(time.strptime(next_read[0].date, "%Y-%m-%d"))
-                D2 = 1.0*calendar.timegm(time.strptime(next_read[1].date, "%Y-%m-%d"))
+                D1 = 1.0*calendar.timegm(time.strptime(str(next_read[0].date), "%Y-%m-%d"))
+                D2 = 1.0*calendar.timegm(time.strptime(str(next_read[1].date), "%Y-%m-%d"))
                 C1 = next_read[0].total_value
                 C2 = next_read[1].total_value
                 value = C1 - (D1-D)*(C2-C1)/(D2-D1)
             else:
-                D1 = 1.0*calendar.timegm(time.strptime(next_read[0].date, "%Y-%m-%d"))
+                D1 = 1.0*calendar.timegm(time.strptime(str(next_read[0].date), "%Y-%m-%d"))
                 C1 = next_read[0].total_value
                 value = C1 - (D1-D)*meter.utilization/(3600*24)
         elif not len(next_read):
-            D1 = 1.0*calendar.timegm(time.strptime(prev_read[0].date, "%Y-%m-%d"))
+            D1 = 1.0*calendar.timegm(time.strptime(str(prev_read[0].date), "%Y-%m-%d"))
             C1 = prev_read[0].total_value
             value = C1 + (D-D1)*meter.utilization/(3600*24)
         else:
-            D1 = 1.0*calendar.timegm(time.strptime(prev_read[0].date, "%Y-%m-%d"))
-            D2 = 1.0*calendar.timegm(time.strptime(next_read[0].date, "%Y-%m-%d"))
+            D1 = 1.0*calendar.timegm(time.strptime(str(prev_read[0].date), "%Y-%m-%d"))
+            D2 = 1.0*calendar.timegm(time.strptime(str(next_read[0].date), "%Y-%m-%d"))
             C1 = prev_read[0].total_value
             C2 = next_read[0].total_value
             value = C1 + (D-D1)*(C2-C1)/(D2-D1)
