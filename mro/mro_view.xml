@@ -187,7 +187,7 @@
                                             <tree string="Planned Parts" editable="bottom">
                                                 <field name="parts_id" domain="[('isParts','=',True)]" context="{'default_categ_id': context.get('default_categ_id')}"/>
                                                 <field name="parts_qty"/>
-                                                <field name="parts_uom" groups="product.group_uom"/>
+                                                <field name="parts_uom" groups="uom.group_uom"/>
                                                 <field name="name"/>
                                             </tree>
                                         </field>
@@ -197,7 +197,7 @@
                                             <tree string="Available Parts">
                                                 <field name="product_id" string="Parts"/>
                                                 <field name="product_qty"/>
-                                                <field name="product_uom" groups="product.group_uom"/>
+                                                <field name="product_uom" groups="uom.group_uom"/>
                                                 <field name="state" invisible="0"/>
                                             </tree>
                                         </field>
@@ -207,7 +207,7 @@
                                             <tree string="Parts to Consume">
                                                 <field name="product_id" string="Parts"/>
                                                 <field name="product_qty" string="Quantity"/>
-                                                <field name="product_uom" string="Unit of Measure" groups="product.group_uom"/>
+                                                <field name="product_uom" string="Unit of Measure" groups="uom.group_uom"/>
                                                 <field name="state" invisible="1"/>
                                             </tree>
                                         </field>
@@ -217,7 +217,7 @@
                                            <tree string="Consumed Parts">
                                                <field name="product_id" readonly="1" string="Parts"/>
                                                <field name="product_qty" readonly="1"/>
-                                               <field name="product_uom" readonly="1" string="Unit of Measure" groups="product.group_uom"/>
+                                               <field name="product_uom" readonly="1" string="Unit of Measure" groups="uom.group_uom"/>
                                                <field name="state" invisible="1"/>
                                            </tree>
                                         </field>
@@ -378,7 +378,7 @@
                                 <tree string="Parts" editable="bottom">
                                     <field name="parts_id" domain="[('isParts','=','True')]" context="{'default_categ_id': context.get('default_categ_id')}"/>
                                     <field name="parts_qty"/>
-                                    <field name="parts_uom" groups="product.group_uom"/>
+                                    <field name="parts_uom" groups="uom.group_uom"/>
                                     <field name="name"/>
                                 </tree>
                             </field>
