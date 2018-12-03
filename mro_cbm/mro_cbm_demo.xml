@@ -3,11 +3,12 @@
     <data noupdate="1">
 
         <!-- UoM -->
-        <record id="uom_mro_degree" model="product.uom">
+        <record id="uom_mro_degree" model="uom.uom">
             <field name="category_id" ref="mro_pm.uom_categ_mro_work"/>
             <field name="name">°C</field>
             <field name="factor" eval="1.0"/>
             <field name="rounding" eval="1.0"/>
+            <field name="uom_type">bigger</field>
         </record>        
 
         <!-- Parameters -->
