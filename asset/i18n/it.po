@@ -1,0 +1,566 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-28 10:47+0000\n"
+"PO-Revision-Date: 2019-10-28 11:00+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: Unknown\n"
+"Language: zxx\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"X-Loco-Source-Locale: it_IT\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Accounting"
+msgstr "Contabilità"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_active
+msgid "Active"
+msgstr "Attivo"
+
+#. module: asset
+#: model:ir.model,name:asset.model_asset_asset
+msgid "Asset"
+msgstr "Impianto"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_property_stock_asset
+msgid "Asset Location"
+msgstr "Cantiere"
+
+#. module: asset
+#: model:stock.location,name:asset.stock_location_locations_asset
+msgid "Asset Locations"
+msgstr "Ubicazioni Macchinari"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_name
+msgid "Asset Name"
+msgstr "Nome Impianto"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_asset_number
+msgid "Asset Number"
+msgstr "Numero Impianto"
+
+#. module: asset
+#: model:ir.ui.view,arch_db:asset.assets_search
+msgid "Asset Search"
+msgstr "Ricerca Macchinario"
+
+#. module: asset
+#: model:ir.actions.act_window,name:asset.action_asset_state 
+#: model:ir.ui.menu,name:asset.menu_asset_state
+msgid "Asset States"
+msgstr "Stati Macchinari"
+
+#. module: asset
+#: model:ir.actions.act_window,name:asset.action_asset_category 
+#: model:ir.model,name:asset.model_asset_category 
+#: model:ir.ui.menu,name:asset.menu_asset_category
+msgid "Asset Tags"
+msgstr "Attributi Macchinario"
+
+#. module: asset
+#: model:ir.actions.act_window,name:asset.action_assets 
+#: model:ir.model.fields,field_description:asset.field_asset_category_asset_ids
+#:  model:ir.ui.menu,name:asset.menu_maintenance_assets 
+#: model:ir.ui.menu,name:asset.menu_maintenance_assets_assets 
+#: model:ir.ui.view,arch_db:asset.assets_form_view 
+#: model:ir.ui.view,arch_db:asset.assets_tree_view 
+#: model:stock.location,name:asset.stock_location_assets
+msgid "Assets"
+msgstr "Impianti"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_user_id
+msgid "Assigned to"
+msgstr "Assignato a"
+
+#. module: asset
+#: selection:asset.state,state_color:0
+msgid "Black"
+msgstr "Nero"
+
+#. module: asset
+#: selection:asset.state,state_color:0
+msgid "Blue"
+msgstr "Blue"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_breakdown
+msgid "Breakdown"
+msgstr "Rotto"
+
+#. module: asset
+#: model:ir.ui.view,arch_db:asset.asset_state_kanban_view
+msgid "Change color"
+msgstr "Cambia colore"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_close
+msgid "Close"
+msgstr "Chiuso"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_maintenance_state_color
+msgid "Color"
+msgstr "Colore"
+
+#. module: asset
+#: model:ir.ui.menu,name:asset.menu_maintenance_config
+msgid "Configuration"
+msgstr "Configurazione"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_create_uid 
+#: model:ir.model.fields,field_description:asset.field_asset_category_create_uid
+#:  model:ir.model.fields,field_description:asset.field_asset_state_create_uid
+msgid "Created by"
+msgstr "Creato da"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_create_date 
+#: model:ir.model.fields,field_description:asset.field_asset_category_create_date
+#:  model:ir.model.fields,field_description:asset.field_asset_state_create_date
+msgid "Created on"
+msgstr "Creato il"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "Critical"
+msgstr "Critical"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_criticality
+msgid "Criticality"
+msgstr "Criticality"
+
+#. module: asset
+#: model:res.groups,name:asset.group_mro_customer
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: asset
+#: selection:asset.state,state_color:0
+msgid "Cyan"
+msgstr "Ciano"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_depreciation
+msgid "Depreciation"
+msgstr "Svalutazione"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_display_name
+#:  
+#: model:ir.model.fields,field_description:asset.field_asset_category_display_name
+#:  
+#: model:ir.model.fields,field_description:asset.field_asset_state_display_name
+msgid "Display Name"
+msgstr "Nome da visualizzare"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_down
+msgid "Down"
+msgstr "Giù"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_draft
+msgid "Draft"
+msgstr "Bozza"
+
+#. module: asset
+#: model:ir.module.category,name:asset.module_category_eam
+msgid "Enterprise Asset Management"
+msgstr "Gestione dei Macchinari Aziendali"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Finance"
+msgstr "Finanza"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "General"
+msgstr "Generale"
+
+#. module: asset
+#: selection:asset.state,state_color:0
+msgid "Green"
+msgstr "Verde"
+
+#. module: asset
+#: model:ir.ui.view,arch_db:asset.assets_search
+msgid "Group By"
+msgstr "Raggruppa per"
+
+#. module: asset
+#: model:ir.module.category,description:asset.module_category_eam
+msgid "Helps you manage your assets."
+msgstr "Ti aiuta a gestire i macchinari."
+
+#. module: asset
+#: model:ir.module.category,description:asset.module_category_maintenance
+msgid "Helps you manage your maintenance processes."
+msgstr "Ti aiuta nei processi di manutenzione."
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_id 
+#: model:ir.model.fields,field_description:asset.field_asset_category_id 
+#: model:ir.model.fields,field_description:asset.field_asset_state_id
+msgid "ID"
+msgstr "ID"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_image
+msgid "Image"
+msgstr "Immagine"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "Important"
+msgstr "Importante"
+
+#. module: asset
+#: model:ir.ui.view,arch_db:asset.assets_form_view
+msgid "Info"
+msgstr "Informazione"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_installed
+msgid "Installed"
+msgstr "Installato"
+
+#. module: asset
+#: model:ir.model,name:asset.model_stock_location
+msgid "Inventory Locations"
+msgstr "Location d'Inventario"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset___last_update
+#:  
+#: model:ir.model.fields,field_description:asset.field_asset_category___last_update
+#:  
+#: model:ir.model.fields,field_description:asset.field_asset_state___last_update
+msgid "Last Modified on"
+msgstr "Ultima modifica il"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_write_uid 
+#: model:ir.model.fields,field_description:asset.field_asset_category_write_uid
+#:  model:ir.model.fields,field_description:asset.field_asset_state_write_uid
+msgid "Last Updated by"
+msgstr "Ultimo aggiornamento di"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_write_date 
+#: model:ir.model.fields,field_description:asset.field_asset_category_write_date
+#:  model:ir.model.fields,field_description:asset.field_asset_state_write_date
+msgid "Last Updated on"
+msgstr "Ultimo aggiornamento il"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_leased
+msgid "Leased"
+msgstr "Affittato"
+
+#. module: asset
+#: selection:asset.state,state_color:0
+msgid "Magenta"
+msgstr "Magenta"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_maintenance 
+#: selection:asset.state,team:0 
+#: model:ir.module.category,name:asset.module_category_maintenance
+msgid "Maintenance"
+msgstr "Manutenzione"
+
+#. module: asset
+#: model:ir.actions.act_window,name:asset.action_management_assets 
+#: model:ir.ui.menu,name:asset.menu_maintenance_assets_management
+msgid "Manage states"
+msgstr "Gestisci gli stati"
+
+#. module: asset
+#: model:res.groups,name:asset.group_mro_manager
+msgid "Manager"
+msgstr "Manager"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Manufacture"
+msgstr "Produzione"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_manufacturer_id
+#:  model:ir.ui.view,arch_db:asset.management_assets_kanban_view
+msgid "Manufacturer"
+msgstr "Costruttore"
+
+#. module: asset
+#: model:ir.ui.view,arch_db:asset.assets_kanban_view
+msgid "Manufacturer:"
+msgstr "Costruttore:"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_image_medium
+msgid "Medium-sized image"
+msgstr "Immagine di media dimensione"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_model 
+#: model:ir.ui.view,arch_db:asset.management_assets_kanban_view
+msgid "Model"
+msgstr "Modello"
+
+#. module: asset
+#: model:ir.ui.view,arch_db:asset.assets_kanban_view
+msgid "Model:"
+msgstr "Modello:"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_moves
+msgid "Moves"
+msgstr "Moves"
+
+#. module: asset
+#: model:ir.ui.view,arch_db:asset.assets_search
+msgid "Name"
+msgstr "Nome"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_operable
+msgid "Operable"
+msgstr "Fattibile"
+
+#. module: asset
+#: selection:asset.state,state_color:0
+msgid "Orange"
+msgstr "Arancione"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_planned
+msgid "Planned"
+msgstr "Previsto"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_purchase_date
+msgid "Purchase Date"
+msgstr "Data Acquisto"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_purchased
+msgid "Purchased"
+msgstr "Acquistato"
+
+#. module: asset
+#: selection:asset.state,state_color:0
+msgid "Red"
+msgstr "Rosso"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_rented
+msgid "Rented"
+msgstr "Affittato"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_repair
+msgid "Repair"
+msgstr "Riparato"
+
+#. module: asset
+#: model:ir.ui.menu,name:asset.menu_maintenance_report
+msgid "Reports"
+msgstr "Report"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_retired
+msgid "Retired"
+msgstr "Ritirato"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_run
+msgid "Run"
+msgstr "Avvia"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_state_team
+msgid "Scope Team"
+msgstr "Scopo Team"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_state_sequence
+msgid "Sequence"
+msgstr "Sequenza"
+
+#. module: asset
+#: model:ir.ui.view,arch_db:asset.assets_kanban_view
+msgid "Serial No:"
+msgstr "Numero Seriale: "
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_serial
+msgid "Serial no."
+msgstr "Numero Seriale."
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_setup
+msgid "Setup"
+msgstr "Impostare"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_shipped
+msgid "Shipped"
+msgstr "Spedito"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_shutdown
+msgid "Shutdown"
+msgstr "Spegnimento"
+
+#. module: asset
+#: selection:asset.state,state_color:0
+msgid "SkyBlue"
+msgstr "Cielo blu"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_image_small
+msgid "Small-sized image"
+msgstr "Immagine (formato piccolo)"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_sold
+msgid "Sold"
+msgstr "Venduto"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_standby
+msgid "Standby"
+msgstr "Standby"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_start_date
+msgid "Start Date"
+msgstr "Data di inizio"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_finance_state_id
+#:  
+#: model:ir.model.fields,field_description:asset.field_asset_asset_maintenance_state_id
+#:  
+#: model:ir.model.fields,field_description:asset.field_asset_asset_manufacture_state_id
+#:  
+#: model:ir.model.fields,field_description:asset.field_asset_asset_warehouse_state_id
+#:  model:ir.model.fields,field_description:asset.field_asset_state_name 
+#: model:ir.ui.view,arch_db:asset.asset_state_form_view
+msgid "State"
+msgstr "Stato"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_state_state_color
+msgid "State Color"
+msgstr "Colore dello stato"
+
+#. module: asset
+#: model:ir.model,name:asset.model_asset_state
+msgid "State of Asset"
+msgstr "Stato del Macchinario"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_stolen
+msgid "Stolen"
+msgstr "Rubato"
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_stored
+msgid "Stored"
+msgstr "Immagazzinato"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_category_name
+msgid "Tag"
+msgstr "Tag"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_category_ids
+msgid "Tags"
+msgstr "Tag"
+
+#. module: asset
+#: model:ir.ui.view,arch_db:asset.assets_form_view
+msgid "Tags..."
+msgstr "tags..."
+
+#. module: asset
+#: model:ir.model.fields,help:asset.field_asset_asset_property_stock_asset
+msgid ""
+"This location will be used as the destination location for installed parts "
+"during asset life."
+msgstr ""
+"Questa posizione verrà utilizzata come posizione di destinazione per le "
+"parti installate durante la vita delle risorse."
+
+#. module: asset
+#: model:asset.state,name:asset.asset_state_use
+msgid "Use"
+msgstr "Uso"
+
+#. module: asset
+#: model:ir.model.fields,help:asset.field_asset_state_sequence
+msgid "Used to order states."
+msgstr "Utilizzato per ordinare gli stati."
+
+#. module: asset
+#: model:ir.ui.view,arch_db:asset.assets_search 
+#: model:res.groups,name:asset.group_mro_user
+msgid "User"
+msgstr "Utente"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_vendor_id
+msgid "Vendor"
+msgstr "Venditore"
+
+#. module: asset
+#: selection:asset.asset,criticality:0
+msgid "Very important"
+msgstr "Molto important"
+
+#. module: asset
+#: selection:asset.state,team:0
+msgid "Warehouse"
+msgstr "Magazzino"
+
+#. module: asset
+#: model:ir.ui.view,arch_db:asset.assets_form_view
+msgid "Warranty"
+msgstr "Garanzia"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_warranty_end_date
+msgid "Warranty End"
+msgstr "Fine della garanzia"
+
+#. module: asset
+#: model:ir.model.fields,field_description:asset.field_asset_asset_warranty_start_date
+msgid "Warranty Start"
+msgstr "Inizio della garanzia"
+
+#. module: asset
+#: selection:asset.state,state_color:0
+msgid "White"
+msgstr "Bianco"
+
+#. module: asset
+#: selection:asset.state,state_color:0
+msgid "Yellow"
+msgstr "Giallo"
