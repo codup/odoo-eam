@@ -170,7 +170,6 @@
             <field name="name">Assets</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">asset.asset</field>
-            <field name="view_type">form</field>
             <field name="view_mode">kanban,tree,form</field>
             <field name="view_id" eval="False"/>
         </record>
@@ -251,7 +250,6 @@
             <field name="name">Manage states</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">asset.asset</field>
-            <field name="view_type">form</field>
             <field name="view_mode">kanban,form</field>
             <field name="view_id" eval="False"/>
         </record>
@@ -337,7 +335,6 @@
             <field name="name">Asset States</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">asset.state</field>
-            <field name="view_type">form</field>
             <field name="view_mode">kanban,form</field>
         </record>
 
@@ -364,7 +361,6 @@
             <field name="name">Asset Tags</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">asset.category</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree</field>
         </record>
 
