@@ -2,13 +2,13 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2018 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2020 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 {
     'name': 'Assets',
-    'version': '1.12',
+    'version': '1.13',
     'summary': 'Asset Management',
     'description': """
 Managing Assets in Odoo.
