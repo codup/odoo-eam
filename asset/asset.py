@@ -144,9 +144,11 @@ class asset_asset(models.Model):
 
     @api.model
     def create(self, vals):
-        tools.image_resize_images(vals)
+        if 'image' in vals:
+            vals['image_small'] = vals['image_medium'] = vals['image']
         return super(asset_asset, self).create(vals)
 
     def write(self, vals):
-        tools.image_resize_images(vals)
+        if 'image' in vals:
+            vals['image_small'] = vals['image_medium'] = vals['image']
         return super(asset_asset, self).write(vals)
