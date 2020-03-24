@@ -18,6 +18,7 @@ Support following feature:
     """,
     'author': 'CodUP',
     'website': 'http://codup.com',
+    'license': 'AGPL-3',
     'category': 'Industries',
     'sequence': 0,
     'depends': ['asset'],
