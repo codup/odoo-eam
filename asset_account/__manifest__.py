@@ -19,6 +19,7 @@ Keep one entity in one place for escape mistakes!
     """,
     'author': 'CodUP',
     'website': 'http://codup.com',
+    'license': 'AGPL-3',
     'category': 'Industries',
     'sequence': 0,
     'depends': ['asset','account'],
