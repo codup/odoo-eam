@@ -41,17 +41,20 @@ class mro_order(models.Model):
 
     def _get_available_parts(self):
         for order in self:
-            line_ids = []
-            available_line_ids = []
-            done_line_ids = []
-            if order.procurement_group_id:
-                for procurement in order.procurement_group_id.procurement_ids:
-                    line_ids += [move.id for move in procurement.move_ids if move.location_dest_id.id == order.asset_id.property_stock_asset.id]
-                    available_line_ids += [move.id for move in procurement.move_ids if move.location_dest_id.id == order.asset_id.property_stock_asset.id and move.state == 'assigned']
-                    done_line_ids += [move.id for move in procurement.move_ids if move.location_dest_id.id == order.asset_id.property_stock_asset.id and move.state == 'done']
-            order.parts_ready_lines = line_ids
-            order.parts_move_lines = available_line_ids
-            order.parts_moved_lines = done_line_ids
+            # line_ids = []
+            # available_line_ids = []
+            # done_line_ids = []
+            # if order.procurement_group_id:
+                # for procurement in order.procurement_group_id.procurement_ids:
+                    # line_ids += [move.id for move in procurement.move_ids if move.location_dest_id.id == order.asset_id.property_stock_asset.id]
+                    # available_line_ids += [move.id for move in procurement.move_ids if move.location_dest_id.id == order.asset_id.property_stock_asset.id and move.state == 'assigned']
+                    # done_line_ids += [move.id for move in procurement.move_ids if move.location_dest_id.id == order.asset_id.property_stock_asset.id and move.state == 'done']
+            # order.parts_ready_lines = line_ids
+            # order.parts_move_lines = available_line_ids
+            # order.parts_moved_lines = done_line_ids
+            order.parts_ready_lines = self.env['stock.move']
+            order.parts_move_lines = self.env['stock.move']
+            order.parts_moved_lines = self.env['stock.move']
 
     name = fields.Char('Reference', size=64)
     origin = fields.Char('Source Document', size=64, readonly=True, states={'draft': [('readonly', False)]},
