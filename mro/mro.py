@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2018 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2020 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -33,7 +33,6 @@ class mro_order(models.Model):
         ('cm', 'Corrective')
     ]
 
-    @api.multi
     def _track_subtype(self, init_values):
         self.ensure_one()
         if 'state' in init_values and self.state == 'ready':
@@ -179,7 +178,6 @@ class mro_order(models.Model):
             vals['name'] = self.env['ir.sequence'].next_by_code('mro.order') or '/'
         return super(mro_order, self).create(vals)
 
-    @api.multi
     def write(self, vals):
         if vals.get('date_execution') and not vals.get('state'):
             # constraint for calendar view
@@ -293,7 +291,6 @@ class mro_request(models.Model):
         ('cancel', 'Canceled')
     ]
 
-    @api.multi
     def _track_subtype(self, init_values):
         self.ensure_one()
         if 'state' in init_values and self.state == 'claim':
