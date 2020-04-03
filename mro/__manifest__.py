@@ -2,13 +2,13 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2018 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2020 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 {
     'name': 'MRO',
-    'version': '1.9',
+    'version': '1.10',
     'summary': 'Asset Maintenance, Repair and Operation',
     'description': """
 Manage Maintenance process in OpenERP
