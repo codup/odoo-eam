@@ -68,7 +68,6 @@
             <field name="name">Work Orders</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">mro.workorder</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree,form,calendar</field>
         </record>
 

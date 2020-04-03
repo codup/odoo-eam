@@ -19,10 +19,9 @@
 
         <act_window name="Convert to Task"
             res_model="mro.convert.order"
-            src_model="mro.order"
+            binding_model="mro.order"
             target="new"
             view_mode="form"
-            view_type="form"
             id="action_view_convert_order"/>
 
     </data>
