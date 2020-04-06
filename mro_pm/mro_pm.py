@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2018 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2020 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -135,7 +135,6 @@ class mro_pm_meter(models.Model):
         self.env['mro.pm.meter.line'].create(values)
         return meter_id
 
-    @api.multi
     def write(self, vals):
         for meter in self:
             if vals.get('new_value',False) and meter.state == 'reading':
