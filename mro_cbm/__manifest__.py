@@ -2,13 +2,13 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2015-2018 CodUP (<http://codup.com>).
+#    Copyright (C) 2015-2020 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 {
     'name': 'MRO CBM',
-    'version': '1.4',
+    'version': '1.5',
     'summary': 'Asset Predictive Maintenance',
     'description': """
 Manage Predictive Maintenance process in OpenERP
