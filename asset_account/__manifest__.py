@@ -2,13 +2,13 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2013-2018 CodUP (<http://codup.com>).
+#    Copyright (C) 2013-2020 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 {
     'name': 'Assets & Finance',
-    'version': '1.4',
+    'version': '1.5',
     'summary': 'Integrate Asset and Accounting',
     'description': """
 Integrate financial and maintenance asset management.
