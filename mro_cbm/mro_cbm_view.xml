@@ -22,7 +22,6 @@
             <field name="name">Update Gauges</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">mro.gauge</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree</field>
             <field name="domain">[('state','=','reading'),('reading_type','!=','src')]</field>
             <field name="context">{}</field>
@@ -41,7 +40,6 @@
             <field name="context">{'search_default_gauge_id': active_id}</field>
             <field name="name">Reading History</field>
             <field name="res_model">mro.gauge.line</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree</field>
         </record>  
 
@@ -65,7 +63,6 @@
             <field name="name">Gauges Logs</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">mro.gauge</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree</field>
             <field name="view_id" ref="mro_gauge_log_tree_view"/>
         </record>
@@ -198,7 +195,6 @@
             <field name="name">PdM Rule</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">mro.cbm.rule</field>
-            <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
         </record>
 
