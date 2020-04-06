@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2015-2018 CodUP (<http://codup.com>).
+#    Copyright (C) 2015-2020 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -53,7 +53,6 @@ class mro_gauge(models.Model):
         self.env['mro.gauge.line'].create(values)
         return gauge_id
 
-    @api.multi
     def write(self, vals):
         for gauge in self:
             if vals.get('new_value',False) and gauge.state == 'reading':
