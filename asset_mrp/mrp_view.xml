@@ -158,7 +158,6 @@
             <field name="name">Assets</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">asset.asset</field>
-            <field name="view_type">form</field>
             <field name="view_mode">kanban,tree,form</field>
             <field name="view_id" eval="False"/>
         </record>
@@ -239,7 +238,6 @@
             <field name="name">Manage states</field>
             <field name="type">ir.actions.act_window</field>
             <field name="res_model">asset.asset</field>
-            <field name="view_type">form</field>
             <field name="view_mode">kanban</field>
             <field name="view_id" eval="False"/>
         </record>
