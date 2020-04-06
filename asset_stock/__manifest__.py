@@ -2,13 +2,13 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2014-2018 CodUP (<http://codup.com>).
+#    Copyright (C) 2014-2020 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
 {
     'name': 'Assets & Warehouse',
-    'version': '1.4',
+    'version': '1.5',
     'summary': 'Integrate Asset and Warehouse',
     'description': """
 Integrate Maintenance and Warehouse.
