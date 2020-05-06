@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Odoo
-#    Copyright (C) 2014-2018 CodUP (<http://codup.com>).
+#    Copyright (C) 2014-2020 CodUP (<http://codup.com>).
 #
 ##############################################################################
 
@@ -26,7 +26,9 @@ class asset_asset(models.Model):
                 ('state', 'not in', ('done','cancel'))],
                 limit=1, order='date_execution')
             if len(order_ids) > 0:
-                self.maintenance_date = order_ids[0].date_execution
+                asset.maintenance_date = order_ids[0].date_execution
+            else:
+                asset.maintenance_date = False
 
     mro_count = fields.Integer(compute='_mro_count', string='# Maintenance')
     maintenance_date = fields.Datetime(compute='_next_maintenance', string='Maintenance Date')
