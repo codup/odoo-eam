@@ -36,7 +36,7 @@ class mro_order(models.Model):
     def _track_subtype(self, init_values):
         self.ensure_one()
         if 'state' in init_values and self.state == 'ready':
-            return 'mro.mt_order_confirmed'
+            return self.env.ref('mro.mt_order_confirmed')
         return super(mro_order, self)._track_subtype(init_values)
 
     def _get_available_parts(self):
@@ -297,11 +297,11 @@ class mro_request(models.Model):
     def _track_subtype(self, init_values):
         self.ensure_one()
         if 'state' in init_values and self.state == 'claim':
-            return 'mro.mt_request_sent'
+            return self.env.ref('mro.mt_request_sent')
         elif 'state' in init_values and self.state == 'run':
-            return 'mro.mt_request_confirmed'
+            return self.env.ref('mro.mt_request_confirmed')
         elif 'state' in init_values and self.state == 'reject':
-            return 'mro.mt_request_rejected'
+            return self.env.ref('mro.mt_request_rejected')
         return super(mro_request, self)._track_subtype(init_values)
 
     name = fields.Char('Reference', size=64)
