@@ -20,6 +20,5 @@ class mro_request_reject(models.TransientModel):
         if active_id:
             request = self.env['mro.request'].browse(self._context.get('active_id'))
             request.write({'reject_reason':self.reject_reason})
-            wf_service = netsvc.LocalService("workflow")
-            wf_service.trg_validate(self.env.user.id, 'mro.request', active_id, 'button_reject', self.env.cr)
+            request.action_reject()
         return {'type': 'ir.actions.act_window_close',}
